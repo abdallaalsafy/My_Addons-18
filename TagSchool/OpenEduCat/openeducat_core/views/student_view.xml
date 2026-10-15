@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+        <record id="kanban_view_student" model="ir.ui.view">
+            <field name="name">Student Kanban</field>
+            <field name="model">op.student</field>
+            <field name="arch" type="xml">
+                <kanban sample="1">
+                    <field name="id"/>
+                    <field name="image_1920"/>
+                    <field name="age_from_id"/>
+                    <templates>
+                        <t t-name="card" class="flex-row">
+                            <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger" invisible="active"/>
+                           <aside class="o_kanban_aside_full">
+                                <t t-if="record.image_1920.value">
+                                    <div class="o_kanban_image_fill position-relative w-100">
+                                        <field name="image_1920" alt="Contact image" class="h-100" widget="image" options="{'img_class': 'object-fit-cover'}"/>
+                                    </div>
+                                </t>
+                                <t t-else="">
+                                    <div class="o_kanban_image_fill position-relative w-100">
+                                        <field name="avatar_128" class="h-100" widget="image" options="{'img_class': 'object-fit-cover'}"/>
+                                    </div>
+                                </t>
+                            </aside>
+                            <main class="ml16 ps-2 ps-md-0">
+                                <div class="mb-1">
+                                    <field name="name" class="mb-0 fw-bold fs-5"/>
+                                </div>
+                                <field name="email" class="text-truncate"/>
+                                <div class="text-muted small">
+                                    Age: <field name="age_from_id"/> years
+                                </div>
+                                <footer><field name="activity_ids" widget="kanban_activity" class="ms-auto mt-auto" style="padding-bottom:6px;"/></footer>
+                            </main>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="view_op_student_tree" model="ir.ui.view">
+            <field name="name">op.student.list</field>
+            <field name="model">op.student</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <list string="Student">
+                    <field name="name"/>
+                    <field name="id_number"/>
+                    <field name="age_from_id"/>
+                    <field name="gender" optional="hide"/>
+                    <field name="birth_date" optional="hide"/>
+                    <field name="ref" optional="hide"/>
+                    <field name="mobile" optional="hide"/>
+                    <field name="email" optional="hide"/>
+                    <field name="emergency_contact"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_op_student_form" model="ir.ui.view">
+            <field name="name">op.student.form</field>
+            <field name="model">op.student</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Student">
+                    <header>
+                    </header>
+                    <sheet>
+                        <div name="button_box" class="oe_button_box"/>
+                        <field name="active" invisible="1"/>
+                        <widget name="web_ribbon" title="Archived" bg_color="bg-danger"
+                                invisible ="active == True"/>
+                        <div style="width:100%;" class="row align-items-center">
+                            <div class="mb16 col-8 col-lg-10 px-4">
+                                <div class="student-name">
+                                    <div class="mt-2">
+                                        <h1>
+                                            <field name="name" invisible="1"/>
+                                            <field name="edited_name" readonly="1"/>
+                                        </h1>
+                                        <h2>
+                                            <field name="ref" placeholder="Registration Number"/>
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 col-lg-2">
+                                <field name="image_1920" widget="image" class="oe_left oe_avatar" />
+                            </div>
+                        </div>
+                        <group col="3" string="Student Name">
+                            <group>
+                                <field name="first_name"  placeholder="First Name"/>
+                            </group>
+                            <group>
+                                <field name="middle_name"  placeholder="Middle Name"/>
+                            </group>
+                            <group>
+                                <field name="last_name"  placeholder="Last Name"/>
+                            </group>
+                        </group>
+                        <notebook colspan="4">
+                            <page name="personal_information" string="Personal Information">
+                                <group name="personal_detail">
+                                    <group>
+                                        <field name="id_number"/>
+                                        <field name="gender" readonly="id_number" force_save="1"/>
+                                        <field name="birth_date" readonly="id_number" force_save="1"/>
+                                        <field name="age_years" readonly="id_number or birth_date"/>
+                                        <field name="age_from_id" readonly="1" force_save="1"/>
+                                        <label for="street" string="Address"/>
+                                        <div name="o_address_format">
+                                            <field name="street" placeholder="Street..."/>
+                                            <field name="street2" placeholder="Street2"/>
+                                        </div>
+                                        <field name="emergency_contact" context="{'show_address': 1}"
+                                               options="{&quot;always_reload&quot;: True}"/>
+                                    </group>
+                                    <group>
+                                        <field name="email"/>
+                                        <field name="mobile"/>
+                                        <field name="partner_id"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <chatter/>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_op_student_search" model="ir.ui.view">
+            <field name="name">op.student.search</field>
+            <field name="model">op.student</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <search string="Student">
+                    <field name="name"/>
+                    <field name="age_years"/>
+                    <group expand="0" string="Group By...">
+                        <filter name="age_group" string="Age"
+                                domain="[]" context="{'group_by':'age_years'}"/>
+                        <filter name="language" string="Language"
+                                domain="[]" context="{'group_by':'lang'}"/>
+                        <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="student_view_activity" model="ir.ui.view">
+            <field name="name">op.students.activity</field>
+            <field name="model">op.student</field>
+            <field name="arch" type="xml">
+                <activity string="Contacts">
+                    <field name="id"/>
+                    <templates>
+                        <div t-name="activity-box">
+                            <img t-att-src="activity_image('op.student', 'image_1920', record.id.raw_value)" role="img" t-att-title="record.name.value" t-att-alt="record.name.value"/>
+                            <div class="ms-2">
+                                <field name="name" display="full" class="o_text_block"/>
+                            </div>
+                        </div>
+                    </templates>
+                </activity>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_op_student_view">
+            <field name="name">Students</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.student</field>
+            <field name="path">students</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">kanban,list,form,activity</field>
+            <field name="search_view_id" ref="view_op_student_search"/>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_op_student_view_form">
+            <field name="act_window_id" ref="act_open_op_student_view"/>
+            <field name="sequence" eval="20"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_op_student_form"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_op_student_view_tree">
+            <field name="act_window_id" ref="act_open_op_student_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">list</field>
+            <field name="view_id" ref="view_op_student_tree"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_op_student_view_kanban">
+            <field name="act_window_id" ref="act_open_op_student_view"/>
+            <field name="sequence" eval="5"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="kanban_view_student"/>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_op_student_view_2">
+            <field name="name">Students</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.student</field>
+            <field name="path">student</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">kanban,list,form,activity</field>
+            <field name="search_view_id" ref="view_op_student_search"/>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+</odoo>

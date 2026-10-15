@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- New Partner Form View for Quran Office Management -->
+        <record id="res_partner_form_view_quran_office" model="ir.ui.view">
+            <field name="name">quran.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <form string="Quran Office Partner">
+                    <header>
+                        <button name="action_make_teacher" type="object" string="Make Teacher"
+                            class="btn-primary" invisible="is_teacher"/>
+                        <button name="action_make_student" type="object" string="Make Student"
+                            class="btn-primary" invisible="is_student" />
+                        <button name="action_make_mother" type="object" string="Make Mother"
+                            class="btn-primary" invisible="parent_role == 'mother' or gender != 'f'"/>
+                        <button name="action_make_father" type="object" string="Make Father"
+                            class="btn-primary" invisible="parent_role == 'father' or gender != 'm'"/>
+                        <button name="action_remove_father_role" type="object" string="Remove as Father"
+                            class="btn-warning" invisible="parent_role != 'father'"/>
+                        <button name="action_remove_mother_role" type="object" string="Remove as Mother"
+                            class="btn-warning" invisible="parent_role != 'mother'"/>
+                        <button name="action_remove_student_role" type="object" string="Remove as Student"
+                            class="btn-warning" invisible="not is_student"/>
+                        <button name="action_remove_teacher_role" type="object" string="Remove as Teacher"
+                            class="btn-warning" invisible="not is_teacher"/>
+                        <field name="student_status" widget="statusbar" options="{'clickable': '1'}"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_view_children" type="object" icon="fa-users"
+                                class="oe_stat_button" invisible="parent_role == False">
+                                <field name="children_count" widget="statinfo" string="Children"/>
+                            </button>
+                        </div>
+                        <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger" invisible="active"/>
+                        <field name="image_1920" widget='image' class="oe_avatar" options='{"preview_image": "avatar_128"}'/>
+                        <div class="oe_title mb24">
+                            <h1>
+                                <field name="name" id="individual" readonly="1" force_save="1" required="1"/>
+                            </h1>
+                            <h2>
+                                <field name="ref" readonly="1"/>
+                            </h2>
+                        </div>
+                        <!-- name details-->
+                        <group col="4" string="Name Details">
+                            <group>
+                                <field name="first_name"  placeholder="First Name"/>
+                            </group>
+                            <group>
+                                <field name="middle_name"  placeholder="Middle Name"/>
+                            </group>
+                            <group>
+                                <field name="third_name"  placeholder="Third Name"/>
+                            </group>
+                            <group>
+                                <field name="last_name"  placeholder="Last Name"/>
+                            </group>
+                        </group>
+                        <!-- Basic Information -->
+                        <group name="personal_details" string="Personal Details">
+                            <group>
+                                <field name="id_number"/>
+                                <field name="gender" readonly="id_number" force_save="1"/>
+                                <field name="birth_date" readonly="id_number" force_save="1"/>
+                                <field name="age_from_id"/>
+                                 <field name="area_id"/>
+                                <label for="street" string="Address"/>
+                                <field name="street" placeholder="Address..." nolabel="1"/>
+                                 <field name="qualification"/>
+                            </group>
+                            <group>
+                                <field name="function" placeholder="e.g. Sales Director"/>
+                                <field name="phone" widget="phone"/>
+                                <field name="mobile" widget="phone"/>
+                                <field name="email" widget="email" context="{'gravatar_image': True}"/>
+                                <field name="website" string="Website" widget="url" placeholder="e.g. https://www.odoo.com"/>
+                                <field name="title" options='{"no_open": True}' placeholder="e.g. Mister"/>
+                                <field name="category_id" widget="many2many_tags" options="{'color_field': 'color'}"
+                                       placeholder='e.g. "B2B", "VIP", "Consulting", ...'/>
+                            </group>
+                        </group>
+                         <group col="3">
+                             <group string="Family">
+                                 <field name="father_name" options="{'no_quick_create':True}" context="{
+                                    'default_parent_role': 'father',
+                                    'form_view_ref': 'management_quran_office_core.res_partner_form_view_quran_office'}"/>
+                                 <field name="mother_name" options="{'no_quick_create':True}" context="{
+                                    'default_parent_role': 'mother',
+                                    'form_view_ref': 'management_quran_office_core.res_partner_form_view_quran_office'}"/>
+                                 <field name="is_fatherless" widget="boolean_toggle" invisible="not is_student"/>
+                                 <field name="is_quran_memorizer" widget="boolean_toggle"/>
+                             </group>
+                             <group string="Education" invisible="not is_student">
+                                 <field name="office_id"/>
+                                 <field name="class_id" options="{'no_quick_create':True}" context="{'default_office_id': office_id}"/>
+                                 <field name="teacher_id" options="{'no_quick_create':True}" context="{
+                                    'default_is_teacher': True,
+                                    'form_view_ref': 'management_quran_office_core.res_partner_form_view_quran_office'}"/>
+                            </group>
+                             <group string="Financial" invisible="not is_student and not is_teacher">
+                                 <field name="subscription_fee" widget="monetary" invisible="not is_student"/>
+                                 <field name="discount_percentage_fee" widget="percentage" invisible="not is_student"/>
+                                 <field name="reason_discount_fee" required="discount_percentage_fee > 0"
+                                        invisible="not is_student or discount_percentage_fee == 0"/>
+                                 <field name="teacher_salary" widget="monetary" invisible="not is_teacher"/>
+                             </group>
+                        </group>
+
+                        <notebook colspan="4">
+                            <page name="memorization" string="Memorization Details" invisible="not is_student">
+                                <group>
+                                    <group string="Start Point">
+                                        <field name="memorization_surah" options="{'no_create':True,'no_open':True}"/>
+                                        <field name="memorization_ayah"/>
+                                    </group>
+                                    <group string="Method">
+                                        <field name="memorization_method"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page name="documents" string="Documents">
+                                <group>
+                                    <group string="Photos &amp; Identity">
+                                        <field name="personal_photo" filename="personal_photo_file"/>
+                                        <field name="personal_photo_file" invisible="1"/>
+                                        <field name="birth_certificate" filename="birth_certificate_file"/>
+                                        <field name="birth_certificate_file" invisible="1"/>
+                                    </group>
+                                    <group string="ID Card">
+                                        <field name="id_card_front" filename="id_card_front_file"/>
+                                        <field name="id_card_front_file" invisible="1"/>
+                                        <field name="id_card_back" filename="id_card_back_file"/>
+                                        <field name="id_card_back_file" invisible="1"/>
+                                    </group>
+                                </group>
+
+                                <group string="Additional Documents">
+                                    <field name="additional_documents" widget="many2many_binary"/>
+                                </group>
+                            </page>
+                            <page name='internal_notes' string="Internal Notes">
+                                <field name="comment" placeholder="Internal notes..."/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- New Partner Tree View for Quran Office Management -->
+        <record id="res_partner_tree_view_quran_office" model="ir.ui.view">
+            <field name="name">quran.partner.tree</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <list string="Quran Office Partners">
+                    <header>
+                        <button name="management_quran_office_core.student_academic_wizard_action" type="action" string="Manage Student Academic Information"
+                                class="btn-primary" invisible="not context.get('default_is_student')"/>
+                        <button name="management_quran_office_core.student_subscription_wizard_action" type="action" string="Manage Student Subscription"
+                                class="btn-primary" invisible="not context.get('default_is_student')"/>
+                        <button name="action_mark_present" type="object" string="Mark Present"
+                                class="btn-success" invisible="not context.get('default_is_student')"/>
+                        <button name="action_mark_absent" type="object" string="Mark Absent"
+                                class="btn-warning" invisible="not context.get('default_is_student')"/>
+                        <button name="management_quran_office_core.teacher_salary_wizard_action" type="action" string="Manage Teacher Salary"
+                                class="btn-primary" invisible="not context.get('default_is_teacher')"/>
+                    </header>
+                    <field name="name"/>
+                    <field name="ref" optional="hide"/>
+                    <field name="id_number"/>
+                    <field name="age_years"/>
+                    <field name="gender" optional="hide"/>
+                    <field name="birth_date" optional="hide"/>
+                    <field name="office_id" column_invisible="not context.get('default_is_student')"/>
+                    <field name="class_id" column_invisible="not context.get('default_is_student')"/>
+                    <field name="teacher_id" column_invisible="not context.get('default_is_student')"/>
+                    <field name="student_status" column_invisible="not context.get('default_is_student')"
+                           widget="badge" decoration-success="student_status=='present'"
+                           decoration-danger="student_status=='absent'"/>
+                    <field name="subscription_fee" column_invisible="not context.get('default_is_student')"
+                           optional="hide" sum="Total Fee"/>
+                    <field name="teacher_salary" column_invisible="not context.get('default_is_teacher')"
+                           optional="hide" sum="Total Salary"/>
+                     <field name="phone" class="o_force_ltr" optional="show"/>
+                    <field name="mobile" optional="hide"/>
+                    <field name="email" optional="show"/>
+                    <field name="area_id" optional="show"/>
+                    <field name="street" optional="hide"/>
+                    <field name="category_id" optional="hide" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- New Partner Kanban View for Quran Office Management -->
+        <record id="view_quran_partner_kanban" model="ir.ui.view">
+            <field name="name">quran.partner.kanban</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <kanban sample="1">
+                    <field name="name"/>
+                    <field name="age_years"/>
+                    <field name="gender"/>
+                    <field name="phone"/>
+                    <field name="is_student"/>
+                    <field name="is_teacher"/>
+                    <field name="parent_role"/>
+                    <field name="children_count"/>
+                    <field name="student_status"/>
+                    <templates>
+                        <t t-name="card" class="flex-row">
+                            <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger" invisible="active"/>
+                            <aside class="o_kanban_aside_full">
+                                <field name="avatar_128" class="w-100" widget="image" options="{'img_class': 'object-fit-contain w-100 h-100'}"/>
+                            </aside>
+                            <main class="ps-2 ps-md-0">
+                                <field name="name" class="mb-0 fw-bold fs-5"/>
+                                <div class="o_kanban_details">
+                                    <div class="o_kanban_record_top">
+                                        <div class="o_kanban_record_subtitle">
+                                            <span t-if="record.age_years">
+                                                <field name="age_years"/> years
+                                            </span>
+                                            <span t-if="record.gender == 'm'">♂</span>
+                                            <span t-if="record.gender == 'f'">♀</span>
+                                            <span t-if="record.phone">📞 <field name="phone"/></span>
+                                        </div>
+                                    </div>
+                                    <div class="o_kanban_record_bottom">
+                                        <div class="oe_kanban_bottom_left">
+                                            <span t-if="record.is_student" class="badge badge-primary">Student</span>
+                                            <span t-if="record.is_teacher" class="badge badge-success">Teacher</span>
+                                            <span t-if="record.parent_role == 'father'" class="badge badge-info">Father</span>
+                                            <span t-if="record.parent_role == 'mother'" class="badge badge-warning">Mother</span>
+                                            <span t-if="record.student_status == 'present'" class="badge badge-success">Present</span>
+                                            <span t-if="record.student_status == 'absent'" class="badge badge-danger">Absent</span>
+                                        </div>
+                                        <div class="oe_kanban_bottom_right">
+                                            <span t-if="record.children_count > 0" class="badge badge-secondary">
+                                                <field name="children_count"/> Children
+                                            </span>
+                                            <span t-if="record.is_quran_memorizer" class="badge badge-info">Quran</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </main>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <!-- New Partner Search View for Quran Office Management -->
+        <record id="res_partner_search_view_quran_office" model="ir.ui.view">
+            <field name="name">quran.partner.search</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <search string="Quran Office Partners">
+                    <field name="name" filter_domain="['|','|',('name', 'ilike', self),('complete_name', 'ilike', self),('ref', 'ilike', self)]"/>
+                    <field name="email" filter_domain="[('email', 'ilike', self)]"/>
+                    <field name="phone" filter_domain="['|', ('phone', 'ilike', self), ('mobile', 'ilike', self)]"/>
+                    <field name="category_id" string="Tag" operator="child_of"/>
+                    <field name="id_number"/>
+                    <field name="age_from_id"/>
+                    <field name="gender"/>
+                    <field name="birth_date"/>
+                    <field name="area_id"/>
+                    <field name="office_id" column_invisible="not context.get('default_is_student')"/>
+                    <field name="class_id" column_invisible="not context.get('default_is_student')"/>
+                    <field name="teacher_id" column_invisible="not context.get('default_is_student')"/>
+                    <separator/>
+                    <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+                    <separator/>
+                    <filter name="with_area" string="With Area" domain="[('area_id', '!=', False)]"/>
+                    <separator/>
+                    <filter name="with_office" string="With Office" domain="[('office_id', '!=', False)]"
+                        invisible="not context.get('default_is_student')"/>
+                    <separator/>
+                     <filter name="with_class" string="With Class" domain="[('class_id', '!=', False)]"
+                        invisible="not context.get('default_is_student')"/>
+                    <separator/>
+                    <filter name="with_teacher" string="With Teacher" domain="[('teacher_id', '!=', False)]"
+                        invisible="not context.get('default_is_student')"/>
+                    <separator/>
+                    <filter name="present_students" string="Present Students" domain="[('student_status', '=', 'present')]"
+                        invisible="not context.get('default_is_student')"/>
+                    <filter name="absent_students" string="Absent Students" domain="[('student_status', '=', 'absent')]"
+                        invisible="not context.get('default_is_student')"/>
+                    <separator/>
+                    <filter name="with_birth_certificate" string="Has Birth Certificate" domain="[('birth_certificate', '!=', False)]"/>
+                    <filter name="without_birth_certificate" string="No Birth Certificate" domain="[('birth_certificate', '=', False)]"/>
+                    <separator/>
+                    <filter name="with_personal_photo" string="Has Personal Photo" domain="[('personal_photo', '!=', False)]"/>
+                    <filter name="without_personal_photo" string="No Personal Photo" domain="[('personal_photo', '=', False)]"/>
+                    <separator/>
+                    <filter name="with_id_card" string="Has ID Card" domain="[('id_card_front', '!=', False)]"/>
+                    <filter name="without_id_card" string="No ID Card" domain="[('id_card_front', '=', False)]"/>
+                    <separator/>
+                    <filter name="with_id_number" string="Has ID Number" domain="[('id_number', '!=', False)]"/>
+                    <separator/>
+                    <filter name="fatherless_students" string="Fatherless Students" domain="[('is_fatherless', '=', True)]" invisible="not context.get('default_is_student')"/>
+                    <separator/>
+                    <filter name="with_discount_fee" string="Has Discount Fee" domain="[('discount_percentage_fee', '>', 0)]" invisible="not context.get('default_is_student')"/>
+                    <separator/>
+                    <filter name="quran_memorizers" string="Quran Memorizers" domain="[('is_quran_memorizer', '=', True)]"/>
+                    <separator/>
+                    <group expand="0" name="group_by" string="Group By">
+                        <filter name="age_group" string="Age"
+                                domain="[]" context="{'group_by':'age_years'}"/>
+                        <filter name="gender" string="Gender"
+                                domain="[]" context="{'group_by':'gender'}"/>
+                        <filter name="birth_date" string="Birth Date"
+                                domain="[]" context="{'group_by':'birth_date'}"/>
+                        <filter name="area" string="Area"
+                                domain="[]" context="{'group_by':'area_id'}"/>
+                        <filter name="office" string="Office" invisible="not context.get('default_is_student')"
+                                domain="[]" context="{'group_by':'office_id'}"/>
+                        <filter name="class" string="Class" invisible="not context.get('default_is_student')"
+                                domain="[]" context="{'group_by':'class_id'}"/>
+                        <filter name="teacher" string="Teacher" invisible="not context.get('default_is_student')"
+                                domain="[]" context="{'group_by':'teacher_id'}"/>
+                        <filter name="student_status" string="Student Status" invisible="not context.get('default_is_student')"
+                                domain="[]" context="{'group_by':'student_status'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- ================= Action for New Partner Views ================================-->
+
+        <record id="action_students_view_id" model="ir.actions.act_window">
+            <field name="name">Students</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">kanban,list,form</field>
+            <field name="view_id" ref="res_partner_form_view_quran_office"/>
+            <field name="search_view_id" ref="res_partner_search_view_quran_office"/>
+            <field name="domain">[('is_student','=',True),('is_company','=',False),('partner_share','=',True)]</field>
+            <field name="context">{'default_is_student': True,}</field>
+        </record>
+
+        <record id="action_teachers_view_id" model="ir.actions.act_window">
+            <field name="name">Teachers</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">kanban,list,form</field>
+            <field name="view_id" ref="res_partner_form_view_quran_office"/>
+            <field name="search_view_id" ref="res_partner_search_view_quran_office"/>
+            <field name="domain">[('is_teacher','=',True),('is_company','=',False),('partner_share','=',True)]</field>
+            <field name="context">{'default_is_teacher': True}</field>
+        </record>
+
+        <record id="action_fathers_view_id" model="ir.actions.act_window">
+            <field name="name">Fathers</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">kanban,list,form</field>
+            <field name="view_id" ref="res_partner_form_view_quran_office"/>
+            <field name="search_view_id" ref="res_partner_search_view_quran_office"/>
+            <field name="domain">[('parent_role','=','father'),('is_company','=',False),('partner_share','=',True)]</field>
+            <field name="context">{'default_parent_role': 'father'}</field>
+        </record>
+
+        <record id="action_mothers_view_id" model="ir.actions.act_window">
+            <field name="name">Mothers</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">kanban,list,form</field>
+            <field name="view_id" ref="res_partner_form_view_quran_office"/>
+            <field name="search_view_id" ref="res_partner_search_view_quran_office"/>
+            <field name="domain">[('parent_role','=','mother'),('is_company','=',False),('partner_share','=',True)]</field>
+            <field name="context">{'default_parent_role': 'mother'}</field>
+        </record>
+
+        <record id="action_all_partners_view_id" model="ir.actions.act_window">
+            <field name="name">All Partners</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">kanban,list,form</field>
+            <field name="view_id" ref="res_partner_form_view_quran_office"/>
+            <field name="search_view_id" ref="res_partner_search_view_quran_office"/>
+            <field name="domain">[('is_company','=',False),('partner_share','=',True)]</field>
+            <field name="context">{}</field>
+        </record>
+
+         <!-- ================= Actions For ListViews ============================= -->
+        <record model="ir.actions.act_window.view" id="act_res_partner_student_view_tree">
+            <field name="act_window_id" ref="action_students_view_id"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">list</field>
+            <field name="view_id" ref="res_partner_tree_view_quran_office"/>
+        </record>
+        <record model="ir.actions.act_window.view" id="act_res_partner_teacher_view_tree">
+            <field name="act_window_id" ref="action_teachers_view_id"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">list</field>
+            <field name="view_id" ref="res_partner_tree_view_quran_office"/>
+        </record>
+        <record model="ir.actions.act_window.view" id="act_res_partner_father_view_tree">
+            <field name="act_window_id" ref="action_fathers_view_id"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">list</field>
+            <field name="view_id" ref="res_partner_tree_view_quran_office"/>
+        </record>
+        <record model="ir.actions.act_window.view" id="act_res_partner_mother_view_tree">
+            <field name="act_window_id" ref="action_mothers_view_id"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">list</field>
+            <field name="view_id" ref="res_partner_tree_view_quran_office"/>
+        </record>
+        <record model="ir.actions.act_window.view" id="act_res_partner_all_partner_view_tree">
+            <field name="act_window_id" ref="action_all_partners_view_id"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">list</field>
+            <field name="view_id" ref="res_partner_tree_view_quran_office"/>
+        </record>
+    </data>
+</odoo>

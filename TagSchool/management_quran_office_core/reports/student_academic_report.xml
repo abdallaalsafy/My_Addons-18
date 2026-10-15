@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_student_document">
+        <t t-call="web.external_layout">
+            <main>
+            <div class="page">
+                <!-- Report Title -->
+                <h2 style="text-align: center; margin-bottom: 30px;">
+                    Students Academic Report
+                </h2>
+                
+                <!-- Report generation date -->
+                <p style="text-align: left; margin-bottom: 20px;">
+                    <strong>Report Date:</strong> 
+                    <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M:%S')"/>
+                </p>
+                
+                <!-- Data table -->
+                <table class="table table-striped o_main_table" style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr style="background-color: #f8f9fa; border-bottom: 2px solid #dee2e6;">
+                            <th style="padding: 12px; text-align: center; border: 1px solid #dee2e6;">#</th>
+                            <th style="padding: 12px; text-align: left; border: 1px solid #dee2e6;">Student Name</th>
+                            <th style="padding: 12px; text-align: center; border: 1px solid #dee2e6;">Gender</th>
+                            <th style="padding: 12px; text-align: center; border: 1px solid #dee2e6;">Age</th>
+                            <th style="padding: 12px; text-align: left; border: 1px solid #dee2e6;">Office</th>
+                            <th style="padding: 12px; text-align: left; border: 1px solid #dee2e6;">Class</th>
+                            <th style="padding: 12px; text-align: left; border: 1px solid #dee2e6;">Teacher</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="docs" t-as="student">
+                            <tr>
+                                <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">
+                                    <span t-esc="student_index + 1"/>
+                                </td>
+                                <td style="padding: 10px; text-align: left; border: 1px solid #dee2e6;">
+                                    <span t-esc="student.name or ''"/>
+                                </td>
+                                <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">
+                                    <t t-if="student.gender == 'm'">Male</t>
+                                    <t t-elif="student.gender == 'f'">Female</t>
+                                    <t t-else="">-</t>
+                                </td>
+                                <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">
+                                    <span t-esc="student.age_years or 0"/>
+                                </td>
+                                <td style="padding: 10px; text-align: left; border: 1px solid #dee2e6;">
+                                    <span t-esc="student.office_id.name or ''"/>
+                                </td>
+                                <td style="padding: 10px; text-align: left; border: 1px solid #dee2e6;">
+                                    <span t-esc="student.class_id.name or ''"/>
+                                </td>
+                                <td style="padding: 10px; text-align: left; border: 1px solid #dee2e6;">
+                                    <span t-esc="student.teacher_id.name or ''"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+                
+                <!-- Summary -->
+                <div style="margin-top: 30px; padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                    <p style="margin: 0; font-weight: bold;">
+                        Total Students: <span t-esc="len(docs)"/>
+                    </p>
+                </div>
+            </div>
+            </main>
+        </t>
+    </template>
+</odoo>

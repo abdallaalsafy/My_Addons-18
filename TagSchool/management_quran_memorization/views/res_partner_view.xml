@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Inherit Student Form to Add Memorization Button -->
+        <record id="view_res_partner_form_memorization_inherit" model="ir.ui.view">
+            <field name="name">res.partner.form.memorization.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="management_quran_office_core.res_partner_form_view_quran_office"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="action_view_memorizations" type="object" icon="fa-book"
+                        class="oe_stat_button" invisible="not is_student or memorization_count == 0">
+                        <field name="memorization_count" widget="statinfo" string="Memorizations"/>
+                    </button>
+                </xpath>
+                <xpath expr="//header" position="inside">
+                    <button name="action_create_memorization" type="object" string="Register Memorization"
+                        class="btn-primary" invisible="not is_student"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Add smart button to existing student list view -->
+        <record id="res_partner_tree_view_quran_office_memorization" model="ir.ui.view">
+            <field name="name">quran.partner.tree.memorization.header.button</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="management_quran_office_core.res_partner_tree_view_quran_office"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <button name="management_quran_memorization.action_batch_memorization_wizard" type="action" string="Batch Memorization"
+                        class="btn-info" invisible="not context.get('default_is_student')"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

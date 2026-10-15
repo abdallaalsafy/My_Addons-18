@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_partner_basic_data_document">
+        <t t-call="web.external_layout">
+            <main>
+            <div class="page">
+                <!-- Dynamic title based on context -->
+                <h2 style="text-align: center; margin-bottom: 30px;">
+                    <t t-if="context.get('default_is_student')">
+                        Basic Data for Students
+                    </t>
+                    <t t-elif="context.get('default_is_teacher')">
+                        Basic Data for Teachers
+                    </t>
+                    <t t-elif="context.get('default_parent_role') == 'father'">
+                        Basic Data for Fathers
+                    </t>
+                    <t t-elif="context.get('default_parent_role') == 'mother'">
+                        Basic Data for Mothers
+                    </t>
+                    <t t-else="">
+                        Basic Data for Partners
+                    </t>
+                </h2>
+                
+                <!-- Report generation date -->
+                <p style="text-align: left; margin-bottom: 20px;">
+                    <strong>Report Date:</strong> 
+                    <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M:%S')"/>
+                </p>
+                
+                <!-- Data table -->
+                <table class="table table-striped o_main_table" style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr style="background-color: #f8f9fa; border-bottom: 2px solid #dee2e6;">
+                            <th style="padding: 12px; text-align: center; border: 1px solid #dee2e6;">#</th>
+                            <th style="padding: 12px; text-align: left; border: 1px solid #dee2e6;">Full Name</th>
+                            <th style="padding: 12px; text-align: left; border: 1px solid #dee2e6;">ID Number</th>
+                            <th style="padding: 12px; text-align: center; border: 1px solid #dee2e6;">Age</th>
+                            <th style="padding: 12px; text-align: center; border: 1px solid #dee2e6;">Birth Date</th>
+                            <th style="padding: 12px; text-align: left; border: 1px solid #dee2e6;">Area</th>
+                            <th style="padding: 12px; text-align: left; border: 1px solid #dee2e6;">Phone</th>
+                            <th style="padding: 12px; text-align: center; border: 1px solid #dee2e6;">Qualification</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="docs" t-as="partner">
+                            <tr>
+                                <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">
+                                    <span t-esc="partner_index + 1"/>
+                                </td>
+                                <td style="padding: 10px; text-align: left; border: 1px solid #dee2e6;">
+                                    <span t-esc="partner.name or ''"/>
+                                </td>
+                                <td style="padding: 10px; text-align: left; border: 1px solid #dee2e6;">
+                                    <span t-esc="partner.id_number or ''"/>
+                                </td>
+                                <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">
+                                    <span t-esc="partner.age_years or 0"/>
+                                </td>
+                                <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">
+                                    <span t-if="partner.birth_date" 
+                                          t-esc="partner.birth_date.strftime('%d-%m-%Y')"/>
+                                    <span t-else="">-</span>
+                                </td>
+                                <td style="padding: 10px; text-align: left; border: 1px solid #dee2e6;">
+                                    <span t-esc="partner.area_id.name or ''"/>
+                                </td>
+                                <td style="padding: 10px; text-align: left; border: 1px solid #dee2e6;">
+                                    <span t-esc="partner.phone or partner.mobile or ''"/>
+                                </td>
+                                <td style="padding: 10px; text-align: left; border: 1px solid #dee2e6;">
+                                    <span t-esc="partner.qualification or ''"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+                
+                <!-- Summary -->
+                <div style="margin-top: 30px; padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                    <p style="margin: 0; font-weight: bold;">
+                        Total Records: <span t-esc="len(docs)"/>
+                    </p>
+                </div>
+            </div>
+            </main>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Server Action to Set Quran Memorizer to True -->
+    <record id="action_set_quran_memorizer_true" model="ir.actions.server">
+        <field name="name">Set Quran Memorizer</field>
+        <field name="model_id" ref="base.model_res_partner"/>
+        <field name="binding_model_id" ref="base.model_res_partner"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+                    if records:
+                       records.write({'is_quran_memorizer': True})
+        </field>
+    </record>
+
+    <!-- Server Action to Set Quran Memorizer to False -->
+    <record id="action_set_quran_memorizer_false" model="ir.actions.server">
+        <field name="name">Unset Quran Memorizer</field>
+        <field name="model_id" ref="base.model_res_partner"/>
+        <field name="binding_model_id" ref="base.model_res_partner"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+                    if records:
+                        records.write({'is_quran_memorizer': False})
+        </field>
+    </record>
+</odoo>

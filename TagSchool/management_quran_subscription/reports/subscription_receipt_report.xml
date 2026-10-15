@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Subscription Receipt Template -->
+    <template id="report_subscription_receipt_document">
+        <t t-call="web.external_layout">
+            <main>
+            <div class="page">
+                <t t-foreach="docs" t-as="doc">
+                    <!-- Receipt Header -->
+                    <div style="text-align: center; margin-bottom: 20px; border-bottom: 2px solid #007bff; padding-bottom: 15px;">
+                        <h1 style="margin: 0; color: #007bff; font-size: 30px; font-weight: bold;">
+                           Quran Office
+                        </h1>
+                        <h2 style="margin: 5px 0 0 0; color: #6c757d; font-size: 24px;">
+                            Payment Receipt
+                        </h2>
+                    </div>
+
+                    <!-- Receipt Number and Date -->
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                        <div>
+                            <strong style="font-size: 18px; font-weight: bold;">Receipt No:</strong>
+                            <span t-esc="doc.name or 'N/A'" style="font-size: 22px; font-weight: bold;"/>
+                        </div>
+                        <div>
+                            <strong style="font-size: 18px; font-weight: bold;">Date:</strong>
+                            <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"
+                                    style="font-size: 22px; font-weight: bold;"/>
+                        </div>
+                    </div>
+
+                    <!-- Student Information -->
+                    <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            <div>
+                                <strong style="font-size: 18px; font-weight: bold;">Name:</strong>
+                                <span t-esc="doc.student_id.name or ''" style="font-size: 22px; font-weight: bold;"/>
+                            </div>
+                            <div>
+                                <strong style="font-size: 18px; font-weight: bold;">Code:</strong>
+                                <span t-esc="doc.student_id.ref or ''" style="font-size: 22px; font-weight: bold;"/>
+                            </div>
+                            <div>
+                                <strong style="font-size: 18px; font-weight: bold;">Office:</strong>
+                                <span t-esc="doc.office_id.name or ''" style="font-size: 22px; font-weight: bold;"/>
+                            </div>
+                            <div>
+                                <strong style="font-size: 18px; font-weight: bold;">Class:</strong>
+                                <span t-esc="doc.class_id.name or ''" style="font-size: 22px; font-weight: bold;"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Subscription Details -->
+                    <div style="background-color: #e3f2fd; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            <div>
+                                <strong style="font-size: 18px; font-weight: bold;">Subscription Month:</strong>
+                                <span t-esc="doc.month_name or ''" style="font-size: 22px; font-weight: bold;"/>
+                            </div>
+                            <div>
+                                <strong style="font-size: 18px; font-weight: bold;">Paid Amount:</strong>
+                                <span style="font-weight: bold; color: #155724; font-size: 22px;"
+                                      t-esc="'{:,.2f}'.format(docs[0].paid_amount or 0)"/>
+                            </div><div>
+                                <strong style="font-size: 18px; font-weight: bold;">Payment Voucher:</strong>
+                                <span t-esc="docs[0].payment_voucher_number or 'N/A'" style="font-size: 22px; font-weight: bold;"/>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Payment Status -->
+                    <div style="text-align: center; margin-bottom: 30px;">
+                        <div style="background-color: #d4edda; color: #155724; padding: 15px; border-radius: 8px; font-weight: bold; font-size: 20px;">
+                            PAID IN FULL
+                        </div>
+                    </div>
+
+                    <!-- Footer -->
+                    <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #dee2e6; color: #6c757d; font-size: 15px;">
+                        <p style="margin: 0;">
+                            Thank you for your payment!
+                        </p>
+                        <p style="margin: 5px 0 0 0;">
+                            Quran Office Management System
+                        </p>
+                        <p style="margin: 5px 0 0 0; font-size: 12px;">
+                            Generated: <t t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M:%S')"/>
+                        </p>
+                    </div>
+
+                    <!-- Page break for each partner except last -->
+                    <div t-if="not doc_last" style="page-break-after: always;"/>
+                </t>
+            </div>
+            </main>
+        </t>
+    </template>
+
+</odoo>

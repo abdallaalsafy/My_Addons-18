@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_participant_filter_wizard_form" model="ir.ui.view">
+        <field name="name">participant.filter.wizard.form</field>
+        <field name="model">participant.filter.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Advanced Participant Filter">
+                <sheet>
+                    <group>
+                        <group string="Competition">
+                            <field name="competition_id" options="{'no_create': True,'no_open': True}"/>
+                        </group>
+                        <group string="Student">
+                            <field name="participant_id" options="{'no_create': True,'no_open': True}"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Office">
+                            <field name="has_office"/>
+                            <field name="office_id" invisible="has_office" options="{'no_create': True,'no_open': True}"/>
+                        </group>
+                        <group string="Class">
+                            <field name="has_class"/>
+                            <field name="class_id" invisible="has_class" options="{'no_create': True,'no_open': True}"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Teacher">
+                            <field name="has_teacher"/>
+                            <field name="teacher_id" invisible="has_teacher" options="{'no_create': True,'no_open': True}"/>
+                        </group>
+                        <group string="Registration">
+                            <field name="has_registration_number"/>
+                            <field name="registration_number" invisible="has_registration_number"/>
+                        </group>
+                    </group>
+                    
+                    <group col="3">
+                        <group string="Status">
+                            <field name="state"/>
+                        </group>
+                        <group string="Score Filter">
+                            <field name="score_filter_type"/>
+                            <field name="score_value" invisible="score_filter_type != 'equals'"/>
+                            <field name="score_min" invisible="score_filter_type != 'between'"/>
+                            <field name="score_max" invisible="score_filter_type != 'between'"/>
+                        </group>
+                        <group string="Amount Juz Filter">
+                            <field name="amount_juz_filter_type"/>
+                            <field name="amount_juz_value" invisible="amount_juz_filter_type != 'equals'"/>
+                            <field name="amount_juz_min" invisible="amount_juz_filter_type != 'between'"/>
+                            <field name="amount_juz_max" invisible="amount_juz_filter_type != 'between'"/>
+                        </group>
+                    </group>
+                    
+                    <group>
+                        <group string="Memorization">
+                            <field name="memorization_method"/>
+                        </group>
+                        <group string="Registration Date">
+                            <field name="registration_date_from"/>
+                            <field name="registration_date_to"/>
+                        </group>
+                    </group>
+                    
+                    <group>
+                        <group string="Prize">
+                            <field name="has_monetary_prize"/>
+                            <field name="has_in_kind_prize"/>
+                        </group>
+                        <group string="Competition Date">
+                            <field name="competition_date_from"/>
+                            <field name="competition_date_to"/>
+                        </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="action_show_filter_participants" type="object"
+                            string="Apply Filter" class="btn-primary"/>
+                    <button name="action_print_results" type="object" 
+                            string="Print Results" class="btn-success"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_participant_filter_wizard" model="ir.actions.act_window">
+        <field name="name">Advanced Participant Filter</field>
+        <field name="res_model">participant.filter.wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+        <menuitem id="menu_quran_office_core_root"
+                  name="Manage Quran Office"
+                  sequence="1"/>
+        <menuitem id="menu_partners_quran_office_core"
+                  name="Partners"
+                  parent="menu_quran_office_core_root"
+                  sequence="10"/>
+
+        <menuitem id="menu_students_quran_office_core"
+                  name="Students"
+                  parent="menu_partners_quran_office_core"
+                  sequence="10"
+                  action="action_students_view_id"/>
+
+        <menuitem id="menu_teachers_quran_office_core"
+                  name="Teachers"
+                  parent="menu_partners_quran_office_core"
+                  sequence="20"
+                  action="action_teachers_view_id"/>
+
+        <menuitem id="menu_parents_quran_office_core"
+                  name="Parents"
+                  parent="menu_partners_quran_office_core"
+                  sequence="30"/>
+
+        <menuitem id="menu_fathers_quran_office_core"
+                  name="Fathers"
+                  parent="menu_parents_quran_office_core"
+                  sequence="10"
+                  action="action_fathers_view_id"/>
+
+        <menuitem id="menu_mothers_quran_office_core"
+                  name="Mothers"
+                  parent="menu_parents_quran_office_core"
+                  sequence="20"
+                  action="action_mothers_view_id"/>
+
+        <menuitem id="menu_all_partners_quran_office_core"
+                  name="All Partners"
+                  parent="menu_partners_quran_office_core"
+                  sequence="40"
+                  action="action_all_partners_view_id"/>
+
+        # ======================= Configuration =======================
+
+        <menuitem id="menu_configuration_quran_office_core"
+                  name="Configuration"
+                  parent="menu_quran_office_core_root"
+                  sequence="80"/>
+
+        <menuitem id="menu_areas_quran_office_core"
+                  name="Areas/Districts"
+                  parent="menu_configuration_quran_office_core"
+                  sequence="10"
+                  action="action_areas_view_id"/>
+         <menuitem id="menu_quran_offices_quran_office_core"
+                  name="Offices"
+                  parent="menu_configuration_quran_office_core"
+                  sequence="20"
+                  action="action_quran_offices_view_id"/>
+
+        <menuitem id="menu_classes_quran_office_core"
+                  name="Classes"
+                  parent="menu_configuration_quran_office_core"
+                  sequence="30"
+                  action="action_classes_view_id"/>
+
+        # ======================== Reports ========================
+        <menuitem id="menu_reports_quran_office_core"
+                  name="Reports"
+                  parent="menu_quran_office_core_root"
+                  sequence="70"/>
+
+        <menuitem id="menu_student_filter_wizard"
+                  name="Student Filter"
+                  parent="menu_reports_quran_office_core"
+                  sequence="10"
+                  action="action_student_filter_wizard"/>
+</odoo>

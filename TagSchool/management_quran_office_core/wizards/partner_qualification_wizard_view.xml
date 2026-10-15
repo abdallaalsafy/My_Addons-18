@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Partner Qualification Wizard Form View -->
+    <record id="partner_qualification_wizard_form_view" model="ir.ui.view">
+        <field name="name">partner.qualification.wizard.form</field>
+        <field name="model">partner.qualification.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Change Academic Qualification">
+                <group>
+                    <field name="mode"/>
+                </group>
+                <group invisible="mode == 'clear'">
+                    <field name="qualification" required="mode == 'update'"/>
+                </group>
+                <footer>
+                    <button name="action_apply_qualification" type="object" string="Apply Qualification" 
+                            class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Partner Qualification Wizard Action -->
+    <record id="partner_qualification_wizard_action" model="ir.actions.act_window">
+        <field name="name">Change Academic Qualification</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">partner.qualification.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="base.model_res_partner"/>
+        <field name="binding_view_types">list</field>
+    </record>
+</odoo>

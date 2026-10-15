@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_student_filter_wizard_form" model="ir.ui.view">
+        <field name="name">student.filter.wizard.form</field>
+        <field name="model">student.filter.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Advanced Student Filter">
+                <sheet>
+                    <group>
+                        <group string="Office">
+                            <field name="has_office"/>
+                            <field name="office_id" invisible="has_office"/>
+                        </group>
+                        <group string="Class">
+                            <field name="has_class"/>
+                            <field name="class_id" invisible="has_class"/>
+                        </group>
+                    </group>
+                    <group >
+                        <group string="Teacher">
+                            <field name="has_teacher"/>
+                            <field name="teacher_id" invisible="has_teacher"/>
+                        </group>
+                        <group string="Identification">
+                            <field name="has_id_number"/>
+                            <field name="id_number" invisible="has_id_number"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Father">
+                            <field name="has_father"/>
+                            <field name="father_id" invisible="has_father"/>
+                        </group>
+                        <group string="Mother">
+                            <field name="has_mother"/>
+                            <field name="mother_id" invisible="has_mother"/>
+                        </group>
+                    </group>
+                    
+                    <group col="3">
+                        <group string="Contact Information">
+                            <field name="has_phone"/>
+                            <field name="phone" invisible="has_phone"/>
+                        </group>
+                        <group string="Age Filter">
+                            <field name="age_filter_type"/>
+                            <field name="age_value" invisible="age_filter_type"/>
+                        </group>
+                        <group string="Status &amp; Gender">
+                            <field name="student_status"/>
+                            <field name="gender"/>
+                        </group>
+                    </group>
+                    
+                    <group>
+                        <group string="Documents &amp; Photos">
+                            <field name="has_personal_photo"/>
+                            <field name="has_birth_certificate"/>
+                            <field name="has_id_card_front"/>
+                        </group>
+                        <group string="Social &amp; Religious Status">
+                            <field name="is_fatherless"/>
+                            <field name="is_quran_memorizer"/>
+                        </group>
+                    </group>
+                </sheet>
+                
+                <footer>
+                    <button name="action_show_filter_students" type="object"
+                            string="Apply Filter" class="btn-primary"/>
+                    <button name="action_print_results" type="object" 
+                            string="Print Results" class="btn-success"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_student_filter_wizard" model="ir.actions.act_window">
+        <field name="name">Advanced Student Filter</field>
+        <field name="res_model">student.filter.wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

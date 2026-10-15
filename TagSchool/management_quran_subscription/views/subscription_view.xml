@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Monthly Subscription Form View -->
+        <record id="view_monthly_subscription_form" model="ir.ui.view">
+            <field name="name">monthly.subscription.form</field>
+            <field name="model">monthly.subscription</field>
+            <field name="arch" type="xml">
+                <form string="Monthly Subscription">
+                    <sheet>
+                        <div class="oe_title d-flex align-items-center gap-2">
+                            <h2>
+                                <field name="name" readonly="1"/>
+                            </h2>
+                            <h3>
+                                <field name="month_name"/>
+                            </h3>
+                        </div>
+                        
+                        <group>
+                            <group string="Student Information">
+                                <field name="student_id" options="{'no_quick_create': True}" context="{
+                                    'form_view_ref': 'management_quran_office_core.res_partner_form_view_quran_office',
+                                    'default_is_student': True}"/>
+                                <field name="office_id" />
+                                <field name="class_id" context="{'default_office_id': office_id}"/>
+                                <field name="teacher_id" options="{'no_quick_create': True}"
+                                       context="{
+                                       'default_is_teacher': True,
+                                       'form_view_ref': 'management_quran_office_core.res_partner_form_view_quran_office'}"/>
+                            </group>
+                            <group string="Subscription Details">
+                                <field name="subscription_fee" force_save="1"/>
+                                <field name="discount_percentage_fee" widget="percentage" force_save="1"/>
+                                <field name="expected_amount" force_save="1"/>
+                            </group>
+                        </group>
+                        
+                        <group string="Payment Information">
+                            <group>
+                                <field name="paid_amount"/>
+                                <field name="remaining_amount"/>
+                            </group>
+                            <group>
+                                <field name="payment_voucher_number"/>
+                                <field name="subscription_month"/>
+                            </group>
+                        </group>
+                        
+                        <group string="Additional Information">
+                            <group colspan="2">
+                                <field name="notes" placeholder="Add any notes about this subscription..."/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Monthly Subscription Tree View -->
+        <record id="view_monthly_subscription_tree" model="ir.ui.view">
+            <field name="name">monthly.subscription.tree</field>
+            <field name="model">monthly.subscription</field>
+            <field name="arch" type="xml">
+                <list string="Monthly Subscriptions" default_order="subscription_month desc">
+                    <field name="name"/>
+                    <field name="payment_voucher_number"/>
+                    <field name="student_id"/>
+                    <field name="month_name"/>
+                    <field name="office_id" optional="hide"/>
+                    <field name="class_id" optional="hide"/>
+                    <field name="teacher_id" optional="hide"/>
+                    <field name="subscription_fee" optional="hide"/>
+                    <field name="discount_percentage_fee" optional="hide"/>
+                    <field name="expected_amount" optional="hide"/>
+                    <field name="paid_amount" sum="Paid Amount"/>
+                    <field name="remaining_amount" sum="Remaining Amount" 
+                           decoration-danger="remaining_amount > 0"
+                           decoration-warning="remaining_amount &lt; 0"
+                           decoration-success="remaining_amount == 0"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Monthly Subscription Search View -->
+        <record id="view_monthly_subscription_search" model="ir.ui.view">
+            <field name="name">monthly.subscription.search</field>
+            <field name="model">monthly.subscription</field>
+            <field name="arch" type="xml">
+                <search string="Monthly Subscriptions">
+                    <field name="name"/>
+                    <field name="student_id"/>
+                    <field name="office_id"/>
+                    <field name="class_id"/>
+                    <field name="teacher_id"/>
+                    <field name="payment_voucher_number"/>
+                    <field name="subscription_month"/>
+                    
+                    <!-- Filters -->
+                    <filter string="Current Month" name="current_month" 
+                            domain="[('subscription_month', '&gt;=', (context_today()).strftime('%Y-%m-01')),
+                                    ('subscription_month', '&lt;', (context_today() + relativedelta(months=1)).strftime('%Y-%m-01'))]"/>
+                    <filter string="Last Month" name="last_month" 
+                            domain="[('subscription_month', '&gt;=', (context_today() - relativedelta(months=1)).strftime('%Y-%m-01')),
+                                    ('subscription_month', '&lt;', context_today().strftime('%Y-%m-01'))]"/>
+                    <filter string="This Year" name="this_year" 
+                            domain="[('subscription_month', '&gt;=', context_today().strftime('%Y-01-01')),
+                                    ('subscription_month', '&lt;', (context_today() + relativedelta(years=1)).strftime('%Y-01-01'))]"/>
+                    <separator/>
+                    <filter string="Paid in Full" name="paid_full" domain="[('remaining_amount', '=', 0)]"/>
+                    <filter string="Partial Payment" name="partial_payment" domain="[('remaining_amount', '>', 0)]"/>
+                    <filter string="Overpayment" name="overpayment" domain="[('remaining_amount', '&lt;', 0)]"/>
+                    <separator/>
+                    <filter string="With Discount" name="with_discount" domain="[('discount_percentage_fee', '&gt;', 0)]"/>
+                    <filter string="No Discount" name="no_discount" domain="[('discount_percentage_fee', '=', 0)]"/>
+                    
+                    <!-- Group By -->
+                    <group expand="0" string="Group By">
+                        <filter string="Student" name="group_student" context="{'group_by': 'student_id'}"/>
+                        <filter string="Office" name="group_office" context="{'group_by': 'office_id'}"/>
+                        <filter string="Class" name="group_class" context="{'group_by': 'class_id'}"/>
+                        <filter string="Teacher" name="group_teacher" context="{'group_by': 'teacher_id'}"/>
+                        <filter string="Month" name="group_month" context="{'group_by': 'subscription_month'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- Action for Monthly Subscriptions -->
+        <record id="action_monthly_subscriptions" model="ir.actions.act_window">
+            <field name="name">Monthly Subscriptions</field>
+            <field name="res_model">monthly.subscription</field>
+            <field name="view_mode">list,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new monthly subscription
+                </p>
+                <p>
+                    Manage student subscriptions for Quran office classes.
+                    Track payments, discounts, and remaining amounts.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

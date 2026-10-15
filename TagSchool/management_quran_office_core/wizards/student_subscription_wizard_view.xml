@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Student Subscription Wizard Form View -->
+    <record id="student_subscription_wizard_form_view" model="ir.ui.view">
+        <field name="name">student.subscription.wizard.form</field>
+        <field name="model">student.subscription.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Manage Student Subscription">
+                <group>
+                    <field name="mode"/>
+                </group>
+                
+                <group string="Subscription Information" invisible="mode == 'clear'">
+                    <group>
+                        <field name="update_subscription_fee"/>
+                    </group>
+                    <group invisible="mode == 'clear' or not update_subscription_fee">
+                        <field name="subscription_fee" widget="monetary"/>
+                    </group>
+                </group>
+                
+                <group string="Discount Information" invisible="mode == 'clear'">
+                    <group>
+                        <field name="update_discount"/>
+                    </group>
+                    <group  invisible="not update_discount">
+                        <field name="discount_percentage_fee" widget="percentage"/>
+                        <field name="reason_discount_fee" invisible="discount_percentage_fee == 0"
+                               required="discount_percentage_fee > 0 and mode != 'clear'"/>
+                    </group>
+                </group>
+                
+                <group string="Clear Selected Fields" invisible="mode == 'update'">
+                    <p>This will clear the selected subscription fields for selected students.</p>
+                </group>
+                
+                <footer>
+                    <button name="action_apply_subscription" type="object" string="Apply Changes" 
+                            class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Student Subscription Wizard Action -->
+    <record id="student_subscription_wizard_action" model="ir.actions.act_window">
+        <field name="name">Manage Student Subscription</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">student.subscription.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

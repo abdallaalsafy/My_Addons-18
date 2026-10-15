@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Parent Menu - Main Menu for Memorization Module -->
+        <menuitem id="menu_memorization_management_root"
+                  name="Memorization"
+                  parent="management_quran_office_core.menu_quran_office_core_root"
+                  sequence="60"/>
+        
+        <!-- Student Memorizations Menu -->
+        <menuitem id="menu_student_memorizations"
+                  name="Monthly Memorizations"
+                  parent="menu_memorization_management_root"
+                  action="action_student_memorizations"
+                  sequence="10"/>
+        
+    </data>
+</odoo>

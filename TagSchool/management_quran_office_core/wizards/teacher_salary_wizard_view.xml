@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Teacher Salary Wizard Form View -->
+    <record id="teacher_salary_wizard_form_view" model="ir.ui.view">
+        <field name="name">teacher.salary.wizard.form</field>
+        <field name="model">teacher.salary.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Manage Teacher Salary">
+                <group>
+                    <field name="mode"/>
+                </group>
+                
+                <group string="Salary Information" invisible="mode == 'clear'">
+                    <group>
+                        <field name="update_teacher_salary"/>
+                    </group>
+                    <group invisible="mode == 'clear' or not update_teacher_salary">
+                        <field name="teacher_salary" widget="monetary"/>
+                    </group>
+                </group>
+                
+                <group string="Clear Selected Fields" invisible="mode == 'update'">
+                    <p>This will clear the teacher salary for selected teachers.</p>
+                </group>
+                
+                <footer>
+                    <button name="action_apply_salary" type="object" string="Apply Changes" 
+                            class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Teacher Salary Wizard Action -->
+    <record id="teacher_salary_wizard_action" model="ir.actions.act_window">
+        <field name="name">Manage Teacher Salary</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">teacher.salary.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

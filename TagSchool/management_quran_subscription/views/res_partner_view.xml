@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Add smart button to existing student form view -->
+        <record id="res_partner_form_view_quran_office_subscription" model="ir.ui.view">
+            <field name="name">quran.partner.form.subscription.smart.button</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="management_quran_office_core.res_partner_form_view_quran_office"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="action_view_subscriptions" type="object" icon="fa-money"
+                        class="oe_stat_button" invisible="not is_student or subscription_count == 0">
+                        <field name="subscription_count" widget="statinfo" string="Subscriptions"/>
+                    </button>
+                </xpath>
+                <xpath expr="//header" position="inside">
+                    <button name="action_create_subscription" type="object"
+                            string="Batch Subscription" class="btn-info"
+                            invisible="not is_student"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Add smart button to existing student list view -->
+        <record id="res_partner_tree_view_quran_office_subscription" model="ir.ui.view">
+            <field name="name">quran.partner.tree.subscription.header.button</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="management_quran_office_core.res_partner_tree_view_quran_office"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <button name="management_quran_subscription.batch_subscription_wizard_action" type="action" string="Batch Subscription"
+                            class="btn-info" invisible="not context.get('default_is_student')"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

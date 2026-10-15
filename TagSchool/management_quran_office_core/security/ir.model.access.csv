@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_area_user,quran_office.area.user,model_quran_office_area,base.group_user,1,1,1,1
+access_office_user,quran_office.office.user,model_quran_office_office,base.group_user,1,1,1,1
+access_class_user,quran_office.class.user,model_quran_office_class,base.group_user,1,1,1,1
+access_partner_qualification_wizard_user,partner.qualification.wizard.user,model_partner_qualification_wizard,base.group_user,1,1,1,1
+access_partner_parent_wizard_user,partner.parent.wizard.user,model_partner_parent_wizard,base.group_user,1,1,1,1
+access_student_academic_wizard_user,student.academic.wizard.user,model_student_academic_wizard,base.group_user,1,1,1,1
+access_partner_area_tags_wizard_user,partner.area.tags.wizard.user,model_partner_area_tags_wizard,base.group_user,1,1,1,1
+access_student_subscription_wizard_user,student.subscription.wizard.user,model_student_subscription_wizard,base.group_user,1,1,1,1
+access_teacher_salary_wizard_user,teacher.salary.wizard.user,model_teacher_salary_wizard,base.group_user,1,1,1,1
+access_student_filter_wizard_user,student.filter.wizard.user,model_student_filter_wizard,base.group_user,1,1,1,1
+

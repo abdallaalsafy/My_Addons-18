@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Parent Menu - Main Menu for Subscription Module -->
+        <menuitem id="menu_subscription_management_root"
+                  name="Subscription"
+                  parent="management_quran_office_core.menu_quran_office_core_root"
+                  sequence="50"/>
+        
+        <!-- Monthly Subscriptions Menu -->
+        <menuitem id="menu_monthly_subscriptions"
+                  name="Monthly Subscriptions"
+                  parent="menu_subscription_management_root"
+                  action="action_monthly_subscriptions"
+                  sequence="10"/>
+        
+    </data>
+</odoo>

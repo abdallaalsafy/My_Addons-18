@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_surah_user,quran_office.surah.user,model_quran_office_surah,base.group_user,1,1,1,1
+access_ayat_user,quran_office.ayat.user,model_quran_office_ayat,base.group_user,1,1,1,1
+access_ayat_desc_user,quran_office.ayat_desc.user,model_quran_office_ayat_desc,base.group_user,1,1,1,1

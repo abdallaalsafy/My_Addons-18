@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_monthly_subscription_manager,monthly.subscription.manager,model_monthly_subscription,base.group_user,1,1,1,1
+access_batch_subscription_wizard_manager,batch.subscription.wizard.manager,model_batch_subscription_wizard,base.group_user,1,1,1,1

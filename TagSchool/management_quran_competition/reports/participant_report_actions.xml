@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Participant List Report Action -->
+        <record id="report_participant_list" model="ir.actions.report">
+            <field name="name">Participants List</field>
+            <field name="model">quran.competition.participant</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">management_quran_competition.report_participant_list_template</field>
+            <field name="report_file">management_quran_competition.report_participant_list_template</field>
+            <field name="print_report_name">'Participants Report'</field>
+            <field name="binding_model_id" ref="model_quran_competition_participant"/>
+            <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="paper_report_formats.landscape_A4_list_paperformat"/>
+        </record>
+
+    </data>
+</odoo>

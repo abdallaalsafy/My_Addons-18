@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Student Memorization Form View -->
+        <record id="view_student_memorization_form" model="ir.ui.view">
+            <field name="name">student.memorization.form</field>
+            <field name="model">student.memorization</field>
+            <field name="arch" type="xml">
+                <form string="Student Memorization">
+                    <sheet>
+                        <div class="oe_title d-flex align-items-center gap-2">
+                            <h2>
+                                <field name="name" readonly="1"/>
+                            </h2>
+                            <h3>
+                                <field name="month_name"/>
+                            </h3>
+                        </div>
+                        
+                        <group>
+                            <group string="Student Information">
+                                <field name="student_id" options="{'no_quick_create': True}" context="{
+                                    'form_view_ref': 'management_quran_office_core.res_partner_form_view_quran_office',
+                                    'default_is_student': True}"/>
+                                <field name="memorization_month"/>
+                             </group>
+                            <group string="Date Information">
+                                <field name="office_id" />
+                                <field name="class_id" context="{'default_office_id': office_id}"/>
+                                <field name="teacher_id" options="{'no_quick_create': True}"
+                                       context="{'default_is_teacher': True,
+                                       'form_view_ref': 'management_quran_office_core.res_partner_form_view_quran_office'}"/>
+
+                            </group>
+                        </group>
+                        
+                        <group string="Quran Memorization Details">
+                            <group>
+                                <field name="memorization_method"/>
+                                <field name="memorization_surah" options="{'no_create':True,'no_open':True}"/>
+                                <field name="memorization_ayah"/>
+                                <field name="memorization_amount_juz"/>
+                            </group>
+                            <group>
+                                <field name="review_amount" placeholder="Enter review details..."/>
+                                <field name="student_grade"/>
+                                <field name="test_grade"/>
+                            </group>
+                        </group>
+                        <group string="Additional Information">
+                            <group colspan="2">
+                                <field name="notes" placeholder="Add any notes about this memorization session..."/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Student Memorization Tree View -->
+        <record id="view_student_memorization_tree" model="ir.ui.view">
+            <field name="name">student.memorization.tree</field>
+            <field name="model">student.memorization</field>
+            <field name="arch" type="xml">
+                <list string="Student Memorizations" default_order="memorization_month desc">
+                    <field name="name"/>
+                    <field name="student_id"/>
+                    <field name="month_name"/>
+                    <field name="office_id" optional="hide"/>
+                    <field name="class_id" optional="hide"/>
+                    <field name="teacher_id" optional="hide"/>
+                    <field name="memorization_method" optional="show"/>
+                    <field name="memorization_surah"/>
+                    <field name="memorization_ayah"/>
+                    <field name="student_grade" optional="show"/>
+                    <field name="test_grade" optional="show"/>
+                    <field name="memorization_amount_juz" optional="show"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Student Memorization Search View -->
+        <record id="view_student_memorization_search" model="ir.ui.view">
+            <field name="name">student.memorization.search</field>
+            <field name="model">student.memorization</field>
+            <field name="arch" type="xml">
+                <search string="Student Memorizations">
+                    <field name="name"/>
+                    <field name="student_id"/>
+                    <field name="office_id"/>
+                    <field name="class_id"/>
+                    <field name="teacher_id"/>
+                    <field name="memorization_surah"/>
+                    <field name="memorization_month"/>
+                    
+                    <!-- Filters -->
+                    <filter string="Current Month" name="current_month" 
+                            domain="[('memorization_month', '&gt;=', (context_today()).strftime('%Y-%m-01')),
+                                    ('memorization_month', '&lt;', (context_today() + relativedelta(months=1)).strftime('%Y-%m-01'))]"/>
+                    <filter string="Last Month" name="last_month" 
+                            domain="[('memorization_month', '&gt;=', (context_today() - relativedelta(months=1)).strftime('%Y-%m-01')),
+                                    ('memorization_month', '&lt;', context_today().strftime('%Y-%m-01'))]"/>
+                    <filter string="This Year" name="this_year" 
+                            domain="[('memorization_month', '&gt;=', context_today().strftime('%Y-01-01')),
+                                    ('memorization_month', '&lt;', (context_today() + relativedelta(years=1)).strftime('%Y-01-01'))]"/>
+                    <separator/>
+                    <filter string="Memorization From Baqarah" name="new_memorization" domain="[('memorization_method', '=', 'from_baqarah')]"/>
+                    <filter string="Memorization From Nas" name="review_only" domain="[('memorization_method', '=', 'from_nas')]"/>
+                    <filter string="Mixing Memorization" name="both_methods" domain="[('memorization_method', '=', 'mixed')]"/>
+                    
+                    <!-- Group By -->
+                    <group expand="0" string="Group By">
+                        <filter string="Student" name="group_student" context="{'group_by': 'student_id'}"/>
+                        <filter string="Office" name="group_office" context="{'group_by': 'office_id'}"/>
+                        <filter string="Class" name="group_class" context="{'group_by': 'class_id'}"/>
+                        <filter string="Teacher" name="group_teacher" context="{'group_by': 'teacher_id'}"/>
+                        <filter string="Date" name="group_month" context="{'group_by': 'memorization_month'}"/>
+                        <filter string="Month" name="group_month" context="{'group_by': 'month_name'}"/>
+                        <filter string="Method" name="group_method" context="{'group_by': 'memorization_method'}"/>
+                        <filter string="Surah" name="group_surah" context="{'group_by': 'memorization_surah'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- Action for Student Memorizations -->
+        <record id="action_student_memorizations" model="ir.actions.act_window">
+            <field name="name">Monthly Memorizations</field>
+            <field name="res_model">student.memorization</field>
+            <field name="view_mode">list,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new student memorization record
+                </p>
+                <p>
+                    Manage student Quran memorization records.
+                    Track monthly memorization progress, surahs, ayahs, and review details.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Quran Competition Menu -->
+        <menuitem id="menu_quran_competition_root"
+            name="Competitions"
+            parent="management_quran_office_core.menu_quran_office_core_root"
+            sequence="65"/>
+
+        <!-- Competitions Submenu -->
+        <menuitem id="menu_quran_competition"
+            name="Competitions"
+            parent="menu_quran_competition_root"
+            action="action_quran_competition_view_id"
+            sequence="10"/>
+
+        <!-- Requirements Submenu -->
+        <menuitem id="menu_competition_requirements"
+            name="Requirements"
+            parent="menu_quran_competition_root"
+            action="action_competition_requirements_view_id"
+            sequence="30"/>
+
+        <!-- Participants Submenu -->
+        <menuitem id="menu_quran_competition_participants"
+            name="Participants"
+            parent="menu_quran_competition_root"
+            action="action_quran_competition_participant_view_id"
+            sequence="20"/>
+
+        <!-- Advanced Filter Submenu -->
+        <menuitem id="menu_participant_filter"
+            name="Participant Filter"
+            parent="management_quran_office_core.menu_reports_quran_office_core"
+            action="action_participant_filter_wizard"
+            sequence="20"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Batch Memorization Wizard Form View -->
+        <record id="view_batch_memorization_wizard_form" model="ir.ui.view">
+            <field name="name">batch.memorization.wizard.form</field>
+            <field name="model">batch.memorization.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Batch Memorization Registration">
+                    <sheet>
+                        <group>
+                            <group string="Memorization Information">
+                                <field name="memorization_month"/>
+                                <field name="month_name" readonly="1"/>
+                            </group>
+                            <group string="Class Information">
+                                <field name="office_id"/>
+                                <field name="class_id"/>
+                                <field name="teacher_id" options="{'no_quick_create': True}"
+                                       context="{'default_is_teacher': True, 'form_view_ref': 'management_quran_office_core.res_partner_form_view_quran_office'}"/>
+                            </group>
+                        </group>
+                        
+                        <group string="Quran Memorization Details">
+                            <group>
+                                <field name="memorization_method"/>
+                                <field name="memorization_surah" options="{'no_create':True,'no_open':True}"/>
+                                <field name="memorization_ayah"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="action_register_memorization" type="object" 
+                                string="Register Memorization" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- Batch Memorization Wizard Action -->
+        <record id="action_batch_memorization_wizard" model="ir.actions.act_window">
+            <field name="name">Batch Memorization Registration</field>
+            <field name="res_model">batch.memorization.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="context">{}</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Competition Requirements Form View -->
+<!--        <record id="competition_requirements_form_view" model="ir.ui.view">-->
+<!--            <field name="name">competition.requirements.form</field>-->
+<!--            <field name="model">competition.requirements</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form string="Competition Requirements">-->
+<!--                    <sheet>-->
+<!--&lt;!&ndash;                        <div class="oe_button_box" name="button_box">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <button name="action_view_competitions" type="object" class="oe_stat_button" icon="fa-trophy">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <field name="competition_count" widget="statinfo" string="Competitions"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </button>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--                        <div class="oe_title mb24">-->
+<!--                            <h1>-->
+<!--                                <field name="name" placeholder="Requirement Template Name"/>-->
+<!--                            </h1>-->
+<!--                            <h2>-->
+<!--                                <field name="code" readonly="1"/>-->
+<!--                            </h2>-->
+<!--                        </div>-->
+<!--                        <group>-->
+<!--                            <group string="Basic Information">-->
+<!--                                <field name="active"/>-->
+<!--                            </group>-->
+<!--                        </group>-->
+<!--                        <group string="Description">-->
+<!--                            <field name="description" nolabel="1" placeholder="Add detailed description about the requirements..."/>-->
+<!--                        </group>-->
+<!--                        -->
+<!--                        <notebook colspan="4">-->
+<!--                            &lt;!&ndash; Age Requirements &ndash;&gt;-->
+<!--                            <page name="age_requirements" string="Age Requirements">-->
+<!--                                <group>-->
+<!--                                    <group>-->
+<!--                                        <field name="age_required"/>-->
+<!--                                        <field name="min_age" attrs="{'invisible': [('age_required', '=', False)], 'required': [('age_required', '=', True)]}"/>-->
+<!--                                        <field name="max_age" attrs="{'invisible': [('age_required', '=', False)]}"/>-->
+<!--                                    </group>-->
+<!--                                </group>-->
+<!--                            </page>-->
+<!--                            -->
+<!--                            &lt;!&ndash; Memorization Requirements &ndash;&gt;-->
+<!--                            <page name="memorization_requirements" string="Memorization Requirements">-->
+<!--                                <group>-->
+<!--                                    <group>-->
+<!--                                        <field name="memorization_required"/>-->
+<!--                                        <field name="min_memorization_amount" attrs="{'invisible': [('memorization_required', '=', False)], 'required': [('memorization_required', '=', True)]}"/>-->
+<!--                                        <field name="max_memorization_amount" attrs="{'invisible': [('memorization_required', '=', False)]}"/>-->
+<!--                                    </group>-->
+<!--                                    <group>-->
+<!--                                        <field name="specific_surahs_required" attrs="{'invisible': [('memorization_required', '=', False)]}"/>-->
+<!--                                        <field name="required_surah_ids" widget="many2many_tags" -->
+<!--                                            attrs="{'invisible': ['|', ('memorization_required', '=', False), ('specific_surahs_required', '=', False)]}"-->
+<!--                                            options="{'no_create': True}"/>-->
+<!--                                    </group>-->
+<!--                                </group>-->
+<!--                            </page>-->
+<!--                            -->
+<!--                            &lt;!&ndash; Previous Competition Requirements &ndash;&gt;-->
+<!--                            <page name="previous_competition_requirements" string="Previous Competition Requirements">-->
+<!--                                <group>-->
+<!--                                    <group>-->
+<!--                                        <field name="previous_competition_required"/>-->
+<!--                                        <field name="previous_competition_level" attrs="{'invisible': [('previous_competition_required', '=', False)]}"/>-->
+<!--                                        <field name="previous_competition_result" attrs="{'invisible': [('previous_competition_required', '=', False)]}"/>-->
+<!--                                    </group>-->
+<!--                                </group>-->
+<!--                            </page>-->
+<!--                            -->
+<!--                            &lt;!&ndash; Academic Requirements &ndash;&gt;-->
+<!--                            <page name="academic_requirements" string="Academic Requirements">-->
+<!--                                <group>-->
+<!--                                    <group>-->
+<!--                                        <field name="grade_required"/>-->
+<!--                                        <field name="min_grade" attrs="{'invisible': [('grade_required', '=', False)], 'required': [('grade_required', '=', True)]}"/>-->
+<!--                                    </group>-->
+<!--                                </group>-->
+<!--                            </page>-->
+<!--                            -->
+<!--                            &lt;!&ndash; Assignment Requirements &ndash;&gt;-->
+<!--                            <page name="assignment_requirements" string="Assignment Requirements">-->
+<!--                                <group>-->
+<!--                                    <group>-->
+<!--                                        <field name="office_required"/>-->
+<!--                                        <field name="class_required"/>-->
+<!--                                        <field name="teacher_required"/>-->
+<!--                                    </group>-->
+<!--                                </group>-->
+<!--                            </page>-->
+<!--                            -->
+<!--                            &lt;!&ndash; Custom Requirements &ndash;&gt;-->
+<!--                            <page name="custom_requirements" string="Custom Requirements">-->
+<!--                                <group>-->
+<!--                                    <group>-->
+<!--                                        <field name="custom_requirements" nolabel="1" placeholder="Add any additional custom requirements..."/>-->
+<!--                                    </group>-->
+<!--                                </group>-->
+<!--                            </page>-->
+<!--                        </notebook>-->
+<!--                    </sheet>-->
+<!--                </form>-->
+<!--            </field>-->
+<!--        </record>-->
+
+<!--        &lt;!&ndash; Competition Requirements Tree View &ndash;&gt;-->
+<!--        <record id="competition_requirements_tree_view" model="ir.ui.view">-->
+<!--            <field name="name">competition.requirements.tree</field>-->
+<!--            <field name="model">competition.requirements</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <list string="Competition Requirements">-->
+<!--                    <field name="code" optional="show"/>-->
+<!--                    <field name="name"/>-->
+<!--                    <field name="competition_count" optional="show"/>-->
+<!--                    <field name="active" widget="boolean_toggle"/>-->
+<!--                </list>-->
+<!--            </field>-->
+<!--        </record>-->
+
+<!--        &lt;!&ndash; Competition Requirements Search View &ndash;&gt;-->
+<!--        <record id="competition_requirements_search_view" model="ir.ui.view">-->
+<!--            <field name="name">competition.requirements.search</field>-->
+<!--            <field name="model">competition.requirements</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <search string="Competition Requirements">-->
+<!--                    <field name="name" filter_domain="['|', ('name', 'ilike', self), ('code', 'ilike', self)]"/>-->
+<!--                    <field name="code"/>-->
+<!--                    <field name="description"/>-->
+<!--                    -->
+<!--                    <filter name="active" string="Active" domain="[('active', '=', True)]"/>-->
+<!--                    <filter name="inactive" string="Inactive" domain="[('active', '=', False)]"/>-->
+<!--                    -->
+<!--                    <separator/>-->
+<!--                    <filter name="age_required" string="Age Required" domain="[('age_required', '=', True)]"/>-->
+<!--                    <filter name="memorization_required" string="Memorization Required" domain="[('memorization_required', '=', True)]"/>-->
+<!--                    <filter name="previous_competition_required" string="Previous Competition Required" domain="[('previous_competition_required', '=', True)]"/>-->
+<!--                    <filter name="grade_required" string="Grade Required" domain="[('grade_required', '=', True)]"/>-->
+<!--                    -->
+<!--                    <separator/>-->
+<!--                    <filter name="with_competitions" string="Used in Competitions" domain="[('competition_count', '>', 0)]"/>-->
+<!--                    <filter name="without_competitions" string="Not Used" domain="[('competition_count', '=', 0)]"/>-->
+<!--                    -->
+<!--                    <group expand="0" string="Group By">-->
+<!--                        <filter name="group_active" string="Active Status" context="{'group_by': 'active'}"/>-->
+<!--                    </group>-->
+<!--                </search>-->
+<!--            </field>-->
+<!--        </record>-->
+
+        <!-- Competition Requirements Action -->
+        <record id="action_competition_requirements_view_id" model="ir.actions.act_window">
+            <field name="name">Competition Requirements</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">competition.requirements</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create your first requirement template
+                </p>
+                <p>
+                    Requirement templates help you define eligibility criteria for competitions.
+                    Each competition can use a template to automatically validate participants.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

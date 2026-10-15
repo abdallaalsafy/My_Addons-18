@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Partner Area Tags Wizard Form View -->
+    <record id="partner_area_tags_wizard_form_view" model="ir.ui.view">
+        <field name="name">partner.area.tags.wizard.form</field>
+        <field name="model">partner.area.tags.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Manage Area and Tags">
+                <group>
+                    <field name="mode"/>
+                </group>
+                
+                <group string="Update Area" invisible="mode == 'clear'">
+                    <group>
+                        <field name="update_area"/>
+                    </group>
+                    <group invisible="mode == 'clear' or not update_area">
+                        <field name="area_id"/>
+                    </group>
+                </group>
+                <group string="Update Tags" invisible="mode == 'clear'">
+                    <group>
+                        <field name="update_tags"/>
+                    </group>
+                    <group invisible="mode == 'clear' or not update_tags">
+                        <field name="tags_mode"/>
+                        <field name="tag_ids" widget="many2many_tags"/>
+                    </group>
+                </group>
+                
+                <group string="Clear Selected Fields" invisible="mode == 'update'">
+                    <p>This will clear the selected fields (area and/or tags) for selected partners.</p>
+                </group>
+                
+                <footer>
+                    <button name="action_apply_area_tags" type="object" string="Apply Changes" 
+                            class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Partner Area Tags Wizard Action -->
+    <record id="partner_area_tags_wizard_action" model="ir.actions.act_window">
+        <field name="name">Manage Area and Tags</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">partner.area.tags.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="base.model_res_partner"/>
+        <field name="binding_view_types">list</field>
+    </record>
+</odoo>

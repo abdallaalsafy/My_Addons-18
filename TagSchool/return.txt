@@ -1,0 +1,66 @@
+asl_list_view_pdf_print
+
+{'doc_ids': [], 
+'doc_model': 'quran_office.office', 
+'headers': ['Office Code', 'Office Name', 'Number of Students', 'Number of Classes', 'Active'], 
+'rows': [{'type': 'data', 'values': ['ofice code', 'office 1', '0', '0', 'True']}], 
+'title': 'Quran Memorization Office', 
+'grand_totals': ['Total', '', '0', '0', '']}
+
+{'doc_ids': [],
+'doc_model': 'quran_office.office',
+'headers': ['Office Code', 'Office Name', 'Number of Students', 'Number of Classes', 'Active'],
+'rows': [{'type': 'header', 'values': ['Yes (1)', '', '0', '0', ''], 'depth': 0}, {'type': 'data', 'values': ['ofice code', 'office 1', '0', '0', 'True']}],
+'title': 'Quran Memorization Office',
+'grand_totals': ['Total', '', '0', '0', '']}
+-------------------------------------------------
+
+asl data:
+{'context': {'lang': 'en_US', 'tz': 'Africa/Cairo', 'uid': 2, 'allowed_company_ids': [1]},
+'model': 'quran_office.office',
+'domain': [],
+'fields': [{'name': 'code', 'label': 'Office Code', 'aggregate': None}, {'name': 'name', 'label': 'Office Name', 'aggregate': None}, {'name': 'student_count', 'label': 'Number of Students', 'aggregate': None}, {'name': 'class_count', 'label': 'Number of Classes', 'aggregate': None}, {'name': 'active', 'label': 'Active', 'aggregate': None}],
+'groupby': ['active'],
+'title': 'quran_office.office',
+'res_ids': [],
+'report_type': 'pdf',
+'debug': False}
+
+##################################################################
+
+pdf_export_option
+
+{'headers': ['Active', 'Number of Classes', 'Number of Students', 'Office Code', 'Office Name'], 
+'rows': [{'type': 'data', 'values': [True, 0, 0, 'ofice code', 'office 1']}], 
+'orientation': 'portrait', 
+'font_size': '15px;'}
+
+{'headers': ['Active', 'Number of Classes', 'Number of Students', 'Office Code', 'Office Name'],
+'rows': [{'type': 'header', 'label': 'True (1)', 'depth': 1}, {'type': 'data', 'values': [True, 0, 0, 'ofice code', 'office 1']}],
+'orientation': 'portrait',
+'font_size': '15px;'}
+-------------------------------------------------
+option data:
+{"import_compat":false,
+"context":{"lang":"en_US","tz":"Africa/Cairo","uid":2,"allowed_company_ids":[1]},
+"domain":[],
+"fields":[{"name":"active","label":"Active","type":"boolean"},{"name":"class_count","label":"Number of Classes","type":"integer"},{"name":"student_count","label":"Number of Students","type":"integer"},{"name":"code","label":"Office Code","type":"char"},{"name":"name","label":"Office Name","type":"char"}],
+"groupby":[],
+"ids":[1],
+"model":"quran_office.office"}
+
+D:\Odoo_Work_Space\Pycharm_Work_Space\Odoo-18\server\odoo\addons\web\static\src\views\view_dialogs\export_data_dialog.js
+D:\Odoo_Work_Space\Pycharm_Work_Space\Odoo-18\server\odoo\addons\web\controllers\export.py
+D:\Odoo_Work_Space\Pycharm_Work_Space\Odoo-18\server\odoo\addons\web\static\src\views\list\list_controller.js
+D:\Odoo_Work_Space\Pycharm_Work_Space\Odoo-18\server\odoo\addons\web\static\src\views\view_dialogs\export_data_dialog.xml
+
+customization data:
+{'context': {'lang': 'en_US', 'tz': 'Africa/Cairo', 'uid': 2, 'allowed_company_ids': [1], 'params': {'action': 101, 'actionStack': [{'action': 101}]}, 'default_is_student': True},
+'model': 'res.partner',
+'domain': ['&', '&', ['is_student', '=', True], ['is_company', '=', False], ['partner_share', '=', True]],
+'fields': [{'name': 'name', 'label': 'Name', 'type': 'char', 'aggregate': 'none'}],
+'groupby': [],
+'res_ids': [7],
+'report_info': {'reportTitle': 'vvvvvvvvvvvvvvvvvvvv', 'reportOrientation': 'landscape'},
+'report_type': 'pdf',
+'debug': False}

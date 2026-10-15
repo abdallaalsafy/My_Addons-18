@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Partner Parent Wizard Form View -->
+    <record id="partner_parent_wizard_form_view" model="ir.ui.view">
+        <field name="name">partner.parent.wizard.form</field>
+        <field name="model">partner.parent.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Manage Parent Information">
+                <group>
+                    <field name="mode"/>
+                </group>
+                
+                <group string="Select Fields to Update" invisible="mode == 'clear'">
+                    <group>
+                        <field name="update_father"/>
+                        <field name="update_mother"/>
+                        <field name="update_orphan_status"/>
+                    </group>
+                    <group invisible="mode == 'clear' or not (update_father or update_mother or update_orphan_status)">
+                        <field name="father_name" invisible="not update_father"/>
+                        <field name="mother_name" invisible="not update_mother"/>
+                        <field name="is_fatherless" widget="boolean_toggle" invisible="not update_orphan_status"/>
+                    </group>
+                </group>
+                
+                <group string="Clear All Parent Information" invisible="mode == 'update'">
+                    <p>This will clear all parent information (father, mother, and orphan status) for selected partners.</p>
+                </group>
+                
+                <footer>
+                    <button name="action_apply_parent_info" type="object" string="Apply Changes" 
+                            class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Partner Parent Wizard Action -->
+    <record id="partner_parent_wizard_action" model="ir.actions.act_window">
+        <field name="name">Manage Parent Information</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">partner.parent.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="base.model_res_partner"/>
+        <field name="binding_view_types">list</field>
+    </record>
+</odoo>

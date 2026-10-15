@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_detailed_partner_document">
+        <t t-call="web.external_layout">
+            <main>
+                <div class="page">
+                    <!-- Report Title -->
+                    <h3 style="text-align: center; margin-bottom: 10px;">
+                        Detailed Partner Information Report
+                    </h3>
+
+                    <!-- Report generation date -->
+                    <p style="text-align: left; margin-bottom: 10px;">
+                        <strong>Report Date:</strong>
+                        <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M:%S')"/>
+                    </p>
+
+                    <!-- Individual Partner Pages -->
+                    <t t-foreach="docs" t-as="partner">
+                        <!-- Partner Card -->
+                        <div style="border: 2px solid #dee2e6; border-radius: 10px; padding: 20px; margin-bottom: 10px; background-color: #ffffff;">
+                            <!-- Header with Photo and Basic Info -->
+                            <div style="display: flex; margin-bottom: 10px; align-items: flex-start;">
+                                <!-- Photo Section -->
+                                <div class="container">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div style="flex: 1;">
+                                            <h2 style="margin-top: 10px; font-weight: bold; color: #495057;">
+                                                <span t-esc="partner.complete_name or '-'"/>
+                                            </h2>
+                                            <div style="text-align: left;">
+                                                <h5 t-if="partner.id_number"><span style="text-decoration: underline;">ID Number</span>: <span t-esc="partner.id_number"/></h5>
+                                                <h5 t-if="partner.birth_date"><span style="text-decoration: underline;">Birth Date</span>: <span t-if="partner.birth_date" t-esc="partner.birth_date.strftime('%d-%m-%Y')"/></h5>
+                                                <h5 t-if="partner.age_years"><span style="text-decoration: underline;">Age</span>: <span t-esc="partner.age_years or 0"/>years</h5>
+                                            </div>
+                                        </div>
+                                        <div style="flex: 0 0 150px; margin-right: 20px; text-align: center;">
+                                            <div style="width: 150px; height: 150px; border: 2px solid #dee2e6; border-radius: 10px; display: flex; align-items: center; justify-content: center; background-color: #f8f9fa; overflow: hidden;">
+                                                <t t-if="partner.personal_photo">
+                                                    <img t-if="partner.personal_photo"
+                                                         t-att-src="'data:image/png;base64,%s' % (partner.personal_photo.decode('utf-8'))"
+                                                         style="max-width: 100%; max-height: 100%; object-fit: cover;"/>
+                                                </t>
+                                                <t t-else="">
+                                                    <div style="font-size: 60px; color: #6c757d;">👤</div>
+                                                </t>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Basic Information Section -->
+                                <div style="flex: 1;">
+                                    <h4 style="color: #007bff; margin-bottom: 15px; border-bottom: 2px solid #007bff; padding-bottom: 5px;">
+                                        Personal Information
+                                    </h4>
+                                    <table style="width: 100%; border-collapse: collapse;color: black;">
+                                        <tr>
+                                            <td style="padding: 8px;width: 15%; background-color: #e0e0e0;">Qualification:</td>
+                                            <td style="padding: 8px;"><span t-esc="partner.qualification or '-'"/></td>
+                                            <td style="padding: 8px;width: 15%;background-color: #e0e0e0;">Gender:</td>
+                                            <td style="padding: 8px;">
+                                                <t t-if="partner.gender == 'm'">Male</t>
+                                                <t t-elif="partner.gender == 'f'">Female</t>
+                                                <t t-else="">-</t>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- Student Contact Information -->
+                            <div style="margin-bottom: 10px;">
+                                <h4 style="color: #28a745; margin-bottom: 15px; border-bottom: 2px solid #28a745; padding-bottom: 5px;">
+                                    Student Contact Information
+                                </h4>
+                                <table style="width: 100%; border-collapse: collapse;color: black;">
+                                    <tr>
+                                        <td style="padding: 8px; width: 15%;background-color: #e0e0e0;">Phone:</td>
+                                        <td style="padding: 8px;">
+                                            <span t-esc="' -/- '.join(filter(None, [partner.phone, partner.mobile])) or '-'"/>
+                                        </td>
+                                        <td style="padding: 8px;width: 15%; background-color: #e0e0e0;">Area/District:</td>
+                                        <td style="padding: 8px;"><span t-esc="partner.area_id.name or '-'"/></td>
+                                    </tr>
+                                    <tr style="background-color: #f8f9fa;">
+                                        <td style="padding: 8px;background-color: #e0e0e0;">Email:</td>
+                                        <td style="padding: 8px;"><span t-esc="partner.email or '-'"/></td>
+                                        <td style="padding: 8px;background-color: #e0e0e0;">Address:</td>
+                                        <td style="padding: 8px;"><span t-esc="partner.street or '-'"/></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!-- Family Contact Information -->
+                            <div style="margin-bottom: 10px;">
+                                <h4 style="color: #e83e8c; margin-bottom: 15px; border-bottom: 2px solid #e83e8c; padding-bottom: 5px;">
+                                    Family Contact Information
+                                </h4>
+                                <table style="width: 100%; border-collapse: collapse;">
+                                    <tr>
+                                        <td style="padding: 8px; width: 15%;background-color: #e0e0e0;">Father Phone:</td>
+                                        <td style="padding: 8px;">
+                                            <span t-esc="' -/- '.join(filter(None, [partner.father_name.phone, partner.father_name.mobile])) or '-'"/>
+                                        </td>
+
+                                        <td style="padding: 8px; width: 15%;background-color: #e0e0e0;">Father Job:</td>
+                                        <td style="padding: 8px;"><span t-esc="partner.father_name.function or '-'"/></td>
+                                    </tr>
+                                    <tr style="background-color: #f8f9fa;">
+                                        <td style="padding: 8px; width: 15%;background-color: #e0e0e0;">Mother Phone:</td>
+                                        <td style="padding: 8px;">
+                                            <span t-esc="' -/- '.join(filter(None, [partner.mother_name.phone, partner.mother_name.mobile])) or '-'"/>
+                                        </td>
+
+                                        <td style="padding: 8px; width: 15%;background-color: #e0e0e0;">Mother Job:</td>
+                                        <td style="padding: 8px;"><span t-esc="partner.mother_name.function or '-'"/></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!-- Financial Information -->
+                            <div style="margin-bottom: 10px;" t-if="partner.is_student or partner.is_teacher">
+                                <h4 style="color: #fd7e14; margin-bottom: 15px; border-bottom: 2px solid #fd7e14; padding-bottom: 5px;">
+                                    Financial Information
+                                </h4>
+                                <table style="width: 100%; border-collapse: collapse;color: black;">
+                                    <tr>
+                                        <td t-if="partner.is_student" style="padding: 8px; width: 20%;background-color: #e0e0e0;">Subscription Fee:</td>
+                                        <td t-if="partner.is_student" style="padding: 8px;">
+                                            <span t-esc="partner.subscription_fee or 0"/>
+                                        </td>
+                                        <td t-if="partner.is_teacher" style="padding: 8px; width: 20%;background-color: #e0e0e0;">Teacher Salary:</td>
+                                        <td t-if="partner.is_teacher" style="padding: 8px;">
+                                            <span t-esc="partner.teacher_salary or 0"/>
+                                        </td>
+                                        <td t-if="partner.is_student and partner.discount_percentage_fee != 0" style="padding: 8px; width: 20%;background-color: #e0e0e0;">Discount Percentage:</td>
+                                        <td t-if="partner.is_student and partner.discount_percentage_fee != 0" style="padding: 8px;">
+                                            <span t-esc="partner.discount_percentage_fee"/>%
+                                        </td>
+                                    </tr>
+                                    <tr  t-if="partner.is_student and partner.discount_percentage_fee != 0 and partner.reason_discount_fee">
+                                        <td style="padding: 8px; background-color: #e0e0e0;">Discount Reason:</td>
+                                        <td colspan="5" style="padding: 8px;">
+                                            <span t-esc="partner.reason_discount_fee"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!-- Academic Information (for Students) -->
+                            <t t-if="partner.is_student">
+                                <div style="margin-bottom: 10px;">
+                                    <h4 style="color: #17a2b8; margin-bottom: 15px; border-bottom: 2px solid #17a2b8; padding-bottom: 5px;">
+                                        Academic Information
+                                    </h4>
+                                    <table style="width: 100%; border-collapse: collapse;color: black;">
+                                        <tr>
+                                            <td style="padding: 8px; width: 20%;background-color: #e0e0e0;">Office:</td>
+                                            <td style="padding: 8px;"><span t-esc="partner.office_id.name or '-'"/></td>
+
+                                            <td style="padding: 8px; width: 20%;background-color: #e0e0e0;">Memorization Method:</td>
+                                            <td style="padding: 8px;">
+                                                <t t-if="partner.memorization_method == 'from_baqarah'">From Al-Baqarah</t>
+                                                <t t-elif="partner.memorization_method == 'from_nas'">From An-Nas</t>
+                                                <t t-elif="partner.memorization_method == 'mixed'">Mixed Memorization</t>
+                                                <t t-else="">-</t>
+                                            </td>
+                                        </tr>
+                                        <tr style="background-color: #f8f9fa;">
+                                            <td style="padding: 8px;background-color: #e0e0e0;">Class:</td>
+                                            <td style="padding: 8px;"><span t-esc="partner.class_id.name or '-'"/></td>
+
+                                            <td style="padding: 8px;background-color: #e0e0e0;">Memorization Start:</td>
+                                            <td style="padding: 8px;"><span t-esc="partner.memorization_surah.name or ''"/> </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 8px;background-color: #e0e0e0;">Teacher:</td>
+                                            <td style="padding: 8px;"><span t-esc="partner.teacher_id.name or '-'"/></td>
+
+                                            <td style="padding: 8px;background-color: #e0e0e0;">To Aya:</td>
+                                            <td style="padding: 8px;"> <span t-esc="partner.memorization_ayah or 0"/></td>
+                                        </tr>
+                                    </table>
+    <!--                                <td style="padding: 8px; width: 15%;">Quran Memorizer:</td>-->
+    <!--                                <td style="padding: 8px;">-->
+    <!--                                            <span t-if="partner.is_quran_memorizer" style="color: #28a745; font-weight: bold;">Yes - Complete Quran Memorizer</span>-->
+    <!--                                            <span t-else="" style="color: #6c757d;">No</span>-->
+    <!--                                        </td>-->
+                                </div>
+                            </t>
+                            <!-- Documents Status -->
+                            <div style="margin-bottom: 10px;">
+                                <h4 style="color: #6610f2; margin-bottom: 15px; border-bottom: 2px solid #6610f2; padding-bottom: 5px;">
+                                    Partners And Documents Status
+                                </h4>
+                                <div class="container">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div t-if="partner.is_student" style="padding: 8px 15px; border-radius: 20px; background-color: #d4edda;">
+                                            <span>STUDENT</span>
+                                        </div>
+                                        <div t-if="partner.is_teacher" style="padding: 8px 15px; border-radius: 20px; background-color: #d4edda;">
+                                            <span>TEACHER</span>
+                                        </div>
+                                        <div t-if="partner.parent_role" style="padding: 8px 15px; border-radius: 20px;  background-color: #d4edda;">
+                                            <span>PARENT</span>
+                                        </div>
+                                        <div t-att-style="'padding: 8px 15px; border-radius: 20px; font-weight: bold; ' + ('background-color: #d6eaf8; color: #155724;' if partner.birth_certificate else 'background-color: #f8d7da; color: #721c24;')">
+                                              <t t-if="partner.birth_certificate">(OK) Birth Certificate</t>
+                                            <t t-else="">(X) Birth Certificate</t>
+                                        </div>
+                                        <div t-att-style="'padding: 8px 15px; border-radius: 20px; font-weight: bold; ' + ('background-color:#d6eaf8; color: #155724;' if (partner.id_card_front or partner.id_card_back) else 'background-color: #f8d7da; color: #721c24;')">
+                                             <t t-if="partner.id_card_front">(OK)ID Card</t>
+                                            <t t-else="">(X) ID Card</t>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Page break for each partner except last -->
+                        <div t-if="not partner_last" style="page-break-after: always;"/>
+                    </t>
+                </div>
+            </main>
+        </t>
+    </template>
+</odoo>

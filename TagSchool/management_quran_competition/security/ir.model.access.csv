@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_quran_competition_manager,quran.competition.manager,model_quran_competition,base.group_user,1,1,1,1
+access_quran_competition_participant_manager,quran.competition.participant.manager,model_quran_competition_participant,base.group_user,1,1,1,1
+access_competition_requirements_manager,competition.requirements.manager,model_competition_requirements,base.group_user,1,1,1,1
+access_participant_filter_wizard,participant.filter.wizard,model_participant_filter_wizard,base.group_user,1,1,1,1
+access_participant_sort_print_wizard,participant.sort.print.wizard,model_participant_sort_print_wizard,base.group_user,1,1,1,1

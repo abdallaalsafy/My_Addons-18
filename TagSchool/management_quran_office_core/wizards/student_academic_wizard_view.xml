@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Student Academic Wizard Form View -->
+    <record id="student_academic_wizard_form_view" model="ir.ui.view">
+        <field name="name">student.academic.wizard.form</field>
+        <field name="model">student.academic.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Manage Student Academic Information">
+                <group>
+                    <field name="mode"/>
+                </group>
+                
+                <group string="Select Fields to Update" invisible="mode == 'clear'">
+                    <group>
+                        <field name="update_office_class"/>
+                        <field name="update_teacher"/>
+                    </group>
+                     <group invisible="mode == 'clear' or not (update_office_class or update_teacher)">
+                        <field name="office_id" invisible="not update_office_class"/>
+                        <field name="class_id" invisible="not update_office_class"/>
+                        <field name="teacher_id" invisible="not update_teacher"/>
+                    </group>
+                </group>
+                <group string="Clear All Academic Information" invisible="mode == 'update'">
+                    <p>This will clear all academic information (office, class, and teacher) for selected students.</p>
+                </group>
+                
+                <footer>
+                    <button name="action_apply_academic_info" type="object" string="Apply Changes" 
+                            class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Student Academic Wizard Action -->
+    <record id="student_academic_wizard_action" model="ir.actions.act_window">
+        <field name="name">Manage Student Academic Information</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">student.academic.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

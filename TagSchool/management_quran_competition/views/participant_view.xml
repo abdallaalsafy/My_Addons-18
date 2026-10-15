@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Quran Competition Participant Form View -->
+        <record id="quran_competition_participant_form_view" model="ir.ui.view">
+            <field name="name">quran.competition.participant.form</field>
+            <field name="model">quran.competition.participant</field>
+            <field name="arch" type="xml">
+                <form string="Competition Participant">
+                    <header>
+                        <button name="action_confirm_participant" type="object" string="Confirm Registration"
+                            class="btn-success" invisible="state != 'registered'"/>
+                        <button name="action_mark_inappropriate" type="object" string="Mark Inappropriate"
+                            class="btn-danger" invisible="state != 'registered'"/>
+                        <button name="action_disqualify_participant" type="object" string="Disqualify"
+                            class="btn-warning" invisible="state !='inappropriate'"/>
+                        <button name="action_withdraw_participant" type="object" string="Withdraw"
+                            class="btn-secondary" invisible="state not in ['registered', 'confirmed']"/>
+                        <button name="action_reset_to_registered" type="object" string="Reset to Registered"
+                            class="btn-secondary" invisible="state == 'registered'"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title mb24">
+                            <h1>
+                                <field name="name" readonly="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group string="Registration Details">
+                                <field name="competition_id"/>
+                                <field name="registration_date"/>
+                                <field name="registration_number"/>
+                            </group>
+                            <group string="Participant Information">
+                                <field name="participant_id" options="{'no_quick_create': True}" context="{
+                                    'form_view_ref': 'management_quran_office_core.res_partner_form_view_quran_office',
+                                    'default_is_student': True}"/>
+                                <field name="office_id"/>
+                                <field name="class_id" context="{'default_office_id': office_id}"/>
+                                <field name="teacher_id" options="{'no_quick_create': True}"
+                                       context="{'default_is_teacher': True,
+                                       'form_view_ref': 'management_quran_office_core.res_partner_form_view_quran_office'}"/>
+                                <field name="age_from_id" force_save="1"/>
+                                <field name="age_years" invisible="1"/>
+                                <field name="age_months" invisible="1"/>
+                                <field name="age_days" invisible="1"/>
+                            </group>
+                        </group>
+                        <group string="Quran Memorization Details">
+                            <group>
+                                <field name="amount_juz"/>
+                                <field name="surah" invisible="memorization_method == 'mixed'" options="{'no_open':True}"/>
+                                <field name="ayah" invisible="memorization_method == 'mixed'"/>
+                            </group>
+                            <group>
+                                <field name="memorization_method"/>
+                                <field name="surahes_memorized" placeholder="Enter Surahes Memorized details..."
+                                        invisible="memorization_method != 'mixed'" required="memorization_method == 'mixed'"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group string="Evaluation Results">
+                                <field name="score"/>
+                                <field name="competition_test_grade"/>
+                            </group>
+                            <group string="Prize Information">
+                                <field name="monetary_prize"/>
+                                <field name="in_kind_prize" placeholder="Describe in-kind prize..."/>
+                            </group>
+                        </group>
+                        <group >
+                            <field name="notes" placeholder="Add evaluation notes..."/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Quran Competition Participant Tree View -->
+        <record id="quran_competition_participant_tree_view" model="ir.ui.view">
+            <field name="name">quran.competition.participant.tree</field>
+            <field name="model">quran.competition.participant</field>
+            <field name="arch" type="xml">
+                <list string="Competition Participants">
+                    <field name="name"/>
+                    <field name="registration_number"/>
+                    <field name="participant_id"/>
+                    <field name="age_from_id"/>
+                    <field name="amount_juz"/>
+                    <field name="office_id" optional="show"/>
+                    <field name="class_id" optional="show"/>
+                    <field name="teacher_id" optional="show"/>
+                    <field name="score" optional="show"/>
+                    <field name="monetary_prize" optional="show"/>
+                    <field name="state" widget="badge" decoration-success="state=='participated'" 
+                        decoration-warning="state=='confirmed'" decoration-info="state=='registered'" 
+                        decoration-danger="state=='disqualified'"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Quran Competition Participant Search View -->
+        <record id="quran_competition_participant_search_view" model="ir.ui.view">
+            <field name="name">quran.competition.participant.search</field>
+            <field name="model">quran.competition.participant</field>
+            <field name="arch" type="xml">
+                <search string="Competition Participants">
+                    <field name="participant_id" filter_domain="['|',('participant_id.name', 'ilike', self),('participant_id.ref', 'ilike', self)]"/>
+                    <field name="name"/>
+                    <field name="registration_number"/>
+                    <field name="competition_id"/>
+                    <field name="office_id"/>
+                    <field name="class_id"/>
+                    <field name="teacher_id"/>
+
+                    <filter name="registered" string="Registered" domain="[('state', '=', 'registered')]"/>
+                    <filter name="confirmed" string="Confirmed" domain="[('state', '=', 'confirmed')]"/>
+                    <filter name="inappropriate" string="Participated" domain="[('state', '=', 'participated')]"/>
+                    <filter name="disqualified" string="Disqualified" domain="[('state', '=', 'disqualified')]"/>
+                    <filter name="withdrawn" string="Withdrawn" domain="[('state', '=', 'withdrawn')]"/>
+                    <separator/>
+
+                    <group expand="0" string="Group By">
+                        <filter name="group_student" string="Student" context="{'group_by': 'participant_id'}"/>
+                        <filter name="group_competition" string="Competition" context="{'group_by': 'competition_id'}"/>
+                        <filter name="group_office" string="Office" context="{'group_by': 'office_id'}"/>
+                        <filter name="group_class" string="Class" context="{'group_by': 'class_id'}"/>
+                        <filter name="group_teacher" string="Teacher" context="{'group_by': 'teacher_id'}"/>
+                        <filter name="group_state" string="Status" context="{'group_by': 'state'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- Quran Competition Action -->
+        <record id="action_quran_competition_participant_view_id" model="ir.actions.act_window">
+            <field name="name">Quran Competitions Participant</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">quran.competition.participant</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create your first Quran competition
+                </p>
+                <p>
+                    Quran competitions help motivate students to improve their memorization
+                    and recitation skills while fostering healthy competition.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

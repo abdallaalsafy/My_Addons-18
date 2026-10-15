@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_participant_sort_print_wizard_form" model="ir.ui.view">
+        <field name="name">participant.sort.print.wizard.form</field>
+        <field name="model">participant.sort.print.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Sort and Print Participants">
+                <sheet>
+                    <group string="Global Sort Type">
+                        <group>
+                            <field name="global_sort_type" widget="radio"/>
+                        </group>
+                    </group>
+                    
+                    <group string="Main Sorting Options">
+                        <group>
+                            <field name="sort_by_score"/>
+                            <field name="sort_by_amount_juz"/>
+                        </group>
+                    </group>
+                    
+                    <group string="Additional Sorting Options">
+                        <group>
+                            <field name="sort_by_name"/>
+                            <field name="sort_by_registration_number"/>
+                        </group>
+                        <group>
+                            <field name="sort_by_office"/>
+                            <field name="sort_by_class"/>
+                        </group>
+                    </group>
+                    
+                    <group string="Instructions">
+                        <div class="alert alert-info">
+                            <strong>Note:</strong> This wizard will sort and print the participants you have selected in the list view.
+                            <br/><br/>
+                            <strong>Global Sort Type:</strong> Apply the same sort direction (Ascending/Descending) to all selected options
+                            <br/>
+                            <strong>Main Sorting:</strong> Score and Amount Juz
+                            <br/>
+                            <strong>Additional Sorting:</strong> Name, Registration, Office, or Class
+                        </div>
+                    </group>
+                </sheet>
+                
+                <footer>
+                    <button name="action_print_selected_participants" type="object"
+                            string="Print Selected Participants" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_participant_sort_print_wizard" model="ir.actions.act_window">
+        <field name="name">Sort and Print Participants</field>
+        <field name="res_model">participant.sort.print.wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="model_quran_competition_participant"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

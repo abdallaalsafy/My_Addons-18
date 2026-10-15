@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_list_view">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <style>
+                        .table-pdf {
+                            width: 100%;
+                            border-collapse: collapse;
+                            table-layout: fixed;
+                            direction: ltr !important; /* Force LTR for data consistency */
+                        }
+                        .table-pdf th {
+                            background-color: #f8f9fa;
+                            border: 1px solid #333;
+                            padding: 5px;
+                            text-align: left;
+                            font-weight: bold;
+                            font-size: <t t-esc="14"/>px;
+                            word-wrap: break-word;
+                        }
+                        .table-pdf td {
+                            border: 1px solid #dee2e6;
+                            padding: 5px;
+                            vertical-align: top;
+                            font-size: <t t-esc="13"/>px;
+                            word-wrap: break-word;
+                            text-align: left;
+                        }
+                        .table-pdf tr:nth-child(even) {
+                            background-color: #f9f9f9;
+                        }
+                        .table-pdf tr.o_group_header {
+                            background-color: #eee !important;
+                            font-weight: bold;
+                        }
+                        .table-pdf tr.o_group_header td {
+                            border-top: 1px solid #333;
+                            border-bottom: 1px solid #333;
+                            white-space: pre; /* Keep indentation spaces */
+                        }
+                        .table-pdf tr.o_grand_total {
+                            background-color: #dee2e6 !important;
+                            font-weight: bold;
+                        }
+                        .table-pdf tr.o_grand_total td {
+                            border-top: 2px solid #333;
+                            border-bottom: 2px solid #333;
+                        }
+                    </style>
+                    <h2 class="text-center mb-4" t-esc="title or 'List View Export'"/>
+                    <div class="mt-2">
+                        <table class="table-pdf">
+                            <thead>
+                                <tr>
+                                    <th style="width: 40px;" t-if="enable_indexing">#</th>
+                                    <t t-foreach="headers" t-as="header">
+                                        <th t-esc="header"/>
+                                    </t>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-set="indx" t-value="0"/>
+                                <t t-foreach="rows" t-as="row">
+                                    <t t-set="indx" t-value="indx+1" t-if="row['type'] != 'header'"/>
+                                    <tr t-att-class="'o_group_header' if row['type'] == 'header' else ''">
+                                        <td t-if="enable_indexing" t-esc="indx if row['type'] != 'header' else ''"/>
+                                        <t t-foreach="row['values']" t-as="cell">
+                                            <td t-esc="cell"/>
+                                        </t>
+                                    </tr>
+                                </t>
+                                <t t-if="grand_totals">
+                                    <tr class="o_grand_total">
+                                        <td t-if="enable_indexing"/>
+                                        <t t-foreach="grand_totals" t-as="total">
+                                            <td t-esc="total"/>
+                                        </t>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

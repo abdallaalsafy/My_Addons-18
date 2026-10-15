@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Inherit Student Form to Add Competition Participant Button -->
+        <record id="view_res_partner_form_competition_inherit" model="ir.ui.view">
+            <field name="name">res.partner.form.competition.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="management_quran_office_core.res_partner_form_view_quran_office"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="action_view_participants" type="object" icon="fa-trophy"
+                        class="oe_stat_button" invisible="not is_student or participant_count == 0">
+                        <field name="participant_count" widget="statinfo" string="Competitions"/>
+                    </button>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

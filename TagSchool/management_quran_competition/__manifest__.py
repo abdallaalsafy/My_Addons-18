@@ -1,0 +1,28 @@
+# -*- coding: utf-8 -*-
+{
+    'name': 'Quran Competition Management',
+    'version': '18.0.1.0.0',
+    'category': 'Education/Management',
+    'sequence': 3,
+    'summary': 'Manage Quran Competitions and Participants',
+    'complexity': "easy",
+    'author': 'Abdallaalsafy',
+    'website': 'https://www.facebook.com/abdalla6alsafy',
+    'depends': ['base', 'management_quran_office_core'],
+    'data': [
+        'security/ir.model.access.csv',
+        'data/ir_sequence_data.xml',
+        'wizards/participant_filter_wizard_view.xml',
+        'wizards/participant_sort_print_wizard_view.xml',
+        'views/competition_view.xml',
+        'views/requirements_view.xml',
+        'views/participant_view.xml',
+        'views/res_partner_view.xml',
+        'reports/participant_report.xml',
+        'reports/participant_report_actions.xml',
+        'views/menu.xml',
+    ],
+    'installable': True,
+    'auto_install': False,
+    'application': False,
+}

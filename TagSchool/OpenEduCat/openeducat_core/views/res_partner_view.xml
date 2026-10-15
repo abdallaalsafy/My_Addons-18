@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="res_partner_form_view_inherit" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='company_type']" position="after">
+                <field name="is_parent"/>
+                <field name="is_student"/>
+                <field name="is_faculty"/>
+            </xpath>
+            <xpath expr="//field[@name='company_type']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+             <xpath expr="//field[@id='individual']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+             <xpath expr="//field[@id='company']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@id='individual']" position="after">
+                <field name="edited_name" readonly="1"/>
+            </xpath>
+            <xpath expr="//sheet/div[2]/h1[1]" position="after">
+                 <h2>
+                    <field name="ref" readonly="1"/>
+                </h2>
+            </xpath>
+
+            <xpath expr="//sheet/group[1]" position="attributes">
+                <attribute name="string">Personal Details</attribute>
+            </xpath>
+            <xpath expr="//sheet/group/group[1]" position="after">
+                 <group>
+                    <field name="id_number"/>
+                    <field name="gender" readonly="id_number" force_save="1"/>
+                    <field name="birth_date" readonly="id_number" force_save="1"/>
+                    <field name="age_years" readonly="id_number or birth_date"/>
+                    <field name="age_from_id" readonly="1" force_save="1"/>
+                    <label for="street" string="Address"/>
+                    <div name="o_address_format">
+                        <field name="street" placeholder="Street..."/>
+                        <field name="street2" placeholder="Street2"/>
+                    </div>
+                    <field name="emergency_contact" context="{'show_address': 1}"
+                           options="{&quot;always_reload&quot;: True}"/>
+                </group>
+            </xpath>
+            <xpath expr="//sheet/group/group[1]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//sheet/group" position="before">
+                <group col="3" string="Name Details">
+                    <group>
+                        <field name="first_name"  placeholder="First Name"/>
+                    </group>
+                    <group>
+                        <field name="middle_name"  placeholder="Middle Name"/>
+                    </group>
+                    <group>
+                        <field name="last_name"  placeholder="Last Name"/>
+                    </group>
+                </group>
+            </xpath>
+
+            <xpath expr="//sheet/div[2]/div[1]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//page[@name='sales_purchases']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//page[@name='contact_addresses']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="res_partner_tree_view_inherit" model="ir.ui.view">
+        <field name="name">res.partner.tree.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='complete_name']" position="before">
+                <field name="name"/>
+                <field name="ref" optional="hide"/>
+                <field name="id_number"/>
+                <field name="age_from_id"/>
+                <field name="gender" optional="hide"/>
+                <field name="birth_date" optional="hide"/>
+                <field name="emergency_contact"/>
+            </xpath>
+            <xpath expr="//field[@name='display_name']" position="attributes">
+                <attribute name="column_invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='city']" position="attributes">
+                <attribute name="column_invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='country_id']" position="attributes">
+                <attribute name="column_invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='vat']" position="attributes">
+                <attribute name="column_invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='company_id']" position="attributes">
+                <attribute name="column_invisible">True</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="res_partner_search_view_inherit" model="ir.ui.view">
+        <field name="name">res.partner.search.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='user_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+             <xpath expr="//field[@name='name']" position="attributes">
+                <attribute name="filter_domain">['|',('name', 'ilike', self),('edited_name', 'ilike', self)]</attribute>
+            </xpath>
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="id_number"/>
+                <field name="age_from_id"/>
+                <field name="gender"/>
+                <field name="birth_date"/>
+                <field name="emergency_contact"/>
+            </xpath>
+            <xpath expr="//search/group[1]" position="before">
+                <group expand="0" string="Group By...">
+                    <filter name="age_group" string="Age"
+                            domain="[]" context="{'group_by':'age_years'}"/>
+                    <filter name="gender" string="Gender"
+                            domain="[]" context="{'group_by':'gender'}"/>
+                    <filter name="birth_date" string="Birth Date"
+                            domain="[]" context="{'group_by':'birth_date'}"/>
+                </group>
+            </xpath>
+            <xpath expr="//search/group[2]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_student_view" model="ir.actions.act_window">
+        <field name="name">Students</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,list,form</field>
+        <field name="search_view_id" ref="res_partner_search_view_inherit"/>
+        <field name="domain">[]</field>
+        <field name="context">{default_is_student: True}</field>
+    </record>
+
+    <record id="action_faculty_view" model="ir.actions.act_window">
+            <field name="name">Faculties</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">kanban,list,form</field>
+            <field name="search_view_id" ref="res_partner_search_view_inherit"/>
+            <field name="domain">[]</field>
+            <field name="context">{default_is_faculty: True}</field>
+        </record>
+
+</odoo>

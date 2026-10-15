@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Odoo-18",
+            "type": "python",
+            "request": "launch",
+            "program": "D:/Odoo_Work_Space/Pycharm_Work_Space/Odoo-18/server/odoo-bin",
+            "args": [
+                "--config=D:/Odoo_Work_Space/Pycharm_Work_Space/Odoo-18.conf",
+            ],
+            "console": "integratedTerminal",
+        }
+    ]
+}
