@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_attendance_register_search" model="ir.ui.view">
+            <field name="name">attendance.register.search</field>
+            <field name="model">attendance.register</field>
+            <field name="arch" type="xml">
+                <search string="Attendance Register Search">
+                    <field name="student_id"/>
+                    <field name="date"/>
+                    <field name="year"/>
+                    <field name="month"/>
+
+                    <filter string="This Month" name="this_month"
+                            domain="[('date', '>=', context_today().strftime('%Y-%m-01')), ('date', '&lt;=', context_today().strftime('%Y-%m-%d'))]"/>
+                    <separator/>
+
+                    <group expand="1" string="Group By">
+                        <filter name="group_by_student" string="Student" context="{'group_by': 'student_id'}"/>
+                        <filter name="group_by_year" string="Year" context="{'group_by': 'year'}"/>
+                        <filter name="group_by_month" string="Month" context="{'group_by': 'month'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="view_attendance_register_list" model="ir.ui.view">
+            <field name="name">attendance.register.list</field>
+            <field name="model">attendance.register</field>
+            <field name="arch" type="xml">
+                <list string="Attendance Register" editable="top" multi_edit="1" create="1">
+                    <field name="student_id"/>
+                    <field name="date" column_invisible="1"/>
+                    <field name="year"/>
+                    <field name="month"/>
+                    <field name="day_1" widget="boolean_toggle"/>
+                    <field name="day_2" widget="boolean_toggle"/>
+                    <field name="day_3" widget="boolean_toggle"/>
+                    <field name="day_4" widget="boolean_toggle"/>
+                    <field name="day_5" widget="boolean_toggle"/>
+                    <field name="day_6" widget="boolean_toggle"/>
+                    <field name="day_7" widget="boolean_toggle"/>
+                    <field name="day_8" widget="boolean_toggle"/>
+                    <field name="day_9" widget="boolean_toggle"/>
+                    <field name="day_10" widget="boolean_toggle"/>
+                    <field name="day_11" widget="boolean_toggle"/>
+                    <field name="day_12" widget="boolean_toggle"/>
+                    <field name="day_13" widget="boolean_toggle"/>
+                    <field name="day_14" widget="boolean_toggle"/>
+                    <field name="day_15" widget="boolean_toggle"/>
+                    <field name="day_16" widget="boolean_toggle"/>
+                    <field name="day_17" widget="boolean_toggle"/>
+                    <field name="day_18" widget="boolean_toggle"/>
+                    <field name="day_19" widget="boolean_toggle"/>
+                    <field name="day_20" widget="boolean_toggle"/>
+                    <field name="day_21" widget="boolean_toggle"/>
+                    <field name="day_22" widget="boolean_toggle"/>
+                    <field name="day_23" widget="boolean_toggle"/>
+                    <field name="day_24" widget="boolean_toggle"/>
+                    <field name="day_25" widget="boolean_toggle"/>
+                    <field name="day_26" widget="boolean_toggle"/>
+                    <field name="day_27" widget="boolean_toggle"/>
+                    <field name="day_28" widget="boolean_toggle"/>
+                    <field name="day_29" widget="boolean_toggle" readonly="month == 2 and not is_leap_year" force_save="1"/>
+                    <field name="day_30" widget="boolean_toggle" readonly="month == 2" force_save="1"/>
+                    <field name="day_31" widget="boolean_toggle" readonly="month not in [1, 3, 5, 7, 8, 10, 12]" force_save="1"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="action_attendance_register_current_month" model="ir.actions.act_window">
+            <field name="name">Attendance Register Current Month</field>
+            <field name="res_model">attendance.register</field>
+            <field name="view_mode">list</field>
+            <field name="search_view_id" ref="view_attendance_register_search"/>
+            <field name="domain">[('date', '&gt;=', context_today().strftime('%Y-%m-01')),('date', '&lt;=', context_today().strftime('%Y-%m-31'))]</field>
+            <field name="context">{'default_date': context_today().strftime('%Y-%m-%d'), 'group_by': ['date']}</field>
+        </record>
+        <record id="action_attendance_register_previous_month" model="ir.actions.act_window">
+            <field name="name">Attendance Register Previous Month</field>
+            <field name="res_model">attendance.register</field>
+            <field name="view_mode">list</field>
+            <field name="search_view_id" ref="view_attendance_register_search"/>
+            <field name="domain">[('date', '&gt;=', (context_today() - datetime.timedelta(days=context_today().day)).strftime('%Y-%m-01')),('date', '&lt;', context_today().strftime('%Y-%m-01'))]</field>
+            <field name="context">{'default_date': (context_today() - relativedelta(months=1)).strftime('%Y-%m-%d'), 'group_by': ['date']}</field>
+        </record>
+    </data>
+</odoo>

@@ -22,7 +22,7 @@
     """,
     'author': 'Your Name',
     'website': 'https://www.facebook.com/abdalla6alsafy',
-    'category': 'Education/Management',
+    'category': 'Education',
     'depends': ['management_quran_office_core', 'mail'],
     'data': [
         'security/ir.model.access.csv',

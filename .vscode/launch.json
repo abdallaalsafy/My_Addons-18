@@ -9,6 +9,7 @@
             "program": "D:/Odoo_Work_Space/Pycharm_Work_Space/Odoo-18/server/odoo-bin",
             "args": [
                 "--config=D:/Odoo_Work_Space/Pycharm_Work_Space/Odoo-18.conf",
+                "-u","management_quran_subscription,management_quran_competition,management_quran_office_core,management_quran_memorization,management_quran_attendance",
             ],
             "console": "integratedTerminal",
         }

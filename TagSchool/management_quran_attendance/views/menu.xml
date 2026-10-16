@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Quran Attendance Menu -->
+        <menuitem id="menu_quran_attendance_root"
+            name="Attendance"
+            parent="management_quran_office_core.menu_quran_office_core_root"
+            sequence="65"/>
+
+        <!-- Attendance Submenu -->
+        <menuitem id="menu_quran_attendance_current_month"
+            name="Current Month"
+            parent="menu_quran_attendance_root"
+            action="action_attendance_register_current_month"
+            sequence="10"/>
+        <menuitem id="menu_quran_attendance_previous_month"
+            name="Previous Month"
+            parent="menu_quran_attendance_root"
+            action="action_attendance_register_previous_month"
+            sequence="20"/>
+
+        <menuitem id="menu_quran_attendance_date_range"
+            name="By Date Range"
+            parent="menu_quran_attendance_root"
+            action="action_attendance_register_date_filter"
+            sequence="30"/>
+
+        <menuitem id="menu_quran_attendance_holiday_policy"
+            name="Holiday Policies"
+            parent="menu_quran_attendance_root"
+            action="action_attendance_holiday_policy"
+            sequence="30"/>
+
+        <menuitem id="menu_quran_attendance_holidays"
+            name="Monthly Holidays"
+            parent="menu_quran_attendance_root"
+            action="action_attendance_month_holiday"
+            sequence="35"/>
+
+        <menuitem id="menu_quran_attendance_settings"
+            name="Settings"
+            parent="management_quran_office_core.menu_configuration_quran_office_core"
+            action="action_attendance_register_settings"
+            sequence="5"/>
+    </data>
+</odoo>

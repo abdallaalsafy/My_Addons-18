@@ -208,6 +208,7 @@
                     <field name="parent_role"/>
                     <field name="children_count"/>
                     <field name="student_status"/>
+                    <field name="is_quran_memorizer"/>
                     <templates>
                         <t t-name="card" class="flex-row">
                             <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger" invisible="active"/>
@@ -219,28 +220,50 @@
                                 <div class="o_kanban_details">
                                     <div class="o_kanban_record_top">
                                         <div class="o_kanban_record_subtitle">
-                                            <span t-if="record.age_years">
-                                                <field name="age_years"/> years
-                                            </span>
-                                            <span t-if="record.gender == 'm'">♂</span>
-                                            <span t-if="record.gender == 'f'">♀</span>
-                                            <span t-if="record.phone">📞 <field name="phone"/></span>
+                                            <t t-if="record.age_years">
+                                                <span><field name="age_years"/> years</span>
+                                            </t>
+                                            <t t-if="record.gender == 'm'">
+                                                <span>♂</span>
+                                            </t>
+                                            <t t-if="record.gender == 'f'">
+                                                <span>♀</span>
+                                            </t>
+                                            <t t-if="record.phone">
+                                                <span>📞 <field name="phone"/></span>
+                                            </t>
                                         </div>
                                     </div>
                                     <div class="o_kanban_record_bottom">
                                         <div class="oe_kanban_bottom_left">
-                                            <span t-if="record.is_student" class="badge badge-primary">Student</span>
-                                            <span t-if="record.is_teacher" class="badge badge-success">Teacher</span>
-                                            <span t-if="record.parent_role == 'father'" class="badge badge-info">Father</span>
-                                            <span t-if="record.parent_role == 'mother'" class="badge badge-warning">Mother</span>
-                                            <span t-if="record.student_status == 'present'" class="badge badge-success">Present</span>
-                                            <span t-if="record.student_status == 'absent'" class="badge badge-danger">Absent</span>
+                                            <t t-if="record.is_student.raw_value">
+                                                <span class="badge badge-primary">Student</span>
+                                            </t>
+                                            <t t-if="record.is_teacher.raw_value">
+                                                <span class="badge badge-success">Teacher</span>
+                                            </t>
+                                            <t  t-if="record.parent_role == 'father'">
+                                                <span class="badge badge-info">Father</span>
+                                            </t>
+                                            <t  t-if="record.parent_role == 'mother'">
+                                                <span class="badge badge-warning">Mother</span>
+                                            </t>
+                                            <t t-if="record.student_status == 'present'">
+                                                <span  class="badge badge-success">Present</span>
+                                            </t>
+                                            <t t-if="record.student_status == 'absent'">
+                                                <span  class="badge badge-danger">Absent</span>
+                                            </t>
                                         </div>
                                         <div class="oe_kanban_bottom_right">
-                                            <span t-if="record.children_count > 0" class="badge badge-secondary">
-                                                <field name="children_count"/> Children
-                                            </span>
-                                            <span t-if="record.is_quran_memorizer" class="badge badge-info">Quran</span>
+                                            <t t-if="record.children_count > 0">
+                                                <span  class="badge badge-secondary">
+                                                    <field name="children_count"/> Children
+                                                </span>
+                                            </t>
+                                            <t t-if="record.is_quran_memorizer.raw_value">
+                                                <span class="badge badge-info">Quran</span>
+                                            </t>
                                         </div>
                                     </div>
                                 </div>

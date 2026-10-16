@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_attendance_register_manager,attendance.register.manager,model_attendance_register,base.group_user,1,1,1,1
+access_attendance_register_date_wizard_manager,attendance.register.date.wizard.manager,model_attendance_register_date_wizard,base.group_user,1,1,1,1
+access_attendance_holiday_policy_manager,attendance.holiday.policy.manager,model_attendance_holiday_policy,base.group_user,1,1,1,1
+access_attendance_holiday_day_manager,attendance.holiday.day.manager,model_attendance_holiday_day,base.group_user,1,1,1,1
+

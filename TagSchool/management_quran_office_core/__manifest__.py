@@ -1,5 +1,5 @@
 {
-    'name': 'Management Quran Office Core',
+    'name': 'Quran Office Management Core',
     'version': '18.0.0.0',
     'license': 'LGPL-3',
     'category': 'Education',

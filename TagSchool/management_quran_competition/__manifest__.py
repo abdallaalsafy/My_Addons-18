@@ -2,7 +2,7 @@
 {
     'name': 'Quran Competition Management',
     'version': '18.0.1.0.0',
-    'category': 'Education/Management',
+    'category': 'Education',
     'sequence': 3,
     'summary': 'Manage Quran Competitions and Participants',
     'complexity': "easy",
