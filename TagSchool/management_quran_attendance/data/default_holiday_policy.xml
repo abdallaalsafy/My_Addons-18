@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="attendance_default_holiday_policy" model="attendance.holiday.policy">
+        <field name="name">Default Attendance Holiday Policy</field>
+        <field name="start_date">2025-01-01</field>
+        <field name="end_date">2100-12-31</field>
+        <field name="active">True</field>
+        <field name="is_saturday_off">False</field>
+        <field name="is_sunday_off">False</field>
+        <field name="is_monday_off">False</field>
+        <field name="is_tuesday_off">False</field>
+        <field name="is_wednesday_off">False</field>
+        <field name="is_thursday_off">False</field>
+        <field name="is_friday_off">True</field>
+    </record>
+</odoo>

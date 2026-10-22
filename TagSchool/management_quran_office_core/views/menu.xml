@@ -49,7 +49,11 @@
                   name="Configuration"
                   parent="menu_quran_office_core_root"
                   sequence="80"/>
-
+        <menuitem id="menu_quran_office_core_settings"
+                name="Settings"
+                parent="menu_configuration_quran_office_core"
+                action="action_management_quran_office_core_settings"
+                sequence="5"/>
         <menuitem id="menu_areas_quran_office_core"
                   name="Areas/Districts"
                   parent="menu_configuration_quran_office_core"

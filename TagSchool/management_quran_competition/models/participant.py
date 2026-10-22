@@ -39,7 +39,7 @@ class QuranCompetitionParticipant(models.Model):
     age_days = fields.Integer('Age (Days)')
 
     office_id = fields.Many2one(
-        'quran_office.office',
+        'quran.office.office',
         string='Office',
     )
 

@@ -4,7 +4,7 @@ from odoo.exceptions import ValidationError
 
 
 class QuranOffice(models.Model):
-    _name = 'quran_office.office'
+    _name = 'quran.office.office'
     _description = 'Quran Memorization Office'
     _order = 'name asc'
 

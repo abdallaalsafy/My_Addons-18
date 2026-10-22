@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="student_attendance_detail">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <h2 class="text-center mb-3">Student Attendance Detail Report</h2>
+                    <div class="mb-3 text-center"><h4>
+                        <strong>Period:</strong>
+                        <span t-esc="date_period['start_date']"/>
+                        <span> - </span>
+                        <span t-esc="date_period['end_date']"/></h4>
+                    </div>
+
+                    <t t-if="not periods">
+                        <p>No attendance data available for the selected students.</p>
+                    </t>
+
+                    <t t-foreach="periods" t-as="period">
+                        <div style="page-break-inside: avoid; page-break-after: always;">
+                            <h3 class="mt-4 mb-2">
+                                <strong>Month:</strong>
+                                <span t-esc="period['month_name']"/>
+                                <span t-esc="period['year']"/>
+                            </h3>
+
+                            <t t-foreach="period['groups'].values()" t-as="group">
+                                <h4 class="mt-3 mb-2">
+                                    <strong>Office:</strong>
+                                    <span t-esc="group['office'].name"/>
+                                </h4>
+
+                                <table class="table table-sm table-bordered mt-2">
+                                    <thead>
+                                        <tr>
+                                            <th>Student</th>
+                                            <th>Class</th>
+                                            <th>Teacher</th>
+                                            <th>Present</th>
+                                            <th>Absent</th>
+                                            <th>Late</th>
+                                            <th>Holiday</th>
+                                            <th>Excused</th>
+                                            <th>Sick</th>
+                                            <th>Study</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="group['students']" t-as="student">
+                                            <tr>
+                                                <td><span t-esc="student['name']"/></td>
+                                                <td><span t-esc="student['class']"/></td>
+                                                <td><span t-esc="student['teacher']"/></td>
+                                                <td><span t-esc="student['present']"/></td>
+                                                <td><span t-esc="student['absent']"/></td>
+                                                <td><span t-esc="student['late']"/></td>
+                                                <td><span t-esc="student['holiday']"/></td>
+                                                <td><span t-esc="student['excused']"/></td>
+                                                <td><span t-esc="student['sick']"/></td>
+                                                <td><span t-esc="student['study_days']"/></td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+
+                                <p class="mt-3 mb-2" style="font-size: 12px;">
+                                    <strong>Note:</strong> Status Codes:
+                                    P = Present, A = Absent, H = Holiday,
+                                    E = Excused, S = Sick, L = Late,
+                                    Un = Unrestricted
+                                </p>
+
+                                <h5 class="mt-4 mb-2">Detailed Attendance by Day</h5>
+                                <table class="table table-sm table-bordered mt-2">
+                                    <thead>
+                                        <tr>
+                                            <th>Student</th>
+                                            <t t-foreach="range(1, period['last_day'] + 1)" t-as="day_number">
+                                                <th><span t-esc="day_number"/></th>
+                                            </t>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="group['students']" t-as="student">
+                                            <tr>
+                                                <td><span t-esc="student['name']"/></td>
+                                                <t t-foreach="student['day_rows']" t-as="day">
+                                                    <td t-att-class="day['css_class'] if day['status'] else 'bg-light'" style="text-align: center; min-width: 36px;">
+                                                        <span t-esc="day['status'] or '—'"/>
+                                                    </td>
+                                                </t>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+                            </t>
+                        </div>
+                    </t>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <record id="action_report_student_attendance_detail" model="ir.actions.report">
+        <field name="name">Student Attendance Detail Report</field>
+        <field name="model">res.partner</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">management_quran_attendance.student_attendance_detail</field>
+        <field name="report_file">management_quran_attendance.student_attendance_detail</field>
+        <field name="print_report_name">'Student Attendance Detail Report'</field>
+        <field name="paperformat_id" ref="paper_report_formats.landscape_A4_list_paperformat"/>
+    </record>
+</odoo>

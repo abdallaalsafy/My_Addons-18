@@ -28,50 +28,147 @@
             <field name="name">attendance.register.list</field>
             <field name="model">attendance.register</field>
             <field name="arch" type="xml">
-                <list string="Attendance Register" editable="top" multi_edit="1" create="1">
+                <list string="Attendance Register" editable="top" multi_edit="1" create="1"  open_form_view="True">
                     <field name="student_id"/>
+                    <field name="holiday_policy_id" decoration-danger="not is_policy_valid"/>
                     <field name="date" column_invisible="1"/>
                     <field name="year"/>
                     <field name="month"/>
-                    <field name="day_1" widget="boolean_toggle"/>
-                    <field name="day_2" widget="boolean_toggle"/>
-                    <field name="day_3" widget="boolean_toggle"/>
-                    <field name="day_4" widget="boolean_toggle"/>
-                    <field name="day_5" widget="boolean_toggle"/>
-                    <field name="day_6" widget="boolean_toggle"/>
-                    <field name="day_7" widget="boolean_toggle"/>
-                    <field name="day_8" widget="boolean_toggle"/>
-                    <field name="day_9" widget="boolean_toggle"/>
-                    <field name="day_10" widget="boolean_toggle"/>
-                    <field name="day_11" widget="boolean_toggle"/>
-                    <field name="day_12" widget="boolean_toggle"/>
-                    <field name="day_13" widget="boolean_toggle"/>
-                    <field name="day_14" widget="boolean_toggle"/>
-                    <field name="day_15" widget="boolean_toggle"/>
-                    <field name="day_16" widget="boolean_toggle"/>
-                    <field name="day_17" widget="boolean_toggle"/>
-                    <field name="day_18" widget="boolean_toggle"/>
-                    <field name="day_19" widget="boolean_toggle"/>
-                    <field name="day_20" widget="boolean_toggle"/>
-                    <field name="day_21" widget="boolean_toggle"/>
-                    <field name="day_22" widget="boolean_toggle"/>
-                    <field name="day_23" widget="boolean_toggle"/>
-                    <field name="day_24" widget="boolean_toggle"/>
-                    <field name="day_25" widget="boolean_toggle"/>
-                    <field name="day_26" widget="boolean_toggle"/>
-                    <field name="day_27" widget="boolean_toggle"/>
-                    <field name="day_28" widget="boolean_toggle"/>
-                    <field name="day_29" widget="boolean_toggle" readonly="month == 2 and not is_leap_year" force_save="1"/>
-                    <field name="day_30" widget="boolean_toggle" readonly="month == 2" force_save="1"/>
-                    <field name="day_31" widget="boolean_toggle" readonly="month not in [1, 3, 5, 7, 8, 10, 12]" force_save="1"/>
+                    <field name="study_days" optional="hide"/>
+                    <field name="present_days" optional="hide"/>
+                    <field name="absent_days" optional="hide"/>
+                    <field name="late_days" optional="hide"/>
+                    <field name="holiday_days" optional="hide"/>
+                    <field name="excused_days" optional="hide"/>
+                    <field name="sick_days" optional="hide"/>
+                    <field name="office_id" optional="show"/>
+                    <field name="class_id" optional="hide"/>
+                    <field name="teacher_id" optional="hide"/>
+                    <field name="day_1"/>
+                    <field name="day_2" readonly="day &gt; 0 and day &lt; 2" force_save="1"/>
+                    <field name="day_3"  readonly="day &gt; 0 and day &lt; 3" force_save="1"/>
+                    <field name="day_4"  readonly="day &gt; 0 and day &lt; 4" force_save="1"/>
+                    <field name="day_5"  readonly="day &gt; 0 and day &lt; 5" force_save="1"/>
+                    <field name="day_6"  readonly="day &gt; 0 and day &lt; 6" force_save="1"/>
+                    <field name="day_7"  readonly="day &gt; 0 and day &lt; 7" force_save="1"/>
+                    <field name="day_8"  readonly="day &gt; 0 and day &lt; 8" force_save="1"/>
+                    <field name="day_9"  readonly="day &gt; 0 and day &lt; 9" force_save="1"/>
+                    <field name="day_10" readonly="day &gt; 0 and day &lt; 10" force_save="1"/>
+                    <field name="day_11" readonly="day &gt; 0 and day &lt; 11" force_save="1"/>
+                    <field name="day_12" readonly="day &gt; 0 and day &lt; 12" force_save="1"/>
+                    <field name="day_13" readonly="day &gt; 0 and day &lt; 13" force_save="1"/>
+                    <field name="day_14" readonly="day &gt; 0 and day &lt; 14" force_save="1"/>
+                    <field name="day_15" readonly="day &gt; 0 and day &lt; 15" force_save="1"/>
+                    <field name="day_16" readonly="day &gt; 0 and day &lt; 16" force_save="1"/>
+                    <field name="day_17" readonly="day &gt; 0 and day &lt; 17" force_save="1"/>
+                    <field name="day_18" readonly="day &gt; 0 and day &lt; 18" force_save="1"/>
+                    <field name="day_19" readonly="day &gt; 0 and day &lt; 19" force_save="1"/>
+                    <field name="day_20" readonly="day &gt; 0 and day &lt; 20" force_save="1"/>
+                    <field name="day_21" readonly="day &gt; 0 and day &lt; 21" force_save="1"/>
+                    <field name="day_22" readonly="day &gt; 0 and day &lt; 22" force_save="1"/>
+                    <field name="day_23" readonly="day &gt; 0 and day &lt; 23" force_save="1"/>
+                    <field name="day_24" readonly="day &gt; 0 and day &lt; 24" force_save="1"/>
+                    <field name="day_25" readonly="day &gt; 0 and day &lt; 25" force_save="1"/>
+                    <field name="day_26" readonly="day &gt; 0 and day &lt; 26" force_save="1"/>
+                    <field name="day_27" readonly="day &gt; 0 and day &lt; 27" force_save="1"/>
+                    <field name="day_28" readonly="day &gt; 0 and day &lt; 28" force_save="1"/>
+                    <field name="day_29" readonly="(day &gt; 0 and day &lt; 29) or (month == 2 and not is_leap_year)" force_save="1"/>
+                    <field name="day_30" readonly="(day &gt; 0 and day &lt; 30) or (month == 2)" force_save="1"/>
+                    <field name="day_31" readonly="(day &gt; 0 and day &lt; 31) or (month not in [1, 3, 5, 7, 8, 10, 12])" force_save="1"/>
                 </list>
+            </field>
+        </record>
+
+        <record id ="form_attendance_register" model="ir.ui.view">
+            <field name="name">attendance.register.form</field>
+            <field name="model">attendance.register</field>
+            <field name="arch" type="xml">
+                <form string="Attendance Register">
+                    <sheet>
+                        <group>
+                            <group string="Attendance Register Details">
+                                <field name="student_id"/>
+                                <field name="office_id"/>
+                                <field name="class_id"/>
+                                <field name="teacher_id"/>
+                                <field name="is_leap_year" invisible="1"/>
+                            </group>
+                            <group string="Attendance Register Date">
+                                <field name="holiday_policy_id" decoration-danger="not is_policy_valid"/>
+                                <field name="date" invisible="1"/>
+                                <field name="year"/>
+                                <field name="month"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Days">
+                                <group string="Days" col="3">
+                                    <group>
+                                        <field name="day_1"/>
+                                        <field name="day_2" readonly="day &gt; 0 and day &lt; 2" force_save="1"/>
+                                        <field name="day_3"  readonly="day &gt; 0 and day &lt; 3" force_save="1"/>
+                                        <field name="day_4"  readonly="day &gt; 0 and day &lt; 4" force_save="1"/>
+                                        <field name="day_5"  readonly="day &gt; 0 and day &lt; 5" force_save="1"/>
+                                        <field name="day_6"  readonly="day &gt; 0 and day &lt; 6" force_save="1"/>
+                                        <field name="day_7"  readonly="day &gt; 0 and day &lt; 7" force_save="1"/>
+                                        <field name="day_8"  readonly="day &gt; 0 and day &lt; 8" force_save="1"/>
+                                        <field name="day_9"  readonly="day &gt; 0 and day &lt; 9" force_save="1"/>
+                                        <field name="day_10" readonly="day &gt; 0 and day &lt; 10" force_save="1"/>
+                                    </group>
+                                    <group>
+                                        <field name="day_11" readonly="day &gt; 0 and day &lt; 11" force_save="1"/>
+                                        <field name="day_12" readonly="day &gt; 0 and day &lt; 12" force_save="1"/>
+                                        <field name="day_13" readonly="day &gt; 0 and day &lt; 13" force_save="1"/>
+                                        <field name="day_14" readonly="day &gt; 0 and day &lt; 14" force_save="1"/>
+                                        <field name="day_15" readonly="day &gt; 0 and day &lt; 15" force_save="1"/>
+                                        <field name="day_16" readonly="day &gt; 0 and day &lt; 16" force_save="1"/>
+                                        <field name="day_17" readonly="day &gt; 0 and day &lt; 17" force_save="1"/>
+                                        <field name="day_18" readonly="day &gt; 0 and day &lt; 18" force_save="1"/>
+                                        <field name="day_19" readonly="day &gt; 0 and day &lt; 19" force_save="1"/>
+                                        <field name="day_20" readonly="day &gt; 0 and day &lt; 20" force_save="1"/>
+                                    </group>
+                                    <group>
+                                        <field name="day_21" readonly="day &gt; 0 and day &lt; 21" force_save="1"/>
+                                        <field name="day_22" readonly="day &gt; 0 and day &lt; 22" force_save="1"/>
+                                        <field name="day_23" readonly="day &gt; 0 and day &lt; 23" force_save="1"/>
+                                        <field name="day_24" readonly="day &gt; 0 and day &lt; 24" force_save="1"/>
+                                        <field name="day_25" readonly="day &gt; 0 and day &lt; 25" force_save="1"/>
+                                        <field name="day_26" readonly="day &gt; 0 and day &lt; 26" force_save="1"/>
+                                        <field name="day_27" readonly="day &gt; 0 and day &lt; 27" force_save="1"/>
+                                        <field name="day_28" readonly="day &gt; 0 and day &lt; 28" force_save="1"/>
+                                        <field name="day_29" readonly="(day &gt; 0 and day &lt; 29) or (month == 2 and not is_leap_year)" force_save="1"/>
+                                        <field name="day_30" readonly="(day &gt; 0 and day &lt; 30) or (month == 2)" force_save="1"/>
+                                    </group>
+                                </group>
+                                <group>
+                                    <field name="day_31" readonly="(day &gt; 0 and day &lt; 31) or (month not in [1, 3, 5, 7, 8, 10, 12])" force_save="1"/>
+                                </group>
+                            </page>
+                            <page string="Summary">
+                                <group>
+                                    <group string="Collection">
+                                        <field name="study_days"/>
+                                        <field name="present_days"/>
+                                        <field name="absent_days"/>
+                                    </group>
+                                    <group string="Detail">
+                                        <field name="late_days"/>
+                                        <field name="holiday_days"/>
+                                        <field name="excused_days"/>
+                                        <field name="sick_days"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
             </field>
         </record>
 
         <record id="action_attendance_register_current_month" model="ir.actions.act_window">
             <field name="name">Attendance Register Current Month</field>
             <field name="res_model">attendance.register</field>
-            <field name="view_mode">list</field>
+            <field name="view_mode">list,form</field>
             <field name="search_view_id" ref="view_attendance_register_search"/>
             <field name="domain">[('date', '&gt;=', context_today().strftime('%Y-%m-01')),('date', '&lt;=', context_today().strftime('%Y-%m-31'))]</field>
             <field name="context">{'default_date': context_today().strftime('%Y-%m-%d'), 'group_by': ['date']}</field>
@@ -79,7 +176,7 @@
         <record id="action_attendance_register_previous_month" model="ir.actions.act_window">
             <field name="name">Attendance Register Previous Month</field>
             <field name="res_model">attendance.register</field>
-            <field name="view_mode">list</field>
+            <field name="view_mode">list,form</field>
             <field name="search_view_id" ref="view_attendance_register_search"/>
             <field name="domain">[('date', '&gt;=', (context_today() - datetime.timedelta(days=context_today().day)).strftime('%Y-%m-01')),('date', '&lt;', context_today().strftime('%Y-%m-01'))]</field>
             <field name="context">{'default_date': (context_today() - relativedelta(months=1)).strftime('%Y-%m-%d'), 'group_by': ['date']}</field>

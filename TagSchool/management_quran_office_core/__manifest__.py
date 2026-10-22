@@ -10,6 +10,7 @@
     'website': 'https://www.facebook.com/abdalla6alsafy',
     'depends': ['base', 'quran_utils','paper_report_formats'],
     'data': [
+        'security/quran_office_security.xml',
         'security/ir.model.access.csv',
         'data/ir_sequence_data.xml',
         'data/server_actions.xml',
@@ -29,6 +30,8 @@
         'reports/student_teacher_financial_report.xml',
         'reports/detailed_partner_report.xml',
         'reports/quran_office_core_report_actions.xml',
+
+        "views/res_config_settings_views.xml",
         'views/menu.xml',
     ],
     'installable': True,

@@ -16,7 +16,7 @@
                             <group string="Information">
                                 <p class="text-muted">
                                     This will register subscriptions for all eligible students with subscription fees.
-                                    Students must be active, present, and have a subscription fee set.
+                                    Students must be active, persistent, and have a subscription fee set.
                                 </p>
                             </group>
                         </group>

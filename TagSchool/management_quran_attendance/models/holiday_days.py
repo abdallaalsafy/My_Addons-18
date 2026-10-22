@@ -15,7 +15,6 @@ class AttendanceHolidayDay(models.Model):
     day_number = fields.Integer(string='Day Number', compute='_compute_holiday_date_parts', store=True)
     day_name = fields.Char(string='Day Name', compute='_compute_holiday_date_parts', store=True, translate=True)
     reason = fields.Char(string='Reason')
-    active = fields.Boolean(string='Active', default=True)
 
     _sql_constraints = [
         (
@@ -42,16 +41,11 @@ class AttendanceHolidayDay(models.Model):
                 rec.day_name = ''
 
     # ========== Constraints Methods =============================
-    @api.constrains('policy_id', 'holiday_date')
+    @api.constrains('policy_id', 'holiday_date',)
     def _check_valid_holiday_date(self):
         for rec in self:
             if not rec.policy_id or not rec.holiday_date:
                 raise ValidationError(_('Both policy and holiday date must be set.'))
-            if rec.holiday_date < rec.policy_id.start_date or rec.holiday_date > rec.policy_id.end_date:
-                raise ValidationError(_(
-                    'Holiday date %s is outside the selected policy range (%s to %s).'
-                    % (rec.holiday_date, rec.policy_id.start_date, rec.policy_id.end_date)
-                ))
             
     # ========== Onchange Methods =============================
 

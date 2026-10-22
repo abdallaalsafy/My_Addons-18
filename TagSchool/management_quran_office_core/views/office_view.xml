@@ -4,7 +4,7 @@
     <!-- Quran Office Form View -->
     <record id="quran_office_form_view" model="ir.ui.view">
         <field name="name">quran_office.form</field>
-        <field name="model">quran_office.office</field>
+        <field name="model">quran.office.office</field>
         <field name="arch" type="xml">
             <form string="Quran Office">
                 <sheet>
@@ -36,7 +36,7 @@
     <!-- Quran Office Tree View -->
     <record id="quran_office_tree_view" model="ir.ui.view">
         <field name="name">quran_office.tree</field>
-        <field name="model">quran_office.office</field>
+        <field name="model">quran.office.office</field>
         <field name="arch" type="xml">
             <list string="Quran Offices">
                 <field name="code" optional="show"/>
@@ -51,7 +51,7 @@
     <!-- Quran Office Search View -->
     <record id="quran_office_search_view" model="ir.ui.view">
         <field name="name">quran_office.search</field>
-        <field name="model">quran_office.office</field>
+        <field name="model">quran.office.office</field>
         <field name="arch" type="xml">
             <search string="Quran Offices">
                 <field name="name" filter_domain="['|', ('name', 'ilike', self), ('code', 'ilike', self)]"/>
@@ -80,7 +80,7 @@
     <record id="action_quran_offices_view_id" model="ir.actions.act_window">
         <field name="name">Quran Offices</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="res_model">quran_office.office</field>
+        <field name="res_model">quran.office.office</field>
         <field name="view_mode">list,form</field>
         <field name="search_view_id" ref="quran_office_search_view"/>
         <field name="context">{}</field>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_quran_core" model="ir.ui.view">
+        <field name="name">quran.core.res.config.settings.view.form</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app data-string="Quran Office Management" string="Quran Office Management" name="management_quran_office_core">
+                </app>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_management_quran_office_core_settings" model="ir.actions.act_window">
+        <field name="name">Quran Office Management Settings</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module': 'management_quran_office_core','bin_size': False}</field>
+    </record>
+</odoo>

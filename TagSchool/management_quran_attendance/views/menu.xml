@@ -36,11 +36,5 @@
             parent="menu_quran_attendance_root"
             action="action_attendance_month_holiday"
             sequence="35"/>
-
-        <menuitem id="menu_quran_attendance_settings"
-            name="Settings"
-            parent="management_quran_office_core.menu_configuration_quran_office_core"
-            action="action_attendance_register_settings"
-            sequence="5"/>
     </data>
 </odoo>

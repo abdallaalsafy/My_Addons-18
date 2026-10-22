@@ -27,7 +27,7 @@ class StudentMemorization(models.Model):
     )
     # Related Fields (computed from student)
     office_id = fields.Many2one(
-        'quran_office.office',
+        'quran.office.office',
         string='Student Office',
     )
     class_id = fields.Many2one(
@@ -180,10 +180,10 @@ class StudentMemorization(models.Model):
         """Check student status before allowing memorization record"""
         for record in self:
             if record.student_id:
-                # Check if student is absent or discontinued
-                if record.student_id.student_status == 'absent':
+                # Check if student is disconnected.
+                if record.student_id.student_status == 'disconnected':
                     raise ValidationError(
-                        _('Cannot create memorization record for absent student %s. Please update student status first.') % record.student_id.name)
+                        _('Cannot create memorization record for disconnected student %s. Please update student status first.') % record.student_id.name)
 
                 # Check if student is active
                 if not record.student_id.active:

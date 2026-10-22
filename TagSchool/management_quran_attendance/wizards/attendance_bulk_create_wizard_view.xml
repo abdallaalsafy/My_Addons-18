@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_attendance_bulk_create_wizard_form" model="ir.ui.view">
+        <field name="name">attendance.bulk.create.wizard.form</field>
+        <field name="model">attendance.bulk.create.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Create Attendance for Students">
+                <sheet>
+                    <group>
+                        <group string="Date Information">
+                            <field name="year"/>
+                            <field name="month"/>
+                            <field name="holiday_policy_id"/>
+                        </group>
+                        <group string="Students Information">
+                            <field name="office_id"/>
+                            <field name="class_id"/>
+                            <field name="teacher_id"/>
+                        </group>
+                    </group>
+                    <group string="Options">
+                        <group>
+                            <field name="show_mode"/>
+                        </group>
+                        <group>
+                            <field name="create_mode"/>
+                        </group>
+                    </group>
+                    <group string="Notes">
+                        <p>Students must have office or choose office here , And must not registered for attendance at this month.</p>
+                    </group>
+                </sheet>
+
+                <footer>
+                    <button name="action_create_attendance_registers" type="object" string="Create Attendance" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_attendance_bulk_create_wizard" model="ir.actions.act_window">
+        <field name="name">Create Attendance Registers</field>
+        <field name="res_model">attendance.bulk.create.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

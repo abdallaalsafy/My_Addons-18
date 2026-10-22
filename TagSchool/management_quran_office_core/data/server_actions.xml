@@ -25,4 +25,24 @@
                         records.write({'is_quran_memorizer': False})
         </field>
     </record>
+
+    <!-- Server Action to Mark Student as Persistent -->
+    <record id="action_mark_student_persistent" model="ir.actions.server">
+        <field name="name">Mark Student as Persistent</field>
+        <field name="model_id" ref="base.model_res_partner"/>
+        <field name="binding_model_id" ref="base.model_res_partner"/>
+        <field name="binding_view_types">list,form</field>
+        <field name="state">code</field>
+        <field name="code">records.action_mark_persistent()</field>
+    </record>
+
+    <!-- Server Action to Mark Student as Disconnected -->
+    <record id="action_mark_student_disconnected" model="ir.actions.server">
+        <field name="name">Mark Student as Disconnected</field>
+        <field name="model_id" ref="base.model_res_partner"/>
+        <field name="binding_model_id" ref="base.model_res_partner"/>
+        <field name="binding_view_types">list,form</field>
+        <field name="state">code</field>
+        <field name="code">records.action_mark_disconnected()</field>
+    </record>
 </odoo>

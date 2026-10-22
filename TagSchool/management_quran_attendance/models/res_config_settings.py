@@ -4,39 +4,35 @@ from odoo import api, fields, models
 class AttendanceRegisterSettings(models.TransientModel):
     _inherit = 'res.config.settings'
 
-    auto_day_value = fields.Boolean(string='Default day value')
-    is_sunday_off = fields.Boolean(string='Sunday')
-    is_monday_off = fields.Boolean(string='Monday')
-    is_tuesday_off = fields.Boolean(string='Tuesday')
-    is_wednesday_off = fields.Boolean(string='Wednesday')
-    is_thursday_off = fields.Boolean(string='Thursday')
-    is_friday_off = fields.Boolean(string='Friday')
-    is_saturday_off = fields.Boolean(string='Saturday')
+    def _default_default_holiday_policy(self):
+        default_policy = self.env.ref('management_quran_attendance.attendance_default_holiday_policy', raise_if_not_found=False)
+        return default_policy
+
+
+    holiday_policy_id = fields.Many2one(
+        'attendance.holiday.policy',
+        string='Default absence policy',
+        default=_default_default_holiday_policy,
+    )
 
     @api.model
     def get_values(self):
         res = super().get_values()
         param = self.env['ir.config_parameter'].sudo()
-        res.update(
-            auto_day_value=param.get_param('attendance_register.auto_day_value', default=True),
-            is_sunday_off=param.get_param('attendance_register.is_sunday_off', default=False),
-            is_monday_off=param.get_param('attendance_register.is_monday_off', default=False),
-            is_tuesday_off=param.get_param('attendance_register.is_tuesday_off', default=False),
-            is_wednesday_off=param.get_param('attendance_register.is_wednesday_off', default=False),
-            is_thursday_off=param.get_param('attendance_register.is_thursday_off', default=False),
-            is_friday_off=param.get_param('attendance_register.is_friday_off', default=False),
-            is_saturday_off=param.get_param('attendance_register.is_saturday_off', default=False),
-        )
+        default_policy = self._default_default_holiday_policy()
+        stored_policy_id = param.get_param('attendance_register.default_holiday_policy_id')
+        if stored_policy_id:
+            stored_policy = self.env['attendance.holiday.policy'].browse(int(stored_policy_id))
+            if stored_policy.exists():
+                default_policy = stored_policy
+
+        res.update(holiday_policy_id=default_policy.id if default_policy else False,)
         return res
 
     def set_values(self):
         super().set_values()
         param = self.env['ir.config_parameter'].sudo()
-        param.set_param('attendance_register.auto_day_value', self.auto_day_value)
-        param.set_param('attendance_register.is_sunday_off', self.is_sunday_off)
-        param.set_param('attendance_register.is_monday_off', self.is_monday_off)
-        param.set_param('attendance_register.is_tuesday_off', self.is_tuesday_off)
-        param.set_param('attendance_register.is_wednesday_off', self.is_wednesday_off)
-        param.set_param('attendance_register.is_thursday_off', self.is_thursday_off)
-        param.set_param('attendance_register.is_friday_off', self.is_friday_off)
-        param.set_param('attendance_register.is_saturday_off', self.is_saturday_off)
+        param.set_param(
+            'attendance_register.default_holiday_policy_id',
+            self.holiday_policy_id.id if self.holiday_policy_id else False,
+        )

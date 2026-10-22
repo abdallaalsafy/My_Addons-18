@@ -160,10 +160,6 @@
                                 class="btn-primary" invisible="not context.get('default_is_student')"/>
                         <button name="management_quran_office_core.student_subscription_wizard_action" type="action" string="Manage Student Subscription"
                                 class="btn-primary" invisible="not context.get('default_is_student')"/>
-                        <button name="action_mark_present" type="object" string="Mark Present"
-                                class="btn-success" invisible="not context.get('default_is_student')"/>
-                        <button name="action_mark_absent" type="object" string="Mark Absent"
-                                class="btn-warning" invisible="not context.get('default_is_student')"/>
                         <button name="management_quran_office_core.teacher_salary_wizard_action" type="action" string="Manage Teacher Salary"
                                 class="btn-primary" invisible="not context.get('default_is_teacher')"/>
                     </header>
@@ -177,8 +173,8 @@
                     <field name="class_id" column_invisible="not context.get('default_is_student')"/>
                     <field name="teacher_id" column_invisible="not context.get('default_is_student')"/>
                     <field name="student_status" column_invisible="not context.get('default_is_student')"
-                           widget="badge" decoration-success="student_status=='present'"
-                           decoration-danger="student_status=='absent'"/>
+                           widget="badge" decoration-success="student_status=='persistent'"
+                           decoration-danger="student_status=='disconnected'"/>
                     <field name="subscription_fee" column_invisible="not context.get('default_is_student')"
                            optional="hide" sum="Total Fee"/>
                     <field name="teacher_salary" column_invisible="not context.get('default_is_teacher')"
@@ -248,11 +244,11 @@
                                             <t  t-if="record.parent_role == 'mother'">
                                                 <span class="badge badge-warning">Mother</span>
                                             </t>
-                                            <t t-if="record.student_status == 'present'">
-                                                <span  class="badge badge-success">Present</span>
+                                            <t t-if="record.student_status == 'persistent'">
+                                                <span  class="badge badge-success">Persistent</span>
                                             </t>
-                                            <t t-if="record.student_status == 'absent'">
-                                                <span  class="badge badge-danger">Absent</span>
+                                            <t t-if="record.student_status == 'disconnected'">
+                                                <span  class="badge badge-danger">Disconnected</span>
                                             </t>
                                         </div>
                                         <div class="oe_kanban_bottom_right">
@@ -306,9 +302,9 @@
                     <filter name="with_teacher" string="With Teacher" domain="[('teacher_id', '!=', False)]"
                         invisible="not context.get('default_is_student')"/>
                     <separator/>
-                    <filter name="present_students" string="Present Students" domain="[('student_status', '=', 'present')]"
+                    <filter name="persistent_students" string="Persistent Students" domain="[('student_status', '=', 'persistent')]"
                         invisible="not context.get('default_is_student')"/>
-                    <filter name="absent_students" string="Absent Students" domain="[('student_status', '=', 'absent')]"
+                    <filter name="disconnected_students" string="Disconnected Students" domain="[('student_status', '=', 'disconnected')]"
                         invisible="not context.get('default_is_student')"/>
                     <separator/>
                     <filter name="with_birth_certificate" string="Has Birth Certificate" domain="[('birth_certificate', '!=', False)]"/>

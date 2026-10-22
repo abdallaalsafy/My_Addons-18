@@ -22,7 +22,7 @@ class BatchMemorizationWizard(models.TransientModel):
     )
     
     office_id = fields.Many2one(
-        'quran_office.office',
+        'quran.office.office',
         string='Office',
         help="Select office to filter students"
     )

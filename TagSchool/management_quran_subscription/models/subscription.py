@@ -28,7 +28,7 @@ class MonthlySubscription(models.Model):
     
     # Related Fields (computed from student)
     office_id = fields.Many2one(
-        'quran_office.office',
+        'quran.office.office',
         string='Office',
     )
     
@@ -177,10 +177,10 @@ class MonthlySubscription(models.Model):
         """Check student status before allowing subscription"""
         for record in self:
             if record.student_id:
-                # Check if student is absent or discontinued
-                if record.student_id.student_status == 'absent':
+                # Check if student is disconnected
+                if record.student_id.student_status == 'disconnected':
                     raise ValidationError(
-                        _('Cannot create subscription for absent student %s. Please update student status first.') % record.student_id.name)
+                        _('Cannot create subscription for disconnected student %s. Please update student status first.') % record.student_id.name)
 
                 # Check if student is active
                 if not record.student_id.active:

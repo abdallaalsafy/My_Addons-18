@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+     <!-- Add smart button to existing student form view -->
+    <record id="res_partner_form_view_attendance_inherit" model="ir.ui.view">
+        <field name="name">res.partner.form.attendance.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="management_quran_office_core.res_partner_form_view_quran_office"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_view_attendance" type="object" icon="fa-calendar"
+                    class="oe_stat_button" invisible="not is_student or attendance_count == 0">
+                    <field name="attendance_count" widget="statinfo" string="Attendances"/>
+                </button>
+            </xpath>
+            <xpath expr="//header" position="inside">
+                <button name="management_quran_attendance.action_attendance_bulk_create_wizard" type="action"
+                        string="Create Attendance" class="btn-info"
+                        invisible="not is_student"/>
+                <button name="management_quran_attendance.action_attendance_register_date_filter"
+                        type="action"
+                        string="Print Attendance Report"
+                        class="btn-primary"
+                        context="{'print_attendance_register_report': 1}"
+                        invisible="not is_student"/>
+            </xpath>
+            
+        </field>
+    </record>
+
+    <record id="res_partner_tree_view_attendance_inherit" model="ir.ui.view">
+        <field name="name">res.partner.tree.attendance.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="management_quran_office_core.res_partner_tree_view_quran_office"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="management_quran_attendance.action_attendance_bulk_create_wizard"
+                        type="action"
+                        string="Create Attendance"
+                        class="btn-primary"
+                        invisible="not context.get('default_is_student')"/>
+                <button name="management_quran_attendance.action_attendance_register_date_filter"
+                        type="action"
+                        string="Print Attendance Report"
+                        class="btn-primary"
+                        context="{'print_attendance_register_report': 1}"
+                        invisible="not context.get('default_is_student')"/>
+                <button name="management_quran_attendance.action_student_monthly_absence_sheet_wizard"
+                        type="action"
+                        string="Print Absence Sheet"
+                        class="btn-warning"
+                        invisible="not context.get('default_is_student')"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

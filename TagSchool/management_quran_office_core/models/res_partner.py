@@ -130,7 +130,7 @@ class StudentPortal(models.Model):
     # ========== Students Fields ===========================================
     # Education relationships
     office_id = fields.Many2one(
-        'quran_office.office',
+        'quran.office.office',
         'Office',
         help="Quran memorization office this partner belongs to"
     )
@@ -181,9 +181,9 @@ class StudentPortal(models.Model):
     ], 'Memorization Method', default='from_nas', required=True,
         help="Method of Quran memorization")
     student_status = fields.Selection([
-        ('present', 'Present'),
-        ('absent', 'Absent'),
-    ], 'Student Status', default='present',
+        ('persistent', 'Persistent'),
+        ('disconnected', 'Disconnected'),
+    ], 'Student Status', default='persistent',
         help="Student attendance status - only shown for students")
 
     # ====================== Teachers Fields ============================================
@@ -570,17 +570,17 @@ class StudentPortal(models.Model):
                     raise ValidationError(_("Cannot remove student role: This student has active assignments (office, class, teacher, or subscription)."))
                 record.is_student = False
 
-    def action_mark_present(self):
-        """Mark selected students as present"""
+    def action_mark_persistent(self):
+        """Mark selected students as persistent"""
         for record in self:
             if record.is_student:
-                record.student_status = 'present'
+                record.student_status = 'persistent'
 
-    def action_mark_absent(self):
-        """Mark selected students as absent"""
+    def action_mark_disconnected(self):
+        """Mark selected students as disconnected"""
         for record in self:
             if record.is_student:
-                record.student_status = 'absent'
+                record.student_status = 'disconnected'
 
     def action_view_children(self):
         """View children of this partner (father or mother)"""

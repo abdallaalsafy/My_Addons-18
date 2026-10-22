@@ -1,3 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_monthly_subscription_manager,monthly.subscription.manager,model_monthly_subscription,base.group_user,1,1,1,1
-access_batch_subscription_wizard_manager,batch.subscription.wizard.manager,model_batch_subscription_wizard,base.group_user,1,1,1,1
+access_monthly_subscription_user,monthly.subscription.user,model_monthly_subscription,management_quran_office_core.group_quran_office_user,1,1,1,0
+access_monthly_subscription_manager,monthly.subscription.manager,model_monthly_subscription,management_quran_office_core.group_quran_office_manager,1,1,1,1
+
+access_batch_subscription_wizard_user,batch.subscription.wizard.user,model_batch_subscription_wizard,management_quran_office_core.group_quran_office_user,1,1,1,0
+access_batch_subscription_wizard_manager,batch.subscription.wizard.manager,model_batch_subscription_wizard,management_quran_office_core.group_quran_office_manager,1,1,1,1

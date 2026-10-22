@@ -10,19 +10,19 @@
     'depends': ['base', 'management_quran_office_core'],
     "data": [
         "security/ir.model.access.csv",
+        "data/default_holiday_policy.xml",
         "wizards/attendance_register_date_wizard_view.xml",
+        "wizards/attendance_bulk_create_wizard_view.xml",
+        "wizards/absence_monthly_sheet_wizard_view.xml",
+        "reports/student_attendance_report.xml",
+        "reports/absence_monthly_sheet_report.xml",
         "views/attendance_register_view.xml",
+        "views/res_partner_views.xml",
         "views/holiday_policy_views.xml",
         "views/holiday_days_views.xml",
         "views/res_config_settings_views.xml",
         "views/menu.xml",
     ],
-    "assets": {
-        "web.assets_backend": [
-            # "management_quran_attendance/static/src/js/attendance_group_renderer.js",
-            # "management_quran_attendance/static/src/xml/attendance_group_renderer.xml",
-        ],
-    },
     "installable": True,
     "application": False,
 }

@@ -1,3 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_student_memorization_user,student.memorization.user,model_student_memorization,management_quran_office_core.group_quran_office_user,1,1,1,0
 access_student_memorization_manager,student.memorization.manager,model_student_memorization,base.group_user,1,1,1,1
-access_batch_memorization_wizard,batch.memorization.wizard,model_batch_memorization_wizard,base.group_user,1,1,1,1
+
+access_batch_memorization_wizard_user,batch.memorization.wizard.user,model_batch_memorization_wizard,management_quran_office_core.group_quran_office_user,1,1,1,0
+access_batch_memorization_wizard_manager,batch.memorization.wizard.manager,model_batch_memorization_wizard,management_quran_office_core.group_quran_office_manager,1,1,1,1
+

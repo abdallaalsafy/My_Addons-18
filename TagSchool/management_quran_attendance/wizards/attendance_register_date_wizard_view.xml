@@ -7,12 +7,20 @@
             <form string="Filter Attendance Register by Date Range">
                 <sheet>
                     <group>
-                        <field name="date_from"/>
-                        <field name="date_to"/>
+                        <group>
+                            <field name="start_date"/>
+                            <field name="end_date"/>
+                        </group>
+                        <group>
+                            <field name="office_id"/>
+                        </group>
                     </group>
                 </sheet>
                 <footer>
-                    <button name="action_show_records" type="object" string="Show Records" class="btn-primary"/>
+                    <button name="action_show_records" type="object" string="Show Records" class="btn-primary"
+                        invisible="context.get('print_attendance_register_report')"/>
+                    <button name="action_print_report" type="object" string="Print PDF" class="btn-primary"
+                        invisible="not context.get('print_attendance_register_report')"/>
                     <button string="Cancel" class="btn-secondary" special="cancel"/>
                 </footer>
             </form>

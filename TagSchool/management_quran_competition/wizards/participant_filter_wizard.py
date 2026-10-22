@@ -24,7 +24,7 @@ class ParticipantFilterWizard(models.TransientModel):
 
     # Office filtering
     office_id = fields.Many2one(
-        'quran_office.office',
+        'quran.office.office',
         'Office',
         help="Filter by office or leave empty to include all"
     )

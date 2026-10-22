@@ -32,7 +32,7 @@ class QuranClass(models.Model):
     
     # Relationships
     office_id = fields.Many2one(
-        'quran_office.office',
+        'quran.office.office',
         'Office',
         required=True,
         ondelete='cascade',

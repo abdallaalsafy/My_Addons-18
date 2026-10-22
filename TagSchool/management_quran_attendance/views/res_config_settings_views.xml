@@ -3,57 +3,15 @@
     <record id="res_config_settings_view_form_attendance" model="ir.ui.view">
         <field name="name">attendance.res.config.settings.form</field>
         <field name="model">res.config.settings</field>
-        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="inherit_id" ref="management_quran_office_core.res_config_settings_view_form_quran_core"/>
         <field name="arch" type="xml">
-            <xpath expr="//form" position="inside">
-                <app data-string="Quran Office Management" string="Quran Office Management" name="management_quran_office_core">
-                    <block title="Quran Attendance Management">
-                        <setting id="attendance_auto_day_value"
-                                 string="Default value of each day in new attendance records"
-                                 help="Choose whether new records will start with the day value as True or False.">
-                            <field name="auto_day_value"/>
-                        </setting>
-                        <setting id="official_weekly_holidays" string="Official Weekly Holidays" help="Select the official weekly holidays for the organization.">
-                            <div>
-                                <field name="is_saturday_off"/>
-                                <label for="is_saturday_off"/>
-                            </div>
-                            <div>
-                                <field name="is_sunday_off"/>
-                                <label for="is_sunday_off"/>
-                            </div>
-                            <div>
-                                <field name="is_monday_off"/>
-                                <label for="is_monday_off"/>
-                            </div>
-                            <div>
-                                <field name="is_tuesday_off"/>
-                                <label for="is_tuesday_off"/>
-                            </div>
-                            <div>
-                                <field name="is_wednesday_off"/>
-                                <label for="is_wednesday_off"/>
-                            </div>
-                            <div>
-                                <field name="is_thursday_off"/>
-                                <label for="is_thursday_off"/>
-                            </div>
-                            <div>
-                                <field name="is_friday_off"/>
-                                <label for="is_friday_off"/>
-                            </div>
-                        </setting>
-                    </block>
-                </app>
+            <xpath expr="//form/app[@name='management_quran_office_core']" position="inside">
+                <block title="Quran Attendance Management">
+                    <setting id="default_absence_policy" string="Default absence policy" help="Choose the default holiday policy used in new attendance records.">
+                        <field name="holiday_policy_id" options="{'no_create': True, 'no_open': True}"/>
+                    </setting>
+                </block>
             </xpath>
         </field>
-    </record>
-
-    <record id="action_attendance_register_settings" model="ir.actions.act_window">
-        <field name="name">Attendance Settings</field>
-        <field name="res_model">res.config.settings</field>
-        <field name="view_mode">form</field>
-        <field name="target">inline</field>
-        <field name="context">{'module': 'management_quran_office_core','bin_size': False}</field>
     </record>
 </odoo>

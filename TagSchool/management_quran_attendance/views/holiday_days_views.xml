@@ -10,7 +10,6 @@
                 <field name="holiday_date"/>
                 <field name="day_name"/>
                 <field name="reason"/>
-                <field name="active" widget="boolean_toggle"/>
             </list>
         </field>
     </record>
@@ -31,7 +30,6 @@
                             <field name="day_number"/>
                             <field name="day_name"/>
                             <field name="reason"/>
-                            <field name="active" widget="boolean_taggole"/>
                         </group>
                     </group>
                 </sheet>

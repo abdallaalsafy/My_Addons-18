@@ -21,7 +21,7 @@ class StudentAcademicWizard(models.TransientModel):
     
     # Data fields
     office_id = fields.Many2one(
-        'quran_office.office',
+        'quran.office.office',
         'Office',
         help="Select office for student"
     )
