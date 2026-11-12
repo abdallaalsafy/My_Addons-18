@@ -11,7 +11,7 @@
             <field name="print_report_name">'Participants Report'</field>
             <field name="binding_model_id" ref="model_quran_competition_participant"/>
             <field name="binding_type">report</field>
-            <field name="paperformat_id" ref="paper_report_formats.landscape_A4_list_paperformat"/>
+            <field name="paperformat_id" ref="management_quran_office_core.landscape_A4_list_paperformat"/>
         </record>
 
     </data>

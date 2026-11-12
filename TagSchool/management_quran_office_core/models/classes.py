@@ -4,7 +4,7 @@ from odoo.exceptions import ValidationError
 
 
 class QuranClass(models.Model):
-    _name = 'quran_office.class'
+    _name = 'quran.office.class'
     _description = 'Quran Class'
     _order = 'name asc'
 
@@ -13,12 +13,7 @@ class QuranClass(models.Model):
         required=True,
         help="Name of the class"
     )
-    
-    code = fields.Char(
-        'Class Code',
-        help="Unique code for the class"
-    )
-    
+    code = fields.Char('Code', readonly=True, default=lambda self: _('New'))
     description = fields.Text(
         'Description',
         help="Additional information about the class"
@@ -61,26 +56,28 @@ class QuranClass(models.Model):
         help="Total number of students in this class"
     )
 
-    # ================================ Built-in Methods ================================
+    _sql_constraints = [('name_uniq', "unique(name)", "Name must be unique per class."),
+                        ('office_name_uniq', "unique(name,office_id)", "Name must be unique per class per office."),]
+    
+# ================================ Built-in Methods ================================
+    @api.model_create_multi
+    def create(self, vals_list):
+        """Override create method to generate registration number automatically."""
+        for vals in vals_list:
+            vals['code'] = self.env['ir.sequence'].next_by_code('quran.office.class')
+        return super().create(vals_list)
 
     def name_get(self):
-        """
-        Override name_get to show code and name.
-        """
+        """Override name_get to show code and name."""
         result = []
         for cls in self:
-            if cls.code:
-                name = f"[{cls.code}] {cls.name}"
-            else:
-                name = cls.name
+            name = f"[{cls.code}] {cls.name}"
             result.append((cls.id, name))
         return result
 
     @api.model
     def name_search(self, name='', args=None, operator='ilike', limit=100):
-        """
-        Enhanced name search to find classes by name or code.
-        """
+        """Enhanced name search to find classes by name or code."""
         if name == '':
             return super().name_search(name, args, operator, limit)
 
@@ -101,56 +98,19 @@ class QuranClass(models.Model):
 
         return super().name_search(name, args, operator, limit)
 
-    # ================================ CONSTRAINTS ================================
-
-    @api.constrains('code', 'office_id')
-    def _check_unique_code(self):
-        """
-        Ensure class code is unique within the same office.
-        """
-        for cls in self:
-            if cls.code:
-                duplicates = self.search([
-                    ('code', '=', cls.code),
-                    ('office_id', '=', cls.office_id.id),
-                    ('id', '!=', cls.id)
-                ])
-                if duplicates:
-                    raise ValidationError(_(
-                        "Class Code must be unique within the same office! This code is already used."))
-
-    @api.constrains('name', 'office_id')
-    def _check_unique_name(self):
-        """
-        Ensure class name is unique within the same office.
-        """
-        for cls in self:
-            if cls.name:
-                duplicates = self.search([
-                    ('name', '=', cls.name),
-                    ('office_id', '=', cls.office_id.id),
-                    ('id', '!=', cls.id)
-                ])
-                if duplicates:
-                    raise ValidationError(_(
-                        "Class Name must be unique within the same office! This name is already used."))
-
-    # ================================ COMPUTE METHODS ================================
+# ================================ CONSTRAINTS ================================
+# ================================ COMPUTE METHODS ================================
 
     @api.depends('student_ids')
     def _compute_student_count(self):
-        """
-        Compute number of students in this class.
-        """
+        """Compute number of students in this class."""
         for cls in self:
             cls.student_count = len(cls.student_ids)
 
     # ================================ Actions ================================
 
     def action_view_students(self):
-        """
-        Action to view students in this class.
-        """
+        """Action to view students in this class."""
         self.ensure_one()
         action = self.env.ref('management_quran_office_core.action_students_view_id').read()[0]
         action['domain'] = [('class_id', '=', self.id)]

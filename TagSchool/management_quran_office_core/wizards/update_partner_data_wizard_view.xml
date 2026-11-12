@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Partner Area Tags Wizard Form View -->
+    <record id="update_partner_data_wizard_form_view" model="ir.ui.view">
+        <field name="name">update.partner.data.wizard.form</field>
+        <field name="model">update.partner.data.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Update Partner Data">
+                <field name="currancy_id" invisible="True"/>
+                <group string="Update Area">
+                    <group>
+                        <field name="mode_area"/>
+                    </group>
+                    <group>
+                        <field name="area_id" 
+                                options="{'no_create':True,'no_open':True}" 
+                                invisible="mode_area != 'update'"
+                                required="mode_area == 'update'"/>
+                    </group>
+                </group>
+                <group string="Update Tags">
+                    <group>
+                        <field name="mode_tags"/>
+                    </group>
+                    <group>
+                        <field name="tags_mode" invisible="mode_tags != 'update'"/>
+                        <field name="tag_ids" widget="many2many_tags" 
+                                invisible="mode_tags != 'update'"
+                                required="mode_tags == 'update'"/>
+                    </group>
+                </group>
+                <group string="Update Parent">
+                    <group>
+                        <field name="mode_father" />
+                        <field name="mode_mother"/>
+                    </group>
+                    <group>
+                        <field name="father_id" options="{'no_create':True,'no_open':True}" 
+                                invisible="mode_father != 'update'" required="mode_father == 'update'"/>
+                        <field name="mother_id" options="{'no_create':True,'no_open':True}" 
+                                invisible="mode_mother != 'update'" required="mode_mother == 'update'"/>
+                    </group>
+                </group>
+                <group string="Update Qualification">
+                    <group>
+                        <field name="mode_qua"/>
+                    </group>
+                    <group>
+                        <field name="qualification" invisible="mode_qua != 'update'" required="mode_qua == 'update'"/>
+                    </group>
+                </group>
+                <group string="Update Academic Information" invisible="not context.get('is_student')">
+                    <group>
+                        <field name="mode_office_class" />
+                        <field name="mode_teacher"/>
+                    </group>
+                    <group>
+                        <field name="office_id" options="{'no_create':True,'no_open':True}" 
+                                invisible="mode_office_class != 'update'" required="mode_office_class == 'update'"/>
+                        <field name="class_id" options="{'no_create':True,'no_open':True}" invisible="mode_office_class != 'update'"/>
+                        <field name="teacher_id" options="{'no_create':True,'no_open':True}" 
+                                invisible="mode_teacher != 'update'" required="mode_teacher == 'update'"/>
+                    </group>
+                </group>
+                <group string="Update Subscription" invisible="not context.get('is_student')">
+                    <group>
+                        <field name="mode_subscrip"/>
+                        <field name="mode_discount" readonly="mode_subscrip == 'clear'" force_save="1"/>
+                    </group>
+                    <group>
+                        <field name="subscription_fee" invisible="mode_subscrip != 'update'"/>
+                        <field name="discount_percentage_fee" invisible="mode_discount != 'update'"/>
+                        <field name="reason_discount_fee" invisible="mode_discount != 'update' or discount_percentage_fee &lt;= 0"/>
+                    </group>
+                </group>
+                <group string="Update Salary" invisible="not context.get('is_teacher')">
+                    <group>
+                        <field name="mode_salary"/>
+                    </group>
+                    <group>
+                        <field name="teacher_salary" invisible="mode_salary != 'update'"/>
+                    </group>
+                </group>
+                
+                <footer>
+                    <button name="action_update_selected_fields_data" type="object" string="Update Data" 
+                            class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

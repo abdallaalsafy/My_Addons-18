@@ -1,9 +1,7 @@
 {
     'name': 'Management Quran Memorization',
     'version': '18.0.0.0',
-    'license': 'LGPL-3',
     'category': 'Education',
-    "sequence": 2,
     'summary': 'Manage Student Quran Memorization',
     'complexity': "easy",
     'author': 'Abdallaalsafy',
@@ -16,10 +14,11 @@
         'views/memorization_view.xml',
         'views/res_partner_view.xml',
         'reports/memorization_report.xml',
-        'reports/memorization_report_actions.xml',
         'views/menu.xml',
     ],
     'installable': True,
     'auto_install': False,
     'application': False,
+    'license': 'LGPL-3',
+    'sequence': 3,
 }

@@ -15,7 +15,7 @@
         <record id="seq_quran_competition_participant" model="ir.sequence">
             <field name="name">Quran Competition Participant</field>
             <field name="code">quran.competition.participant</field>
-            <field name="prefix">QP</field>
+            <field name="prefix">QCP</field>
             <field name="padding">6</field>
             <field name="number_next">1</field>
             <field name="number_increment">1</field>
@@ -25,7 +25,7 @@
         <record id="seq_competition_requirements" model="ir.sequence">
             <field name="name">Competition Requirements</field>
             <field name="code">competition.requirements</field>
-            <field name="prefix">REQ</field>
+            <field name="prefix">QCR</field>
             <field name="padding">4</field>
             <field name="number_next">1</field>
             <field name="number_increment">1</field>

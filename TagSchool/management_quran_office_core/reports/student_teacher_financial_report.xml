@@ -138,4 +138,18 @@
             </main>
         </t>
     </template>
+
+    <!-- Salaries Or Subscriptions Report -->
+    <record id="action_report_salaries_or_subscriptions" model="ir.actions.report">
+        <field name="name">Salaries Or Subscriptions Report</field>
+        <field name="model">res.partner</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">management_quran_office_core.report_financial_document</field>
+        <field name="report_file">management_quran_office_core.report_financial_document</field>
+        <field name="print_report_name">'Salaries Or Subscriptions Report'</field>
+        <field name="binding_model_id" ref="base.model_res_partner"/>
+        <field name="binding_type">report</field>
+        <field name="domain">[('is_company', '=', False), ('partner_share', '=', True),
+                            '|',('is_student', '=', True),('is_teacher', '=', True)]</field>
+    </record>
 </odoo>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Bulk Update State -->
+    <record id="action_update_participant_state" model="ir.actions.server">
+        <field name="name">State of Participant</field>
+        <field name="model_id" ref="management_quran_competition.model_quran_competition_participant"/>
+        <field name="binding_model_id" ref="management_quran_competition.model_quran_competition_participant"/>
+        <field name="binding_view_types">list,form</field>
+        <field name="state">code</field>
+        <field name="code">
+action = {
+    'type': 'ir.actions.act_window',
+    'name': 'State of Participant',
+    'res_model': 'participant.bulk.update.wizard',
+    'view_mode': 'form',
+    'target': 'new',
+    'context': {
+        'default_field_name': 'state',
+        'active_model': model._name,
+        'active_ids': records.ids,
+        'active_id': records[:1].id if records else False,
+    },
+}
+action
+        </field>
+    </record>
+
+        <!-- Bulk Update Status -->
+    <record id="action_update_participant_status" model="ir.actions.server">
+        <field name="name">Evaluate Participant</field>
+        <field name="model_id" ref="management_quran_competition.model_quran_competition_participant"/>
+        <field name="binding_model_id" ref="management_quran_competition.model_quran_competition_participant"/>
+        <field name="binding_view_types">list,form</field>
+        <field name="state">code</field>
+        <field name="code">
+action = {
+    'type': 'ir.actions.act_window',
+    'name': 'Evaluate Participant',
+    'res_model': 'participant.bulk.update.wizard',
+    'view_mode': 'form',
+    'target': 'new',
+    'context': {
+        'default_field_name': 'status',
+        'active_model': model._name,
+        'active_ids': records.ids,
+        'active_id': records[:1].id if records else False,
+    },
+}
+action
+        </field>
+    </record>
+
+    <!-- Server Action to Set Participant Status to Opening -->
+    <record id="action_set_participant_status_opening" model="ir.actions.server">
+        <field name="name">Set to Opening</field>
+        <field name="model_id" ref="management_quran_competition.model_quran_competition"/>
+        <field name="binding_model_id" ref="management_quran_competition.model_quran_competition"/>
+        <field name="binding_view_types">list,form</field>
+        <field name="state">code</field>
+        <field name="code">
+                    if records:
+                       records.write({'status': 'opening'})
+        </field>
+    </record>
+
+    <!-- Server Action to Set Participant Status to Completed -->
+    <record id="action_set_participant_status_completed" model="ir.actions.server">
+        <field name="name">Set to Completed</field>
+        <field name="model_id" ref="management_quran_competition.model_quran_competition"/>
+        <field name="binding_model_id" ref="management_quran_competition.model_quran_competition"/>
+        <field name="binding_view_types">list,form</field>
+        <field name="state">code</field>
+        <field name="code">
+                    if records:
+                       records.write({'status': 'completed'})
+        </field>
+    </record>
+
+    <!-- Server Action to Set Participant state to Closed -->
+    <record id="action_set_participant_status_closed" model="ir.actions.server">
+        <field name="name">Set to Closed</field>
+        <field name="model_id" ref="management_quran_competition.model_quran_competition"/>
+        <field name="binding_model_id" ref="management_quran_competition.model_quran_competition"/>
+        <field name="binding_view_types">list,form</field>
+        <field name="state">code</field>
+        <field name="code">
+                    if records:
+                       records.write({'status': 'closed'})
+        </field>
+    </record>
+</odoo>

@@ -8,20 +8,92 @@ class BatchSubscriptionWizard(models.TransientModel):
     _name = 'batch.subscription.wizard'
     _description = 'Batch Student Subscription Registration Wizard'
 
+
+    def _get_defaults_values(self):
+        """Get default values for the wizard fields based on the context."""
+        defaults = {}
+        active_ids = self._context.get('active_ids', [])
+        if len(active_ids) == 1:
+            students = self.env['res.partner'].browse(active_ids)
+            if len(students) == 1:
+                student = students[0]
+                defaults['office_id'] = student.office_id
+                defaults['class_id'] = student.class_id
+                defaults['teacher_id'] = student.teacher_id
+                defaults['subscription_fee'] = student.get_subscription_expected_amount()
+        return defaults
+
     subscription_month = fields.Date(
         string='Subscription Month',
         required=True,
         default=lambda self: fields.Date.today().replace(day=1),
         help="Month and year for this subscription batch"
     )
-    
     month_name = fields.Char(
         string='Month Name',
         compute='_compute_month_name',
         readonly=True
     )
+    office_id = fields.Many2one(
+        'quran.office.office',
+        string='Office', 
+        default=lambda self: self._get_defaults_values().get('office_id'),
+        help="Select office to filter students"
+    )
+    class_id = fields.Many2one(
+        'quran.office.class',
+        string='Class',
+        domain="[('office_id', '=?', office_id)]",
+        default=lambda self: self._get_defaults_values().get('class_id'),
+        help="Select class to filter students"
+    )
+    teacher_id = fields.Many2one(
+        'res.partner',
+        string='Teacher',
+        domain="[('is_teacher', '=', True)]",
+        default=lambda self: self._get_defaults_values().get('teacher_id'),
+        help="Teacher for the subscription batch"
+    )
+    subscription_fee = fields.Monetary(
+        string='Subscription Fee',
+        currency_field='currancy_id',
+        default=lambda self: self._get_defaults_values().get('subscription_fee'),
+        help="Student subscription fee"
+    )
+    currancy_id = fields.Many2one(
+        'res.currency',
+        'Currency',
+        required=True,
+        default=lambda self: self.env.company.currency_id,
+        help="Currency for subscription fee"
+    )
 
+# ========================= Onchange Functions =========================
+    @api.onchange('office_id')
+    def _onchange_office_id(self):
+        """Clear class_id and teacher_id when office changes to ensure proper filtering."""
+        if (self.office_id and self.office_id != self.class_id.office_id) or not self.office_id:
+            self.class_id = False
 
+    @api.onchange('class_id')
+    def _onchange_class_id(self):
+        """Auto-fill teacher_id when class is selected."""
+        if self.class_id:
+            self.office_id = self.class_id.office_id
+        if self.class_id and self.class_id.teacher_id:
+            self.teacher_id = self.class_id.teacher_id
+
+    @api.onchange('teacher_id')
+    def _onchange_teacher_id(self):
+        if self.teacher_id and not self.class_id:
+            self.class_id = self.teacher_id.class_ids[0]
+
+    @api.onchange('subscription_month')
+    def _onchange_subscription_month(self):
+        if self.subscription_month and self.subscription_month.day != 1:
+            self.subscription_month = self.subscription_month.replace(day=1)
+
+# ========================= Computed Functions =========================
     @api.depends('subscription_month')
     def _compute_month_name(self):
         """Compute month name for display"""
@@ -31,35 +103,29 @@ class BatchSubscriptionWizard(models.TransientModel):
             else:
                 record.month_name = ''
 
+# ========================= Action Functions =========================
     def action_register_subscriptions(self):
         """Register subscriptions for all eligible students"""
-        self.ensure_one()
-        
-        # Get all active students (including those without subscription fees for validation)
         active_ids= self._context.get('active_ids')
-        all_active_students = self.env['res.partner'].browse(active_ids)
-
-        # Check if any student has empty subscription fee
-        students_without_fees = all_active_students.filtered(lambda s: s.subscription_fee <= 0)
-        if students_without_fees:
-            raise ValidationError(_("Cannot proceed with batch subscription registration. The following students do not have subscription fees set:\n\n") + '\n'.join(f"- {name}" for name in students_without_fees[:20]) + "\n\nPlease set subscription fees for all students before proceeding.")
-        
-        # Get all eligible students (now we know all have subscription fees)
-        students = all_active_students.filtered(lambda s: s.subscription_fee > 0)
+        students = self.env['res.partner'].browse(active_ids)
 
         subscription_vals_list = []
-        # try:
         for student in students:
-            discount_amount = student.subscription_fee * student.discount_percentage_fee
-            expected_amount = student.subscription_fee - discount_amount
-            subscription_vals = {
-                'student_id': student.id,
-                'subscription_month': self.subscription_month,
-                'subscription_fee': student.subscription_fee,
-                'discount_percentage_fee': student.discount_percentage_fee,
-                'paid_amount': expected_amount,
-            }
+            subscription_month = self.subscription_month.replace(day=1)
+            subscription_fee = self.subscription_fee or student.get_subscription_expected_amount()
+            office_id = self.office_id or student.office_id
+            class_id = self.class_id or student.class_id
+            teacher = self.teacher_id or student.teacher_id
+            student.validate_student_for_subscription(month=subscription_month, office=office_id, subscription_fee=subscription_fee)
 
-            subscription_vals_list.append(subscription_vals)
+            subscription_vals_list.append({
+                'student_id': student.id,
+                'subscription_month': subscription_month,
+                'office_id': office_id.id,
+                'class_id': class_id.id,
+                'teacher_id': teacher.id,
+                'paid_amount': subscription_fee,
+            })
+
         self.env['monthly.subscription'].create(subscription_vals_list)
 

@@ -14,8 +14,8 @@
                     </button>
                 </xpath>
                 <xpath expr="//header" position="inside">
-                    <button name="action_create_subscription" type="object"
-                            string="Batch Subscription" class="btn-info"
+                    <button name="management_quran_subscription.batch_subscription_wizard_action" type="action"
+                            string="Create Subscription" class="btn-info"
                             invisible="not is_student"/>
                 </xpath>
             </field>
@@ -28,7 +28,7 @@
             <field name="inherit_id" ref="management_quran_office_core.res_partner_tree_view_quran_office"/>
             <field name="arch" type="xml">
                 <xpath expr="//header" position="inside">
-                    <button name="management_quran_subscription.batch_subscription_wizard_action" type="action" string="Batch Subscription"
+                    <button name="management_quran_subscription.batch_subscription_wizard_action" type="action" string="Create Subscription"
                             class="btn-info" invisible="not context.get('default_is_student')"/>
                 </xpath>
             </field>

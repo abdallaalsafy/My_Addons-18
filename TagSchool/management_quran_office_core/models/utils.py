@@ -61,7 +61,7 @@ def get_birth_date_from_national_id(national_id: str) -> date:
     return date(year, month, day)
 
 
-def get_detailed_age(national_id: str = None, birth_date: date = None):
+def get_detailed_age(national_id: str = None, birth_date: date = None, today:date = date.today()):
     """
     Calculate detailed age in years, months, and days from Egyptian national ID or birth date.
     
@@ -77,7 +77,7 @@ def get_detailed_age(national_id: str = None, birth_date: date = None):
         If neither is provided, returns "Not specified".
     """
     # Try to get birth date from national ID first
-    if national_id and not is_invalid_national_id(national_id):
+    if not is_invalid_national_id(national_id):
         try:
             birth_date = get_birth_date_from_national_id(national_id)
         except:
@@ -85,9 +85,9 @@ def get_detailed_age(national_id: str = None, birth_date: date = None):
     
     # If no valid birth date, return not specified
     if not birth_date:
-        return _("Not specified")
+        return _("Not specified"),0,0,0
     
-    today = date.today()
+    # today = today or date.today()
     
     # Calculate years
     years = today.year - birth_date.year

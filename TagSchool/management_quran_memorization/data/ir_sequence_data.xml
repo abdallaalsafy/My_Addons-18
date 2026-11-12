@@ -5,7 +5,7 @@
         <record id="sequence_student_memorization_number" model="ir.sequence">
             <field name="name">Student Memorization Number</field>
             <field name="code">student.memorization.number</field>
-            <field name="prefix">MEM-%(year)s%(month)s-</field>
+            <field name="prefix">MEM-(%(year)s%(month)s)-</field>
             <field name="padding">6</field>
             <field name="number_next">1</field>
             <field name="number_increment">1</field>

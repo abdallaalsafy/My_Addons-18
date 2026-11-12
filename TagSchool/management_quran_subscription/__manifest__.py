@@ -20,19 +20,19 @@
         Dependencies:
         * management_quran_office_core (for student and office data)
     """,
-    'author': 'Your Name',
+    'author': 'abdallaalsafy',
     'website': 'https://www.facebook.com/abdalla6alsafy',
     'category': 'Education',
     'depends': ['management_quran_office_core', 'mail'],
     'data': [
         'security/ir.model.access.csv',
-        'data/subscription_data.xml',
+        'data/ir_sequence_data.xml',
+        'data/ir_actions_server.xml',
         'wizards/batch_subscription_wizard_view.xml',
         'views/subscription_view.xml',
         'views/res_partner_view.xml',
         'reports/subscription_report.xml',
         'reports/subscription_receipt_report.xml',
-        'reports/subscription_report_actions.xml',
         'views/menu.xml',
     ],
     'installable': True,

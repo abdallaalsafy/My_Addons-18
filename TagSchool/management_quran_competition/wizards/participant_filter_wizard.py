@@ -15,7 +15,7 @@ class ParticipantFilterWizard(models.TransientModel):
     )
 
     # Student filtering
-    participant_id = fields.Many2one(
+    student_id = fields.Many2one(
         'res.partner',
         'Student',
         domain="[('is_student', '=', True)]",
@@ -35,7 +35,7 @@ class ParticipantFilterWizard(models.TransientModel):
 
     # Class filtering
     class_id = fields.Many2one(
-        'quran_office.class',
+        'quran.office.class',
         'Class',
         domain="[('office_id', '=?', office_id)]",
         help="Filter by class or leave empty to include all"
@@ -97,21 +97,21 @@ class ParticipantFilterWizard(models.TransientModel):
     )
 
     # Amount Juz filtering
-    amount_juz_filter_type = fields.Selection([
+    juze_amount_filter_type = fields.Selection([
         ('equals', 'Equals'),
         ('greater_than', 'Greater Than'),
         ('less_than', 'Less Than'),
         ('between', 'Between'),
     ], 'Amount Juz Filter Type')
-    amount_juz_value = fields.Float(
+    juze_amount_value = fields.Float(
         'Amount Juz Value',
         help="Amount Juz value for filtering"
     )
-    amount_juz_min = fields.Float(
+    juze_amount_min = fields.Float(
         'Min Amount Juz',
         help="Minimum amount Juz for between filter"
     )
-    amount_juz_max = fields.Float(
+    juze_amount_max = fields.Float(
         'Max Amount Juz',
         help="Maximum amount Juz for between filter"
     )
@@ -165,8 +165,8 @@ class ParticipantFilterWizard(models.TransientModel):
             domain.append(('competition_id', '=', wizard.competition_id.id))
 
         # Student filtering
-        if wizard.participant_id:
-            domain.append(('participant_id', '=', wizard.participant_id.id))
+        if wizard.student_id:
+            domain.append(('student_id', '=', wizard.student_id.id))
 
         # Office filtering
         if wizard.has_office == 'with_office':
@@ -216,15 +216,15 @@ class ParticipantFilterWizard(models.TransientModel):
             domain.append(('score', '<=', wizard.score_max))
 
         # Amount Juz filtering
-        if wizard.amount_juz_filter_type == 'equals':
-            domain.append(('amount_juz', '=', wizard.amount_juz_value))
-        elif wizard.amount_juz_filter_type == 'greater_than':
-            domain.append(('amount_juz', '>', wizard.amount_juz_value))
-        elif wizard.amount_juz_filter_type == 'less_than':
-            domain.append(('amount_juz', '<', wizard.amount_juz_value))
-        elif wizard.amount_juz_filter_type == 'between':
-            domain.append(('amount_juz', '>=', wizard.amount_juz_min))
-            domain.append(('amount_juz', '<=', wizard.amount_juz_max))
+        if wizard.juze_amount_filter_type == 'equals':
+            domain.append(('juze_amount', '=', wizard.juze_amount_value))
+        elif wizard.juze_amount_filter_type == 'greater_than':
+            domain.append(('juze_amount', '>', wizard.juze_amount_value))
+        elif wizard.juze_amount_filter_type == 'less_than':
+            domain.append(('juze_amount', '<', wizard.juze_amount_value))
+        elif wizard.juze_amount_filter_type == 'between':
+            domain.append(('juze_amount', '>=', wizard.juze_amount_min))
+            domain.append(('juze_amount', '<=', wizard.juze_amount_max))
 
         # Memorization method filtering
         if wizard.memorization_method:

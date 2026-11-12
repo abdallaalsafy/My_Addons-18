@@ -7,6 +7,14 @@ from odoo.exceptions import ValidationError, UserError
 class ResPartnerInherit(models.Model):
     _inherit = 'res.partner'
 
+
+    memorization_ids = fields.One2many(
+        'student.memorization',
+        'student_id',
+        string='Memorizations',
+        help="Memorization records for this student (only shown for students)"
+    )
+
     # Memorization count for students
     memorization_count = fields.Integer(
         'Memorization Count',
@@ -14,18 +22,14 @@ class ResPartnerInherit(models.Model):
         help="Number of memorization records for this student (only shown for students)"
     )
 
+# =============================== Compute Functions =====================================
     def _compute_memorization_count(self):
-        """
-        Compute the number of memorization records for this student (only for students)
-        """
+        """Compute the number of memorization records for this student (only for students)"""
         for record in self:
             if record.is_student:
-                # Count memorization records where this partner is the student
-                memorizations = self.env['student.memorization'].search([('student_id', '=', record.id)])
-                record.memorization_count = len(memorizations)
-            else:
-                record.memorization_count = 0
+                record.memorization_count = len(record.memorization_ids)
 
+# =============================== Action Functions =====================================   
     def action_view_memorizations(self):
         """View memorizations of this student"""
         self.ensure_one()
@@ -41,35 +45,23 @@ class ResPartnerInherit(models.Model):
             'context': { 'default_student_id': self.id, }
         }
 
-    def action_create_memorization(self):
-        """
-        Open memorization registration form for the current student
-        """
+#============================== Helper Functions =====================================
+    def validate_student_for_memorization(self, month=None, office=None):
+        """Check student status before allowing memorization"""
         self.ensure_one()
+
+        self.validate_status_of_student()
         
-        # Check if the partner is a student
-        if not self.is_student:
-            raise ValidationError(_('This partner is not a student. Only students can have memorization records.'))
-        
-        # Check if student already has memorization for current month
-        current_month = fields.Date.today().replace(day=1)
-        existing_memorization = self.env['student.memorization'].search([
-            ('student_id', '=', self.id),
-            ('memorization_month', '>=', current_month)
-        ], limit=1)
-        if not existing_memorization:
-            # Open new record
-            return {
-                'type': 'ir.actions.act_window',
-                'name': _('Register Memorization'),
-                'res_model': 'student.memorization',
-                'view_mode': 'form',
-                'target': 'new',
-                'context': {
-                    'default_student_id': self.id,
-                    'default_memorization_month': fields.Date.today(),
-                }
-            }
-        else:
-            raise UserError(_('This student already has memorization for current month.'))
+        office = office or self.office_id
+
+        # There also _sql_constraints in student.memorization to ensure uniqueness, but we check here for a more user-friendly error message
+        month = month or fields.Date.today()
+        existing_memorization = self.memorization_ids.filtered(
+                    lambda m: m.memorization_month.replace(day=1) == month.replace(day=1) and m.office_id == office
+                )
+        if existing_memorization:
+            raise ValidationError(_('This student already has memorization for month (%s) and office (%s).') % (month, office.name))
+        if not office:
+            raise ValidationError(
+                _('Cannot create memorization for student (%s) without office.') % self.name)
 

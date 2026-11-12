@@ -44,7 +44,7 @@ class AttendanceRegister(models.Model):
     is_policy_valid = fields.Boolean(string='Is Policy Valid', compute="_compute_is_policy_valid",store=True)
     
     office_id = fields.Many2one('quran.office.office', string='Office', required=True)
-    class_id = fields.Many2one('quran_office.class', string='Class', domain="[('office_id', '=?', office_id)]")
+    class_id = fields.Many2one('quran.office.class', string='Class', domain="[('office_id', '=?', office_id)]")
     teacher_id = fields.Many2one('res.partner', string='Teacher', domain="[('is_teacher', '=', True)]")
     
     is_leap_year = fields.Boolean(string='Is Leap Year', compute='_compute_is_leap_year', store=False)

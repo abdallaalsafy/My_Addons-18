@@ -15,6 +15,9 @@
                             <h3>
                                 <field name="month_name"/>
                             </h3>
+                            <h3>
+                                <field name="memorization_month"/>
+                            </h3>
                         </div>
                         
                         <group>
@@ -22,33 +25,28 @@
                                 <field name="student_id" options="{'no_quick_create': True}" context="{
                                     'form_view_ref': 'management_quran_office_core.res_partner_form_view_quran_office',
                                     'default_is_student': True}"/>
-                                <field name="memorization_month"/>
-                             </group>
-                            <group string="Date Information">
                                 <field name="office_id" />
                                 <field name="class_id" context="{'default_office_id': office_id}"/>
                                 <field name="teacher_id" options="{'no_quick_create': True}"
                                        context="{'default_is_teacher': True,
                                        'form_view_ref': 'management_quran_office_core.res_partner_form_view_quran_office'}"/>
-
+                             </group>
+                            <group string="Quran Memorization Details">
+                                <field name="memorization_method"/>
+                                <field name="surah_id" invisible="memorization_method == 'mixed'" options="{'no_create':True,'no_open':True}"/>
+                                <field name="ayah_num" invisible="memorization_method == 'mixed'"/>
+                                <field name="surah_ids" invisible="memorization_method != 'mixed'" widget="many2many_tags"
+                                       options="{'no_create':True,'no_open':True}"/>
+                                <field name="juze_amount" readonly="memorization_method == 'mixed'" force_save="1"/>
                             </group>
                         </group>
-                        
-                        <group string="Quran Memorization Details">
-                            <group>
-                                <field name="memorization_method"/>
-                                <field name="memorization_surah" options="{'no_create':True,'no_open':True}"/>
-                                <field name="memorization_ayah"/>
-                                <field name="memorization_amount_juz"/>
-                            </group>
-                            <group>
+                        <group >
+                            <group string="Review &amp; Grade Details">
                                 <field name="review_amount" placeholder="Enter review details..."/>
                                 <field name="student_grade"/>
                                 <field name="test_grade"/>
                             </group>
-                        </group>
-                        <group string="Additional Information">
-                            <group colspan="2">
+                            <group string="Additional Information">
                                 <field name="notes" placeholder="Add any notes about this memorization session..."/>
                             </group>
                         </group>
@@ -70,11 +68,11 @@
                     <field name="class_id" optional="hide"/>
                     <field name="teacher_id" optional="hide"/>
                     <field name="memorization_method" optional="show"/>
-                    <field name="memorization_surah"/>
-                    <field name="memorization_ayah"/>
+                    <field name="surah_id"/>
+                    <field name="ayah_num"/>
                     <field name="student_grade" optional="show"/>
                     <field name="test_grade" optional="show"/>
-                    <field name="memorization_amount_juz" optional="show"/>
+                    <field name="juze_amount" optional="show"/>
                 </list>
             </field>
         </record>
@@ -90,7 +88,7 @@
                     <field name="office_id"/>
                     <field name="class_id"/>
                     <field name="teacher_id"/>
-                    <field name="memorization_surah"/>
+                    <field name="surah_id"/>
                     <field name="memorization_month"/>
                     
                     <!-- Filters -->
@@ -117,7 +115,7 @@
                         <filter string="Date" name="group_month" context="{'group_by': 'memorization_month'}"/>
                         <filter string="Month" name="group_month" context="{'group_by': 'month_name'}"/>
                         <filter string="Method" name="group_method" context="{'group_by': 'memorization_method'}"/>
-                        <filter string="Surah" name="group_surah" context="{'group_by': 'memorization_surah'}"/>
+                        <filter string="Surah" name="group_surah" context="{'group_by': 'surah_id'}"/>
                     </group>
                 </search>
             </field>

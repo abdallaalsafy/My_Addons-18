@@ -4,20 +4,16 @@ from odoo.exceptions import ValidationError
 
 
 class Area(models.Model):
-    _name = 'quran_office.area'
+    _name = 'quran.office.area'
     _description = 'Area/District'
     _order = 'name asc'
 
     name = fields.Char(
-        'Area Name',
+        'Name',
         required=True,
         help="Name of the area/district"
     )
-    
-    code = fields.Char(
-        'Area Code',
-        help="Unique code for the area"
-    )
+    code = fields.Char('Code', help="Unique code for the area",readonly=True)
     
     description = fields.Text(
         'Description',
@@ -45,62 +41,29 @@ class Area(models.Model):
         help="Partners located in this area"
     )
 
-    @api.depends('partner_ids')
-    def _compute_partner_count(self):
-        """
-        Compute the number of partners in this area.
-        """
-        for area in self:
-            area.partner_count = len(area.partner_ids)
 
-    @api.constrains('code')
-    def _check_unique_code(self):
-        """
-        Ensure area code is unique.
-        """
-        for area in self:
-            if area.code:
-                duplicates = self.search([
-                    ('code', '=', area.code),
-                    ('id', '!=', area.id)
-                ])
-                if duplicates:
-                    raise ValidationError(_(
-                        "Area Code must be unique! This code is already used."))
+    _sql_constraints = [('name_uniq', "unique(name)", "Name must be unique per area."),]
+    
+############################## Builtin Functions #############################################
+    @api.model_create_multi
+    def create(self, vals_list):
+        """Override create method to generate registration number automatically."""
+        for vals in vals_list:
+            vals['code'] = self.env['ir.sequence'].next_by_code('quran.office.area')
 
-    @api.constrains('name')
-    def _check_unique_name(self):
-        """
-        Ensure area name is unique.
-        """
-        for area in self:
-            if area.name:
-                duplicates = self.search([
-                    ('name', '=', area.name),
-                    ('id', '!=', area.id)
-                ])
-                if duplicates:
-                    raise ValidationError(_(
-                        "Area Name must be unique! This name is already used."))
+        return super().create(vals_list)
 
     def name_get(self):
-        """
-        Override name_get to show code and name.
-        """
+        """Override name_get to show code and name."""
         result = []
         for area in self:
-            if area.code:
-                name = f"[{area.code}] {area.name}"
-            else:
-                name = area.name
+            name = f"[{area.code}] {area.name}"
             result.append((area.id, name))
         return result
 
     @api.model
     def name_search(self, name='', args=None, operator='ilike', limit=100):
-        """
-        Enhanced name search to find areas by name or code.
-        """
+        """Enhanced name search to find areas by name or code."""
         if name == '':
             return super().name_search(name, args, operator, limit)
         
@@ -121,10 +84,16 @@ class Area(models.Model):
 
         return super().name_search(name, args, operator, limit)
 
+############################## Compute Fields #########################################################
+    @api.depends('partner_ids')
+    def _compute_partner_count(self):
+        """Compute the number of partners in this area."""
+        for area in self:
+            area.partner_count = len(area.partner_ids)
+
+############################## Actions Functions #############################################
     def action_view_partners(self):
-        """
-        Action to view partners in this area.
-        """
+        """Action to view partners in this area."""
         self.ensure_one()
         action = self.env.ref('base.action_partner_tree_view2').read()[0]
         action['domain'] = [('area_id', '=', self.id)]

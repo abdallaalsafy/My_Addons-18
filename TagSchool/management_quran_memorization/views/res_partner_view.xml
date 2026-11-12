@@ -14,7 +14,7 @@
                     </button>
                 </xpath>
                 <xpath expr="//header" position="inside">
-                    <button name="action_create_memorization" type="object" string="Register Memorization"
+                    <button name="management_quran_memorization.action_batch_memorization_wizard" type="action" string="Create Memorization"
                         class="btn-primary" invisible="not is_student"/>
                 </xpath>
             </field>
@@ -27,7 +27,7 @@
             <field name="inherit_id" ref="management_quran_office_core.res_partner_tree_view_quran_office"/>
             <field name="arch" type="xml">
                 <xpath expr="//header" position="inside">
-                    <button name="management_quran_memorization.action_batch_memorization_wizard" type="action" string="Batch Memorization"
+                    <button name="management_quran_memorization.action_batch_memorization_wizard" type="action" string="Create Memorization"
                         class="btn-info" invisible="not context.get('default_is_student')"/>
                 </xpath>
             </field>

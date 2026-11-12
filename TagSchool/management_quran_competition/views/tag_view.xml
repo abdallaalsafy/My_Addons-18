@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="quran_competition_tag_form_view" model="ir.ui.view">
+            <field name="name">quran.competition.tag.form</field>
+            <field name="model">quran.competition.tag</field>
+            <field name="arch" type="xml">
+                <form string="Competition Tag">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="quran_competition_tag_tree_view" model="ir.ui.view">
+            <field name="name">quran.competition.tag.tree</field>
+            <field name="model">quran.competition.tag</field>
+            <field name="arch" type="xml">
+                <list string="Competition Tags">
+                    <field name="name"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="quran_competition_tag_search_view" model="ir.ui.view">
+            <field name="name">quran.competition.tag.search</field>
+            <field name="model">quran.competition.tag</field>
+            <field name="arch" type="xml">
+                <search string="Competition Tags">
+                    <field name="name"/>
+                    <filter name="active" string="Active" domain="[('active', '=', True)]"/>
+                    <filter name="inactive" string="Inactive" domain="[('active', '=', False)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_quran_competition_tag_view_id" model="ir.actions.act_window">
+            <field name="name">Competition Tags</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">quran.competition.tag</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{'search_default_active': 1}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No competition tags defined yet.
+                </p>
+                <p>
+                    Create tags to categorize competitions and requirement templates.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

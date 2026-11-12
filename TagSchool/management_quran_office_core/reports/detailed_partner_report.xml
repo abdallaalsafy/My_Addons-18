@@ -98,20 +98,20 @@
                                     <tr>
                                         <td style="padding: 8px; width: 15%;background-color: #e0e0e0;">Father Phone:</td>
                                         <td style="padding: 8px;">
-                                            <span t-esc="' -/- '.join(filter(None, [partner.father_name.phone, partner.father_name.mobile])) or '-'"/>
+                                            <span t-esc="' -/- '.join(filter(None, [partner.father_id.phone, partner.father_id.mobile])) or '-'"/>
                                         </td>
 
                                         <td style="padding: 8px; width: 15%;background-color: #e0e0e0;">Father Job:</td>
-                                        <td style="padding: 8px;"><span t-esc="partner.father_name.function or '-'"/></td>
+                                        <td style="padding: 8px;"><span t-esc="partner.father_id.function or '-'"/></td>
                                     </tr>
                                     <tr style="background-color: #f8f9fa;">
                                         <td style="padding: 8px; width: 15%;background-color: #e0e0e0;">Mother Phone:</td>
                                         <td style="padding: 8px;">
-                                            <span t-esc="' -/- '.join(filter(None, [partner.mother_name.phone, partner.mother_name.mobile])) or '-'"/>
+                                            <span t-esc="' -/- '.join(filter(None, [partner.mother_id.phone, partner.mother_id.mobile])) or '-'"/>
                                         </td>
 
                                         <td style="padding: 8px; width: 15%;background-color: #e0e0e0;">Mother Job:</td>
-                                        <td style="padding: 8px;"><span t-esc="partner.mother_name.function or '-'"/></td>
+                                        <td style="padding: 8px;"><span t-esc="partner.mother_id.function or '-'"/></td>
                                     </tr>
                                 </table>
                             </div>
@@ -167,14 +167,14 @@
                                             <td style="padding: 8px;"><span t-esc="partner.class_id.name or '-'"/></td>
 
                                             <td style="padding: 8px;background-color: #e0e0e0;">Memorization Start:</td>
-                                            <td style="padding: 8px;"><span t-esc="partner.memorization_surah.name or ''"/> </td>
+                                            <td style="padding: 8px;"><span t-esc="partner.surah_id.name or ''"/> </td>
                                         </tr>
                                         <tr>
                                             <td style="padding: 8px;background-color: #e0e0e0;">Teacher:</td>
                                             <td style="padding: 8px;"><span t-esc="partner.teacher_id.name or '-'"/></td>
 
                                             <td style="padding: 8px;background-color: #e0e0e0;">To Aya:</td>
-                                            <td style="padding: 8px;"> <span t-esc="partner.memorization_ayah or 0"/></td>
+                                            <td style="padding: 8px;"> <span t-esc="partner.ayah_num or 0"/></td>
                                         </tr>
                                     </table>
     <!--                                <td style="padding: 8px; width: 15%;">Quran Memorizer:</td>-->
@@ -219,4 +219,18 @@
             </main>
         </t>
     </template>
+
+    <!-- Detailed Partner Report -->
+    <record id="action_report_detailed_partner" model="ir.actions.report">
+        <field name="name">Detailed Partner Report</field>
+        <field name="model">res.partner</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">management_quran_office_core.report_detailed_partner_document</field>
+        <field name="report_file">management_quran_office_core.report_detailed_partner_document</field>
+        <field name="print_report_name">'Detailed Partner Report'</field>
+        <field name="paperformat_id" ref="management_quran_office_core.detailed_partner_document_paperformat"/>
+        <field name="binding_model_id" ref="base.model_res_partner"/>
+        <field name="binding_type">report</field>
+        <field name="domain">[('is_company', '=', False), ('partner_share', '=', True)]</field>
+    </record>
 </odoo>

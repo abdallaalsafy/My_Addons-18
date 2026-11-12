@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="quran_competition_participant_result_form_view" model="ir.ui.view">
+            <field name="name">quran.competition.participant.result.form</field>
+            <field name="model">quran.competition.participant.result</field>
+            <field name="arch" type="xml">
+                <form string="Participant Result Rule">
+                    <sheet>
+                        <div class="oe_title mb24 d-flex align-items-center gap-3" >
+                            <h1 class="flex-shrink-0">
+                                <field name="name" placeholder="Result Name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="competition_id" options="{'no_create': True, 'no_open': True}"/>
+                                <field name="percentage"/>
+                            </group>
+                            <group>
+                                <field name="result_status"/>
+                            </group>
+                        </group>
+                        <group string="Notes">
+                            <field name="notes" nolabel="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="quran_competition_participant_result_tree_view" model="ir.ui.view">
+            <field name="name">quran.competition.participant.result.tree</field>
+            <field name="model">quran.competition.participant.result</field>
+            <field name="arch" type="xml">
+                <list string="Participation Results">
+                    <field name="name"/>
+                    <field name="competition_id"/>
+                    <field name="result_status"/>
+                    <field name="percentage"/>
+                    <field name="active" widget="boolean_toggle"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="quran_competition_participant_result_search_view" model="ir.ui.view">
+            <field name="name">quran.competition.participant.result.search</field>
+            <field name="model">quran.competition.participant.result</field>
+            <field name="arch" type="xml">
+                <search string="Participation Results">
+                    <field name="name"/>
+                    <field name="competition_id"/>
+                    <field name="result_status"/>
+                    <filter name="active" string="Active" domain="[('active', '=', True)]"/>
+                    <filter name="inactive" string="Inactive" domain="[('active', '=', False)]"/>
+                    <group expand="0" string="Group By">
+                        <filter name="group_competition" string="Competition" context="{'group_by': 'competition_id'}"/>
+                        <filter name="group_status" string="Status" context="{'group_by': 'result_status'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_quran_competition_participant_result_view_id" model="ir.actions.act_window">
+            <field name="name">Participant Evaluation Rules</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">quran.competition.participant.result</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{}</field>
+        </record>
+    </data>
+</odoo>

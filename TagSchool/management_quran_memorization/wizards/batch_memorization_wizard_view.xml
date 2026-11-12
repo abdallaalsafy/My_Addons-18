@@ -20,12 +20,16 @@
                                        context="{'default_is_teacher': True, 'form_view_ref': 'management_quran_office_core.res_partner_form_view_quran_office'}"/>
                             </group>
                         </group>
-                        
-                        <group string="Quran Memorization Details">
-                            <group>
+                        <group>
+                            <group string="Method &amp; Amount">
                                 <field name="memorization_method"/>
-                                <field name="memorization_surah" options="{'no_create':True,'no_open':True}"/>
-                                <field name="memorization_ayah"/>
+                                <field name="juze_amount" readonly="memorization_method == 'mixed'" force_save="1"/>
+                            </group>
+                            <group string="Start Point">
+                                <field name="surah_id" invisible="memorization_method == 'mixed'" options="{'no_create':True,'no_open':True}"/>
+                                <field name="ayah_num" invisible="memorization_method == 'mixed'"/>
+                                <field name="surah_ids" invisible="memorization_method != 'mixed'" widget="many2many_tags"
+                                       options="{'no_create':True,'no_open':True}"/>
                             </group>
                         </group>
                     </sheet>

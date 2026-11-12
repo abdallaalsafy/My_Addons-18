@@ -22,7 +22,7 @@ class AttendanceBulkCreateWizard(models.TransientModel):
     holiday_policy_id = fields.Many2one('attendance.holiday.policy', string='Holiday Policy',default=lambda self: self.env.ref('management_quran_attendance.attendance_default_holiday_policy').id)
     office_id = fields.Many2one('quran.office.office', string='Office')
     class_id = fields.Many2one(
-        'quran_office.class',
+        'quran.office.class',
         string='Class',
         domain="[('office_id', '=?', office_id)]",
     )

@@ -8,34 +8,54 @@
             <field name="arch" type="xml">
                 <form string="Competition Participant">
                     <header>
-                        <button name="action_confirm_participant" type="object" string="Confirm Registration"
-                            class="btn-success" invisible="state != 'registered'"/>
-                        <button name="action_mark_inappropriate" type="object" string="Mark Inappropriate"
-                            class="btn-danger" invisible="state != 'registered'"/>
-                        <button name="action_disqualify_participant" type="object" string="Disqualify"
-                            class="btn-warning" invisible="state !='inappropriate'"/>
-                        <button name="action_withdraw_participant" type="object" string="Withdraw"
-                            class="btn-secondary" invisible="state not in ['registered', 'confirmed']"/>
-                        <button name="action_reset_to_registered" type="object" string="Reset to Registered"
-                            class="btn-secondary" invisible="state == 'registered'"/>
+                        <button name="action_check_participant_eligibility" type="object" string="Validate Requirment"
+                            class="btn-danger" invisible="not requirement_id"/>
+                        <button name="action_match_level_to_juze_amount" type="object" string="Match Levels"
+                            class="btn-primary" invisible="not competition_id"/>
+                        <button name="action_evaluate_participant" type="object" string="Evaluate Participant"
+                            class="btn-secondary" invisible="not competition_id"/>
                         <field name="state" widget="statusbar"/>
                     </header>
                     <sheet>
-                        <div class="oe_title mb24">
+                        <widget name="web_ribbon" title="Superior" bg_color="bg-success" invisible="status != 'superior'"/>
+                        <widget name="web_ribbon" title="Successful" bg_color="bg-primary" invisible="status != 'successful'"/>
+                        <widget name="web_ribbon" title="Acceptable" bg_color="bg-warning" invisible="status != 'acceptable'"/>
+                        <widget name="web_ribbon" title="Precipitate" bg_color="bg-danger" invisible="status != 'precipitate'"/>
+                        <div class="oe_title">
                             <h1>
                                 <field name="name" readonly="1"/>
                             </h1>
+                            <h2>
+                                <group>
+                                    <field name="student_id" options="{'no_quick_create': True}" context="{
+                                            'form_view_ref': 'management_quran_office_core.res_partner_form_view_quran_office',
+                                            'default_is_student': True}"/>
+                                </group>
+                            </h2>
                         </div>
                         <group>
-                            <group string="Registration Details">
+                            <group string="Competition Details">
                                 <field name="competition_id"/>
-                                <field name="registration_date"/>
                                 <field name="registration_number"/>
                             </group>
+                            <group string="Registration Information">
+                                <field name="registration_date"/>
+                                <field name="level_id" invisible="not competition_id"/>
+                            </group>
+                        </group>
+                        <group string="Quran Memorization Details">
+                            <group>
+                                <field name="memorization_method"/>
+                                <field name="juze_amount" readonly="memorization_method == 'mixed'" force_save="1"/>
+                                <field name="surah_id" invisible="memorization_method == 'mixed'" 
+                                        options="{'no_open':True}" readonly="1" force_save="1"/>
+                                <field name="ayah_num" invisible="memorization_method == 'mixed'" readonly="1" force_save="1"/>
+                                <field name="surah_ids" options="{'no_open': True, 'no_create': True}"
+                                        invisible="memorization_method != 'mixed'" 
+                                        required="memorization_method == 'mixed'"
+                                        widget="many2many_tags" />
+                            </group>
                             <group string="Participant Information">
-                                <field name="participant_id" options="{'no_quick_create': True}" context="{
-                                    'form_view_ref': 'management_quran_office_core.res_partner_form_view_quran_office',
-                                    'default_is_student': True}"/>
                                 <field name="office_id"/>
                                 <field name="class_id" context="{'default_office_id': office_id}"/>
                                 <field name="teacher_id" options="{'no_quick_create': True}"
@@ -47,31 +67,27 @@
                                 <field name="age_days" invisible="1"/>
                             </group>
                         </group>
-                        <group string="Quran Memorization Details">
-                            <group>
-                                <field name="amount_juz"/>
-                                <field name="surah" invisible="memorization_method == 'mixed'" options="{'no_open':True}"/>
-                                <field name="ayah" invisible="memorization_method == 'mixed'"/>
-                            </group>
-                            <group>
-                                <field name="memorization_method"/>
-                                <field name="surahes_memorized" placeholder="Enter Surahes Memorized details..."
-                                        invisible="memorization_method != 'mixed'" required="memorization_method == 'mixed'"/>
-                            </group>
-                        </group>
                         <group>
                             <group string="Evaluation Results">
                                 <field name="score"/>
                                 <field name="competition_test_grade"/>
+                                <field name="evaluation_percentage" readonly="1" force_save="1"/>
+                                <field name="status" invisible="1"/>
+                                <field name="result_id" invisible="1"/>
                             </group>
                             <group string="Prize Information">
                                 <field name="monetary_prize"/>
                                 <field name="in_kind_prize" placeholder="Describe in-kind prize..."/>
                             </group>
                         </group>
-                        <group >
-                            <field name="notes" placeholder="Add evaluation notes..."/>
-                        </group>
+                        <notebook>
+                            <page string="Notes">
+                                <field name="notes" placeholder="Add evaluation notes..."/>
+                            </page>
+                            <page string="Reason Disqualified" invisible="state != 'disqualified'">
+                                <field name="reason_disqualified" placeholder="Reason Disqualified"/>
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>
@@ -83,19 +99,28 @@
             <field name="model">quran.competition.participant</field>
             <field name="arch" type="xml">
                 <list string="Competition Participants">
+                    <header>
+                        <button name="action_check_participant_eligibility" type="object" string="Validate Requirment"
+                            class="btn-danger"/>
+                        <button name="action_match_level_to_juze_amount" type="object" string="Match Levels"
+                            class="btn-primary"/>
+                        <button name="action_evaluate_participant" type="object" string="Evaluate Participant"
+                            class="btn-secondary"/>
+                    </header>
                     <field name="name"/>
-                    <field name="registration_number"/>
-                    <field name="participant_id"/>
+                    <field name="registration_number" optional="show"/>
+                    <field name="student_id"/>
                     <field name="age_from_id"/>
-                    <field name="amount_juz"/>
+                    <field name="juze_amount"/>
+                    <field name="level_id"/>
                     <field name="office_id" optional="show"/>
                     <field name="class_id" optional="show"/>
                     <field name="teacher_id" optional="show"/>
                     <field name="score" optional="show"/>
                     <field name="monetary_prize" optional="show"/>
-                    <field name="state" widget="badge" decoration-success="state=='participated'" 
-                        decoration-warning="state=='confirmed'" decoration-info="state=='registered'" 
-                        decoration-danger="state=='disqualified'"/>
+                    <field name="state" widget="badge" decoration-success="state=='confirmed'" 
+                        decoration-warning="state=='disqualified'" decoration-info="state=='draft'" 
+                        decoration-danger="state=='withdrawn'"/>
                 </list>
             </field>
         </record>
@@ -106,27 +131,28 @@
             <field name="model">quran.competition.participant</field>
             <field name="arch" type="xml">
                 <search string="Competition Participants">
-                    <field name="participant_id" filter_domain="['|',('participant_id.name', 'ilike', self),('participant_id.ref', 'ilike', self)]"/>
+                    <field name="student_id" filter_domain="['|',('student_id.name', 'ilike', self),('student_id.ref', 'ilike', self)]"/>
                     <field name="name"/>
                     <field name="registration_number"/>
                     <field name="competition_id"/>
                     <field name="office_id"/>
                     <field name="class_id"/>
                     <field name="teacher_id"/>
+                    <field name="level_id"/>
 
-                    <filter name="registered" string="Registered" domain="[('state', '=', 'registered')]"/>
+                    <filter name="draft" string="Draft" domain="[('state', '=', 'draft')]"/>
                     <filter name="confirmed" string="Confirmed" domain="[('state', '=', 'confirmed')]"/>
-                    <filter name="inappropriate" string="Participated" domain="[('state', '=', 'participated')]"/>
                     <filter name="disqualified" string="Disqualified" domain="[('state', '=', 'disqualified')]"/>
                     <filter name="withdrawn" string="Withdrawn" domain="[('state', '=', 'withdrawn')]"/>
                     <separator/>
 
                     <group expand="0" string="Group By">
-                        <filter name="group_student" string="Student" context="{'group_by': 'participant_id'}"/>
+                        <filter name="group_student" string="Student" context="{'group_by': 'student_id'}"/>
                         <filter name="group_competition" string="Competition" context="{'group_by': 'competition_id'}"/>
                         <filter name="group_office" string="Office" context="{'group_by': 'office_id'}"/>
                         <filter name="group_class" string="Class" context="{'group_by': 'class_id'}"/>
                         <filter name="group_teacher" string="Teacher" context="{'group_by': 'teacher_id'}"/>
+                        <filter name="group_level" string="Level" context="{'group_by': 'level_id'}"/>
                         <filter name="group_state" string="Status" context="{'group_by': 'state'}"/>
                     </group>
                 </search>

@@ -5,8 +5,38 @@
         <record id="seq_partner_id" model="ir.sequence">
             <field name="name">Partner Registration</field>
             <field name="code">res.partner</field>
-            <field name="prefix">TAG</field>
+            <field name="prefix">PRT</field>
             <field name="padding">6</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+
+        <!-- Area Registration Number Sequence -->
+        <record id="seq_area_id" model="ir.sequence">
+            <field name="name">Area Registration</field>
+            <field name="code">quran.office.area</field>
+            <field name="prefix">ARE</field>
+            <field name="padding">5</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+
+        <!-- Class Registration Number Sequence -->
+        <record id="seq_class_id" model="ir.sequence">
+            <field name="name">Class Registration</field>
+            <field name="code">quran.office.class</field>
+            <field name="prefix">CLS</field>
+            <field name="padding">5</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+
+        <!-- Office Registration Number Sequence -->
+        <record id="seq_office_id" model="ir.sequence">
+            <field name="name">Office Registration</field>
+            <field name="code">quran.office.office</field>
+            <field name="prefix">OFF</field>
+            <field name="padding">5</field>
             <field name="number_next">1</field>
             <field name="number_increment">1</field>
         </record>

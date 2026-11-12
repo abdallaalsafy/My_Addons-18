@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_participant_bulk_update_wizard_form" model="ir.ui.view">
+        <field name="name">participant.bulk.update.wizard.form</field>
+        <field name="model">participant.bulk.update.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Bulk Update Participant">
+                <sheet>
+                    <group>
+                        <field name="field_name" invisible="1"/>
+                        <field name="state_value"
+                               invisible="field_name != 'state'" required="field_name == 'state'"
+                               options="{'no_create': True, 'no_open': True}"/>
+                        <field name="status_value"
+                               invisible="field_name != 'status'" required="field_name == 'status'"
+                               options="{'no_create': True, 'no_open': True}"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="action_apply"
+                            type="object"
+                            string="Apply"
+                            class="btn-primary"
+                            confirm="Are you sure you want to update the selected participants?"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

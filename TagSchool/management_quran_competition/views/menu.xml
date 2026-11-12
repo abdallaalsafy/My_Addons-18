@@ -21,6 +21,27 @@
             action="action_competition_requirements_view_id"
             sequence="30"/>
 
+        <!-- Levels Submenu -->
+        <menuitem id="menu_quran_competition_levels"
+            name="Levels"
+            parent="menu_quran_competition_root"
+            action="action_quran_competition_level_view_id"
+            sequence="40"/>
+
+        <!-- Evaluation Rules Submenu -->
+        <menuitem id="menu_quran_competition_evaluation_rules"
+            name="Evaluation Rules"
+            parent="menu_quran_competition_root"
+            action="action_quran_competition_participant_result_view_id"
+            sequence="50"/>
+
+        <!-- Tags Submenu -->
+        <menuitem id="menu_quran_competition_tags_config"
+            name="Competition Tags"
+            parent="management_quran_office_core.menu_configuration_quran_office_core"
+            action="action_quran_competition_tag_view_id"
+            sequence="35"/>
+
         <!-- Participants Submenu -->
         <menuitem id="menu_quran_competition_participants"
             name="Participants"

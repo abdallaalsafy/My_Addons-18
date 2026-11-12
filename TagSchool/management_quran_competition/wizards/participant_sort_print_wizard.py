@@ -23,7 +23,7 @@ class ParticipantSortPrintWizard(models.TransientModel):
         default=True,
         help="Sort results by score"
     )
-    sort_by_amount_juz = fields.Boolean(
+    sort_by_juze_amount = fields.Boolean(
         'Sort by Amount Juz',
         default=True,
         help="Sort results by amount Juz"
@@ -59,38 +59,14 @@ class ParticipantSortPrintWizard(models.TransientModel):
             raise ValidationError(_('Please select participants to print.'))
         
         participants = self.env['quran.competition.participant'].browse(active_ids)
-        
-        # Build sort order based on global sort type
-        desc_suffix = ' desc' if self.global_sort_type == 'desc' else ' asc'
-        order_parts = []
-        
-        # Add main sorting options
-        if self.sort_by_score:
-            order_parts.append(f'score{desc_suffix}')
-        if self.sort_by_amount_juz:
-            order_parts.append(f'amount_juz{desc_suffix}')
-        
-        # Add additional sorting options
-        if self.sort_by_name:
-            order_parts.append(f'participant_id.name{desc_suffix}')
-        if self.sort_by_registration_number:
-            order_parts.append(f'registration_number{desc_suffix}')
-        if self.sort_by_office:
-            order_parts.append(f'office_id.name{desc_suffix}')
-        if self.sort_by_class:
-            order_parts.append(f'class_id.name{desc_suffix}')
-        
-        # Apply sorting if any options selected
-        if order_parts:
-            order = ', '.join(order_parts)
-            participants = participants.sorted(lambda p: (
-                p.score or 0 if self.sort_by_score else 0,
-                p.amount_juz or 0 if self.sort_by_amount_juz else 0,
-                p.participant_id.name or '' if self.sort_by_name else '',
-                p.registration_number or '' if self.sort_by_registration_number else '',
-                p.office_id.name or '' if self.sort_by_office else '',
-                p.class_id.name or '' if self.sort_by_class else ''
-            ), reverse=self.global_sort_type == 'desc')
+        participants = participants.sorted(key=lambda p:(
+            p.student_id.name if self.sort_by_name else '',
+            p.score if self.sort_by_score else 0,
+            p.juze_amount if self.sort_by_juze_amount else 0,
+            p.registration_number if self.sort_by_registration_number else '',
+            p.office_id.name if self.sort_by_office else '',
+            p.class_id.name if self.sort_by_class else ''
+        ), reverse=self.global_sort_type == 'desc')
         
         return participants
 

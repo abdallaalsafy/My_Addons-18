@@ -8,12 +8,16 @@
             <field name="arch" type="xml">
                 <form string="Monthly Subscription">
                     <sheet>
+                        <field name="currancy_id" invisible="1"/>
                         <div class="oe_title d-flex align-items-center gap-2">
                             <h2>
                                 <field name="name" readonly="1"/>
                             </h2>
                             <h3>
                                 <field name="month_name"/>
+                            </h3>
+                            <h3>
+                                <field name="subscription_month"/>
                             </h3>
                         </div>
                         
@@ -29,26 +33,20 @@
                                        'default_is_teacher': True,
                                        'form_view_ref': 'management_quran_office_core.res_partner_form_view_quran_office'}"/>
                             </group>
-                            <group string="Subscription Details">
-                                <field name="subscription_fee" force_save="1"/>
-                                <field name="discount_percentage_fee" widget="percentage" force_save="1"/>
-                                <field name="expected_amount" force_save="1"/>
-                            </group>
-                        </group>
-                        
-                        <group string="Payment Information">
-                            <group>
+                            <group string="Payment Information">
                                 <field name="paid_amount"/>
                                 <field name="remaining_amount"/>
-                            </group>
-                            <group>
                                 <field name="payment_voucher_number"/>
-                                <field name="subscription_month"/>
                             </group>
                         </group>
                         
-                        <group string="Additional Information">
-                            <group colspan="2">
+                        <group>
+                            <group string="Subscription Details">
+                                <field name="subscription_fee" force_save="1"/>
+                                <field name="discount_percentage_fee"  force_save="1"/>
+                                <field name="expected_amount" force_save="1"/>
+                            </group>
+                            <group string="Additional Information">
                                 <field name="notes" placeholder="Add any notes about this subscription..."/>
                             </group>
                         </group>
@@ -63,6 +61,7 @@
             <field name="model">monthly.subscription</field>
             <field name="arch" type="xml">
                 <list string="Monthly Subscriptions" default_order="subscription_month desc">
+                    <field name="currancy_id" column_invisible="1"/>
                     <field name="name"/>
                     <field name="payment_voucher_number"/>
                     <field name="student_id"/>

@@ -9,16 +9,11 @@ class QuranOffice(models.Model):
     _order = 'name asc'
 
     name = fields.Char(
-        'Office Name',
+        'Name',
         required=True,
         help="Name of the Quran memorization office"
     )
-    
-    code = fields.Char(
-        'Office Code',
-        help="Unique code for the office"
-    )
-    
+    code = fields.Char('Code', readonly=True, default=lambda self: _('New'))
     description = fields.Text(
         'Description',
         help="Additional information about the office"
@@ -40,7 +35,7 @@ class QuranOffice(models.Model):
     )
     
     class_ids = fields.One2many(
-        'quran_office.class',
+        'quran.office.class',
         'office_id',
         'Classes',
         help="Classes in this office"
@@ -60,44 +55,20 @@ class QuranOffice(models.Model):
         help="Total number of classes in this office"
     )
 
-    # ================================ CONSTRAINTS ================================
+    _sql_constraints = [('name_uniq', "unique(name)", "Name must be unique per office."),]
+    
 
-    @api.constrains('code')
-    def _check_unique_code(self):
-        """
-        Ensure office code is unique.
-        """
-        for office in self:
-            if office.code:
-                duplicates = self.search([
-                    ('code', '=', office.code),
-                    ('id', '!=', office.id)
-                ])
-                if duplicates:
-                    raise ValidationError(_(
-                        "Office Code must be unique! This code is already used."))
+# ================================ Built-in Methods ================================
+    @api.model_create_multi
+    def create(self, vals_list):
+        """Override create method to generate registration number automatically."""
+        for vals in vals_list:
+            vals['code'] = self.env['ir.sequence'].next_by_code('quran.office.office')
 
-    @api.constrains('name')
-    def _check_unique_name(self):
-        """
-        Ensure office name is unique.
-        """
-        for office in self:
-            if office.name:
-                duplicates = self.search([
-                    ('name', '=', office.name),
-                    ('id', '!=', office.id)
-                ])
-                if duplicates:
-                    raise ValidationError(_(
-                        "Office Name must be unique! This name is already used."))
-
-    # ================================ Built-in Methods ================================
+        return super(QuranOffice, self).create(vals_list)
 
     def name_get(self):
-        """
-        Override name_get to show code and name.
-        """
+        """Override name_get to show code and name."""
         result = []
         for office in self:
             if office.code:
@@ -136,28 +107,20 @@ class QuranOffice(models.Model):
 
     @api.depends('student_ids')
     def _compute_student_count(self):
-        """
-        Compute the number of students in this office.
-        """
+        """Compute the number of students in this office."""
         for office in self:
             office.student_count = len(office.student_ids)
 
     @api.depends('class_ids')
     def _compute_class_count(self):
-        """
-        Compute the number of classes in this office.
-        """
+        """Compute the number of classes in this office."""
         for office in self:
             office.class_count = len(office.class_ids)
-
-
 
     # ================================ ACTIONS ================================
 
     def action_view_students(self):
-        """
-        Action to view students in this office.
-        """
+        """Action to view students in this office."""
         self.ensure_one()
         action = self.env.ref('management_quran_office_core.action_students_view_id').read()[0]
         action['domain'] = [('quran_office_id', '=', self.id)]
@@ -165,9 +128,7 @@ class QuranOffice(models.Model):
         return action
 
     def action_view_classes(self):
-        """
-        Action to view classes in this office.
-        """
+        """Action to view classes in this office."""
         self.ensure_one()
         action = self.env.ref('management_quran_office_core.action_classes_view_id').read()[0]
         action['domain'] = [('office_id', '=', self.id)]

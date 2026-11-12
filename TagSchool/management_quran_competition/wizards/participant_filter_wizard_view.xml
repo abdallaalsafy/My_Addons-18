@@ -11,7 +11,7 @@
                             <field name="competition_id" options="{'no_create': True,'no_open': True}"/>
                         </group>
                         <group string="Student">
-                            <field name="participant_id" options="{'no_create': True,'no_open': True}"/>
+                            <field name="student_id" options="{'no_create': True,'no_open': True}"/>
                         </group>
                     </group>
                     <group>
@@ -46,10 +46,10 @@
                             <field name="score_max" invisible="score_filter_type != 'between'"/>
                         </group>
                         <group string="Amount Juz Filter">
-                            <field name="amount_juz_filter_type"/>
-                            <field name="amount_juz_value" invisible="amount_juz_filter_type != 'equals'"/>
-                            <field name="amount_juz_min" invisible="amount_juz_filter_type != 'between'"/>
-                            <field name="amount_juz_max" invisible="amount_juz_filter_type != 'between'"/>
+                            <field name="juze_amount_filter_type"/>
+                            <field name="juze_amount_value" invisible="juze_amount_filter_type != 'equals'"/>
+                            <field name="juze_amount_min" invisible="juze_amount_filter_type != 'between'"/>
+                            <field name="juze_amount_max" invisible="juze_amount_filter_type != 'between'"/>
                         </group>
                     </group>
                     

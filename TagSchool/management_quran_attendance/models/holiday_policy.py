@@ -14,7 +14,7 @@ class AttendanceHolidayPolicy(models.Model):
     end_date = fields.Date(string='End Date',help="The day is not included in the holiday policy.")
 
     office_id = fields.Many2one('quran.office.office', string='Office')
-    class_id = fields.Many2one('quran_office.class', string='Class', domain="[('office_id', '= ?', office_id)]")
+    class_id = fields.Many2one('quran.office.class', string='Class', domain="[('office_id', '= ?', office_id)]")
     teacher_id = fields.Many2one('res.partner', string='Teacher', domain="[('is_teacher', '=', True)]")
 
     is_saturday_off = fields.Boolean(string='Saturday')

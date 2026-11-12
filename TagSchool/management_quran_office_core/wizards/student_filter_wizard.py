@@ -20,7 +20,7 @@ class StudentFilterWizard(models.TransientModel):
 
     # Class filtering
     class_id = fields.Many2one(
-        'quran_office.class',
+        'quran.office.class',
         'Class',
         domain="[('office_id', '=?', office_id)]",
         help="Filter by class or leave empty to include all"
@@ -171,19 +171,19 @@ class StudentFilterWizard(models.TransientModel):
 
         # Father filtering
         if wizard.has_father == 'with_father':
-            domain.append(('father_name', '!=', False))
+            domain.append(('father_id', '!=', False))
         elif wizard.has_father == 'without_father':
-            domain.append(('father_name', '=', False))
+            domain.append(('father_id', '=', False))
         elif wizard.father_id:
-            domain.append(('father_name', '=', wizard.father_id.id))
+            domain.append(('father_id', '=', wizard.father_id.id))
 
         # Mother filtering
         if wizard.has_mother == 'with_mother':
-            domain.append(('mother_name', '!=', False))
+            domain.append(('mother_id', '!=', False))
         elif wizard.has_mother == 'without_mother':
-            domain.append(('mother_name', '=', False))
+            domain.append(('mother_id', '=', False))
         elif wizard.mother_id:
-            domain.append(('mother_name', '=', wizard.mother_id.id))
+            domain.append(('mother_id', '=', wizard.mother_id.id))
 
         # ID Number filtering
         if wizard.has_id_number == 'with_id':

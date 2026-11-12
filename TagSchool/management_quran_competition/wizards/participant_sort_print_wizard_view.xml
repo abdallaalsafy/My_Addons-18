@@ -15,7 +15,7 @@
                     <group string="Main Sorting Options">
                         <group>
                             <field name="sort_by_score"/>
-                            <field name="sort_by_amount_juz"/>
+                            <field name="sort_by_juze_amount"/>
                         </group>
                     </group>
                     
