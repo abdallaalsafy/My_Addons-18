@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_competition_registration_form_wizard_form" model="ir.ui.view">
+        <field name="name">competition.registration.form.wizard.form</field>
+        <field name="model">competition.registration.form.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Print Blank Registration Form">
+                <sheet>
+                    <group>
+                        <field name="competition_id" 
+                                options="{'no_create': True, 'no_open': True}"
+                                invisible="context.get('active_id')"/>
+                        <field name="copies" min="1"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="action_print_blank_registration_form" type="object"
+                            string="Print" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_blank_registration_form_wizard" model="ir.actions.act_window">
+        <field name="name">Blank Registration Form</field>
+        <field name="res_model">competition.registration.form.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

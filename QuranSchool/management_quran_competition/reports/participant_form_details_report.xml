@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Participant Detailed Registration Form Template -->
+        <template id="report_participant_registration_form_document">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="participant">
+                    <t t-call="web.external_layout">
+                        <div class="page" style="font-size: 13px; color: #1f2937;">
+                            <div style="text-align: center; margin-bottom: 20px;">
+                                <h2 style="margin: 0; font-weight: bold;">Student Competition Registration Form</h2>
+                            </div>
+
+                            <div style="border: 2px solid #dfe3e8; border-radius: 10px; padding: 20px; margin-bottom: 15px; background-color: #ffffff;">
+                                <table style="width: 100%; border-collapse: collapse;">
+                                    <tr>
+                                        <td style="padding: 8px; width: 28%; font-weight: bold; background-color: #f3f4f6;">Registration No.</td>
+                                        <td style="padding: 8px; border-bottom: 1px solid #e5e7eb;"><span t-esc="participant.name or '-'"/></td>
+                                        <td style="padding: 8px; width: 28%; font-weight: bold; background-color: #f3f4f6;">Registration Date</td>
+                                        <td style="padding: 8px; border-bottom: 1px solid #e5e7eb;">
+                                            <span t-if="participant.registration_date" t-esc="participant.registration_date.strftime('%Y-%m-%d')"/>
+                                            <span t-else="">-</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; width: 28%; font-weight: bold; background-color: #f3f4f6;">Competition Name</td>
+                                        <td style="padding: 8px; border-bottom: 1px solid #e5e7eb;"><span t-esc="participant.competition_id.name or '-'"/></td>
+                                        <td style="padding: 8px; width: 28%; font-weight: bold; background-color: #f3f4f6;">Code</td>
+                                        <td style="padding: 8px; border-bottom: 1px solid #e5e7eb;"><span t-esc="participant.competition_id.code or '-'"/></td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div style="margin-bottom: 18px;">
+                                <h3 style="margin-bottom: 8px; color: #1d4ed8;">Student Information</h3>
+                                <table style="width: 100%; border-collapse: collapse;">
+                                    <tr>
+                                        <td style="padding: 0; vertical-align: top; width: 78%;">
+                                            <table style="width: 100%; border-collapse: collapse;">
+                                                <tr>
+                                                    <td style="padding: 8px; width: 22%; font-weight: bold; background-color: #eff6ff;">Student Name</td>
+                                                    <td style="padding: 8px; border-bottom: 1px solid #dbeafe;"><span t-esc="participant.student_id.name or '-'"/></td>
+                                                    <td style="padding: 8px; width: 22%; font-weight: bold; background-color: #eff6ff;">Student Code</td>
+                                                    <td style="padding: 8px; border-bottom: 1px solid #dbeafe;"><span t-esc="participant.student_id.ref or '-'"/></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding: 8px; width: 22%; font-weight: bold; background-color: #eff6ff;">Identity Number</td>
+                                                    <td style="padding: 8px; border-bottom: 1px solid #dbeafe;"><span t-esc="participant.student_id.id_number or '-'"/></td>
+                                                    <td style="padding: 8px; width: 22%; font-weight: bold; background-color: #eff6ff;">Date of Birth</td>
+                                                    <td style="padding: 8px; border-bottom: 1px solid #dbeafe;">
+                                                        <span t-if="participant.student_id.birth_date" t-esc="participant.student_id.birth_date.strftime('%Y-%m-%d')"/>
+                                                        <span t-else="">-</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding: 8px; width: 22%; font-weight: bold; background-color: #eff6ff;">Age</td>
+                                                    <td style="padding: 8px; border-bottom: 1px solid #dbeafe;">
+                                                        <span t-esc="participant.age_years or 0"/> Years
+                                                        <span t-esc="participant.age_months or 0"/> Months
+                                                        <span t-esc="participant.age_days or 0"/> Days
+                                                    </td>
+                                                    <td style="padding: 8px; width: 22%; font-weight: bold; background-color: #eff6ff;">Gender</td>
+                                                    <td style="padding: 8px; border-bottom: 1px solid #dbeafe;">
+                                                        <t t-if="participant.student_id.gender == 'm'">Male</t>
+                                                        <t t-elif="participant.student_id.gender == 'f'">Female</t>
+                                                        <t t-else="">-</t>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div style="margin-bottom: 18px;">
+                                <h3 style="margin-bottom: 8px; color: #15803d;">Office and Class Information</h3>
+                                <table style="width: 100%; border-collapse: collapse;">
+                                    <tr>
+                                        <td style="padding: 8px; width: 22%; font-weight: bold; background-color: #ecfdf5;">Office</td>
+                                        <td style="padding: 8px; border-bottom: 1px solid #bbf7d0;"><span t-esc="participant.office_id.name or '-'"/></td>
+                                        <td style="padding: 8px; width: 22%; font-weight: bold; background-color: #ecfdf5;">Class</td>
+                                        <td style="padding: 8px; border-bottom: 1px solid #bbf7d0;"><span t-esc="participant.class_id.name or '-'"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; width: 22%; font-weight: bold; background-color: #ecfdf5;">Teacher</td>
+                                        <td style="padding: 8px; border-bottom: 1px solid #bbf7d0;"><span t-esc="participant.teacher_id.name or '-'"/></td>
+                                        <td style="padding: 8px; width: 22%; font-weight: bold; background-color: #ecfdf5;">Memorization Type</td>
+                                        <td style="padding: 8px; border-bottom: 1px solid #bbf7d0;">
+                                            <t t-if="participant.memorization_method == 'from_baqarah'">From Al-Baqarah</t>
+                                            <t t-elif="participant.memorization_method == 'from_nas'">From An-Nas</t>
+                                            <t t-elif="participant.memorization_method == 'mixed'">Mixed</t>
+                                            <t t-else="">-</t>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div style="margin-bottom: 18px;">
+                                <h3 style="margin-bottom: 8px; color: #b45309;">Memorization and Evaluation Information</h3>
+                                <table style="width: 100%; border-collapse: collapse;">
+                                    <tr>
+                                        <td style="padding: 8px; width: 22%; font-weight: bold; background-color: #fff7ed;">Level</td>
+                                        <td style="padding: 8px; border-bottom: 1px solid #fed7aa;"><span t-esc="participant.level_id.name or '-'"/></td>
+                                        <td style="padding: 8px; width: 22%; font-weight: bold; background-color: #fff7ed;">Amount Memorized</td>
+                                        <td style="padding: 8px; border-bottom: 1px solid #fed7aa;"><span t-esc="participant.juze_amount or 0.0"/> parts</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; width: 22%; font-weight: bold; background-color: #fff7ed;">Percentage %</td>
+                                        <td style="padding: 8px; border-bottom: 1px solid #fed7aa;"><span t-esc="participant.evaluation_percentage or 0.0"/> %</td>
+                                        <td style="padding: 8px; width: 22%; font-weight: bold; background-color: #fff7ed;">Score</td>
+                                        <td style="padding: 8px; border-bottom: 1px solid #fed7aa;"><span t-esc="participant.score or 0.0"/></td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div style="margin-bottom: 18px;">
+                                <h3 style="margin-bottom: 8px; color: #7c3aed;">Notes / Registration Status</h3>
+                                <table style="width: 100%; border-collapse: collapse;">
+                                    <tr>
+                                        <td style="padding: 8px; width: 20%; font-weight: bold; background-color: #f5f3ff;">Status</td>
+                                        <td style="padding: 8px; border-bottom: 1px solid #ddd6fe;"><span t-esc="participant.state or '-'"/></td>
+                                        <td style="padding: 8px; width: 20%; font-weight: bold; background-color: #f5f3ff;">Cash Reward</td>
+                                        <td style="padding: 8px; border-bottom: 1px solid #ddd6fe;"><span t-esc="participant.monetary_prize or 0.0"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px; width: 20%; font-weight: bold; background-color: #f5f3ff;">In-kind Reward</td>
+                                        <td colspan="3" style="padding: 8px; border-bottom: 1px solid #ddd6fe;"><span t-esc="participant.in_kind_prize or '-'"/></td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div style="margin-top: 20px; border-top: 2px solid #e5e7eb; padding-top: 15px;">
+                                <h4 style="margin-bottom: 10px;">Evaluation Notes</h4>
+                                <div style="min-height: 80px; border: 1px solid #d1d5db; padding: 10px; background-color: #fafafa;">
+                                    <span t-esc="participant.notes or 'No notes available.'"/>
+                                </div>
+                            </div>
+
+                            <div t-if="not participant_last" style="page-break-after: always;"/>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <!-- Participant Detailed Registration Form Action -->
+        <record id="report_participant_registration_form" model="ir.actions.report">
+            <field name="name">Participant Registration Form</field>
+            <field name="model">quran.competition.participant</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">management_quran_competition.report_participant_registration_form_document</field>
+            <field name="report_file">management_quran_competition.report_participant_registration_form_document</field>
+            <field name="print_report_name">'Registration Form'</field>
+            <field name="binding_model_id" ref="model_quran_competition_participant"/>
+            <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="management_quran_office_core.detailed_partner_document_paperformat"/>
+        </record>
+    </data>
+</odoo>

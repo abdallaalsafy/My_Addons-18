@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_quran_core" model="ir.ui.view">
+        <field name="name">quran.core.res.config.settings.view.form</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app data-string="Quran Office Management" string="Quran Office Management" name="management_quran_office_core">
+                    <block title="Quran Core Management">
+                        <setting id="install_subscripition" string="Subscriptions" help="Manage Student Subscription">
+                            <field name="module_management_quran_subscription"/>
+                        </setting>
+                        <setting id="install_memorization" string="Memorization" help="Manage Student Memorization">
+                            <field name="module_management_quran_memorization"/>
+                        </setting>
+                        <setting id="install_competition" string="Competition" help="Manage Student Competition">
+                            <field name="module_management_quran_competition"/>
+                        </setting>
+                        <setting id="install_attendance" string="Attendance" help="Manage Student Attendance">
+                            <field name="module_management_quran_attendance"/>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_management_quran_office_core_settings" model="ir.actions.act_window">
+        <field name="name">Quran Office Management Settings</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module': 'management_quran_office_core','bin_size': False}</field>
+    </record>
+</odoo>
