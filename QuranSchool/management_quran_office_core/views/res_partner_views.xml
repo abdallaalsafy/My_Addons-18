@@ -159,12 +159,6 @@
             <field name="arch" type="xml">
                 <list string="Quran Office Partners">
                     <header>
-                        <button name="action_mark_persistent" type="object" string="Persistent"
-                                confirm="Are you sure you want to mark this student as persistent?"
-                                class="btn-primary" invisible="not context.get('default_is_student')"/>
-                        <button name="action_mark_disconnected" type="object" string="Disconnected"
-                                confirm="Are you sure you want to mark this student as disconnected?"
-                                class="btn-primary" invisible="not context.get('default_is_student')"/>
                         <button name="action_open_update_partner_data_wizard" type="object" string="Update Data"
                                 class="btn-primary"/>
                     </header>
@@ -222,7 +216,7 @@
                                 <div class="o_kanban_details">
                                     <div class="o_kanban_record_top">
                                         <div class="o_kanban_record_subtitle">
-                                            <t t-if="record.age_years">
+                                            <t t-if="record.age_years.raw_value">
                                                 <span><field name="age_years"/> years</span>
                                             </t>
                                             <t t-if="record.gender.raw_value  == 'm'">
@@ -231,7 +225,7 @@
                                             <t t-if="record.gender.raw_value == 'f'">
                                                 <span>♀</span>
                                             </t>
-                                            <t t-if="record.phone">
+                                            <t t-if="record.phone.raw_value">
                                                 <span>📞 <field name="phone"/></span>
                                             </t>
                                         </div>
@@ -239,32 +233,32 @@
                                     <div class="o_kanban_record_bottom">
                                         <div class="oe_kanban_bottom_left">
                                             <t t-if="record.is_student.raw_value">
-                                                <span class="badge badge-primary">Student</span>
+                                                <span class="badge text-bg-primary">Student</span>
                                             </t>
                                             <t t-if="record.is_teacher.raw_value">
-                                                <span class="badge badge-success">Teacher</span>
+                                                <span class="badge text-bg-success">Teacher</span>
                                             </t>
-                                            <t  t-if="record.parent_role == 'father'">
-                                                <span class="badge badge-info">Father</span>
+                                            <t t-if="record.parent_role.raw_value == 'father'">
+                                                <span class="badge text-bg-info">Father</span>
                                             </t>
-                                            <t  t-if="record.parent_role == 'mother'">
-                                                <span class="badge badge-warning">Mother</span>
+                                            <t t-if="record.parent_role.raw_value == 'mother'">
+                                                <span class="badge text-bg-warning">Mother</span>
                                             </t>
-                                            <t t-if="record.student_status == 'persistent'">
-                                                <span  class="badge badge-success">Persistent</span>
+                                            <t t-if="record.student_status.raw_value == 'persistent'">
+                                                <span  class="badge text-bg-success">Persistent</span>
                                             </t>
-                                            <t t-if="record.student_status == 'disconnected'">
-                                                <span  class="badge badge-danger">Disconnected</span>
+                                            <t t-if="record.student_status.raw_value == 'disconnected'">
+                                                <span  class="badge text-bg-danger">Disconnected</span>
                                             </t>
                                         </div>
                                         <div class="oe_kanban_bottom_right">
-                                            <t t-if="record.children_count > 0">
-                                                <span  class="badge badge-secondary">
+                                            <t t-if="record.children_count.raw_value > 0">
+                                                <span  class="badge text-bg-secondary">
                                                     <field name="children_count"/> Children
                                                 </span>
                                             </t>
                                             <t t-if="record.is_quran_memorizer.raw_value">
-                                                <span class="badge badge-info">Quran</span>
+                                                <span class="badge text-bg-info">Quran</span>
                                             </t>
                                         </div>
                                     </div>
@@ -435,6 +429,36 @@
             <field name="sequence" eval="10"/>
             <field name="view_mode">list</field>
             <field name="view_id" ref="res_partner_tree_view_quran_office"/>
+        </record>
+        <record model="ir.actions.act_window.view" id="act_res_partner_student_view_kanban">
+            <field name="act_window_id" ref="action_students_view_id"/>
+            <field name="sequence" eval="5"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="view_quran_partner_kanban"/>
+        </record>
+        <record model="ir.actions.act_window.view" id="act_res_partner_teacher_view_kanban">
+            <field name="act_window_id" ref="action_teachers_view_id"/>
+            <field name="sequence" eval="5"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="view_quran_partner_kanban"/>
+        </record>
+        <record model="ir.actions.act_window.view" id="act_res_partner_father_view_kanban">
+            <field name="act_window_id" ref="action_fathers_view_id"/>
+            <field name="sequence" eval="5"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="view_quran_partner_kanban"/>
+        </record>
+        <record model="ir.actions.act_window.view" id="act_res_partner_mother_view_kanban">
+            <field name="act_window_id" ref="action_mothers_view_id"/>
+            <field name="sequence" eval="5"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="view_quran_partner_kanban"/>
+        </record>
+        <record model="ir.actions.act_window.view" id="act_res_partner_all_partner_view_kanban">
+            <field name="act_window_id" ref="action_all_partners_view_id"/>
+            <field name="sequence" eval="5"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="view_quran_partner_kanban"/>
         </record>
     </data>
 </odoo>

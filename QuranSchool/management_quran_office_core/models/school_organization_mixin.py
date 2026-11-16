@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from odoo import _, api, fields, models
+from odoo.exceptions import ValidationError
 
 
 class SchoolOrganizationMixin(models.AbstractModel):
@@ -43,3 +44,10 @@ class SchoolOrganizationMixin(models.AbstractModel):
     def _onchange_teacher_id(self):
         if self.teacher_id and not self.class_id:
             self.class_id = self.teacher_id.class_ids[:1]
+
+
+    @api.constrains('office_id', 'class_id')
+    def _check_class_belongs_to_office(self):
+        for rec in self:
+            if rec.class_id and rec.office_id and rec.class_id.office_id != rec.office_id:
+                raise ValidationError(_('The selected class does not belong to the selected office.'))

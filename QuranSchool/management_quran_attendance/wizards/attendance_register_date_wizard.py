@@ -55,9 +55,9 @@ class AttendanceRegisterDateWizard(models.TransientModel):
         self._validate_period()
 
         ids = self._context.get('active_ids')
-        students = self.env['res.partner'].browse(ids)
-        is_not_students = students.filtered(lambda s: not s.is_student)
+        students = self.env['res.partner'].browse(ids or []).exists()
 
+        is_not_students = students.filtered(lambda s: not s.is_student)
         if is_not_students:
             raise ValidationError(_('Please select students only.'))
 

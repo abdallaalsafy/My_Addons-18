@@ -55,8 +55,8 @@ class QuranClass(models.Model):
         help="Total number of students in this class"
     )
 
-    _sql_constraints = [('name_uniq', "unique(name)", "Name must be unique per class."),
-                        ('office_name_uniq', "unique(name,office_id)", "Name must be unique per class per office."),]
+    _sql_constraints = [('office_name_uniq', "unique(name,office_id)", "Name must be unique per class per office."),]
+    _rec_names_search = ['code', 'name']
     
 # ================================ Built-in Methods ================================
     @api.model_create_multi
@@ -74,29 +74,6 @@ class QuranClass(models.Model):
                 cls.display_name = f"[{cls.code}] {cls.name}"
             else:
                 cls.display_name = cls.name
-
-    @api.model
-    def name_search(self, name='', args=None, operator='ilike', limit=100):
-        """Enhanced name search to find classes by name or code."""
-        if name == '':
-            return super().name_search(name, args, operator, limit)
-
-        if args is None:
-            args = []
-
-        # Search by code first
-        domain = [('code', operator, name)]
-        classes = self.search(domain + args, limit=limit)
-        if classes:
-            return [(record.id, record.display_name) for record in classes]
-
-        # Then search by name
-        domain = [('name', operator, name)]
-        classes = self.search(domain + args, limit=limit)
-        if classes:
-            return [(record.id, record.display_name) for record in classes]
-
-        return super().name_search(name, args, operator, limit)
 
 # ================================ CONSTRAINTS ================================
 # ================================ COMPUTE METHODS ================================

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from datetime import date
-
+from dateutil.relativedelta import relativedelta
 from odoo import _, models, fields, api
 from odoo.exceptions import ValidationError
 
@@ -9,10 +9,12 @@ from odoo.exceptions import ValidationError
 class ResPartner(models.Model):
     _inherit = 'res.partner'
 
-    student_status = fields.Selection(compute='_compute_student_status',store=True, default=False,
-        help='A student is considered persistent if they have at least one present attendance record within the last 31 days.',
-    )
 
+    attend_status = fields.Selection([('attend', 'Attended'),('non_attend', 'Non-Attended'),], 
+        string='Attendance Status',
+        help="Previous attendance status for this student (only shown for students)",
+        compute='_compute_student_attendance_status',
+    )
     attendance_register_ids = fields.One2many(
         'attendance.register',
         'student_id',
@@ -28,29 +30,37 @@ class ResPartner(models.Model):
     attendance_current_day = fields.Boolean(compute='_compute_attendance_current_day',)
 
 
-    @api.depends('is_student', 'attendance_register_ids.present_days',)
-    def _compute_student_status(self):
-        """ 
-        Compute the student status based on the number of present days.
-        If the student has more than 0 present days in the last 31 days or this month and last month, the status is 'present'.
-         Otherwise, the status is 'absent'.
+    def _compute_student_attendance_status(self):
         """
+            Determine the student's attendance status based on current month attendance and previous month attendance.
+
+            - If a monthly attendance record exists and the student has no attendance
+            days marked as present, the student is considered non-attended.
+            - If at least one attendance day is marked as present, the student is
+            considered attended.
+            - If no monthly attendance record exists for the previous and current month, the
+            student's attendance status remains non-attended.
+            """
         today = fields.Date.today()
         
         for record in self:
             attendance_register_ids = record.attendance_register_ids
             if not record.is_student or not attendance_register_ids:
-                record.student_status = False
+                record.attend_status = 'non_attend'
                 continue
 
-            recent_registers = attendance_register_ids.filtered(
-                            lambda r: r.year and r.month and (
-                                (today - date(r.date.year, r.date.month, 1)).days <= 31
-                            )
-                        )
+            previous_month = today - relativedelta(months=1)
+            recent_registers = attendance_register_ids.filtered_domain([
+                '|','&',
+                ('year', '=', previous_month.year),
+                ('month', '=', previous_month.month),
+                '&',
+                ('year', '=', today.year),
+                ('month', '=', today.month)
+            ])
             
             if not recent_registers:
-                record.student_status = False
+                record.attend_status = 'non_attend'
                 continue
 
             has_recent_attendance = False
@@ -59,7 +69,7 @@ class ResPartner(models.Model):
                     has_recent_attendance = True
                     break
 
-            record.student_status = 'persistent' if has_recent_attendance else 'disconnected'
+            record.attend_status = 'attend' if has_recent_attendance else 'non_attend'
 
     def _compute_attendance_count(self):
         """
@@ -127,12 +137,12 @@ class ResPartner(models.Model):
             
             register.write({f'day_{today.day}': status})
 
-    def action_mark_persistent(self):
+    def action_mark_present_today(self):
         """Override the default persistent action to record attendance in the current month."""
         self._mark_student_current_month_attendance('present')
 
 
-    def action_mark_disconnected(self):
+    def action_mark_absent_today(self):
         """Override the default disconnected action to record absence for the current month."""
         self._mark_student_current_month_attendance('absent')
 

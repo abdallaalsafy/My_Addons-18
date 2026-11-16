@@ -21,7 +21,7 @@ class QuranCompetitionParticipant(models.Model):
         'quran.competition',
         string='Competition',
         required=True,
-        ondelete='cascade',
+        ondelete='restrict',
         help="Competition this participant belongs to"
     )
     requirement_id = fields.Many2one(
@@ -37,7 +37,6 @@ class QuranCompetitionParticipant(models.Model):
         copy=False,
         help="Student participating in the competition"
     )
-
     age_from_id = fields.Char('Detailed Age', compute="_compute_age_to_competition_date")
     age_years = fields.Integer('Age (Years)', compute="_compute_age_to_competition_date")
     age_months = fields.Integer('Age (Months)', compute="_compute_age_to_competition_date")
@@ -122,7 +121,7 @@ class QuranCompetitionParticipant(models.Model):
     @api.model
     def _search(self, domain, offset=0, limit=None, order=None):
         """Override _search to ensure proper ordering of participants"""
-        orders = self.env.context.get('default_search_order')
+        orders = self.env.context.get('main_search_order')
         if orders:
             order = orders
         rtn = super()._search(domain, offset, limit, order)
@@ -131,18 +130,26 @@ class QuranCompetitionParticipant(models.Model):
     @api.model_create_multi
     def create(self, vals_list):
         """Override create to generate registration number"""
+        competitions = self.env['quran.competition'].browse(
+            [v['competition_id'] for v in vals_list if v.get('competition_id')])
+        if competitions.filtered(lambda c: c.status == 'closed'):
+            raise ValidationError(_('Cannot add participants to a closed competition'))
         for vals in vals_list:
             if not vals.get('name'):
                 vals['name'] = self.env['ir.sequence'].next_by_code('quran.competition.participant')
         return super().create(vals_list)
 
     def write(self, vals):
-        for participant in self:
-            if participant.competition_id.status == 'closed':
-                raise ValidationError(_('Cannot modify participant in a closed competition'))
-            if 'state' in vals and vals['state'] != 'disqualified':
-                vals['reason_disqualified'] = ''
+        if self.filtered(lambda p: p.competition_id.status == 'closed'):
+            raise ValidationError(_('Cannot modify participant in a closed competition'))
+        if 'state' in vals and vals['state'] != 'disqualified':
+            vals['reason_disqualified'] = ''
         return super().write(vals)
+
+    def unlink(self):
+        if self.filtered(lambda p: p.competition_id.status == 'closed'):
+            raise ValidationError(_('Cannot delete participant in a closed competition'))
+        return super().unlink()
 
     @api.depends('name', 'student_id')
     def _compute_display_name(self):
@@ -177,7 +184,7 @@ class QuranCompetitionParticipant(models.Model):
              self.result_id,self.status = self.get_status_from_percentage()
 
 # ============================ Computed Functions ===================================
-    @api.depends('competition_id.competition_date','student_id.birth_date')
+    @api.depends('competition_id.competition_date', 'student_id.birth_date', 'student_id.id_number')
     def _compute_age_to_competition_date(self):
         """Compute age of student to competition date using unified functions."""
         for participant in self:
@@ -283,7 +290,7 @@ class QuranCompetitionParticipant(models.Model):
             messages.append(_("Participant limit reached for this requirement"))
 
         # Check age requirements
-        age = self.student_id.age_years
+        age = self.age_years
         min_age = requirement_id.min_age
         max_age = requirement_id.max_age
         if max_age > 0 and (age < min_age or age > max_age):

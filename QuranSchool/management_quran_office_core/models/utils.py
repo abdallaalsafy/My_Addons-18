@@ -156,8 +156,8 @@ def is_invalid_national_id(national_id: str) -> bool:
     Returns:
         bool: True if ID is invalid, False if valid
     """
-    # Check length and null
-    if not national_id or len(national_id) != 14:
+    # Check length, digits only and null
+    if not national_id or len(national_id) != 14 or not national_id.isdigit():
         return True
 
     # Check century code (must be 2 or 3 for valid IDs)

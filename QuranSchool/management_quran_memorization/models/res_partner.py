@@ -56,7 +56,7 @@ class ResPartnerInherit(models.Model):
         
         office = office or self.office_id
 
-        # There also _sql_constraints in student.memorization to ensure uniqueness, but we check here for a more user-friendly error message
+        # student.memorization also has a constraint to ensure uniqueness, but we check here for a more user-friendly error message
         month = month or fields.Date.today()
         existing_memorization = self.memorization_ids.filtered(
                     lambda m: m.memorization_month.replace(day=1) == month.replace(day=1) and m.office_id == office

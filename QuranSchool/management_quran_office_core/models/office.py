@@ -55,6 +55,8 @@ class QuranOffice(models.Model):
     )
 
     _sql_constraints = [('name_uniq', "unique(name)", "Name must be unique per office."),]
+    # Many2one autocomplete / search by code or name (replaces the old name_search override)
+    _rec_names_search = ['code', 'name']
     
 
 # ================================ Built-in Methods ================================
@@ -71,31 +73,6 @@ class QuranOffice(models.Model):
         """Override _compute_display_name to show code and name."""
         for office in self:
             office.display_name = f"[{office.code}] {office.name}"
-
-    @api.model
-    def name_search(self, name='', args=None, operator='ilike', limit=100):
-        """
-        Enhanced name search to find offices by name or code.
-        """
-        if name == '':
-            return super().name_search(name, args, operator, limit)
-
-        if args is None:
-            args = []
-
-        # Search by code first
-        domain = [('code', operator, name)]
-        offices = self.search(domain + args, limit=limit)
-        if offices:
-            return [(record.id, record.display_name) for record in offices]
-
-        # Then search by name
-        domain = [('name', operator, name)]
-        offices = self.search(domain + args, limit=limit)
-        if offices:
-            return [(record.id, record.display_name) for record in offices]
-
-        return super().name_search(name, args, operator, limit)
 
     # ================================ COMPUTE METHODS ================================
 

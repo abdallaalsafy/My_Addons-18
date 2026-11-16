@@ -34,6 +34,7 @@ class ResPartnerExtension(models.Model):
         current_month = fields.Date.today()
         data_list = []
         for student in self:
+            student.validate_student_for_subscription()
             data_list.append({
                 'student_id': student.id,
                 'subscription_month': current_month,
@@ -63,7 +64,8 @@ class ResPartnerExtension(models.Model):
     def get_subscription_expected_amount(self):
         self.ensure_one()
         discount_amount = self.subscription_fee * self.discount_percentage_fee / 100
-        return self.subscription_fee - discount_amount
+        return self.currency_id.round(self.subscription_fee - discount_amount) if self.currency_id \
+            else self.subscription_fee - discount_amount
 
     def validate_student_for_subscription(self, office=None, subscription_fee=None):
         """Check student status before allowing subscription"""

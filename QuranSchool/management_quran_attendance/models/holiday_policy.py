@@ -33,11 +33,16 @@ class AttendanceHolidayPolicy(models.Model):
 
     # =============================== Builtin Functions ==============================
     def write(self, vals):
-        for record in self:
-            if record.is_locked and not self.env.user.has_group('management_quran_office_core.group_quran_office_manager'):
+        if not self.env.user.has_group('management_quran_office_core.group_quran_office_manager'):
+            for record in self.filtered('is_locked'):
                 raise ValidationError(_('This policy is locked. Only managers can edit record: %s.', record.name))
-        res = super().write(vals)
-        return res
+        return super().write(vals)
+
+    def unlink(self):
+        if not self.env.user.has_group('management_quran_office_core.group_quran_office_manager'):
+            for record in self.filtered('is_locked'):
+                raise ValidationError(_('This policy is locked. Only managers can delete record: %s.', record.name))
+        return super().unlink()
 
 # ========================= Constraints =========================
     @api.constrains("start_date","end_date")

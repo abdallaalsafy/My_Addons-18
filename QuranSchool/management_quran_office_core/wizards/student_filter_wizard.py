@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from odoo import _, fields, models
 from odoo.exceptions import ValidationError
+from ..models.constants import _STUDENT_STATUS_SELECTION
 
 
 class StudentFilterWizard(models.TransientModel):
@@ -27,10 +28,7 @@ class StudentFilterWizard(models.TransientModel):
     ], 'Teacher Filter')
 
     # Status filtering
-    student_status = fields.Selection([
-        ('persistent', 'Persistent'),
-        ('disconnected', 'Disconnected'),
-    ], 'Student Status')
+    student_status = fields.Selection(_STUDENT_STATUS_SELECTION, 'Student Status')
 
     # Parent filtering
     father_id = fields.Many2one(

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
-
+from odoo.tools import float_compare
 
 class MemorizationMixin(models.AbstractModel):
     _name = 'memorization.mixin'
@@ -59,6 +59,13 @@ class MemorizationMixin(models.AbstractModel):
         """Memorization surah and ayah from the memorization amount in Juz'."""
         Ayat = self.env['quran_office.ayat']
         for record in self:
+            if record.surah_id and record.ayah_num > 0:
+                current = Ayat.calc_juze_amount(
+                    record.memorization_method, record.surah_id.id,
+                    record.surah_ids.ids, record.ayah_num)
+                if float_compare(current, record.juze_amount, precision_digits=2) == 0:
+                    continue
+
             result = Ayat.calc_surah_ayah_from_amount(record.memorization_method, record.juze_amount)
             if not result['surah_id'] or not result['ayah_num']:
                 continue
@@ -75,8 +82,11 @@ class MemorizationMixin(models.AbstractModel):
                 raise ValidationError(_('Memorization amount and surah and ayah is required for this type of method'))
             
     def _constrain_memorization_amount(self):
-        if not self._check_memorization_amount() and self.memorization_method == 'mixed':
-            raise ValidationError(_('Select memorization Surahs for mixed method'))
+        """Mixed method: the memorized amount is defined by the selected Surahs
+        (juze_amount is not computed/edited for this method)."""
+        for record in self:
+            if record.memorization_method == 'mixed' and not record.surah_ids:
+                raise ValidationError(_('Select memorization Surahs for mixed method'))
 
     def _check_ayah_num(self):
         """True if every record has an ayah number valid for its selected surah."""

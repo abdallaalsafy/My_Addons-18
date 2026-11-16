@@ -25,12 +25,28 @@ class AttendanceHolidayDay(models.Model):
     ]
 
     # =============================== Builtin Functions ==============================
+    def _check_policy_not_locked(self, policies):
+        if self.env.user.has_group('management_quran_office_core.group_quran_office_manager'):
+            return
+        for policy in policies.filtered('is_locked'):
+            raise ValidationError(_('This policy day is locked. Only managers can edit record of policy: %s.', policy.name))
+
+    @api.model_create_multi
+    def create(self, vals_list):
+        policies = self.env['attendance.holiday.policy'].browse(
+            [v['policy_id'] for v in vals_list if v.get('policy_id')])
+        self._check_policy_not_locked(policies)
+        return super().create(vals_list)
+
     def write(self, vals):
-        for record in self:
-            if record.policy_id.is_locked and not self.env.user.has_group('management_quran_office_core.group_quran_office_manager'):
-                raise ValidationError(_('This policy day is locked. Only managers can edit record of policy: %s.', record.policy_id.name))
-        res = super().write(vals)
-        return res
+        self._check_policy_not_locked(self.policy_id)
+        if vals.get('policy_id'):
+            self._check_policy_not_locked(self.env['attendance.holiday.policy'].browse(vals['policy_id']))
+        return super().write(vals)
+
+    def unlink(self):
+        self._check_policy_not_locked(self.policy_id)
+        return super().unlink()
     
     # ========== Compute Methods ==============================================
 
@@ -47,13 +63,3 @@ class AttendanceHolidayDay(models.Model):
                 rec.month = 0
                 rec.day_number = 0
                 rec.day_name = ''
-
-    # ========== Constraints Methods =============================
-    @api.constrains('policy_id', 'holiday_date',)
-    def _check_valid_holiday_date(self):
-        for rec in self:
-            if not rec.policy_id or not rec.holiday_date:
-                raise ValidationError(_('Both policy and holiday date must be set.'))
-            
-    # ========== Onchange Methods =============================
-

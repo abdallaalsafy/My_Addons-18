@@ -92,7 +92,7 @@ class QuranCompetition(models.Model):
         string='Test Grade',
         default=100,
         required=True,
-        help="Student's test grade (must not exceed student grade)"
+        help="Maximum grade of the competition test."
     )
     description = fields.Text(
             'Description',

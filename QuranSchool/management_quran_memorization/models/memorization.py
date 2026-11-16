@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 
+from dateutil.relativedelta import relativedelta
+
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
+from odoo.tools import format_date
 
 
 class StudentMemorization(models.Model):
@@ -56,10 +59,8 @@ class StudentMemorization(models.Model):
     test_grade = fields.Integer(
         string='Test Grade',
         default=10,
-        help="Student's test grade (must not exceed student grade)"
+        help="Maximum grade of the test. The student grade cannot exceed it."
     )
-    # There are also constraints in res.partner to ensure uniqueness, but we check here for a more user-friendly error message.
-    _sql_constraints = [('memorization_uniq', "unique(student_id,month_name,office_id)", "Memorization must be unique per student per month per office.")]
 
 # ========================= Built-in Functions =========================
     @api.model_create_multi
@@ -82,15 +83,34 @@ class StudentMemorization(models.Model):
 
 # ========================= compute Functions =========================
     @api.depends('memorization_month')
+    @api.depends_context('lang')
     def _compute_month_name(self):
         """Compute month name for display"""
         for record in self:
             if record.memorization_month:
-                record.month_name = record.memorization_month.strftime('%B %Y')
+                record.month_name = format_date(self.env, record.memorization_month, date_format='MMMM yyyy')
             else:
                 record.month_name = ''
 
 # ========================= constraints Functions =========================
+    @api.constrains('student_id', 'memorization_month', 'office_id')
+    def _check_duplicate_memorization(self):
+        """One memorization record per student, calendar month and office
+        (compares real dates, also when the office is empty)."""
+        for record in self:
+            if not record.student_id or not record.memorization_month:
+                continue
+            month_start = record.memorization_month.replace(day=1)
+            month_end = month_start + relativedelta(months=1)
+            if self.search_count([
+                ('student_id', '=', record.student_id.id),
+                ('office_id', '=', record.office_id.id or False),
+                ('memorization_month', '>=', month_start),
+                ('memorization_month', '<', month_end),
+                ('id', '!=', record.id),
+            ]):
+                raise ValidationError(_('Memorization must be unique per student per month per office.'))
+
     @api.constrains('memorization_month')
     def _check_future_month(self):
         """Check that memorization month is not in the future"""
@@ -109,7 +129,7 @@ class StudentMemorization(models.Model):
 
     @api.constrains('student_grade', 'test_grade')
     def _check_grades(self):
-        """Constraint to ensure grades are not negative and test_grade doesn't exceed student_grade."""
+        """Grades are not negative and the student grade does not exceed the test (maximum) grade."""
         for record in self:
             # Check that student_grade is not negative
             if record.student_grade < 0:
@@ -119,10 +139,10 @@ class StudentMemorization(models.Model):
             if record.test_grade < 0:
                 raise ValidationError(_('Test grade cannot be negative'))
             
-            # Check that test_grade doesn't exceed student_grade (only if student_grade is set)
+            # test_grade is the maximum grade: the student grade cannot exceed it
             if record.student_grade > record.test_grade:
                 raise ValidationError(_(
-                    'Student grade (%d) cannot be greater than test grade (%.2f)'
+                    'Student grade (%.1f) cannot be greater than test grade (%d)'
                 ) % (record.student_grade, record.test_grade))
 
     @api.constrains('juze_amount', 'memorization_method','surah_id', 'surah_ids', 'ayah_num')
@@ -133,5 +153,3 @@ class StudentMemorization(models.Model):
                 record._check_memorization_amount_consistency()
             else:
                 record._constrain_memorization_amount()
-# ======================= Helper Functions =========================
-# # ======================= Action Functions =======================

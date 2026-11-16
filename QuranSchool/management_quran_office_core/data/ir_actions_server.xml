@@ -49,4 +49,31 @@
                         records.action_set_partner_not_fatherless()
         </field>
     </record>
+
+    <record id="action_set_student_as_persistent" model="ir.actions.server">
+        <field name="name">Set Student as Persistent</field>
+        <field name="model_id" ref="base.model_res_partner"/>
+        <field name="binding_model_id" ref="base.model_res_partner"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+if records.filtered(lambda r: r.is_student):
+    records.filtered(lambda r: r.is_student).write({'student_status': 'persistent'})
+if records.filtered(lambda r: not r.is_student):
+    records.filtered(lambda r: not r.is_student).write({'student_status': False})
+        </field>
+    </record>
+    <record id="action_set_student_as_disconnected" model="ir.actions.server">
+        <field name="name">Set Student as Disconnected</field>
+        <field name="model_id" ref="base.model_res_partner"/>
+        <field name="binding_model_id" ref="base.model_res_partner"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+if records.filtered(lambda r: r.is_student):
+    records.filtered(lambda r: r.is_student).write({'student_status': 'disconnected'})
+if records.filtered(lambda r: not r.is_student):
+    records.filtered(lambda r: not r.is_student).write({'student_status': False})
+        </field>
+    </record>
 </odoo>

@@ -20,41 +20,31 @@ class AttendanceBulkCreateWizard(models.TransientModel):
     show_mode = fields.Selection([('by_date', 'Show all records with the same date'), ('by_ids', 'Show created records only')], string='Show Mode', default='by_ids',)
     create_mode = fields.Selection([('all', 'Create all of them, or create none of them'), ('any', 'Create all or a valid records only')], string='Create Mode', default='any',required=True)
     
-    holiday_policy_id = fields.Many2one('attendance.holiday.policy', string='Holiday Policy',default=lambda self: self.env.ref('management_quran_attendance.attendance_default_holiday_policy').id)
+    holiday_policy_id = fields.Many2one('attendance.holiday.policy', string='Holiday Policy',default=lambda self: self.env['attendance.register']._default_holiday_policy_record())
 
 # ========================== Help Functions =============================
     def _get_valid_students(self):
-        ids = self._context.get('active_ids')
-        all_students = self.env['res.partner'].browse(ids)
-        is_not_students = all_students.filtered(lambda s: not s.is_student)
-        valid_students = all_students - is_not_students
-        
+        if self._context.get('active_model') not in (None, False, 'res.partner'):
+            raise ValidationError(_('This wizard must be opened from the students list.'))
+        ids = self._context.get('active_ids') or []
+        all_students = self.env['res.partner'].browse(ids).exists()
+        valid_students = all_students.filtered(lambda s: s.is_student)
+
         if not self.office_id:
-            no_office_students = valid_students.filtered(lambda s: not s.office_id)
-            valid_students = valid_students - no_office_students
+            valid_students = valid_students.filtered(lambda s: s.office_id)
 
-        has_attendance_students = self.env['res.partner'].browse([])
-        for student in valid_students:
-            office_id = self.office_id.id or student.office_id.id
-            attendance_records = self.env['attendance.register']._read_group(
-                domain=[
-                    ('student_id', '=', student.id),
-                    ('year', '=', self.year),
-                    ('month', '=', int(self.month)),
-                    ('office_id', '=', office_id),
-                ],
-                groupby=['student_id', 'year', 'month', 'office_id'],
-                aggregates=['id:count'],
-            )
-            
-            if attendance_records and attendance_records[0][4] > 0:
-                has_attendance_students |= student
-
-        if has_attendance_students:
-            valid_students = valid_students - has_attendance_students
-        
+        # One query for all students instead of one query per student
+        existing = self.env['attendance.register'].search([
+            ('student_id', 'in', valid_students.ids),
+            ('year', '=', self.year),
+            ('month', '=', int(self.month)),
+        ])
+        existing_pairs = {(reg.student_id.id, reg.office_id.id) for reg in existing}
+        has_attendance_students = valid_students.filtered(
+            lambda s: (s.id, self.office_id.id or s.office_id.id) in existing_pairs)
+        valid_students = valid_students - has_attendance_students
         return all_students, valid_students
-    
+
 # ========================= Action Function ===========================================
     def action_create_attendance_registers(self):
         self.ensure_one()
@@ -78,10 +68,10 @@ class AttendanceBulkCreateWizard(models.TransientModel):
             })
 
         if len(valid_students) != len(all_students) and self.create_mode == 'all':
-            raise ValidationError(_('Some matched students are not valid, equal: %s.') % (len(valid_students) - len(all_students)))
+            raise ValidationError(_('Some matched students are not valid, count: %s.') % (len(all_students) - len(valid_students)))
         
         context_date = fields.Date.to_string(date(self.year, int(self.month), 1))
-        attendance_records = self.env['attendance.register'].with_context({'default_date':context_date, 'create_lines_from_outside':True}).create(created_records)
+        attendance_records = self.env['attendance.register'].with_context(default_date=context_date, create_lines_from_outside=True).create(created_records)
         domain = [('id', 'in', attendance_records.ids)] if self.show_mode == 'by_ids' else [('month', '=', self.month), ('year', '=', self.year)]
         view_id = self.env.ref('management_quran_attendance.view_attendance_register_list').id
         

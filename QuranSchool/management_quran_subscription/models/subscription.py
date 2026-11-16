@@ -3,6 +3,7 @@
 from odoo import models, fields, api, _
 from dateutil.relativedelta import relativedelta
 from odoo.exceptions import ValidationError
+from odoo.tools import format_date
 
 
 class MonthlySubscription(models.Model):
@@ -89,17 +90,15 @@ class MonthlySubscription(models.Model):
     def _compute_remaining_amount(self):
         """Compute remaining amount"""
         for record in self:
-            if record.expected_amount:
-                record.remaining_amount = record.expected_amount - record.paid_amount
-            else:
-                record.remaining_amount = 0
+            record.remaining_amount = (record.expected_amount or 0.0) - (record.paid_amount or 0.0)
     
     @api.depends('subscription_month')
+    @api.depends_context('lang')
     def _compute_month_name(self):
         """Compute month name for display"""
         for record in self:
             if record.subscription_month:
-                record.month_name = record.subscription_month.strftime('%B %Y')
+                record.month_name = format_date(self.env, record.subscription_month, date_format='MMMM yyyy')
             else:
                 record.month_name = ''
 
@@ -123,10 +122,9 @@ class MonthlySubscription(models.Model):
             ]
 
             if self.search_count(domain):
-                raise ValidationError(
+                raise ValidationError(_(
                     'This student already has a subscription '
-                    'for this office in the selected month!'
-                )
+                    'for this office in the selected month!'))
         
     @api.constrains('subscription_month')
     def _check_subscription_month(self):
@@ -149,8 +147,10 @@ class MonthlySubscription(models.Model):
         """Check payment amount and show warning if different from expected"""
         for record in self:
             # Check that paid amount is greater than zero
-            if record.paid_amount <= 0:
-                raise ValidationError(_('Subscription amount must be greater than zero'))
+            if record.paid_amount < 0:
+                raise ValidationError(_('Subscription not allowed with negative paid amount. Please enter a valid amount.'))
+            if record.paid_amount == 0 and record.discount_percentage_fee < 100:
+                raise ValidationError(_('Subscription not allowed with zero paid amount unless discount is 100%. Please enter a valid amount or adjust the discount.'))
     
    # ======================= Action Functions =======================
 

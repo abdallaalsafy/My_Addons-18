@@ -83,10 +83,12 @@ class AttendanceRegister(models.Model):
     @api.model
     def default_get(self, fields_list):
         defaults = super().default_get(fields_list)
-        date_value = self.date or self.env.context.get('default_date') or fields.Date.today()
-        year, month,_ = self._get_year_month_from_date(date_value)
-        defaults['year'] = year
-        defaults['month'] = month
+        # keep year/month coming from context defaults (default_year / default_month)
+        if 'year' not in defaults or 'month' not in defaults:
+            date_value = self.env.context.get('default_date') or fields.Date.today()
+            year, month, __ = self._get_year_month_from_date(date_value)
+            defaults.setdefault('year', year)
+            defaults.setdefault('month', month)
         return defaults
     
     @api.model_create_multi
@@ -221,9 +223,8 @@ class AttendanceRegister(models.Model):
 
             if existing:
                 raise ValidationError(_(
-                    "The student is already registered for this month and scope (%s/%s)."
-                    % (rec.month, rec.year)
-                ))
+                    "The student is already registered for this month and scope (%s/%s).",
+                    rec.month, rec.year))
 
     @api.constrains('day_1', 'day_2', 'day_3', 'day_4', 'day_5', 'day_6', 'day_7', 'day_8', 'day_9', 'day_10',
                    'day_11', 'day_12', 'day_13', 'day_14', 'day_15', 'day_16', 'day_17', 'day_18', 'day_19', 'day_20',
@@ -247,9 +248,8 @@ class AttendanceRegister(models.Model):
 
                 if previous_blank and value != 'holiday':
                     raise ValidationError(_(
-                        "You cannot save day %s before a previous day is filled."
-                        % day_number
-                    ))
+                        "You cannot save day %s before a previous day is filled.",
+                        day_number))
 
                 previous_blank = False
             

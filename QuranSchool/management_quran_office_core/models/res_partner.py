@@ -4,6 +4,7 @@ from dateutil.relativedelta import relativedelta
 
 from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
+from .constants import _STUDENT_STATUS_SELECTION
 from .utils import (fnc_editstring, get_birth_date_from_national_id, get_gender_from_national_id,
                      is_invalid_national_id, get_detailed_age)
 
@@ -20,18 +21,15 @@ class StudentPortal(models.Model):
     middle_name = fields.Char(
         'Middle Name',
         help="Partner's middle name",
-        compute='_compute_partner_middle_last_third_name', store=True, readonly=False,
-    )
+        )
     third_name = fields.Char(
         'Third Name',
         help="Partner's third name",
-        compute='_compute_partner_middle_last_third_name', store=True, readonly=False,
-    )
+        )
     last_name = fields.Char(
         'Last Name',
         help="Partner's last name",
-        compute='_compute_partner_middle_last_third_name', store=True, readonly=False,
-    )
+        )
 
     # Computed fields
     age_from_id = fields.Char(
@@ -155,11 +153,8 @@ class StudentPortal(models.Model):
         'Fatherless',
         help="Is the student fatherless"
     )
-    student_status = fields.Selection([
-        ('persistent', 'Persistent'),
-        ('disconnected', 'Disconnected'),
-    ], 'Student Status',
-        help="Student attendance status - only shown for students")
+    student_status = fields.Selection(_STUDENT_STATUS_SELECTION, 'Student Status',
+        help="Student persistence status - only shown for students")
 
 # ====================== Teachers Fields ============================================
     class_ids = fields.One2many(
@@ -215,7 +210,14 @@ class StudentPortal(models.Model):
         for vals in vals_list:
             if not vals.get('ref') and (vals.get('is_student') or vals.get('is_teacher') or vals.get('parent_role')):
                 vals['ref'] = self.env['ir.sequence'].next_by_code('res.partner')
-            if vals.get('first_name') and not vals.get('name'):
+
+            if vals.get('father_id') and vals.get('first_name'):
+                father = self.env['res.partner'].browse(vals['father_id'])
+                vals['middle_name'] = father.first_name
+                vals['third_name'] = father.middle_name
+                vals['last_name'] = self._quran_join_name(father.third_name, father.last_name)
+                
+            if vals.get('first_name') and vals.get('middle_name') and vals.get('third_name') and not vals.get('is_company') and not vals.get('name'):
                 vals['name'] = self._quran_join_name(
                     vals.get('first_name'), vals.get('middle_name'), vals.get('third_name'))
         return super().create(vals_list)
@@ -223,17 +225,13 @@ class StudentPortal(models.Model):
     def write(self, vals):
         """Rebuild the name per record when a name part changes, and give a
         registration number to partners that just became student/teacher/parent."""
-        if 'name' not in vals and any(f in vals for f in self._NAME_PARTS):
-            result = True
-            for record in self:
-                record_vals = dict(vals)
-                name = self._quran_join_name(*[
-                    record_vals.get(f, record[f]) for f in self._NAME_PARTS])
-                if name:
-                    record_vals['name'] = name
-                result &= super(StudentPortal, record).write(record_vals)
-        else:
-            result = super().write(vals)
+        result = super().write(vals)
+
+        father = self.father_id
+        if (any(f in vals for f in self._NAME_PARTS) or 'father_id' in vals) and len(self) == 1 and father:
+            self.name = self._quran_join_name(self.first_name, father.first_name, father.middle_name)
+            self.last_name = self._quran_join_name(father.third_name, father.last_name)
+
         if any(k in vals for k in ('is_student', 'is_teacher', 'parent_role')):
             for record in self.filtered(lambda r: not r.ref and (r.is_student or r.is_teacher or r.parent_role)):
                 record.ref = self.env['ir.sequence'].next_by_code('res.partner')
@@ -305,24 +303,23 @@ class StudentPortal(models.Model):
                 else:
                     record.gender = record.gender
 
-    @api.depends('father_id')
-    def _compute_partner_middle_last_third_name(self):
+    @api.onchange('father_id')
+    def _onchange_father_set_partner_middle_last_third_name(self):
         """
         Auto-fill partner's name fields from father's name.
         Father's first_name -> partner's middle_name
         Father's middle_name -> partner's third_name
         Father's third_name -> partner's last_name
         """
-        for record in self:
-            if record.father_id:
-                father_first_name = record.father_id.first_name
-                father_middle_name = record.father_id.middle_name
-                father_third_name = record.father_id.third_name
-                father_last_name = record.father_id.last_name
-                
-                record.middle_name = father_first_name
-                record.third_name = father_middle_name
-                record.last_name = self._quran_join_name(father_third_name, father_last_name)
+        if self.father_id:
+            father_first_name = self.father_id.first_name
+            father_middle_name = self.father_id.middle_name
+            father_third_name = self.father_id.third_name
+            father_last_name = self.father_id.last_name
+            
+            self.middle_name = father_first_name
+            self.third_name = father_middle_name
+            self.last_name = self._quran_join_name(father_third_name, father_last_name)
 
     @api.depends('first_name', 'middle_name', 'third_name', 'last_name', 'is_company', 'name',
                  'parent_id.name', 'type', 'company_name', 'commercial_company_name')
@@ -330,7 +327,7 @@ class StudentPortal(models.Model):
         """Compute complete_name from the non empty name parts (original spelling is kept)."""
         super()._compute_complete_name()
         for partner in self:
-            if partner.first_name and not partner.is_company:
+            if partner.first_name and partner.middle_name and partner.third_name and not partner.is_company:
                 partner.complete_name = self._quran_join_name(
                     partner.first_name, partner.middle_name, partner.third_name, partner.last_name)
 
@@ -492,16 +489,6 @@ class StudentPortal(models.Model):
             if record._check_student_has_assignments() and record.is_student:
                 raise ValidationError(_("Cannot remove student role: This student has active assignments (office, class, teacher, or subscription)."))
             record.is_student = False
-
-    def action_mark_persistent(self):
-        """Mark selected students as persistent"""
-        for record in self:
-            record.student_status = 'persistent' if record.is_student else False
-
-    def action_mark_disconnected(self):
-        """Mark selected students as disconnected"""
-        for record in self:
-            record.student_status = 'disconnected' if record.is_student else False
 
     def action_set_partner_as_fatherless(self):
         """Set student as fatherless"""

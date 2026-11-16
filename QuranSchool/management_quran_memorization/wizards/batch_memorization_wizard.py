@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from odoo import _, api, fields, models
+from odoo.exceptions import ValidationError, UserError
+from odoo.tools import format_date
 
 
 class BatchMemorizationWizard(models.TransientModel):
@@ -38,11 +40,12 @@ class BatchMemorizationWizard(models.TransientModel):
 
 # ================================= Dependencies Functions =================================
     @api.depends('memorization_month')
+    @api.depends_context('lang')
     def _compute_month_name(self):
         """Compute month name for display"""
         for record in self:
             if record.memorization_month:
-                record.month_name = record.memorization_month.strftime('%B %Y')
+                record.month_name = format_date(self.env, record.memorization_month, date_format='MMMM yyyy')
             else:
                 record.month_name = ''
                 
@@ -59,8 +62,9 @@ class BatchMemorizationWizard(models.TransientModel):
 # ========================= Action Functions =========================
     def action_register_memorization(self):
         """Register memorization for all eligible students"""
-        active_ids= self._context.get('active_ids')
-        students = self.env['res.partner'].browse(active_ids)
+        if self._context.get('active_model') not in (None, False, 'res.partner'):
+            raise ValidationError(_('This wizard must be opened from the students list.'))
+        students = self.env['res.partner'].browse(self._context.get('active_ids') or []).exists()
 
         memorization_vals_list = []
         for student in students:

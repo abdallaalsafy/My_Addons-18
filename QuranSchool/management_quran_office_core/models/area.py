@@ -42,6 +42,7 @@ class Area(models.Model):
 
 
     _sql_constraints = [('name_uniq', "unique(name)", "Name must be unique per area."),]
+    _rec_names_search = ['code', 'name']
     
 ############################## Builtin Functions #############################################
     @api.model_create_multi
@@ -57,29 +58,6 @@ class Area(models.Model):
         """Override _compute_display_name to show code and name."""
         for area in self:
             area.display_name = f"[{area.code}] {area.name}"
-
-    @api.model
-    def name_search(self, name='', args=None, operator='ilike', limit=100):
-        """Enhanced name search to find areas by name or code."""
-        if name == '':
-            return super().name_search(name, args, operator, limit)
-        
-        if args is None:
-            args = []
-            
-        # Search by code first
-        domain = [('code', operator, name)]
-        areas = self.search(domain + args, limit=limit)
-        if areas:
-            return [(record.id, record.display_name) for record in areas]
-        
-        # Then search by name
-        domain = [('name', operator, name)]
-        areas = self.search(domain + args, limit=limit)
-        if areas:
-            return [(record.id, record.display_name) for record in areas]
-
-        return super().name_search(name, args, operator, limit)
 
 ############################## Compute Fields #########################################################
     @api.depends('partner_ids')

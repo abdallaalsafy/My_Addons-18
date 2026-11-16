@@ -169,27 +169,27 @@ class ParticipantFilterWizard(models.TransientModel):
         if self.sort_by_name:
             order += f"student_id {self.global_sort_type},"
             if participant:
-                keys.append(participant.student_id.name)
+                keys.append(participant.student_id.name or '')
         if self.sort_by_percentage:
             order += f"evaluation_percentage {self.global_sort_type},"
             if participant:
-                keys.append(participant.evaluation_percentage)
+                keys.append(participant.evaluation_percentage or 0.0)
         if self.sort_by_juze_amount:
             order += f"juze_amount {self.global_sort_type},"
             if participant:
-                keys.append(participant.juze_amount)
+                keys.append(participant.juze_amount or 0.0)
         if self.sort_by_registration_number:
             order += f"registration_number {self.global_sort_type},"
             if participant:
-                keys.append(participant.registration_number)
+                keys.append(participant.registration_number or '')
         if self.sort_by_office:
             order += f"office_id {self.global_sort_type},"
             if participant:
-                keys.append(participant.office_id.name)
+                keys.append(participant.office_id.name or '')
         if self.sort_by_class:
             order += f"class_id {self.global_sort_type},"
             if participant:
-                keys.append(participant.class_id.name)
+                keys.append(participant.class_id.name or '')
         return order.rstrip(','),tuple(keys)
 
     def calculate_filtered_participants(self):
@@ -318,7 +318,7 @@ class ParticipantFilterWizard(models.TransientModel):
             'view_mode': 'list',
             'views': [(view_list, 'list'), (view_form, 'form')],
             'domain': [('id', 'in', records.ids)],
-            'context': {'default_search_order': orders},
+            'context': {'main_search_order': orders},
         }
 
     def action_print_results(self):
