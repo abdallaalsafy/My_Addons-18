@@ -1,0 +1,1345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="demo_att_yusuf_202608" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_yusuf"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="year">2026</field>
+        <field name="month">8</field>
+        <field name="holiday_policy_id" ref="demo_policy_noor_fri_sat"/>
+        <field name="day_1">holiday</field>
+        <field name="day_2">present</field>
+        <field name="day_3">present</field>
+        <field name="day_4">present</field>
+        <field name="day_5">present</field>
+        <field name="day_6">present</field>
+        <field name="day_7">holiday</field>
+        <field name="day_8">holiday</field>
+        <field name="day_9">present</field>
+        <field name="day_10">present</field>
+        <field name="day_11">present</field>
+        <field name="day_12">present</field>
+        <field name="day_13">present</field>
+        <field name="day_14">holiday</field>
+        <field name="day_15">holiday</field>
+        <field name="day_16">present</field>
+        <field name="day_17">present</field>
+        <field name="day_18">present</field>
+        <field name="day_19">late</field>
+        <field name="day_20">late</field>
+        <field name="day_21">holiday</field>
+        <field name="day_22">holiday</field>
+        <field name="day_23">present</field>
+        <field name="day_24">present</field>
+        <field name="day_25">present</field>
+        <field name="day_26">present</field>
+        <field name="day_27">present</field>
+        <field name="day_28">holiday</field>
+        <field name="day_29">holiday</field>
+        <field name="day_30">present</field>
+        <field name="day_31">present</field>
+    </record>
+
+    <record id="demo_att_yusuf_202609" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_yusuf"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="year">2026</field>
+        <field name="month">9</field>
+        <field name="holiday_policy_id" ref="demo_policy_noor_fri_sat"/>
+        <field name="day_1">present</field>
+        <field name="day_2">present</field>
+        <field name="day_3">present</field>
+        <field name="day_4">holiday</field>
+        <field name="day_5">holiday</field>
+        <field name="day_6">present</field>
+        <field name="day_7">present</field>
+        <field name="day_8">present</field>
+        <field name="day_9">present</field>
+        <field name="day_10">holiday</field>
+        <field name="day_11">holiday</field>
+        <field name="day_12">holiday</field>
+        <field name="day_13">present</field>
+        <field name="day_14">sick</field>
+        <field name="day_15">present</field>
+        <field name="day_16">present</field>
+        <field name="day_17">present</field>
+        <field name="day_18">holiday</field>
+        <field name="day_19">holiday</field>
+        <field name="day_20">present</field>
+        <field name="day_21">present</field>
+        <field name="day_22">present</field>
+        <field name="day_23">present</field>
+        <field name="day_24">present</field>
+        <field name="day_25">holiday</field>
+        <field name="day_26">holiday</field>
+        <field name="day_27">present</field>
+        <field name="day_28">absent</field>
+        <field name="day_29">present</field>
+        <field name="day_30">present</field>
+    </record>
+
+    <record id="demo_att_yusuf_202610" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_yusuf"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="year">2026</field>
+        <field name="month">10</field>
+        <field name="holiday_policy_id" ref="demo_policy_noor_fri_sat"/>
+        <field name="day_1">present</field>
+        <field name="day_2">holiday</field>
+        <field name="day_3">holiday</field>
+        <field name="day_4">absent</field>
+        <field name="day_5">present</field>
+        <field name="day_6">holiday</field>
+        <field name="day_7">present</field>
+        <field name="day_8">present</field>
+        <field name="day_9">holiday</field>
+        <field name="day_10">holiday</field>
+        <field name="day_11">absent</field>
+        <field name="day_12">excused</field>
+        <field name="day_13">present</field>
+        <field name="day_14">excused</field>
+        <field name="day_15">present</field>
+        <field name="day_16">holiday</field>
+        <field name="day_17">holiday</field>
+        <field name="day_18">present</field>
+        <field name="day_19">present</field>
+        <field name="day_20">present</field>
+        <field name="day_21">present</field>
+        <field name="day_22">present</field>
+        <field name="day_23">holiday</field>
+        <field name="day_24">holiday</field>
+        <field name="day_25">present</field>
+        <field name="day_26">present</field>
+        <field name="day_27">present</field>
+        <field name="day_28">present</field>
+        <field name="day_29">late</field>
+        <field name="day_30">holiday</field>
+        <field name="day_31">holiday</field>
+    </record>
+
+    <record id="demo_att_maryam_202608" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_maryam"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="year">2026</field>
+        <field name="month">8</field>
+        <field name="holiday_policy_id" ref="demo_policy_noor_fri_sat"/>
+        <field name="day_1">holiday</field>
+        <field name="day_2">sick</field>
+        <field name="day_3">present</field>
+        <field name="day_4">present</field>
+        <field name="day_5">present</field>
+        <field name="day_6">present</field>
+        <field name="day_7">holiday</field>
+        <field name="day_8">holiday</field>
+        <field name="day_9">present</field>
+        <field name="day_10">sick</field>
+        <field name="day_11">present</field>
+        <field name="day_12">excused</field>
+        <field name="day_13">present</field>
+        <field name="day_14">holiday</field>
+        <field name="day_15">holiday</field>
+        <field name="day_16">present</field>
+        <field name="day_17">present</field>
+        <field name="day_18">present</field>
+        <field name="day_19">present</field>
+        <field name="day_20">present</field>
+        <field name="day_21">holiday</field>
+        <field name="day_22">holiday</field>
+        <field name="day_23">present</field>
+        <field name="day_24">present</field>
+        <field name="day_25">excused</field>
+        <field name="day_26">present</field>
+        <field name="day_27">sick</field>
+        <field name="day_28">holiday</field>
+        <field name="day_29">holiday</field>
+        <field name="day_30">present</field>
+        <field name="day_31">present</field>
+    </record>
+
+    <record id="demo_att_maryam_202609" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_maryam"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="year">2026</field>
+        <field name="month">9</field>
+        <field name="holiday_policy_id" ref="demo_policy_noor_fri_sat"/>
+        <field name="day_1">present</field>
+        <field name="day_2">present</field>
+        <field name="day_3">present</field>
+        <field name="day_4">holiday</field>
+        <field name="day_5">holiday</field>
+        <field name="day_6">late</field>
+        <field name="day_7">present</field>
+        <field name="day_8">excused</field>
+        <field name="day_9">present</field>
+        <field name="day_10">holiday</field>
+        <field name="day_11">holiday</field>
+        <field name="day_12">holiday</field>
+        <field name="day_13">sick</field>
+        <field name="day_14">present</field>
+        <field name="day_15">present</field>
+        <field name="day_16">present</field>
+        <field name="day_17">present</field>
+        <field name="day_18">holiday</field>
+        <field name="day_19">holiday</field>
+        <field name="day_20">present</field>
+        <field name="day_21">absent</field>
+        <field name="day_22">present</field>
+        <field name="day_23">present</field>
+        <field name="day_24">late</field>
+        <field name="day_25">holiday</field>
+        <field name="day_26">holiday</field>
+        <field name="day_27">present</field>
+        <field name="day_28">absent</field>
+        <field name="day_29">late</field>
+        <field name="day_30">present</field>
+    </record>
+
+    <record id="demo_att_maryam_202610" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_maryam"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="year">2026</field>
+        <field name="month">10</field>
+        <field name="holiday_policy_id" ref="demo_policy_noor_fri_sat"/>
+        <field name="day_1">present</field>
+        <field name="day_2">holiday</field>
+        <field name="day_3">holiday</field>
+        <field name="day_4">present</field>
+        <field name="day_5">present</field>
+        <field name="day_6">holiday</field>
+        <field name="day_7">present</field>
+        <field name="day_8">present</field>
+        <field name="day_9">holiday</field>
+        <field name="day_10">holiday</field>
+        <field name="day_11">present</field>
+        <field name="day_12">present</field>
+        <field name="day_13">excused</field>
+        <field name="day_14">present</field>
+        <field name="day_15">present</field>
+        <field name="day_16">holiday</field>
+        <field name="day_17">holiday</field>
+        <field name="day_18">present</field>
+        <field name="day_19">present</field>
+        <field name="day_20">present</field>
+        <field name="day_21">present</field>
+        <field name="day_22">sick</field>
+        <field name="day_23">holiday</field>
+        <field name="day_24">holiday</field>
+        <field name="day_25">excused</field>
+        <field name="day_26">present</field>
+        <field name="day_27">absent</field>
+        <field name="day_28">present</field>
+        <field name="day_29">present</field>
+        <field name="day_30">holiday</field>
+        <field name="day_31">holiday</field>
+    </record>
+
+    <record id="demo_att_omar_202608" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_omar"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_omar"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_osama"/>
+        <field name="year">2026</field>
+        <field name="month">8</field>
+        <field name="holiday_policy_id" ref="management_quran_attendance.attendance_default_holiday_policy"/>
+        <field name="day_1">present</field>
+        <field name="day_2">late</field>
+        <field name="day_3">present</field>
+        <field name="day_4">present</field>
+        <field name="day_5">present</field>
+        <field name="day_6">present</field>
+        <field name="day_7">holiday</field>
+        <field name="day_8">present</field>
+        <field name="day_9">present</field>
+        <field name="day_10">present</field>
+        <field name="day_11">present</field>
+        <field name="day_12">present</field>
+        <field name="day_13">sick</field>
+        <field name="day_14">holiday</field>
+        <field name="day_15">present</field>
+        <field name="day_16">present</field>
+        <field name="day_17">present</field>
+        <field name="day_18">present</field>
+        <field name="day_19">present</field>
+        <field name="day_20">present</field>
+        <field name="day_21">holiday</field>
+        <field name="day_22">present</field>
+        <field name="day_23">late</field>
+        <field name="day_24">present</field>
+        <field name="day_25">sick</field>
+        <field name="day_26">present</field>
+        <field name="day_27">present</field>
+        <field name="day_28">holiday</field>
+        <field name="day_29">absent</field>
+        <field name="day_30">absent</field>
+        <field name="day_31">present</field>
+    </record>
+
+    <record id="demo_att_omar_202609" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_omar"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_omar"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_osama"/>
+        <field name="year">2026</field>
+        <field name="month">9</field>
+        <field name="holiday_policy_id" ref="management_quran_attendance.attendance_default_holiday_policy"/>
+        <field name="day_1">present</field>
+        <field name="day_2">present</field>
+        <field name="day_3">present</field>
+        <field name="day_4">holiday</field>
+        <field name="day_5">present</field>
+        <field name="day_6">present</field>
+        <field name="day_7">present</field>
+        <field name="day_8">present</field>
+        <field name="day_9">present</field>
+        <field name="day_10">present</field>
+        <field name="day_11">holiday</field>
+        <field name="day_12">present</field>
+        <field name="day_13">present</field>
+        <field name="day_14">present</field>
+        <field name="day_15">present</field>
+        <field name="day_16">present</field>
+        <field name="day_17">present</field>
+        <field name="day_18">holiday</field>
+        <field name="day_19">present</field>
+        <field name="day_20">present</field>
+        <field name="day_21">present</field>
+        <field name="day_22">present</field>
+        <field name="day_23">present</field>
+        <field name="day_24">present</field>
+        <field name="day_25">holiday</field>
+        <field name="day_26">excused</field>
+        <field name="day_27">present</field>
+        <field name="day_28">present</field>
+        <field name="day_29">present</field>
+        <field name="day_30">late</field>
+    </record>
+
+    <record id="demo_att_omar_202610" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_omar"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_omar"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_osama"/>
+        <field name="year">2026</field>
+        <field name="month">10</field>
+        <field name="holiday_policy_id" ref="management_quran_attendance.attendance_default_holiday_policy"/>
+        <field name="day_1">present</field>
+        <field name="day_2">holiday</field>
+        <field name="day_3">present</field>
+        <field name="day_4">present</field>
+        <field name="day_5">late</field>
+        <field name="day_6">holiday</field>
+        <field name="day_7">present</field>
+        <field name="day_8">sick</field>
+        <field name="day_9">holiday</field>
+        <field name="day_10">present</field>
+        <field name="day_11">present</field>
+        <field name="day_12">present</field>
+        <field name="day_13">late</field>
+        <field name="day_14">present</field>
+        <field name="day_15">present</field>
+        <field name="day_16">holiday</field>
+        <field name="day_17">present</field>
+        <field name="day_18">present</field>
+        <field name="day_19">present</field>
+        <field name="day_20">absent</field>
+        <field name="day_21">sick</field>
+        <field name="day_22">present</field>
+        <field name="day_23">holiday</field>
+        <field name="day_24">present</field>
+        <field name="day_25">late</field>
+        <field name="day_26">present</field>
+        <field name="day_27">present</field>
+        <field name="day_28">present</field>
+        <field name="day_29">present</field>
+        <field name="day_30">holiday</field>
+        <field name="day_31">present</field>
+    </record>
+
+    <record id="demo_att_adam_202608" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_adam"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_khaled"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_yasser"/>
+        <field name="year">2026</field>
+        <field name="month">8</field>
+        <field name="holiday_policy_id" ref="management_quran_attendance.attendance_default_holiday_policy"/>
+        <field name="day_1">present</field>
+        <field name="day_2">present</field>
+        <field name="day_3">present</field>
+        <field name="day_4">sick</field>
+        <field name="day_5">present</field>
+        <field name="day_6">present</field>
+        <field name="day_7">holiday</field>
+        <field name="day_8">excused</field>
+        <field name="day_9">absent</field>
+        <field name="day_10">late</field>
+        <field name="day_11">present</field>
+        <field name="day_12">excused</field>
+        <field name="day_13">sick</field>
+        <field name="day_14">holiday</field>
+        <field name="day_15">sick</field>
+        <field name="day_16">late</field>
+        <field name="day_17">present</field>
+        <field name="day_18">present</field>
+        <field name="day_19">present</field>
+        <field name="day_20">present</field>
+        <field name="day_21">holiday</field>
+        <field name="day_22">present</field>
+        <field name="day_23">present</field>
+        <field name="day_24">present</field>
+        <field name="day_25">excused</field>
+        <field name="day_26">present</field>
+        <field name="day_27">absent</field>
+        <field name="day_28">holiday</field>
+        <field name="day_29">late</field>
+        <field name="day_30">present</field>
+        <field name="day_31">present</field>
+    </record>
+
+    <record id="demo_att_adam_202609" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_adam"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_khaled"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_yasser"/>
+        <field name="year">2026</field>
+        <field name="month">9</field>
+        <field name="holiday_policy_id" ref="management_quran_attendance.attendance_default_holiday_policy"/>
+        <field name="day_1">present</field>
+        <field name="day_2">late</field>
+        <field name="day_3">present</field>
+        <field name="day_4">holiday</field>
+        <field name="day_5">present</field>
+        <field name="day_6">present</field>
+        <field name="day_7">present</field>
+        <field name="day_8">absent</field>
+        <field name="day_9">present</field>
+        <field name="day_10">present</field>
+        <field name="day_11">holiday</field>
+        <field name="day_12">present</field>
+        <field name="day_13">present</field>
+        <field name="day_14">present</field>
+        <field name="day_15">present</field>
+        <field name="day_16">late</field>
+        <field name="day_17">present</field>
+        <field name="day_18">holiday</field>
+        <field name="day_19">present</field>
+        <field name="day_20">present</field>
+        <field name="day_21">present</field>
+        <field name="day_22">absent</field>
+        <field name="day_23">present</field>
+        <field name="day_24">present</field>
+        <field name="day_25">holiday</field>
+        <field name="day_26">late</field>
+        <field name="day_27">absent</field>
+        <field name="day_28">present</field>
+        <field name="day_29">present</field>
+        <field name="day_30">present</field>
+    </record>
+
+    <record id="demo_att_adam_202610" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_adam"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_khaled"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_yasser"/>
+        <field name="year">2026</field>
+        <field name="month">10</field>
+        <field name="holiday_policy_id" ref="management_quran_attendance.attendance_default_holiday_policy"/>
+        <field name="day_1">late</field>
+        <field name="day_2">holiday</field>
+        <field name="day_3">present</field>
+        <field name="day_4">present</field>
+        <field name="day_5">late</field>
+        <field name="day_6">holiday</field>
+        <field name="day_7">present</field>
+        <field name="day_8">absent</field>
+        <field name="day_9">holiday</field>
+        <field name="day_10">present</field>
+        <field name="day_11">present</field>
+        <field name="day_12">present</field>
+        <field name="day_13">present</field>
+        <field name="day_14">absent</field>
+        <field name="day_15">present</field>
+        <field name="day_16">holiday</field>
+        <field name="day_17">present</field>
+        <field name="day_18">present</field>
+        <field name="day_19">present</field>
+        <field name="day_20">late</field>
+        <field name="day_21">present</field>
+        <field name="day_22">excused</field>
+        <field name="day_23">holiday</field>
+        <field name="day_24">present</field>
+        <field name="day_25">present</field>
+        <field name="day_26">present</field>
+        <field name="day_27">excused</field>
+        <field name="day_28">present</field>
+        <field name="day_29">present</field>
+        <field name="day_30">holiday</field>
+        <field name="day_31">present</field>
+    </record>
+
+    <record id="demo_att_hamza_202608" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_hamza"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="year">2026</field>
+        <field name="month">8</field>
+        <field name="holiday_policy_id" ref="demo_policy_noor_fri_sat"/>
+        <field name="day_1">holiday</field>
+        <field name="day_2">present</field>
+        <field name="day_3">present</field>
+        <field name="day_4">present</field>
+        <field name="day_5">present</field>
+        <field name="day_6">present</field>
+        <field name="day_7">holiday</field>
+        <field name="day_8">holiday</field>
+        <field name="day_9">present</field>
+        <field name="day_10">present</field>
+        <field name="day_11">sick</field>
+        <field name="day_12">present</field>
+        <field name="day_13">present</field>
+        <field name="day_14">holiday</field>
+        <field name="day_15">holiday</field>
+        <field name="day_16">late</field>
+        <field name="day_17">present</field>
+        <field name="day_18">present</field>
+        <field name="day_19">present</field>
+        <field name="day_20">late</field>
+        <field name="day_21">holiday</field>
+        <field name="day_22">holiday</field>
+        <field name="day_23">present</field>
+        <field name="day_24">present</field>
+        <field name="day_25">late</field>
+        <field name="day_26">present</field>
+        <field name="day_27">present</field>
+        <field name="day_28">holiday</field>
+        <field name="day_29">holiday</field>
+        <field name="day_30">present</field>
+        <field name="day_31">present</field>
+    </record>
+
+    <record id="demo_att_hamza_202609" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_hamza"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="year">2026</field>
+        <field name="month">9</field>
+        <field name="holiday_policy_id" ref="demo_policy_noor_fri_sat"/>
+        <field name="day_1">absent</field>
+        <field name="day_2">present</field>
+        <field name="day_3">present</field>
+        <field name="day_4">holiday</field>
+        <field name="day_5">holiday</field>
+        <field name="day_6">absent</field>
+        <field name="day_7">present</field>
+        <field name="day_8">present</field>
+        <field name="day_9">excused</field>
+        <field name="day_10">holiday</field>
+        <field name="day_11">holiday</field>
+        <field name="day_12">holiday</field>
+        <field name="day_13">present</field>
+        <field name="day_14">present</field>
+        <field name="day_15">present</field>
+        <field name="day_16">present</field>
+        <field name="day_17">sick</field>
+        <field name="day_18">holiday</field>
+        <field name="day_19">holiday</field>
+        <field name="day_20">excused</field>
+        <field name="day_21">present</field>
+        <field name="day_22">present</field>
+        <field name="day_23">present</field>
+        <field name="day_24">present</field>
+        <field name="day_25">holiday</field>
+        <field name="day_26">holiday</field>
+        <field name="day_27">present</field>
+        <field name="day_28">present</field>
+        <field name="day_29">present</field>
+        <field name="day_30">present</field>
+    </record>
+
+    <record id="demo_att_hamza_202610" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_hamza"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="year">2026</field>
+        <field name="month">10</field>
+        <field name="holiday_policy_id" ref="demo_policy_noor_fri_sat"/>
+        <field name="day_1">present</field>
+        <field name="day_2">holiday</field>
+        <field name="day_3">holiday</field>
+        <field name="day_4">present</field>
+        <field name="day_5">excused</field>
+        <field name="day_6">holiday</field>
+        <field name="day_7">late</field>
+        <field name="day_8">present</field>
+        <field name="day_9">holiday</field>
+        <field name="day_10">holiday</field>
+        <field name="day_11">present</field>
+        <field name="day_12">present</field>
+        <field name="day_13">absent</field>
+        <field name="day_14">present</field>
+        <field name="day_15">present</field>
+        <field name="day_16">holiday</field>
+        <field name="day_17">holiday</field>
+        <field name="day_18">present</field>
+        <field name="day_19">late</field>
+        <field name="day_20">late</field>
+        <field name="day_21">present</field>
+        <field name="day_22">late</field>
+        <field name="day_23">holiday</field>
+        <field name="day_24">holiday</field>
+        <field name="day_25">late</field>
+        <field name="day_26">present</field>
+        <field name="day_27">present</field>
+        <field name="day_28">late</field>
+        <field name="day_29">present</field>
+        <field name="day_30">holiday</field>
+        <field name="day_31">holiday</field>
+    </record>
+
+    <record id="demo_att_salma_202608" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_salma"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="year">2026</field>
+        <field name="month">8</field>
+        <field name="holiday_policy_id" ref="demo_policy_noor_fri_sat"/>
+        <field name="day_1">holiday</field>
+        <field name="day_2">present</field>
+        <field name="day_3">present</field>
+        <field name="day_4">present</field>
+        <field name="day_5">present</field>
+        <field name="day_6">late</field>
+        <field name="day_7">holiday</field>
+        <field name="day_8">holiday</field>
+        <field name="day_9">present</field>
+        <field name="day_10">present</field>
+        <field name="day_11">present</field>
+        <field name="day_12">present</field>
+        <field name="day_13">present</field>
+        <field name="day_14">holiday</field>
+        <field name="day_15">holiday</field>
+        <field name="day_16">present</field>
+        <field name="day_17">late</field>
+        <field name="day_18">present</field>
+        <field name="day_19">present</field>
+        <field name="day_20">present</field>
+        <field name="day_21">holiday</field>
+        <field name="day_22">holiday</field>
+        <field name="day_23">present</field>
+        <field name="day_24">present</field>
+        <field name="day_25">present</field>
+        <field name="day_26">present</field>
+        <field name="day_27">present</field>
+        <field name="day_28">holiday</field>
+        <field name="day_29">holiday</field>
+        <field name="day_30">absent</field>
+        <field name="day_31">present</field>
+    </record>
+
+    <record id="demo_att_salma_202609" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_salma"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="year">2026</field>
+        <field name="month">9</field>
+        <field name="holiday_policy_id" ref="demo_policy_noor_fri_sat"/>
+        <field name="day_1">present</field>
+        <field name="day_2">present</field>
+        <field name="day_3">late</field>
+        <field name="day_4">holiday</field>
+        <field name="day_5">holiday</field>
+        <field name="day_6">present</field>
+        <field name="day_7">present</field>
+        <field name="day_8">present</field>
+        <field name="day_9">present</field>
+        <field name="day_10">holiday</field>
+        <field name="day_11">holiday</field>
+        <field name="day_12">holiday</field>
+        <field name="day_13">present</field>
+        <field name="day_14">present</field>
+        <field name="day_15">present</field>
+        <field name="day_16">present</field>
+        <field name="day_17">present</field>
+        <field name="day_18">holiday</field>
+        <field name="day_19">holiday</field>
+        <field name="day_20">present</field>
+        <field name="day_21">present</field>
+        <field name="day_22">present</field>
+        <field name="day_23">present</field>
+        <field name="day_24">absent</field>
+        <field name="day_25">holiday</field>
+        <field name="day_26">holiday</field>
+        <field name="day_27">present</field>
+        <field name="day_28">present</field>
+        <field name="day_29">late</field>
+        <field name="day_30">present</field>
+    </record>
+
+    <record id="demo_att_salma_202610" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_salma"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="year">2026</field>
+        <field name="month">10</field>
+        <field name="holiday_policy_id" ref="demo_policy_noor_fri_sat"/>
+        <field name="day_1">present</field>
+        <field name="day_2">holiday</field>
+        <field name="day_3">holiday</field>
+        <field name="day_4">present</field>
+        <field name="day_5">present</field>
+        <field name="day_6">holiday</field>
+        <field name="day_7">present</field>
+        <field name="day_8">present</field>
+        <field name="day_9">holiday</field>
+        <field name="day_10">holiday</field>
+        <field name="day_11">present</field>
+        <field name="day_12">present</field>
+        <field name="day_13">present</field>
+        <field name="day_14">present</field>
+        <field name="day_15">present</field>
+        <field name="day_16">holiday</field>
+        <field name="day_17">holiday</field>
+        <field name="day_18">present</field>
+        <field name="day_19">excused</field>
+        <field name="day_20">present</field>
+        <field name="day_21">present</field>
+        <field name="day_22">present</field>
+        <field name="day_23">holiday</field>
+        <field name="day_24">holiday</field>
+        <field name="day_25">present</field>
+        <field name="day_26">present</field>
+        <field name="day_27">present</field>
+        <field name="day_28">present</field>
+        <field name="day_29">present</field>
+        <field name="day_30">holiday</field>
+        <field name="day_31">holiday</field>
+    </record>
+
+    <record id="demo_att_mostafa_202608" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_mostafa"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_omar"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_osama"/>
+        <field name="year">2026</field>
+        <field name="month">8</field>
+        <field name="holiday_policy_id" ref="management_quran_attendance.attendance_default_holiday_policy"/>
+        <field name="day_1">late</field>
+        <field name="day_2">present</field>
+        <field name="day_3">present</field>
+        <field name="day_4">present</field>
+        <field name="day_5">present</field>
+        <field name="day_6">present</field>
+        <field name="day_7">holiday</field>
+        <field name="day_8">present</field>
+        <field name="day_9">present</field>
+        <field name="day_10">late</field>
+        <field name="day_11">present</field>
+        <field name="day_12">present</field>
+        <field name="day_13">present</field>
+        <field name="day_14">holiday</field>
+        <field name="day_15">present</field>
+        <field name="day_16">present</field>
+        <field name="day_17">present</field>
+        <field name="day_18">present</field>
+        <field name="day_19">present</field>
+        <field name="day_20">absent</field>
+        <field name="day_21">holiday</field>
+        <field name="day_22">present</field>
+        <field name="day_23">present</field>
+        <field name="day_24">present</field>
+        <field name="day_25">present</field>
+        <field name="day_26">present</field>
+        <field name="day_27">present</field>
+        <field name="day_28">holiday</field>
+        <field name="day_29">present</field>
+        <field name="day_30">present</field>
+        <field name="day_31">present</field>
+    </record>
+
+    <record id="demo_att_mostafa_202609" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_mostafa"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_omar"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_osama"/>
+        <field name="year">2026</field>
+        <field name="month">9</field>
+        <field name="holiday_policy_id" ref="management_quran_attendance.attendance_default_holiday_policy"/>
+        <field name="day_1">late</field>
+        <field name="day_2">present</field>
+        <field name="day_3">sick</field>
+        <field name="day_4">holiday</field>
+        <field name="day_5">present</field>
+        <field name="day_6">present</field>
+        <field name="day_7">present</field>
+        <field name="day_8">present</field>
+        <field name="day_9">absent</field>
+        <field name="day_10">present</field>
+        <field name="day_11">holiday</field>
+        <field name="day_12">present</field>
+        <field name="day_13">present</field>
+        <field name="day_14">present</field>
+        <field name="day_15">present</field>
+        <field name="day_16">late</field>
+        <field name="day_17">present</field>
+        <field name="day_18">holiday</field>
+        <field name="day_19">present</field>
+        <field name="day_20">present</field>
+        <field name="day_21">absent</field>
+        <field name="day_22">late</field>
+        <field name="day_23">present</field>
+        <field name="day_24">present</field>
+        <field name="day_25">holiday</field>
+        <field name="day_26">present</field>
+        <field name="day_27">present</field>
+        <field name="day_28">present</field>
+        <field name="day_29">present</field>
+        <field name="day_30">present</field>
+    </record>
+
+    <record id="demo_att_mostafa_202610" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_mostafa"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_omar"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_osama"/>
+        <field name="year">2026</field>
+        <field name="month">10</field>
+        <field name="holiday_policy_id" ref="management_quran_attendance.attendance_default_holiday_policy"/>
+        <field name="day_1">present</field>
+        <field name="day_2">holiday</field>
+        <field name="day_3">present</field>
+        <field name="day_4">present</field>
+        <field name="day_5">absent</field>
+        <field name="day_6">holiday</field>
+        <field name="day_7">present</field>
+        <field name="day_8">present</field>
+        <field name="day_9">holiday</field>
+        <field name="day_10">present</field>
+        <field name="day_11">present</field>
+        <field name="day_12">present</field>
+        <field name="day_13">present</field>
+        <field name="day_14">present</field>
+        <field name="day_15">present</field>
+        <field name="day_16">holiday</field>
+        <field name="day_17">present</field>
+        <field name="day_18">present</field>
+        <field name="day_19">present</field>
+        <field name="day_20">present</field>
+        <field name="day_21">present</field>
+        <field name="day_22">absent</field>
+        <field name="day_23">holiday</field>
+        <field name="day_24">present</field>
+        <field name="day_25">late</field>
+        <field name="day_26">late</field>
+        <field name="day_27">present</field>
+        <field name="day_28">absent</field>
+        <field name="day_29">absent</field>
+        <field name="day_30">holiday</field>
+        <field name="day_31">present</field>
+    </record>
+
+    <record id="demo_att_nour_202608" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_nour"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="year">2026</field>
+        <field name="month">8</field>
+        <field name="holiday_policy_id" ref="demo_policy_noor_fri_sat"/>
+        <field name="day_1">holiday</field>
+        <field name="day_2">present</field>
+        <field name="day_3">present</field>
+        <field name="day_4">present</field>
+        <field name="day_5">present</field>
+        <field name="day_6">present</field>
+        <field name="day_7">holiday</field>
+        <field name="day_8">holiday</field>
+        <field name="day_9">present</field>
+        <field name="day_10">present</field>
+        <field name="day_11">excused</field>
+        <field name="day_12">present</field>
+        <field name="day_13">present</field>
+        <field name="day_14">holiday</field>
+        <field name="day_15">holiday</field>
+        <field name="day_16">present</field>
+        <field name="day_17">present</field>
+        <field name="day_18">present</field>
+        <field name="day_19">present</field>
+        <field name="day_20">late</field>
+        <field name="day_21">holiday</field>
+        <field name="day_22">holiday</field>
+        <field name="day_23">present</field>
+        <field name="day_24">absent</field>
+        <field name="day_25">late</field>
+        <field name="day_26">present</field>
+        <field name="day_27">present</field>
+        <field name="day_28">holiday</field>
+        <field name="day_29">holiday</field>
+        <field name="day_30">present</field>
+        <field name="day_31">present</field>
+    </record>
+
+    <record id="demo_att_nour_202609" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_nour"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="year">2026</field>
+        <field name="month">9</field>
+        <field name="holiday_policy_id" ref="demo_policy_noor_fri_sat"/>
+        <field name="day_1">present</field>
+        <field name="day_2">present</field>
+        <field name="day_3">absent</field>
+        <field name="day_4">holiday</field>
+        <field name="day_5">holiday</field>
+        <field name="day_6">present</field>
+        <field name="day_7">absent</field>
+        <field name="day_8">present</field>
+        <field name="day_9">present</field>
+        <field name="day_10">holiday</field>
+        <field name="day_11">holiday</field>
+        <field name="day_12">holiday</field>
+        <field name="day_13">present</field>
+        <field name="day_14">present</field>
+        <field name="day_15">present</field>
+        <field name="day_16">present</field>
+        <field name="day_17">present</field>
+        <field name="day_18">holiday</field>
+        <field name="day_19">holiday</field>
+        <field name="day_20">late</field>
+        <field name="day_21">present</field>
+        <field name="day_22">present</field>
+        <field name="day_23">present</field>
+        <field name="day_24">present</field>
+        <field name="day_25">holiday</field>
+        <field name="day_26">holiday</field>
+        <field name="day_27">present</field>
+        <field name="day_28">excused</field>
+        <field name="day_29">present</field>
+        <field name="day_30">present</field>
+    </record>
+
+    <record id="demo_att_nour_202610" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_nour"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="year">2026</field>
+        <field name="month">10</field>
+        <field name="holiday_policy_id" ref="demo_policy_noor_fri_sat"/>
+        <field name="day_1">present</field>
+        <field name="day_2">holiday</field>
+        <field name="day_3">holiday</field>
+        <field name="day_4">present</field>
+        <field name="day_5">excused</field>
+        <field name="day_6">holiday</field>
+        <field name="day_7">present</field>
+        <field name="day_8">present</field>
+        <field name="day_9">holiday</field>
+        <field name="day_10">holiday</field>
+        <field name="day_11">present</field>
+        <field name="day_12">present</field>
+        <field name="day_13">present</field>
+        <field name="day_14">present</field>
+        <field name="day_15">present</field>
+        <field name="day_16">holiday</field>
+        <field name="day_17">holiday</field>
+        <field name="day_18">sick</field>
+        <field name="day_19">present</field>
+        <field name="day_20">present</field>
+        <field name="day_21">present</field>
+        <field name="day_22">present</field>
+        <field name="day_23">holiday</field>
+        <field name="day_24">holiday</field>
+        <field name="day_25">present</field>
+        <field name="day_26">absent</field>
+        <field name="day_27">excused</field>
+        <field name="day_28">late</field>
+        <field name="day_29">present</field>
+        <field name="day_30">holiday</field>
+        <field name="day_31">holiday</field>
+    </record>
+
+    <record id="demo_att_ziad_202608" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_ziad"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_khaled"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_yasser"/>
+        <field name="year">2026</field>
+        <field name="month">8</field>
+        <field name="holiday_policy_id" ref="management_quran_attendance.attendance_default_holiday_policy"/>
+        <field name="day_1">present</field>
+        <field name="day_2">present</field>
+        <field name="day_3">present</field>
+        <field name="day_4">absent</field>
+        <field name="day_5">sick</field>
+        <field name="day_6">present</field>
+        <field name="day_7">holiday</field>
+        <field name="day_8">present</field>
+        <field name="day_9">present</field>
+        <field name="day_10">present</field>
+        <field name="day_11">sick</field>
+        <field name="day_12">present</field>
+        <field name="day_13">late</field>
+        <field name="day_14">holiday</field>
+        <field name="day_15">present</field>
+        <field name="day_16">present</field>
+        <field name="day_17">present</field>
+        <field name="day_18">present</field>
+        <field name="day_19">present</field>
+        <field name="day_20">present</field>
+        <field name="day_21">holiday</field>
+        <field name="day_22">present</field>
+        <field name="day_23">present</field>
+        <field name="day_24">present</field>
+        <field name="day_25">present</field>
+        <field name="day_26">present</field>
+        <field name="day_27">present</field>
+        <field name="day_28">holiday</field>
+        <field name="day_29">present</field>
+        <field name="day_30">present</field>
+        <field name="day_31">present</field>
+    </record>
+
+    <record id="demo_att_ziad_202609" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_ziad"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_khaled"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_yasser"/>
+        <field name="year">2026</field>
+        <field name="month">9</field>
+        <field name="holiday_policy_id" ref="management_quran_attendance.attendance_default_holiday_policy"/>
+        <field name="day_1">present</field>
+        <field name="day_2">present</field>
+        <field name="day_3">present</field>
+        <field name="day_4">holiday</field>
+        <field name="day_5">present</field>
+        <field name="day_6">present</field>
+        <field name="day_7">present</field>
+        <field name="day_8">present</field>
+        <field name="day_9">present</field>
+        <field name="day_10">present</field>
+        <field name="day_11">holiday</field>
+        <field name="day_12">present</field>
+        <field name="day_13">present</field>
+        <field name="day_14">present</field>
+        <field name="day_15">present</field>
+        <field name="day_16">present</field>
+        <field name="day_17">present</field>
+        <field name="day_18">holiday</field>
+        <field name="day_19">present</field>
+        <field name="day_20">present</field>
+        <field name="day_21">present</field>
+        <field name="day_22">present</field>
+        <field name="day_23">present</field>
+        <field name="day_24">sick</field>
+        <field name="day_25">holiday</field>
+        <field name="day_26">present</field>
+        <field name="day_27">present</field>
+        <field name="day_28">present</field>
+        <field name="day_29">excused</field>
+        <field name="day_30">present</field>
+    </record>
+
+    <record id="demo_att_ziad_202610" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_ziad"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_khaled"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_yasser"/>
+        <field name="year">2026</field>
+        <field name="month">10</field>
+        <field name="holiday_policy_id" ref="management_quran_attendance.attendance_default_holiday_policy"/>
+        <field name="day_1">present</field>
+        <field name="day_2">holiday</field>
+        <field name="day_3">absent</field>
+        <field name="day_4">present</field>
+        <field name="day_5">present</field>
+        <field name="day_6">holiday</field>
+        <field name="day_7">present</field>
+        <field name="day_8">present</field>
+        <field name="day_9">holiday</field>
+        <field name="day_10">present</field>
+        <field name="day_11">present</field>
+        <field name="day_12">present</field>
+        <field name="day_13">present</field>
+        <field name="day_14">present</field>
+        <field name="day_15">present</field>
+        <field name="day_16">holiday</field>
+        <field name="day_17">present</field>
+        <field name="day_18">absent</field>
+        <field name="day_19">present</field>
+        <field name="day_20">present</field>
+        <field name="day_21">late</field>
+        <field name="day_22">present</field>
+        <field name="day_23">holiday</field>
+        <field name="day_24">present</field>
+        <field name="day_25">late</field>
+        <field name="day_26">excused</field>
+        <field name="day_27">present</field>
+        <field name="day_28">late</field>
+        <field name="day_29">present</field>
+        <field name="day_30">holiday</field>
+        <field name="day_31">absent</field>
+    </record>
+
+    <record id="demo_att_laila_202608" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_laila"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="year">2026</field>
+        <field name="month">8</field>
+        <field name="holiday_policy_id" ref="demo_policy_noor_fri_sat"/>
+        <field name="day_1">holiday</field>
+        <field name="day_2">late</field>
+        <field name="day_3">present</field>
+        <field name="day_4">absent</field>
+        <field name="day_5">present</field>
+        <field name="day_6">absent</field>
+        <field name="day_7">holiday</field>
+        <field name="day_8">holiday</field>
+        <field name="day_9">absent</field>
+        <field name="day_10">present</field>
+        <field name="day_11">late</field>
+        <field name="day_12">present</field>
+        <field name="day_13">present</field>
+        <field name="day_14">holiday</field>
+        <field name="day_15">holiday</field>
+        <field name="day_16">present</field>
+        <field name="day_17">present</field>
+        <field name="day_18">present</field>
+        <field name="day_19">present</field>
+        <field name="day_20">present</field>
+        <field name="day_21">holiday</field>
+        <field name="day_22">holiday</field>
+        <field name="day_23">present</field>
+        <field name="day_24">present</field>
+        <field name="day_25">present</field>
+        <field name="day_26">late</field>
+        <field name="day_27">present</field>
+        <field name="day_28">holiday</field>
+        <field name="day_29">holiday</field>
+        <field name="day_30">present</field>
+        <field name="day_31">present</field>
+    </record>
+
+    <record id="demo_att_laila_202609" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_laila"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="year">2026</field>
+        <field name="month">9</field>
+        <field name="holiday_policy_id" ref="demo_policy_noor_fri_sat"/>
+        <field name="day_1">present</field>
+        <field name="day_2">present</field>
+        <field name="day_3">late</field>
+        <field name="day_4">holiday</field>
+        <field name="day_5">holiday</field>
+        <field name="day_6">present</field>
+        <field name="day_7">present</field>
+        <field name="day_8">present</field>
+        <field name="day_9">late</field>
+        <field name="day_10">holiday</field>
+        <field name="day_11">holiday</field>
+        <field name="day_12">holiday</field>
+        <field name="day_13">sick</field>
+        <field name="day_14">present</field>
+        <field name="day_15">present</field>
+        <field name="day_16">present</field>
+        <field name="day_17">present</field>
+        <field name="day_18">holiday</field>
+        <field name="day_19">holiday</field>
+        <field name="day_20">present</field>
+        <field name="day_21">present</field>
+        <field name="day_22">present</field>
+        <field name="day_23">present</field>
+        <field name="day_24">present</field>
+        <field name="day_25">holiday</field>
+        <field name="day_26">holiday</field>
+        <field name="day_27">present</field>
+        <field name="day_28">present</field>
+        <field name="day_29">present</field>
+        <field name="day_30">present</field>
+    </record>
+
+    <record id="demo_att_laila_202610" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_laila"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="year">2026</field>
+        <field name="month">10</field>
+        <field name="holiday_policy_id" ref="demo_policy_noor_fri_sat"/>
+        <field name="day_1">present</field>
+        <field name="day_2">holiday</field>
+        <field name="day_3">holiday</field>
+        <field name="day_4">late</field>
+        <field name="day_5">present</field>
+        <field name="day_6">holiday</field>
+        <field name="day_7">present</field>
+        <field name="day_8">sick</field>
+        <field name="day_9">holiday</field>
+        <field name="day_10">holiday</field>
+        <field name="day_11">present</field>
+        <field name="day_12">present</field>
+        <field name="day_13">absent</field>
+        <field name="day_14">present</field>
+        <field name="day_15">present</field>
+        <field name="day_16">holiday</field>
+        <field name="day_17">holiday</field>
+        <field name="day_18">absent</field>
+        <field name="day_19">present</field>
+        <field name="day_20">present</field>
+        <field name="day_21">sick</field>
+        <field name="day_22">absent</field>
+        <field name="day_23">holiday</field>
+        <field name="day_24">holiday</field>
+        <field name="day_25">present</field>
+        <field name="day_26">present</field>
+        <field name="day_27">present</field>
+        <field name="day_28">absent</field>
+        <field name="day_29">present</field>
+        <field name="day_30">holiday</field>
+        <field name="day_31">holiday</field>
+    </record>
+
+    <record id="demo_att_abdelrahman_202608" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_abdelrahman"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="year">2026</field>
+        <field name="month">8</field>
+        <field name="holiday_policy_id" ref="demo_policy_noor_fri_sat"/>
+        <field name="day_1">holiday</field>
+        <field name="day_2">present</field>
+        <field name="day_3">present</field>
+        <field name="day_4">present</field>
+        <field name="day_5">present</field>
+        <field name="day_6">present</field>
+        <field name="day_7">holiday</field>
+        <field name="day_8">holiday</field>
+        <field name="day_9">present</field>
+        <field name="day_10">present</field>
+        <field name="day_11">present</field>
+        <field name="day_12">present</field>
+        <field name="day_13">present</field>
+        <field name="day_14">holiday</field>
+        <field name="day_15">holiday</field>
+        <field name="day_16">present</field>
+        <field name="day_17">present</field>
+        <field name="day_18">present</field>
+        <field name="day_19">present</field>
+        <field name="day_20">present</field>
+        <field name="day_21">holiday</field>
+        <field name="day_22">holiday</field>
+        <field name="day_23">present</field>
+        <field name="day_24">present</field>
+        <field name="day_25">present</field>
+        <field name="day_26">present</field>
+        <field name="day_27">excused</field>
+        <field name="day_28">holiday</field>
+        <field name="day_29">holiday</field>
+        <field name="day_30">present</field>
+        <field name="day_31">present</field>
+    </record>
+
+    <record id="demo_att_abdelrahman_202609" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_abdelrahman"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="year">2026</field>
+        <field name="month">9</field>
+        <field name="holiday_policy_id" ref="demo_policy_noor_fri_sat"/>
+        <field name="day_1">present</field>
+        <field name="day_2">present</field>
+        <field name="day_3">absent</field>
+        <field name="day_4">holiday</field>
+        <field name="day_5">holiday</field>
+        <field name="day_6">present</field>
+        <field name="day_7">present</field>
+        <field name="day_8">present</field>
+        <field name="day_9">present</field>
+        <field name="day_10">holiday</field>
+        <field name="day_11">holiday</field>
+        <field name="day_12">holiday</field>
+        <field name="day_13">present</field>
+        <field name="day_14">present</field>
+        <field name="day_15">present</field>
+        <field name="day_16">sick</field>
+        <field name="day_17">present</field>
+        <field name="day_18">holiday</field>
+        <field name="day_19">holiday</field>
+        <field name="day_20">present</field>
+        <field name="day_21">present</field>
+        <field name="day_22">present</field>
+        <field name="day_23">present</field>
+        <field name="day_24">present</field>
+        <field name="day_25">holiday</field>
+        <field name="day_26">holiday</field>
+        <field name="day_27">excused</field>
+        <field name="day_28">present</field>
+        <field name="day_29">present</field>
+        <field name="day_30">present</field>
+    </record>
+
+    <record id="demo_att_abdelrahman_202610" model="attendance.register">
+        <field name="student_id" ref="management_quran_office_core.demo_student_abdelrahman"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="year">2026</field>
+        <field name="month">10</field>
+        <field name="holiday_policy_id" ref="demo_policy_noor_fri_sat"/>
+        <field name="day_1">present</field>
+        <field name="day_2">holiday</field>
+        <field name="day_3">holiday</field>
+        <field name="day_4">present</field>
+        <field name="day_5">present</field>
+        <field name="day_6">holiday</field>
+        <field name="day_7">present</field>
+        <field name="day_8">present</field>
+        <field name="day_9">holiday</field>
+        <field name="day_10">holiday</field>
+        <field name="day_11">absent</field>
+        <field name="day_12">late</field>
+        <field name="day_13">present</field>
+        <field name="day_14">present</field>
+        <field name="day_15">present</field>
+        <field name="day_16">holiday</field>
+        <field name="day_17">holiday</field>
+        <field name="day_18">present</field>
+        <field name="day_19">present</field>
+        <field name="day_20">present</field>
+        <field name="day_21">present</field>
+        <field name="day_22">present</field>
+        <field name="day_23">holiday</field>
+        <field name="day_24">holiday</field>
+        <field name="day_25">present</field>
+        <field name="day_26">present</field>
+        <field name="day_27">present</field>
+        <field name="day_28">present</field>
+        <field name="day_29">sick</field>
+        <field name="day_30">holiday</field>
+        <field name="day_31">holiday</field>
+    </record>
+
+</odoo>

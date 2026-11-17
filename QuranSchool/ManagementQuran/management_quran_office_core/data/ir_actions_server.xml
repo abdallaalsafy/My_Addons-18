@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Server Action to Set Quran Memorizer to True -->
+    <record id="action_set_quran_memorizer_true" model="ir.actions.server">
+        <field name="name">Set Quran Memorizer</field>
+        <field name="model_id" ref="management_quran_office_core.model_res_persons"/>
+        <field name="binding_model_id" ref="management_quran_office_core.model_res_persons"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+                    if records:
+                       records.write({'is_quran_memorizer': True})
+        </field>
+    </record>
+
+    <!-- Server Action to Set Quran Memorizer to False -->
+    <record id="action_set_quran_memorizer_false" model="ir.actions.server">
+        <field name="name">Unset Quran Memorizer</field>
+        <field name="model_id" ref="management_quran_office_core.model_res_persons"/>
+        <field name="binding_model_id" ref="management_quran_office_core.model_res_persons"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+                    if records:
+                        records.write({'is_quran_memorizer': False})
+        </field>
+    </record>
+
+    <record id="action_set_person_as_fatherless" model="ir.actions.server">
+        <field name="name">Set as Fatherless</field>
+        <field name="model_id" ref="management_quran_office_core.model_res_persons"/>
+        <field name="binding_model_id" ref="management_quran_office_core.model_res_persons"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+                    if records:
+                        records.action_set_person_as_fatherless()
+        </field>
+    </record>
+
+    <record id="action_set_person_not_fatherless" model="ir.actions.server">
+        <field name="name">Set not Fatherless</field>
+        <field name="model_id" ref="management_quran_office_core.model_res_persons"/>
+        <field name="binding_model_id" ref="management_quran_office_core.model_res_persons"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+                    if records:
+                        records.action_set_person_not_fatherless()
+        </field>
+    </record>
+
+    <record id="action_set_student_as_persistent" model="ir.actions.server">
+        <field name="name">Set Student as Persistent</field>
+        <field name="model_id" ref="management_quran_office_core.model_res_persons"/>
+        <field name="binding_model_id" ref="management_quran_office_core.model_res_persons"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+if records.filtered(lambda r: r.is_student):
+    records.filtered(lambda r: r.is_student).write({'status': 'persistent'})
+if records.filtered(lambda r: not r.is_student):
+    records.filtered(lambda r: not r.is_student).write({'status': False})
+        </field>
+    </record>
+    <record id="action_set_student_as_disconnected" model="ir.actions.server">
+        <field name="name">Set Student as Disconnected</field>
+        <field name="model_id" ref="management_quran_office_core.model_res_persons"/>
+        <field name="binding_model_id" ref="management_quran_office_core.model_res_persons"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+if records.filtered(lambda r: r.is_student):
+    records.filtered(lambda r: r.is_student).write({'status': 'disconnected'})
+if records.filtered(lambda r: not r.is_student):
+    records.filtered(lambda r: not r.is_student).write({'status': False})
+        </field>
+    </record>
+</odoo>

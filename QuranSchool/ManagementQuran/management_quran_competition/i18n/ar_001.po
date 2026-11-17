@@ -1,0 +1,2287 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* management_quran_competition
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20260423\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-17 01:45+0000\n"
+"PO-Revision-Date: 2026-11-17 01:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: management_quran_competition
+#: model:ir.actions.report,print_report_name:management_quran_competition.report_blank_participant_registration_form
+msgid "'Blank Registration Form'"
+msgstr "'استمارة التسجيل الفارغة'"
+
+#. module: management_quran_competition
+#: model:ir.actions.report,print_report_name:management_quran_competition.report_participant_list
+msgid "'Participants Report'"
+msgstr "'تقرير المشاركين'"
+
+#. module: management_quran_competition
+#: model:ir.actions.report,print_report_name:management_quran_competition.report_participant_registration_form
+msgid "'Registration Form'"
+msgstr "'استمارة التسجيل'"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_list_template
+msgid "<strong>Report Date:</strong>"
+msgstr "<strong>تاريخ التقرير:</strong>"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_bulk_update_wizard__status_value__acceptable
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__quran_competition_participant__status__acceptable
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__quran_competition_participant_result__result_status__acceptable
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_form_view
+msgid "Acceptable"
+msgstr "مقبول"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition__level_ids
+msgid "Accepted Levels"
+msgstr "المستويات المقبولة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_requirements__active
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_level__active
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant_result__active
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_tag__active
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.competition_requirements_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_level_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_result_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_tag_search_view
+msgid "Active"
+msgstr "نشط"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.competition_requirements_search_view
+msgid "Active Status"
+msgstr "الحالة النشطة"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.competition_requirements_form_view
+msgid "Add any additional custom requirements..."
+msgstr "أضف أي متطلبات إضافية..."
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_form_view
+msgid "Add detailed description about the competition..."
+msgstr "أضف وصفًا تفصيليًا عن المسابقة..."
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.competition_requirements_form_view
+msgid "Add detailed description about the requirements..."
+msgstr "أضف وصفًا تفصيليًا عن المتطلبات..."
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_form_view
+msgid "Add evaluation notes..."
+msgstr "أضف ملاحظات التقييم..."
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_form_view
+msgid "Add notes about the competition..."
+msgstr "أضف ملاحظات حول المسابقة..."
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_participant_filter_wizard_form
+msgid "Additional Sorting Options"
+msgstr "خيارات الفرز الإضافية"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_competition_requirements__custom_requirements
+msgid "Additional custom requirements"
+msgstr "متطلبات مخصصة إضافية"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_level__notes
+msgid "Additional note for this competition level"
+msgstr "ملاحظة إضافية لهذا المستوى في المسابقة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant_result__notes
+msgid "Additional note for this evaluation result"
+msgstr "ملاحظة إضافية لناتج التقييم هذا"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition__notes
+msgid "Additional notes for the competition"
+msgstr "ملاحظات إضافية عن المسابقة"
+
+#. module: management_quran_competition
+#: model:ir.actions.act_window,name:management_quran_competition.action_participant_filter_wizard
+msgid "Advanced Participant Filter"
+msgstr "مرشح المشاركين المتقدم"
+
+#. module: management_quran_competition
+#: model:ir.model,name:management_quran_competition.model_participant_filter_wizard
+msgid "Advanced Participant Filter Wizard"
+msgstr "معالج فلتر المشاركين المتقدم"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.competition_requirements_form_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_blank_participant_registration_form_document
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "Age"
+msgstr "العمر"
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/models/participant.py:0
+msgid "Age (%d) is not within the required range (%d - %d)"
+msgstr "العمر (%d) لا يقع ضمن النطاق المطلوب (%d - %d)"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__age_days
+msgid "Age (Days)"
+msgstr "العمر (أيام)"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__age_months
+msgid "Age (Months)"
+msgstr "العمر (أشهر)"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__age_years
+msgid "Age (Years)"
+msgstr "العمر (سنوات)"
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/models/participant.py:0
+msgid "All requirements are satisfied."
+msgstr "تمت满足 جميع المتطلبات."
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_list_template
+msgid "Amount (Juz')"
+msgstr "المقدار (جزء)"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_participant_filter_wizard_form
+msgid "Amount Juz Filter"
+msgstr "فلتر مقدار الأجزاء"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_blank_participant_registration_form_document
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "Amount Memorized"
+msgstr "المقدار المحفوظ"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant__juze_amount
+msgid "Amount of Quran memorized in Juz' (parts) with decimal precision"
+msgstr "مقدار القرآن الذي تم حفظه بالأجزاء مع دقة عشرية"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_level__required_juz
+msgid "Amount of memorized Juz required for this level"
+msgstr "مقدار الأجزاء المحفوظة المطلوبة لهذا المستوى"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant__monetary_prize
+msgid "Amount of monetary prize awarded to participant"
+msgstr "مقدار الجائزة المالية الممنوحة للمشارك"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_participant_bulk_update_wizard_form
+msgid "Apply"
+msgstr "تطبيق"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_participant_filter_wizard__global_sort_type
+msgid "Apply the same sort direction to all selected sorting options"
+msgstr "تطبيق نفس اتجاه الفرز على جميع خيارات الفرز المحددة"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_participant_bulk_update_wizard_form
+msgid "Are you sure you want to update the selected participants?"
+msgstr "هل أنت متأكد أنك تريد تحديث المشاركين المحددين؟"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__global_sort_type__asc
+msgid "Ascending (Lowest to Highest)"
+msgstr "تصاعدي (الأقل إلى الأعلى)"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.competition_requirements_form_view
+msgid "Assignments"
+msgstr "المهام"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant__ayah_num
+msgid "Ayah number where memorization starts"
+msgstr "رقم الآية التي يبدأ منها الحفظ"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.competition_requirements_form_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_form_view
+msgid "Basic Information"
+msgstr "المعلومات الأساسية"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__juz_filter_type__between
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__percentage_filter_type__between
+msgid "Between"
+msgstr "بين"
+
+#. module: management_quran_competition
+#: model:ir.actions.report,name:management_quran_competition.report_blank_participant_registration_form
+msgid "Blank Competition Registration Form"
+msgstr "استمارة تسجيل المسابقة الفارغة"
+
+#. module: management_quran_competition
+#: model:ir.ui.menu,name:management_quran_competition.menu_blank_registration_form_wizard
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_form_view
+msgid "Blank Registration"
+msgstr "تسجيل فارغ"
+
+#. module: management_quran_competition
+#: model:ir.actions.act_window,name:management_quran_competition.action_blank_registration_form_wizard
+msgid "Blank Registration Form"
+msgstr "استمارة التسجيل الفارغة"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_participant_bulk_update_wizard_form
+msgid "Bulk Update Participant"
+msgstr "تحديث المشاركين بشكل مجمّع"
+
+#. module: management_quran_competition
+#: model:ir.model,name:management_quran_competition.model_participant_bulk_update_wizard
+msgid "Bulk Update Participant Wizard"
+msgstr "معالج تحديث المشاركين بشكل مجمّع"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_competition_registration_form_wizard_form
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_participant_bulk_update_wizard_form
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_participant_filter_wizard_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/models/participant.py:0
+msgid "Cannot add participants to a closed competition"
+msgstr "لا يمكن إضافة المشاركين إلى مسابقة مغلقة"
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/models/participant.py:0
+msgid "Cannot delete participant in a closed competition"
+msgstr "لا يمكن حذف المشارك في مسابقة مغلقة"
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/models/competition.py:0
+msgid "Cannot modify competition in a closed state"
+msgstr "لا يمكن تعديل المسابقة في حالة مغلقة"
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/models/participant.py:0
+msgid "Cannot modify participant in a closed competition"
+msgstr "لا يمكن تعديل المشارك في مسابقة مغلقة"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "Cash Reward"
+msgstr "المكافأة النقدية"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__class_id
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__class_id
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_blank_participant_registration_form_document
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_list_template
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_participant_filter_wizard_form
+msgid "Class"
+msgstr "الفصل"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__has_class
+msgid "Class Filter"
+msgstr "فلتر الفصل"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_participant_filter_wizard__class_id
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant__class_id
+msgid "Class this record belongs to"
+msgstr "الفصل الذي ينتمي إليه هذا السجل"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant_result__result_status
+msgid "Classification assigned after evaluating the final score"
+msgstr "التصنيف المخصص بعد تقييم النتيجة النهائية"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__quran_competition__status__closed
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_search_view
+msgid "Closed"
+msgstr "مغلق"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_requirements__code
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "Code"
+msgstr "الكود"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_tag__color
+msgid "Color Index"
+msgstr "مؤشر اللون"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_tag__color
+msgid "Color index for the tag"
+msgstr "مؤشر لون الوسم"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_registration_form_wizard__competition_id
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__competition_id
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_level__competition_id
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__competition_id
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant_result__competition_id
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_level_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_result_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_list_template
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_participant_filter_wizard_form
+msgid "Competition"
+msgstr "المسابقة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition__code
+msgid "Competition Code"
+msgstr "كود المسابقة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_requirements__competition_count
+msgid "Competition Count"
+msgstr "عدد المسابقات"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition__competition_date
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_participant_filter_wizard_form
+msgid "Competition Date"
+msgstr "تاريخ المسابقة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__competition_date_from
+msgid "Competition Date From"
+msgstr "تاريخ المسابقة من"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__competition_date_to
+msgid "Competition Date To"
+msgstr "تاريخ المسابقة إلى"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_form_view
+msgid "Competition Details"
+msgstr "تفاصيل المسابقة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__level_id
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_level_form_view
+msgid "Competition Level"
+msgstr "مستوى المسابقة"
+
+#. module: management_quran_competition
+#: model:ir.actions.act_window,name:management_quran_competition.action_quran_competition_level_view_id
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_level_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_level_tree_view
+msgid "Competition Levels"
+msgstr "مستويات المسابقة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition__name
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_form_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_blank_participant_registration_form_document
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "Competition Name"
+msgstr "اسم المسابقة"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_form_view
+msgid "Competition Participant"
+msgstr "مشارك المسابقة"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_tree_view
+msgid "Competition Participants"
+msgstr "مشاركو المسابقة"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_list_template
+msgid "Competition Participants Report"
+msgstr "تقرير مشاركي المسابقة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_res_persons__participant_count
+msgid "Competition Participation Count"
+msgstr "عدد مشاركات المسابقة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_res_persons__participant_ids
+msgid "Competition Participations"
+msgstr "مشاركات المسابقة"
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/models/res_persons.py:0
+msgid "Competition Participations of %s"
+msgstr "مشاركات المسابقة لـ %s"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_blank_participant_registration_form_document
+msgid "Competition Registration Form"
+msgstr "استمارة تسجيل المسابقة"
+
+#. module: management_quran_competition
+#: model:ir.model,name:management_quran_competition.model_competition_registration_form_wizard
+msgid "Competition Registration Form Wizard"
+msgstr "معالج استمارة تسجيل المسابقة"
+
+#. module: management_quran_competition
+#: model:ir.actions.act_window,name:management_quran_competition.action_competition_requirements_view_id
+#: model:ir.model,name:management_quran_competition.model_competition_requirements
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.competition_requirements_form_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.competition_requirements_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.competition_requirements_tree_view
+msgid "Competition Requirements"
+msgstr "متطلبات المسابقة"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_tag_form_view
+msgid "Competition Tag"
+msgstr "وسم المسابقة"
+
+#. module: management_quran_competition
+#: model:ir.actions.act_window,name:management_quran_competition.action_quran_competition_tag_view_id
+#: model:ir.ui.menu,name:management_quran_competition.menu_quran_competition_tags_config
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_tag_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_tag_tree_view
+msgid "Competition Tags"
+msgstr "أوسمة المسابقة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__competition_test_grade
+msgid "Competition Test Grade"
+msgstr "درجة اختبار المسابقة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_competition_registration_form_wizard__competition_id
+msgid "Competition for which the blank registration form will be printed"
+msgstr "المسابقة التي ستطبع لها استمارة التسجيل الفارغة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_res_persons__participant_ids
+msgid "Competition participations of this student"
+msgstr "مشاركات هذا الطالب في المسابقات"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_level__competition_id
+msgid "Competition related to this level"
+msgstr "المسابقة المرتبطة بهذا المستوى"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant__competition_id
+msgid "Competition this participant belongs to"
+msgstr "المسابقة التي ينتمي إليها هذا المشارك"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant_result__competition_id
+msgid "Competition where this evaluation rule applies"
+msgstr "المسابقة التي تنطبق عليها قاعدة التقييم هذه"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_requirements__competition_ids
+#: model:ir.ui.menu,name:management_quran_competition.menu_quran_competition
+#: model:ir.ui.menu,name:management_quran_competition.menu_quran_competition_root
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.competition_requirements_form_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_res_persons_form_competition_inherit
+msgid "Competitions"
+msgstr "المسابقات"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_res_persons__competition_ids
+msgid "Competitions Participated"
+msgstr "المسابقات المشاركة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_competition_requirements__required_competition_ids
+msgid "Competitions that are related to this requirement"
+msgstr "المسابقات المرتبطة بهذا المتطلب"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_res_persons__competition_ids
+msgid "Competitions this student has participated in"
+msgstr "المسابقات التي شارك فيها هذا الطالب"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_competition_requirements__competition_ids
+msgid "Competitions using this requirement"
+msgstr "المسابقات التي تستخدم هذا المتطلب"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__quran_competition__status__completed
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_search_view
+msgid "Completed"
+msgstr "مكتمل"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_bulk_update_wizard__state_value__confirmed
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__state__confirmed
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__quran_competition_participant__state__confirmed
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_search_view
+msgid "Confirmed"
+msgstr "مؤكد"
+
+#. module: management_quran_competition
+#: model_terms:ir.actions.act_window,help:management_quran_competition.action_quran_competition_tag_view_id
+msgid "Create tags to categorize competitions and requirement templates."
+msgstr "أنشئ وسومًا لتصنيف المسابقات وقوالب المتطلبات."
+
+#. module: management_quran_competition
+#: model_terms:ir.actions.act_window,help:management_quran_competition.action_quran_competition_participant_view_id
+#: model_terms:ir.actions.act_window,help:management_quran_competition.action_quran_competition_view_id
+msgid "Create your first Quran competition"
+msgstr "أنشئ أول مسابقة قرآن"
+
+#. module: management_quran_competition
+#: model_terms:ir.actions.act_window,help:management_quran_competition.action_competition_requirements_view_id
+msgid "Create your first requirement template"
+msgstr "أنشئ أول قالب متطلبات"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_registration_form_wizard__create_uid
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_requirements__create_uid
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_bulk_update_wizard__create_uid
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__create_uid
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition__create_uid
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_level__create_uid
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__create_uid
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant_result__create_uid
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_tag__create_uid
+msgid "Created by"
+msgstr "أنشأ بواسطة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_registration_form_wizard__create_date
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_requirements__create_date
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_bulk_update_wizard__create_date
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__create_date
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition__create_date
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_level__create_date
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__create_date
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant_result__create_date
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_tag__create_date
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant__currency_id
+msgid "Currency for subscription fee"
+msgstr "عملة رسوم الاشتراك"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition__participants_count
+msgid "Current Participants"
+msgstr "المشاركون الحاليون"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition__participants_count
+msgid "Current number of registered participants"
+msgstr "عدد المشاركين المسجلين حاليًا"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition__status
+msgid "Current status of the competition"
+msgstr "الحالة الحالية للمسابقة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant__state
+msgid "Current status of the participant"
+msgstr "الحالة الحالية للمشارك"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_requirements__custom_requirements
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.competition_requirements_form_view
+msgid "Custom Requirements"
+msgstr "المتطلبات المخصصة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant__registration_date
+msgid "Date and time of registration"
+msgstr "تاريخ ووقت التسجيل"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_blank_participant_registration_form_document
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "Date of Birth"
+msgstr "تاريخ الميلاد"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition__competition_date
+msgid "Date when the competition will be held"
+msgstr "تاريخ إقامة المسابقة"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "Days"
+msgstr "أيام"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__global_sort_type__desc
+msgid "Descending (Highest to Lowest)"
+msgstr "تنازلي (الأعلى إلى الأدنى)"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_form_view
+msgid "Describe in-kind prize..."
+msgstr "صف الجائزة العينية..."
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_requirements__description
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition__description
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.competition_requirements_form_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_form_view
+msgid "Description"
+msgstr "الوصف"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant__in_kind_prize
+msgid "Description of in-kind prize awarded to participant"
+msgstr "وصف الجائزة العينية الممنوحة للمشارك"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__age_from_id
+msgid "Detailed Age"
+msgstr "العمر التفصيلي"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition__description
+msgid "Detailed description of the competition"
+msgstr "وصف تفصيلي للمسابقة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_competition_requirements__description
+msgid "Detailed description of the requirements"
+msgstr "وصف تفصيلي للمتطلبات"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_blank_participant_registration_form_document
+msgid "Details"
+msgstr "التفاصيل"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_registration_form_wizard__display_name
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_requirements__display_name
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_bulk_update_wizard__display_name
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__display_name
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition__display_name
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_level__display_name
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__display_name
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant_result__display_name
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_tag__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_bulk_update_wizard__state_value__disqualified
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__state__disqualified
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__quran_competition_participant__state__disqualified
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_search_view
+msgid "Disqualified"
+msgstr "مستبعد"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_bulk_update_wizard__state_value__draft
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__state__draft
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__quran_competition_participant__state__draft
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_search_view
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__juz_filter_type__equals
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__percentage_filter_type__equals
+msgid "Equals"
+msgstr "يساوي"
+
+#. module: management_quran_competition
+#: model:ir.actions.server,name:management_quran_competition.action_update_participant_status
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_form_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_tree_view
+msgid "Evaluate Participant"
+msgstr "تقييم المشارك"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__notes
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "Evaluation Notes"
+msgstr "ملاحظات التقييم"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__result_id
+msgid "Evaluation Result"
+msgstr "نتيجة التقييم"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_form_view
+msgid "Evaluation Results"
+msgstr "نتائج التقييم"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition__evaluation_rule_ids
+#: model:ir.ui.menu,name:management_quran_competition.menu_quran_competition_evaluation_rules
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_form_view
+msgid "Evaluation Rules"
+msgstr "قواعد التقييم"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant_result__result_status
+msgid "Evaluation Status"
+msgstr "حالة التقييم"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant__status
+msgid "Evaluation status based on performance"
+msgstr "حالة التقييم بناءً على الأداء"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "Female"
+msgstr "أنثى"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_bulk_update_wizard__field_name
+msgid "Field to Update"
+msgstr "الحقل المراد تحديثه"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_participant_filter_wizard_form
+msgid "Filter"
+msgstr "تصفية"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_participant_filter_wizard__competition_id
+msgid "Filter by competition or leave empty to include all"
+msgstr "التصفية حسب المسابقة أو اتركها فارغة لتشمل الجميع"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_participant_filter_wizard__registration_number
+msgid "Filter by registration number or leave empty to include all"
+msgstr "التصفية حسب رقم التسجيل أو اتركها فارغة لتشمل الجميع"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_participant_filter_wizard__student_id
+msgid "Filter by student or leave empty to include all"
+msgstr "التصفية حسب الطالب أو اتركها فارغة لتشمل الجميع"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_participant_filter_wizard__competition_date_from
+msgid "Filter competitions from this date"
+msgstr "تصفية المسابقات من هذا التاريخ"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_participant_filter_wizard__competition_date_to
+msgid "Filter competitions to this date"
+msgstr "تصفية المسابقات حتى هذا التاريخ"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_participant_filter_wizard__registration_date_from
+msgid "Filter participants registered from this date"
+msgstr "تصفية المشاركين المسجلين من هذا التاريخ"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_participant_filter_wizard__registration_date_to
+msgid "Filter participants registered to this date"
+msgstr "تصفية المشاركين المسجلين حتى هذا التاريخ"
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/wizards/participant_filter_wizard.py:0
+msgid "Filtered Participants"
+msgstr "المشاركون المفلترون"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant__evaluation_percentage
+msgid "Final percentage of score against the competition grade"
+msgstr "النسبة النهائية للنتيجة مقارنة بدرجة المسابقة"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_blank_participant_registration_form_document
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "From Al-Baqarah"
+msgstr "من سورة البقرة"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_blank_participant_registration_form_document
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "From An-Nas"
+msgstr "من سورة الناس"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__memorization_method__from_baqarah
+msgid "From Baqarah"
+msgstr "من البقرة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__memorization_method__from_nas
+msgid "From Nas"
+msgstr "من الناس"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_blank_participant_registration_form_document
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "Gender"
+msgstr "الجنس"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__global_sort_type
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_participant_filter_wizard_form
+msgid "Global Sort Type"
+msgstr "نوع الفرز العام"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__juz_filter_type__greater_than
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__percentage_filter_type__greater_than
+msgid "Greater Than"
+msgstr "أكبر من"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.competition_requirements_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_level_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_result_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_search_view
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__has_class__with_class
+msgid "Has Class"
+msgstr "له فصل"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__has_in_kind_prize__with_in_kind
+msgid "Has In-Kind Prize"
+msgstr "له جائزة عينية"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__has_monetary_prize__with_monetary
+msgid "Has Monetary Prize"
+msgstr "له جائزة نقدية"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__has_office__with_office
+msgid "Has Office"
+msgstr "له مكتب"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__has_registration_number__with_registration
+msgid "Has Registration Number"
+msgstr "له رقم تسجيل"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__has_teacher__with_teacher
+msgid "Has Teacher"
+msgstr "له معلم"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_requirements__highest_level_yet
+msgid "Highest Level Yet"
+msgstr "أعلى مستوى حتى الآن"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_competition_registration_form_wizard__copies
+msgid "How many blank registration sheets to print"
+msgstr "كم عدد نماذج التسجيل الفارغة التي سيتم طباعتها"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_registration_form_wizard__id
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_requirements__id
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_bulk_update_wizard__id
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__id
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition__id
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_level__id
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__id
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant_result__id
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_tag__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_blank_participant_registration_form_document
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "Identity Number"
+msgstr "رقم الهوية"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_competition_requirements__active
+msgid "If unchecked, this requirement will not be available"
+msgstr "إذا لم يتم تحديده، فلن تكون هذه المتطلبات متاحة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_tag__active
+msgid "If unchecked, this tag will be hidden"
+msgstr "إذا لم يتم تحديده، سيتم إخفاء هذا الوسم"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__in_kind_prize
+msgid "In-Kind Prize"
+msgstr "الجائزة العينية"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__has_in_kind_prize
+msgid "In-Kind Prize Filter"
+msgstr "فلتر الجائزة العينية"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "In-kind Reward"
+msgstr "المكافأة العينية"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.competition_requirements_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_level_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_result_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_tag_search_view
+msgid "Inactive"
+msgstr "غير نشط"
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/wizards/participant_bulk_update_wizard.py:0
+msgid "Invalid field selected."
+msgstr "تم تحديد حقل غير صالح."
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition__judge_ids
+msgid "Judges"
+msgstr "المحكمون"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_form_view
+msgid "Judges & Test Grade"
+msgstr "المحكمون ودرجة الاختبار"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition__judge_ids
+msgid "Judges for evaluating participants"
+msgstr "المحكمون لتقييم المشاركين"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__juz_filter_type
+msgid "Juz Filter Type"
+msgstr "نوع فلتر الجزء"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__juz_value
+msgid "Juz Value"
+msgstr "قيمة الجزء"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_participant_filter_wizard__juz_value
+msgid "Juz value for filtering"
+msgstr "قيمة الجزء للتصفية"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_registration_form_wizard__write_uid
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_requirements__write_uid
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_bulk_update_wizard__write_uid
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__write_uid
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition__write_uid
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_level__write_uid
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__write_uid
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant_result__write_uid
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_tag__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_registration_form_wizard__write_date
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_requirements__write_date
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_bulk_update_wizard__write_date
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__write_date
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition__write_date
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_level__write_date
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__write_date
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant_result__write_date
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_tag__write_date
+msgid "Last Updated on"
+msgstr "تاريخ آخر تحديث"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__juz_filter_type__less_than
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__percentage_filter_type__less_than
+msgid "Less Than"
+msgstr "أقل من"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_blank_participant_registration_form_document
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "Level"
+msgstr "المستوى"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_level__name
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_level_form_view
+msgid "Level Name"
+msgstr "اسم المستوى"
+
+#. module: management_quran_competition
+#: model:ir.model.constraint,message:management_quran_competition.constraint_quran_competition_level_competition_level_name_uniq
+msgid "Level name must be unique per competition!"
+msgstr "اسم المستوى يجب أن يكون فريدًا لكل مسابقة!"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant__level_id
+msgid "Level of memorization for this participant in the competition"
+msgstr "مستوى الحفظ لهذا المشارك في المسابقة"
+
+#. module: management_quran_competition
+#: model:ir.ui.menu,name:management_quran_competition.menu_quran_competition_levels
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_form_view
+msgid "Levels"
+msgstr "المستويات"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition__level_ids
+msgid "Levels accepted in this competition"
+msgstr "المستويات المقبولة في هذه المسابقة"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_participant_filter_wizard_form
+msgid "Main Sorting Options"
+msgstr "خيارات الفرز الرئيسية"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "Male"
+msgstr "ذكر"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_form_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_tree_view
+msgid "Match Levels"
+msgstr "مطابقة المستويات"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__juz_max
+msgid "Max Juz"
+msgstr "الحد الأقصى للجزء"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__percentage_max
+msgid "Max Percentage"
+msgstr "النسبة القصوى"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_requirements__max_age
+msgid "Maximum Age"
+msgstr "الحد الأقصى للعمر"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_requirements__max_memorization_amount
+msgid "Maximum Memorization (Juz)"
+msgstr "أقصى حفظ (أجزاء)"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_competition_requirements__max_age
+msgid "Maximum age requirement for participants"
+msgstr "متطلب العمر الأقصى للمشاركين"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition__test_grade
+msgid "Maximum grade of the competition test."
+msgstr "الدرجة القصوى لاختبار المسابقة."
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_participant_filter_wizard__juz_max
+msgid "Maximum juz for between filter"
+msgstr "أقصى جزء لفلتر النطاق"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_competition_requirements__max_memorization_amount
+msgid "Maximum memorization amount in Juz"
+msgstr "أقصى مقدار للحفظ بالأجزاء"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_participant_filter_wizard__percentage_max
+msgid "Maximum percentage for between filter"
+msgstr "أقصى نسبة لفلتر النطاق"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.competition_requirements_form_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_participant_filter_wizard_form
+msgid "Memorization"
+msgstr "الحفظ"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__juze_amount
+msgid "Memorization Amount (Juz')"
+msgstr "مقدار الحفظ (جزء)"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__ayah_num
+msgid "Memorization Ayah"
+msgstr "آية الحفظ"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_blank_participant_registration_form_document
+msgid "Memorization Information"
+msgstr "معلومات الحفظ"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__memorization_method
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__memorization_method
+msgid "Memorization Method"
+msgstr "طريقة الحفظ"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_requirements__memorization_required
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.competition_requirements_search_view
+msgid "Memorization Required"
+msgstr "الحفظ مطلوب"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__surah_id
+msgid "Memorization Surah"
+msgstr "سورة الحفظ"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_blank_participant_registration_form_document
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "Memorization Type"
+msgstr "نوع الحفظ"
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/models/participant.py:0
+msgid ""
+"Memorization amount (%.2f Juz) is not within the required range (%.2f - %.2f"
+" Juz)"
+msgstr "مقدار الحفظ (%.2f جزء) ليس داخل النطاق المطلوب (%.2f - %.2f جزء)"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "Memorization and Evaluation Information"
+msgstr "معلومات الحفظ والتقييم"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant__memorization_method
+msgid "Method of Quran memorization"
+msgstr "طريقة حفظ القرآن"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__juz_min
+msgid "Min Juz"
+msgstr "أقل جزء"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__percentage_min
+msgid "Min Percentage"
+msgstr "أقل نسبة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_requirements__min_age
+msgid "Minimum Age"
+msgstr "الحد الأدنى للعمر"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_requirements__min_memorization_amount
+msgid "Minimum Memorization (Juz)"
+msgstr "الحد الأدنى للحفظ (أجزاء)"
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/models/requirements.py:0
+msgid ""
+"Minimum age cannot be greater than maximum age or be negative or zero or "
+"maximum age cannot be zero or negative"
+msgstr "لا يمكن أن يكون الحد الأدنى للعمر أكبر من الحد الأقصى للعمر أو سالبًا أو صفرًا، ولا يمكن أن يكون الحد الأقصى للعمر صفرًا أو سالبًا"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_competition_requirements__min_age
+msgid "Minimum age requirement for participants"
+msgstr "متطلب العمر الأدنى للمشاركين"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_participant_filter_wizard__juz_min
+msgid "Minimum juz for between filter"
+msgstr "أقل جزء لفلتر النطاق"
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/models/requirements.py:0
+msgid ""
+"Minimum memorization amount cannot be greater than maximum memorization "
+"amount or be negative or zero or maximum memorization amount cannot be zero "
+"or negative"
+msgstr "لا يمكن أن يكون الحد الأدنى لمقدار الحفظ أكبر من الحد الأقصى لمقدار الحفظ أو سالبًا أو صفرًا، ولا يمكن أن يكون الحد الأقصى لمقدار الحفظ صفرًا أو سالبًا"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_competition_requirements__min_memorization_amount
+msgid "Minimum memorization amount in Juz"
+msgstr "الحد الأدنى لمقدار الحفظ بالأجزاء"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_participant_filter_wizard__percentage_min
+msgid "Minimum percentage for between filter"
+msgstr "أقل نسبة لفلتر النطاق"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__memorization_method__mixed
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_blank_participant_registration_form_document
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "Mixed"
+msgstr "مختلط"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__monetary_prize
+msgid "Monetary Prize"
+msgstr "الجائزة النقدية"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__has_monetary_prize
+msgid "Monetary Prize Filter"
+msgstr "فلتر الجائزة النقدية"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "Months"
+msgstr "أشهر"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition__name
+msgid "Name of the Quran competition"
+msgstr "اسم مسابقة القرآن"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_tag__name
+msgid "Name of the competition tag"
+msgstr "اسم وسم المسابقة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant_result__name
+msgid "Name of the evaluation result, such as Superior or Successful"
+msgstr "اسم نتيجة التقييم، مثل المتميز أو الناجح"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_level__name
+msgid "Name of the memorization level"
+msgstr "اسم مستوى الحفظ"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_competition_requirements__name
+msgid "Name of the requirement template"
+msgstr "اسم قالب المتطلبات"
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/models/competition.py:0
+#: code:addons/management_quran_competition/models/participant.py:0
+#: code:addons/management_quran_competition/models/requirements.py:0
+msgid "New"
+msgstr "جديد"
+
+#. module: management_quran_competition
+#: model_terms:ir.actions.act_window,help:management_quran_competition.action_quran_competition_tag_view_id
+msgid "No competition tags defined yet."
+msgstr "لا توجد وسوم للمسابقات بعد."
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/wizards/participant_filter_wizard.py:0
+msgid "No participants found matching the criteria."
+msgstr "لم يتم العثور على مشاركين يطابقون المعايير."
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/models/participant.py:0
+msgid "No requirement defined for this competition %s"
+msgstr "لا يوجد متطلب محدد لهذه المسابقة %s"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__competition_requirements__registration_status__not_registered
+msgid "Not Registered"
+msgstr "غير مسجل"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.competition_requirements_search_view
+msgid "Not Used"
+msgstr "غير مستخدم"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition__notes
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_level__notes
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant_result__notes
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_form_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_level_form_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_form_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_result_form_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_blank_participant_registration_form_document
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "Notes / Registration Status"
+msgstr "ملاحظات / حالة التسجيل"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant__notes
+msgid "Notes about participant performance"
+msgstr "ملاحظات حول أداء المشارك"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_registration_form_wizard__copies
+msgid "Number of Copies"
+msgstr "عدد النسخ"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_res_persons__participant_count
+msgid ""
+"Number of competition participations for this student (only shown for "
+"students)"
+msgstr "عدد مشاركات المسابقة لهذا الطالب (يظهر فقط للطلاب)"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_competition_requirements__competition_count
+msgid "Number of competitions using this requirement"
+msgstr "عدد المسابقات التي تستخدم هذا المتطلب"
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/wizards/competition_registration_form_wizard.py:0
+msgid "Number of copies must be between 1 and 100."
+msgstr "يجب أن يكون عدد النسخ بين 1 و100."
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_competition_requirements__participant_nums
+msgid "Number of participants allowed for this requirement"
+msgstr "عدد المشاركين المسموح لهم بهذا المتطلب"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__office_id
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__office_id
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_blank_participant_registration_form_document
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_list_template
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_participant_filter_wizard_form
+msgid "Office"
+msgstr "المكتب"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__has_office
+msgid "Office Filter"
+msgstr "فلتر المكتب"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_blank_participant_registration_form_document
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "Office and Class Information"
+msgstr "معلومات المكتب والفصل"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_participant_filter_wizard__office_id
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant__office_id
+msgid "Office this record belongs to"
+msgstr "المكتب الذي ينتمي إليه هذا السجل"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_competition_requirements__office_ids
+msgid "Offices that must be assigned"
+msgstr "المكاتب التي يجب تخصيصها"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__quran_competition__status__opening
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_search_view
+msgid "Opening"
+msgstr "قيد الفتح"
+
+#. module: management_quran_competition
+#: model:ir.actions.act_window,name:management_quran_competition.action_quran_competition_participant_result_view_id
+msgid "Participant Evaluation Rules"
+msgstr "قواعد تقييم المشارك"
+
+#. module: management_quran_competition
+#: model:ir.ui.menu,name:management_quran_competition.menu_participant_filter
+msgid "Participant Filter"
+msgstr "فلتر المشاركين"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_participant_filter_wizard_form
+msgid "Participant Filter and Sort"
+msgstr "تصفية المشارك وفرزه"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_form_view
+msgid "Participant Information"
+msgstr "معلومات المشارك"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_requirements__participant_nums
+msgid "Participant Numbers"
+msgstr "أرقام المشاركين"
+
+#. module: management_quran_competition
+#: model:ir.actions.report,name:management_quran_competition.report_participant_registration_form
+msgid "Participant Registration Form"
+msgstr "استمارة تسجيل المشارك"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_result_form_view
+msgid "Participant Result Rule"
+msgstr "قاعدة نتيجة المشارك"
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/models/participant.py:0
+msgid "Participant has not memorized all required surahs"
+msgstr "لم يحفظ المشارك كل السور المطلوبة"
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/models/participant.py:0
+msgid "Participant limit reached for this requirement"
+msgstr "تم الوصول إلى حد المشاركين لهذا المتطلب"
+
+#. module: management_quran_competition
+#: model:ir.model.constraint,message:management_quran_competition.constraint_quran_competition_participant_competition_student_uniq
+msgid "Participant must be unique per competition!"
+msgstr "يجب أن يكون المشارك فريدًا داخل المسابقة!"
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/models/participant.py:0
+msgid "Participant's office is not in the required offices"
+msgstr "مكتب المشارك ليس ضمن المكاتب المطلوبة"
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/models/participant.py:0
+msgid "Participant's teacher is not in the required teachers"
+msgstr "معلم المشارك ليس ضمن المعلمين المطلوبين"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition__participants_ids
+#: model:ir.ui.menu,name:management_quran_competition.menu_quran_competition_participants
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_form_view
+msgid "Participants"
+msgstr "المشاركون"
+
+#. module: management_quran_competition
+#: model:ir.actions.report,name:management_quran_competition.report_participant_list
+msgid "Participants List"
+msgstr "قائمة المشاركين"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition__participants_ids
+msgid "Participants in this competition"
+msgstr "المشاركون في هذه المسابقة"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_result_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_result_tree_view
+msgid "Participation Results"
+msgstr "نتائج المشاركة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant_result__percentage
+msgid "Percentage"
+msgstr "النسبة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__evaluation_percentage
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "Percentage %"
+msgstr "النسبة %"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__percentage_filter_type
+msgid "Percentage Filter Type"
+msgstr "نوع فلتر النسبة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__percentage_value
+msgid "Percentage Value"
+msgstr "قيمة النسبة"
+
+#. module: management_quran_competition
+#: model:ir.model.constraint,message:management_quran_competition.constraint_quran_competition_participant_result_competition_result_percentage_positive
+msgid ""
+"Percentage must be greater than or equal to zero and less than or equal to "
+"100!"
+msgstr "يجب أن تكون النسبة أكبر من أو تساوي صفرًا وأقل من أو تساوي 100!"
+
+#. module: management_quran_competition
+#: model:ir.model.constraint,message:management_quran_competition.constraint_quran_competition_participant_result_competition_result_percentage_uniq
+msgid "Percentage must be unique for the same competition!"
+msgstr "يجب أن تكون النسبة فريدة في نفس المسابقة!"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_participant_filter_wizard__percentage_value
+msgid "Percentage value for filtering"
+msgstr "قيمة النسبة للفلترة"
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/wizards/participant_bulk_update_wizard.py:0
+msgid "Please choose a state value to apply."
+msgstr "يرجى اختيار قيمة الحالة لتطبيقها."
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/wizards/participant_bulk_update_wizard.py:0
+msgid "Please choose a status value to apply."
+msgstr "يرجى اختيار قيمة الحالة لتطبيقها."
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/wizards/competition_registration_form_wizard.py:0
+msgid "Please select a competition before printing."
+msgstr "يرجى تحديد مسابقة قبل الطباعة."
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/wizards/participant_bulk_update_wizard.py:0
+msgid "Please select at least one participant."
+msgstr "يرجى تحديد مشارك واحد على الأقل."
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_bulk_update_wizard__status_value__precipitate
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__quran_competition_participant__status__precipitate
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__quran_competition_participant_result__result_status__precipitate
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_form_view
+msgid "Precipitate"
+msgstr "مستبعد"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__competition_requirements__registration_status__registered
+msgid "Previously Registered"
+msgstr "مسجل سابقًا"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_competition_registration_form_wizard_form
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_participant_filter_wizard_form
+msgid "Print"
+msgstr "طباعة"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_competition_registration_form_wizard_form
+msgid "Print Blank Registration Form"
+msgstr "طباعة استمارة التسجيل الفارغة"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_participant_filter_wizard_form
+msgid "Prize"
+msgstr "الجائزة"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_form_view
+msgid "Prize Information"
+msgstr "معلومات الجائزة"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_blank_participant_registration_form_document
+msgid "Qualification"
+msgstr "المؤهل"
+
+#. module: management_quran_competition
+#: model:ir.model,name:management_quran_competition.model_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_form_view
+msgid "Quran Competition"
+msgstr "مسابقة القرآن"
+
+#. module: management_quran_competition
+#: model:ir.model,name:management_quran_competition.model_quran_competition_level
+msgid "Quran Competition Level"
+msgstr "مستوى مسابقة القرآن"
+
+#. module: management_quran_competition
+#: model:ir.model,name:management_quran_competition.model_quran_competition_participant
+msgid "Quran Competition Participant"
+msgstr "مشارك مسابقة القرآن"
+
+#. module: management_quran_competition
+#: model:ir.model,name:management_quran_competition.model_quran_competition_participant_result
+msgid "Quran Competition Participant Result"
+msgstr "نتيجة مشارك مسابقة القرآن"
+
+#. module: management_quran_competition
+#: model:ir.model,name:management_quran_competition.model_quran_competition_tag
+msgid "Quran Competition Tag"
+msgstr "وسم مسابقة القرآن"
+
+#. module: management_quran_competition
+#: model:ir.actions.act_window,name:management_quran_competition.action_quran_competition_view_id
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_tree_view
+msgid "Quran Competitions"
+msgstr "مسابقات القرآن"
+
+#. module: management_quran_competition
+#: model:ir.actions.act_window,name:management_quran_competition.action_quran_competition_participant_view_id
+msgid "Quran Competitions Participant"
+msgstr "مشارك مسابقات القرآن"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_form_view
+msgid "Quran Memorization Details"
+msgstr "تفاصيل حفظ القرآن"
+
+#. module: management_quran_competition
+#: model:ir.model,name:management_quran_competition.model_res_persons
+msgid "Quran School person Extension"
+msgstr "امتداد شخص مدرسة القرآن"
+
+#. module: management_quran_competition
+#: model_terms:ir.actions.act_window,help:management_quran_competition.action_quran_competition_participant_view_id
+msgid ""
+"Quran competitions help motivate students to improve their memorization\n"
+"                    and recitation skills while fostering healthy competition."
+msgstr "تساعد مسابقات القرآن في تحفيز الطلاب على تطوير حفظهم ومهارات التلاوة مع تعزيز روح المنافسة الصحية."
+
+#. module: management_quran_competition
+#: model_terms:ir.actions.act_window,help:management_quran_competition.action_quran_competition_view_id
+msgid ""
+"Quran competitions help motivate students to improve their memorization \n"
+"                    and recitation skills while fostering healthy competition."
+msgstr "تساعد مسابقات القرآن في تحفيز الطلاب على تطوير حفظهم ومهارات التلاوة مع تعزيز روح المنافسة الصحية."
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_form_view
+msgid "Reason Disqualified"
+msgstr "سبب الإقصاء"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_participant_filter_wizard_form
+msgid "Registration"
+msgstr "التسجيل"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__registration_date
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_blank_participant_registration_form_document
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_participant_filter_wizard_form
+msgid "Registration Date"
+msgstr "تاريخ التسجيل"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__registration_date_from
+msgid "Registration Date From"
+msgstr "تاريخ التسجيل من"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__registration_date_to
+msgid "Registration Date To"
+msgstr "تاريخ التسجيل إلى"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_form_view
+msgid "Registration Information"
+msgstr "معلومات التسجيل"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_list_template
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "Registration No."
+msgstr "رقم التسجيل."
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__registration_number
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__name
+msgid "Registration Number"
+msgstr "رقم التسجيل"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__has_registration_number
+msgid "Registration Number Filter"
+msgstr "فلتر رقم التسجيل"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_requirements__registration_status
+msgid "Registration Status"
+msgstr "حالة التسجيل"
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/models/participant.py:0
+msgid "Registration date cannot be after competition date (%s)"
+msgstr "لا يمكن أن يكون تاريخ التسجيل بعد تاريخ المسابقة (%s)"
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/models/participant.py:0
+msgid "Registration date cannot be in the future"
+msgstr "لا يمكن أن يكون تاريخ التسجيل في المستقبل"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_competition_requirements__registration_status
+msgid "Registration status for previous competitions"
+msgstr "حالة التسجيل للمسابقات السابقة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_requirements__required_competition_ids
+msgid "Required Competitions"
+msgstr "المسابقات المطلوبة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_level__required_juz
+msgid "Required Memorization (Juz)"
+msgstr "الحفظ المطلوب (أجزاء)"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_requirements__office_ids
+msgid "Required Offices"
+msgstr "المكاتب المطلوبة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_requirements__required_surah_ids
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__surah_ids
+msgid "Required Surahs"
+msgstr "السور المطلوبة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_requirements__teacher_ids
+msgid "Required Teachers"
+msgstr "المعلمين المطلوبين"
+
+#. module: management_quran_competition
+#: model:ir.model.constraint,message:management_quran_competition.constraint_quran_competition_level_competition_level_juz_positive
+msgid ""
+"Required memorization amount must be greater than zero and less than or "
+"equal to 30!"
+msgstr "يجب أن يكون مقدار الحفظ المطلوب أكبر من صفر وأقل من أو يساوي 30!"
+
+#. module: management_quran_competition
+#: model:ir.model.constraint,message:management_quran_competition.constraint_quran_competition_level_competition_level_juz_uniq
+msgid "Required memorization amount must be unique per competition!"
+msgstr "يجب أن يكون مقدار الحفظ المطلوب فريدًا لكل مسابقة!"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_requirements__name
+msgid "Requirement Name"
+msgstr "اسم المتطلب"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.competition_requirements_form_view
+msgid "Requirement Template Name"
+msgstr "اسم قالب المتطلب"
+
+#. module: management_quran_competition
+#: model_terms:ir.actions.act_window,help:management_quran_competition.action_competition_requirements_view_id
+msgid ""
+"Requirement templates help you define eligibility criteria for competitions.\n"
+"                    Each competition can use a template to automatically validate participants."
+msgstr "تساعدك قوالب المتطلبات في تحديد معايير الأهلية للمسابقات. يمكن لكل مسابقة استخدام قالب للتحقق تلقائيًا من المشاركين."
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition__requirement_id
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__requirement_id
+#: model:ir.ui.menu,name:management_quran_competition.menu_competition_requirements
+msgid "Requirements"
+msgstr "المتطلبات"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition__requirement_id
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant__requirement_id
+msgid "Requirements template for this competition"
+msgstr "قالب المتطلبات لهذه المسابقة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant_result__name
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_result_form_view
+msgid "Result Name"
+msgstr "اسم النتيجة"
+
+#. module: management_quran_competition
+#: model:ir.model.constraint,message:management_quran_competition.constraint_quran_competition_participant_result_competition_result_name_uniq
+msgid "Result name must be unique for the same competition!"
+msgstr "يجب أن يكون اسم النتيجة فريدًا في نفس المسابقة!"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant__result_id
+msgid "Result rule applied to this participant after evaluation"
+msgstr "قاعدة النتيجة المطبقة على هذا المشارك بعد التقييم"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__score
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_list_template
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "Score"
+msgstr "الدرجة"
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/models/participant.py:0
+msgid "Score (%.2f) cannot exceed competition test grade (%d)"
+msgstr "لا يمكن أن تتجاوز الدرجة (%.2f) درجة اختبار المسابقة (%d)"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_participant_filter_wizard_form
+msgid "Score Filter"
+msgstr "فلتر الدرجة"
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/models/participant.py:0
+msgid "Score cannot be negative"
+msgstr "لا يمكن أن تكون الدرجة سالبة"
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/models/participant.py:0
+msgid "Score must be set before evaluation"
+msgstr "يجب تحديد الدرجة قبل التقييم"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant__score
+msgid "Score obtained by the participant"
+msgstr "الدرجة التي حصل عليها المشارك"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant_result__percentage
+msgid "Score percentage for this result"
+msgstr "نسبة الدرجة لهذه النتيجة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition__evaluation_rule_ids
+msgid "Score thresholds and result labels for participants"
+msgstr "عتبات الدرجات وتسميات النتائج للمشاركين"
+
+#. module: management_quran_competition
+#: model:ir.actions.server,name:management_quran_competition.action_set_participant_status_closed
+msgid "Set to Closed"
+msgstr "تعيين كـ مغلق"
+
+#. module: management_quran_competition
+#: model:ir.actions.server,name:management_quran_competition.action_set_participant_status_completed
+msgid "Set to Completed"
+msgstr "تعيين كـ مكتمل"
+
+#. module: management_quran_competition
+#: model:ir.actions.server,name:management_quran_competition.action_set_participant_status_opening
+msgid "Set to Opening"
+msgstr "تعيين كـ قيد الفتح"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_participant_filter_wizard_form
+msgid "Show"
+msgstr "عرض"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_participant_filter_wizard_form
+msgid "Sort"
+msgstr "فرز"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__sort_by_juze_amount
+msgid "Sort by Amount Juz"
+msgstr "فرز حسب مقدار الأجزاء"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__sort_by_class
+msgid "Sort by Class"
+msgstr "فرز حسب الفصل"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__sort_by_name
+msgid "Sort by Name"
+msgstr "فرز حسب الاسم"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__sort_by_office
+msgid "Sort by Office"
+msgstr "فرز حسب المكتب"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__sort_by_percentage
+msgid "Sort by Percentage"
+msgstr "فرز حسب النسبة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__sort_by_registration_number
+msgid "Sort by Registration Number"
+msgstr "فرز حسب رقم التسجيل"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_participant_filter_wizard__sort_by_juze_amount
+msgid "Sort results by amount Juz"
+msgstr "فرز النتائج حسب مقدار الأجزاء"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_participant_filter_wizard__sort_by_class
+msgid "Sort results by class name"
+msgstr "فرز النتائج حسب اسم الفصل"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_participant_filter_wizard__sort_by_office
+msgid "Sort results by office name"
+msgstr "فرز النتائج حسب اسم المكتب"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_participant_filter_wizard__sort_by_percentage
+msgid "Sort results by percentage"
+msgstr "فرز النتائج حسب النسبة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_participant_filter_wizard__sort_by_registration_number
+msgid "Sort results by registration number"
+msgstr "فرز النتائج حسب رقم التسجيل"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_participant_filter_wizard__sort_by_name
+msgid "Sort results by student name"
+msgstr "فرز النتائج حسب اسم الطالب"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__registration_number
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_blank_participant_registration_form_document
+msgid "Source Registration"
+msgstr "تسجيل المصدر"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_requirements__specific_surahs_required
+msgid "Specific Surahs Required"
+msgstr "السور المحددة مطلوبة"
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/models/requirements.py:0
+msgid "Specific surahs are required, but no surahs are selected."
+msgstr "السور المحددة مطلوبة، لكن لم يتم اختيار أي سور."
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_bulk_update_wizard__state_value
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__state
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__state
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_bulk_update_wizard__field_name__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: management_quran_competition
+#: model:ir.actions.server,name:management_quran_competition.action_update_participant_state
+msgid "State of Participant"
+msgstr "حالة المشارك"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_bulk_update_wizard__status_value
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition__status
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__status
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_bulk_update_wizard__field_name__status
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_result_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_list_template
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_participant_filter_wizard_form
+msgid "Status"
+msgstr "الحالة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__student_id
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__student_id
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_list_template
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_participant_filter_wizard_form
+msgid "Student"
+msgstr "الطالب"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_list_template
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "Student Code"
+msgstr "رمز الطالب"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "Student Competition Registration Form"
+msgstr "استمارة تسجيل مسابقة الطالب"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_blank_participant_registration_form_document
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "Student Information"
+msgstr "معلومات الطالب"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_blank_participant_registration_form_document
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "Student Name"
+msgstr "اسم الطالب"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant__student_id
+msgid "Student participating in the competition"
+msgstr "الطالب المشارك في المسابقة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition__students_ids
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_form_view
+msgid "Students"
+msgstr "الطلاب"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition__students_ids
+msgid "Students in this competition"
+msgstr "الطلاب في هذه المسابقة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_bulk_update_wizard__status_value__successful
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__quran_competition_participant__status__successful
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__quran_competition_participant_result__result_status__successful
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_form_view
+msgid "Successful"
+msgstr "ناجح"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_bulk_update_wizard__status_value__superior
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__quran_competition_participant__status__superior
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__quran_competition_participant_result__result_status__superior
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_form_view
+msgid "Superior"
+msgstr "متفوق"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant__surah_id
+msgid "Surah where memorization starts"
+msgstr "السورة التي يبدأ فيها الحفظ"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_competition_requirements__required_surah_ids
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant__surah_ids
+msgid "Surahs that must be memorized"
+msgstr "السور التي يجب حفظها"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_tag__name
+msgid "Tag Name"
+msgstr "اسم الوسم"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_competition_requirements__required_tag_ids
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition__tag_ids
+msgid "Tags"
+msgstr "الوسوم"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition__tag_ids
+msgid "Tags for this competition"
+msgstr "وسوم هذه المسابقة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_competition_requirements__required_tag_ids
+msgid "Tags for this requirement template"
+msgstr "وسوم قالب هذا المتطلب"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__teacher_id
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__teacher_id
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_blank_participant_registration_form_document
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_list_template
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.view_participant_filter_wizard_form
+msgid "Teacher"
+msgstr "المعلم"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_participant_filter_wizard__has_teacher
+msgid "Teacher Filter"
+msgstr "فلتر المعلم"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_participant_filter_wizard__teacher_id
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant__teacher_id
+msgid "Teacher or memorizer for this record"
+msgstr "المعلم أو الحافظ لهذا السجل"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_competition_requirements__teacher_ids
+msgid "Teachers that must be assigned"
+msgstr "المعلمين الذين يجب تعيينهم"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition__test_grade
+msgid "Test Grade"
+msgstr "درجة الاختبار"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant__competition_test_grade
+msgid "Test grade defined in the competition"
+msgstr "درجة الاختبار المحددة في المسابقة"
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/models/participant.py:0
+msgid ""
+"The current memorization level must be higher than every applicable previous"
+" level."
+msgstr "يجب أن يكون مستوى الحفظ الحالي أعلى من كل مستوى سابق قابل للتطبيق."
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/models/participant.py:0
+msgid "The participant has already registered in a restricted competition."
+msgstr "لقد سجل المشارك بالفعل في مسابقة مقيدة."
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/models/participant.py:0
+msgid ""
+"The participant has no previous registration matching the required "
+"competitions or tags."
+msgstr "لا يوجد لدى المشارك تسجيل سابق مطابق للمسابقات أو الوسوم المطلوبة."
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/wizards/participant_bulk_update_wizard.py:0
+msgid "The selected participants could not be found."
+msgstr "تعذر العثور على المشاركين المحددين."
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/wizards/participant_bulk_update_wizard.py:0
+msgid "This wizard must be opened from the participant list."
+msgstr "يجب فتح هذه المعالج من قائمة المشاركين."
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition__code
+msgid "Unique code for the competition"
+msgstr "رمز فريد للمسابقة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_competition_requirements__code
+msgid "Unique code for the requirement"
+msgstr "رمز فريد للمتطلب"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant__registration_number
+msgid "Unique registration number for the participant"
+msgstr "رقم تسجيل فريد للمشارك"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.competition_requirements_search_view
+msgid "Used in Competitions"
+msgstr "مستخدم في المسابقات"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_form_view
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_tree_view
+msgid "Validate Requirment"
+msgstr "التحقق من المتطلبات"
+
+#. module: management_quran_competition
+#. odoo-python
+#: code:addons/management_quran_competition/models/participant.py:0
+msgid "Validation of requirements"
+msgstr "التحقق من المتطلبات"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_competition_requirements__memorization_required
+msgid "Whether memorization check is required"
+msgstr "هل يلزم التحقق من الحفظ"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_competition_requirements__specific_surahs_required
+msgid "Whether specific surahs are required"
+msgstr "هل توجد سور محددة مطلوبة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_competition_requirements__highest_level_yet
+msgid "Whether the participant has achieved the highest level yet"
+msgstr "هل حقق المشارك أعلى مستوى حتى الآن"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_participant_result__active
+msgid "Whether this evaluation rule is active"
+msgstr "هل قاعدة التقييم هذه نشطة"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,help:management_quran_competition.field_quran_competition_level__active
+msgid "Whether this level is active"
+msgstr "هل هذا المستوى نشط"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_search_view
+msgid "With Participants"
+msgstr "مع المشاركين"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_bulk_update_wizard__state_value__withdrawn
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__state__withdrawn
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__quran_competition_participant__state__withdrawn
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_participant_search_view
+msgid "Withdrawn"
+msgstr "مسحوب"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__has_class__without_class
+msgid "Without Class"
+msgstr "بدون فصل"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__has_in_kind_prize__without_in_kind
+msgid "Without In-Kind Prize"
+msgstr "بدون جائزة عينية"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__has_monetary_prize__without_monetary
+msgid "Without Monetary Prize"
+msgstr "بدون جائزة نقدية"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__has_office__without_office
+msgid "Without Office"
+msgstr "بدون مكتب"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.quran_competition_search_view
+msgid "Without Participants"
+msgstr "بدون مشاركين"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__has_registration_number__without_registration
+msgid "Without Registration Number"
+msgstr "بدون رقم تسجيل"
+
+#. module: management_quran_competition
+#: model:ir.model.fields.selection,name:management_quran_competition.selection__participant_filter_wizard__has_teacher__without_teacher
+msgid "Without Teacher"
+msgstr "بدون معلم"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "Years"
+msgstr "سنوات"
+
+#. module: management_quran_competition
+#: model_terms:ir.ui.view,arch_db:management_quran_competition.report_participant_registration_form_document
+msgid "parts"
+msgstr "أجزاء"
+
+#. module: management_quran_competition
+#: model:ir.model.fields,field_description:management_quran_competition.field_quran_competition_participant__reason_disqualified
+msgid "reason disqualified"
+msgstr "سبب الإقصاء"

@@ -1,0 +1,26 @@
+{
+    'name': 'Management Quran Memorization',
+    'version': '18.0.1.0.0',
+    'category': 'Education',
+    'summary': 'Manage Student Quran Memorization',
+    'author': 'Abdallaalsafy',
+    'website': 'https://www.facebook.com/abdalla6alsafy',
+    'depends': ['base', 'management_quran_office_core','quran_utils'],
+    'data': [
+        'security/ir.model.access.csv',
+        'data/ir_sequence_data.xml',
+        'wizards/batch_memorization_wizard_view.xml',
+        'views/memorization_view.xml',
+        'views/res_persons_view.xml',
+        'reports/memorization_report.xml',
+        'views/menu.xml',
+    ],
+    'demo': [
+        'demo/student_memorization.xml',
+    ],
+    'installable': True,
+    'auto_install': False,
+    'application': False,
+    'license': 'LGPL-3',
+    'sequence': 3,
+}

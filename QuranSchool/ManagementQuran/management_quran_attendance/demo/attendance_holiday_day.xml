@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="demo_hday_default_oct6" model="attendance.holiday.day">
+        <field name="policy_id" ref="management_quran_attendance.attendance_default_holiday_policy"/>
+        <field name="holiday_date">2026-10-06</field>
+        <field name="reason">إجازة رسمية - عيد القوات المسلحة</field>
+    </record>
+
+    <record id="demo_hday_noor_sep10" model="attendance.holiday.day">
+        <field name="policy_id" ref="demo_policy_noor_fri_sat"/>
+        <field name="holiday_date">2026-09-10</field>
+        <field name="reason">إجازة استثنائية للمكتب</field>
+    </record>
+
+    <record id="demo_hday_noor_oct6" model="attendance.holiday.day">
+        <field name="policy_id" ref="demo_policy_noor_fri_sat"/>
+        <field name="holiday_date">2026-10-06</field>
+        <field name="reason">إجازة رسمية - عيد القوات المسلحة</field>
+    </record>
+
+</odoo>

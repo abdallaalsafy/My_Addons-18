@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="demo_policy_noor_fri_sat" model="attendance.holiday.policy">
+        <field name="name">سياسة إجازات مكتب النور (الجمعة والسبت)</field>
+        <field name="start_date">2026-01-01</field>
+        <field name="end_date">2026-12-31</field>
+        <field name="is_friday_off">True</field>
+        <field name="is_saturday_off">True</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+    </record>
+
+</odoo>

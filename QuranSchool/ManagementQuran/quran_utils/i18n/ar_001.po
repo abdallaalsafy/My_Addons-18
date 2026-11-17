@@ -1,0 +1,807 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* quran_utils
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20260423\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-17 02:04+0000\n"
+"PO-Revision-Date: 2026-11-17 02:04+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_80
+msgid "Abasa"
+msgstr "عبس"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_93
+msgid "Ad-Dhuha"
+msgstr "الضحى"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_44
+msgid "Ad-Dukhan"
+msgstr "الدخان"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_87
+msgid "Al-Aala"
+msgstr "الأعلى"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_7
+msgid "Al-Aaraf"
+msgstr "الأعراف"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_100
+msgid "Al-Adiyat"
+msgstr "العاديات"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_46
+msgid "Al-Ahqaf"
+msgstr "الأحقاف"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_33
+msgid "Al-Ahzab"
+msgstr "الأحزاب"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_96
+msgid "Al-Alaq"
+msgstr "العلق"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_6
+msgid "Al-Anam"
+msgstr "الأنعام"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_21
+msgid "Al-Anbiyaa"
+msgstr "الأنبياء"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_8
+msgid "Al-Anfal"
+msgstr "الأنفال"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_29
+msgid "Al-Ankabut"
+msgstr "العنكبوت"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_103
+msgid "Al-Asr"
+msgstr "العصر"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_98
+msgid "Al-Baiyina"
+msgstr "البينة"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_90
+msgid "Al-Balad"
+msgstr "البلد"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_2
+msgid "Al-Baqarah"
+msgstr "البقرة"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_85
+msgid "Al-Buruj"
+msgstr "البروج"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_89
+msgid "Al-Fajr"
+msgstr "الفجر"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_113
+msgid "Al-Falaq"
+msgstr "الفلق"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_48
+msgid "Al-Fath"
+msgstr "الفتح"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_1
+msgid "Al-Fatiha"
+msgstr "الفاتحة"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_105
+msgid "Al-Feel"
+msgstr "الفيل"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_25
+msgid "Al-Furqan"
+msgstr "الفرقان"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_88
+msgid "Al-Gashiya"
+msgstr "الغاشية"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_57
+msgid "Al-Hadid"
+msgstr "الحديد"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_22
+msgid "Al-Hajj"
+msgstr "الحج"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_69
+msgid "Al-Haqqa"
+msgstr "الحاقة"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_59
+msgid "Al-Hashr"
+msgstr "الحشر"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_15
+msgid "Al-Hijr"
+msgstr "الحجر"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_49
+msgid "Al-Hujurat"
+msgstr "الحجرات"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_104
+msgid "Al-Humaza"
+msgstr "الهمزة"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_112
+msgid "Al-Ikhlas"
+msgstr "الإخلاص"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_3
+msgid "Al-Imran"
+msgstr "آل عمران"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_82
+msgid "Al-Infitar"
+msgstr "الانفطار"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_76
+msgid "Al-Insan"
+msgstr "الإنسان"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_84
+msgid "Al-Inshiqaq"
+msgstr "الانشقاق"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_17
+msgid "Al-Israa"
+msgstr "الإسراء"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_45
+msgid "Al-Jathiya"
+msgstr "الجاثية"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_72
+msgid "Al-Jinn"
+msgstr "الجن"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_62
+msgid "Al-Jumua"
+msgstr "الجمعة"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_109
+msgid "Al-Kafirun"
+msgstr "الكافرون"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_18
+msgid "Al-Kahf"
+msgstr "الكهف"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_108
+msgid "Al-Kauthar"
+msgstr "الكوثر"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_92
+msgid "Al-Lail"
+msgstr "الليل"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_5
+msgid "Al-Maaida"
+msgstr "المائدة"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_70
+msgid "Al-Maarij"
+msgstr "المعارج"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_111
+msgid "Al-Masad"
+msgstr "المسد"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_107
+msgid "Al-Maun"
+msgstr "الماعون"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_74
+msgid "Al-Muddaththir"
+msgstr "المدثر"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_58
+msgid "Al-Mujadala"
+msgstr "المجادلة"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_67
+msgid "Al-Mulk"
+msgstr "الملك"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_23
+msgid "Al-Muminun"
+msgstr "المؤمنون"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_60
+msgid "Al-Mumtahana"
+msgstr "الممتحنة"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_63
+msgid "Al-Munafiqun"
+msgstr "المنافقون"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_77
+msgid "Al-Mursalat"
+msgstr "المرسلات"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_83
+msgid "Al-Mutaffifeen"
+msgstr "المطففين"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_73
+msgid "Al-Muzzammil"
+msgstr "المزمل"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_97
+msgid "Al-Qadr"
+msgstr "القدر"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_68
+msgid "Al-Qalam"
+msgstr "القلم"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_54
+msgid "Al-Qamar"
+msgstr "القمر"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_101
+msgid "Al-Qari'a"
+msgstr "القارعة"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_28
+msgid "Al-Qasas"
+msgstr "القصص"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_75
+msgid "Al-Qiyamah"
+msgstr "القيامة"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_13
+msgid "Al-Rad"
+msgstr "الرعد"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_94
+msgid "Al-Sharh"
+msgstr "الشرح"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_9
+msgid "Al-Tauba"
+msgstr "التوبة"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_56
+msgid "Al-Waqia'a"
+msgstr "الواقعة"
+
+#. module: quran_utils
+#: model:ir.model.fields,help:quran_utils.field_memorization_mixin__juze_amount
+msgid "Amount of Quran memorized in Juz' (parts) with decimal precision"
+msgstr "مقدار القرآن المحفوظ بالأجزاء مع دقة عشرية"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_78
+msgid "An-Nabaa"
+msgstr "النبأ"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_16
+msgid "An-Nahl"
+msgstr "النحل"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_53
+msgid "An-Najm"
+msgstr "النجم"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_27
+msgid "An-Naml"
+msgstr "النمل"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_114
+msgid "An-Nas"
+msgstr "الناس"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_110
+msgid "An-Nasr"
+msgstr "النصر"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_79
+msgid "An-Naziaat"
+msgstr "النازعات"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_4
+msgid "An-Nisaa"
+msgstr "النساء"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_24
+msgid "An-Nur"
+msgstr "النور"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_55
+msgid "Ar-Rahman"
+msgstr "الرحمن"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_30
+msgid "Ar-Rum"
+msgstr "الروم"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_61
+msgid "As-Saff"
+msgstr "الصف"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_37
+msgid "As-Saffat"
+msgstr "الصافات"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_32
+msgid "As-Sajdah"
+msgstr "السجدة"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_91
+msgid "Ash-Shams"
+msgstr "الشمس"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_42
+msgid "Ash-Shura"
+msgstr "الشورى"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_26
+msgid "Ash-Shuraa"
+msgstr "الشورى"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_64
+msgid "At-Tagabun"
+msgstr "التغابن"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_66
+msgid "At-Tahrim"
+msgstr "التحريم"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_102
+msgid "At-Takathur"
+msgstr "التكاثر"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_81
+msgid "At-Takweer"
+msgstr "التكوير"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_65
+msgid "At-Talaq"
+msgstr "الطلاق"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_86
+msgid "At-Tariq"
+msgstr "الطارق"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_95
+msgid "At-Teen"
+msgstr "التين"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_52
+msgid "At-Tur"
+msgstr "الطور"
+
+#. module: quran_utils
+#: model:ir.model.fields,help:quran_utils.field_memorization_mixin__ayah_num
+msgid "Ayah number where memorization starts"
+msgstr "رقم الآية التي يبدأ عندها الحفظ"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_99
+msgid "Az-Zalzalah"
+msgstr "الزلزلة"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_51
+msgid "Az-Zariyat"
+msgstr "الذاريات"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_43
+msgid "Az-Zukhruf"
+msgstr "الزخرف"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_39
+msgid "Az-Zumar"
+msgstr "الزمر"
+
+#. module: quran_utils
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat__chapter_num
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat_desc__chapter_num
+msgid "Chapter Num"
+msgstr "رقم الفصل"
+
+#. module: quran_utils
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_surah__count_ayat
+msgid "Count Ayat"
+msgstr "عدد الآيات"
+
+#. module: quran_utils
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat__count_ayat_in_chapter
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat_desc__count_ayat_in_chapter
+msgid "Count Ayat In Chapter"
+msgstr "عدد الآيات في الفصل"
+
+#. module: quran_utils
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat__count_pages_in_chapter
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat_desc__count_pages_in_chapter
+msgid "Count Page In Chapter"
+msgstr "عدد الصفحات في الفصل"
+
+#. module: quran_utils
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat__create_uid
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat_desc__create_uid
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_surah__create_uid
+msgid "Created by"
+msgstr "تم الإنشاء بواسطة"
+
+#. module: quran_utils
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat__create_date
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat_desc__create_date
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_surah__create_date
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+#. module: quran_utils
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat__display_name
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat_desc__display_name
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_surah__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_35
+msgid "Fatir"
+msgstr "فاطر"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_41
+msgid "Fussilat"
+msgstr "فصلت"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_40
+msgid "Ghafer"
+msgstr "غافر"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_11
+msgid "Hud"
+msgstr "هود"
+
+#. module: quran_utils
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat__id
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat_desc__id
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_surah__id
+msgid "ID"
+msgstr "المعرّف"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_14
+msgid "Ibrahim"
+msgstr "إبراهيم"
+
+#. module: quran_utils
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat__write_uid
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat_desc__write_uid
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_surah__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: quran_utils
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat__write_date
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat_desc__write_date
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_surah__write_date
+msgid "Last Updated on"
+msgstr "تاريخ آخر تحديث"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_31
+msgid "Luqman"
+msgstr "لقمان"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_19
+msgid "Maryam"
+msgstr "مريم"
+
+#. module: quran_utils
+#: model:ir.model.fields,field_description:quran_utils.field_memorization_mixin__juze_amount
+msgid "Memorization Amount (Juz')"
+msgstr "مقدار الحفظ (جزء)"
+
+#. module: quran_utils
+#: model:ir.model.fields,field_description:quran_utils.field_memorization_mixin__ayah_num
+msgid "Memorization Ayah"
+msgstr "آية الحفظ"
+
+#. module: quran_utils
+#: model:ir.model.fields,field_description:quran_utils.field_memorization_mixin__memorization_method
+msgid "Memorization Method"
+msgstr "طريقة الحفظ"
+
+#. module: quran_utils
+#: model:ir.model,name:quran_utils.model_memorization_mixin
+msgid "Memorization Mixin"
+msgstr "خلاصة الحفظ"
+
+#. module: quran_utils
+#: model:ir.model.fields,field_description:quran_utils.field_memorization_mixin__surah_id
+msgid "Memorization Surah"
+msgstr "سورة الحفظ"
+
+#. module: quran_utils
+#. odoo-python
+#: code:addons/quran_utils/models/memorization_mixin.py:0
+msgid ""
+"Memorization amount and surah and ayah is required for this type of method"
+msgstr "مطلوب مقدار الحفظ والسورة والآية لهذا النوع من الطريقة"
+
+#. module: quran_utils
+#: model:ir.model.fields.selection,name:quran_utils.selection__batch_memorization_wizard__memorization_method__from_baqarah
+#: model:ir.model.fields.selection,name:quran_utils.selection__memorization_mixin__memorization_method__from_baqarah
+#: model:ir.model.fields.selection,name:quran_utils.selection__quran_competition_participant__memorization_method__from_baqarah
+#: model:ir.model.fields.selection,name:quran_utils.selection__res_persons__memorization_method__from_baqarah
+#: model:ir.model.fields.selection,name:quran_utils.selection__student_memorization__memorization_method__from_baqarah
+msgid "Memorization from Al-Baqarah"
+msgstr "الحفظ من البقرة"
+
+#. module: quran_utils
+#: model:ir.model.fields.selection,name:quran_utils.selection__batch_memorization_wizard__memorization_method__from_nas
+#: model:ir.model.fields.selection,name:quran_utils.selection__memorization_mixin__memorization_method__from_nas
+#: model:ir.model.fields.selection,name:quran_utils.selection__quran_competition_participant__memorization_method__from_nas
+#: model:ir.model.fields.selection,name:quran_utils.selection__res_persons__memorization_method__from_nas
+#: model:ir.model.fields.selection,name:quran_utils.selection__student_memorization__memorization_method__from_nas
+msgid "Memorization from An-Nas"
+msgstr "الحفظ من الناس"
+
+#. module: quran_utils
+#: model:ir.model.fields,help:quran_utils.field_memorization_mixin__memorization_method
+msgid "Method of Quran memorization"
+msgstr "طريقة حفظ القرآن"
+
+#. module: quran_utils
+#: model:ir.model.fields.selection,name:quran_utils.selection__batch_memorization_wizard__memorization_method__mixed
+#: model:ir.model.fields.selection,name:quran_utils.selection__memorization_mixin__memorization_method__mixed
+#: model:ir.model.fields.selection,name:quran_utils.selection__quran_competition_participant__memorization_method__mixed
+#: model:ir.model.fields.selection,name:quran_utils.selection__res_persons__memorization_method__mixed
+#: model:ir.model.fields.selection,name:quran_utils.selection__student_memorization__memorization_method__mixed
+msgid "Mixed Memorization"
+msgstr "الحفظ المختلط"
+
+#. module: quran_utils
+#: model:ir.model,name:quran_utils.model_quran_office_ayat
+msgid "Model Of Quran Ayat"
+msgstr "نموذج آيات القرآن"
+
+#. module: quran_utils
+#: model:ir.model,name:quran_utils.model_quran_office_ayat_desc
+msgid "Model Of Quran Ayat (Reverse Order)"
+msgstr "نموذج آيات القرآن (الترتيب العكسي)"
+
+#. module: quran_utils
+#: model:ir.model,name:quran_utils.model_quran_office_surah
+msgid "Model Of Quran Surah"
+msgstr "نموذج سورة القرآن"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_47
+msgid "Muhammad"
+msgstr "محمد"
+
+#. module: quran_utils
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_surah__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_71
+msgid "Nuh"
+msgstr "نوح"
+
+#. module: quran_utils
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat__num_aya_in_chapter
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat_desc__num_aya_in_chapter
+msgid "Num Aya In Chapter"
+msgstr "عدد الآيات في الفصل"
+
+#. module: quran_utils
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat__num_aya_in_quran
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat_desc__num_aya_in_quran
+msgid "Num Aya In Quran"
+msgstr "عدد الآيات في القرآن"
+
+#. module: quran_utils
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat__num_aya_in_surah
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat_desc__num_aya_in_surah
+msgid "Num Aya In Surah"
+msgstr "عدد الآيات في السورة"
+
+#. module: quran_utils
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat__num_page_in_chapter
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat_desc__num_page_in_chapter
+msgid "Num Page In Chapter"
+msgstr "عدد الصفحات في الفصل"
+
+#. module: quran_utils
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat__page_num
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat_desc__page_num
+msgid "Page Num"
+msgstr "رقم الصفحة"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_50
+msgid "Qaf"
+msgstr "ق"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_106
+msgid "Quraish"
+msgstr "قريش"
+
+#. module: quran_utils
+#: model:ir.model.fields,field_description:quran_utils.field_memorization_mixin__surah_ids
+msgid "Required Surahs"
+msgstr "السور المطلوبة"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_34
+msgid "Saba"
+msgstr "سبأ"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_38
+msgid "Sad"
+msgstr "ص"
+
+#. module: quran_utils
+#. odoo-python
+#: code:addons/quran_utils/models/memorization_mixin.py:0
+msgid "Select memorization Surahs for mixed method"
+msgstr "اختر سور الحفظ للطريقة المختلطة"
+
+#. module: quran_utils
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_surah__surah_num
+msgid "Sora Num"
+msgstr "رقم السورة"
+
+#. module: quran_utils
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat__surah_id
+#: model:ir.model.fields,field_description:quran_utils.field_quran_office_ayat_desc__surah_id
+msgid "Surah"
+msgstr "السورة"
+
+#. module: quran_utils
+#: model:ir.model.fields,help:quran_utils.field_memorization_mixin__surah_id
+msgid "Surah where memorization starts"
+msgstr "السورة التي يبدأ عندها الحفظ"
+
+#. module: quran_utils
+#: model:ir.model.fields,help:quran_utils.field_memorization_mixin__surah_ids
+msgid "Surahs that must be memorized"
+msgstr "السور التي يجب حفظها"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_20
+msgid "Taha"
+msgstr "طه"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_36
+msgid "Ya-Seen"
+msgstr "يس"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_10
+msgid "Yunus"
+msgstr "يونس"
+
+#. module: quran_utils
+#: model:quran_office.surah,name:quran_utils.surah_12
+msgid "Yusuf"
+msgstr "يوسف"

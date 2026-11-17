@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="demo_req_general" model="competition.requirements">
+        <field name="name">شروط المسابقة المحلية العامة</field>
+        <field name="description">مسابقة مفتوحة لطلاب المكاتب بدون اشتراط مشاركة سابقة.</field>
+        <field name="participant_nums">30</field>
+        <field name="min_age">8</field>
+        <field name="max_age">16</field>
+        <field name="memorization_required">True</field>
+        <field name="min_memorization_amount">5</field>
+        <field name="max_memorization_amount">30</field>
+    </record>
+
+    <record id="demo_req_elite" model="competition.requirements">
+        <field name="name">شروط مسابقة المتميزين</field>
+        <field name="description">للطلاب الذين شاركوا في مسابقة رمضانية سابقة، ويجب أن يتجاوز مستوى حفظهم مستواهم السابق.</field>
+        <field name="participant_nums">15</field>
+        <field name="min_age">10</field>
+        <field name="max_age">18</field>
+        <field name="memorization_required">True</field>
+        <field name="min_memorization_amount">15</field>
+        <field name="max_memorization_amount">30</field>
+        <field name="registration_status">registered</field>
+        <field name="highest_level_yet">True</field>
+        <field name="required_tag_ids" eval="[(6, 0, [ref('demo_tag_ramadan')])]"/>
+        <field name="office_ids" eval="[(6, 0, [ref('management_quran_office_core.demo_office_noor'), ref('management_quran_office_core.demo_office_furqan')])]"/>
+    </record>
+
+</odoo>

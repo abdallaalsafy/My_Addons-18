@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="unified_dashboard_core.WidgetCard">
+        <section class="ud-card" t-att-aria-busy="state.status === 'loading' || state.reloading ? 'true' : 'false'">
+            <header class="ud-card-header">
+                <div class="ud-card-titles">
+                    <h3 class="ud-card-title" t-out="props.widget.title"/>
+                    <p t-if="props.widget.description" class="ud-card-desc" t-out="props.widget.description"/>
+                </div>
+                <span t-if="periodText and state.status === 'ready'" class="ud-badge" t-out="periodText"/>
+                <span t-elif="!supportsDate" class="ud-badge ud-badge-muted">Not affected by the period</span>
+            </header>
+
+            <div class="ud-card-body" t-att-class="state.reloading ? 'ud-reloading' : ''">
+                <div t-if="state.status === 'loading'" class="ud-state" role="status">
+                    <i class="fa fa-circle-o-notch fa-spin me-2"/>Loading…
+                </div>
+                <div t-elif="state.status === 'error'" class="ud-state ud-state-error" role="alert">
+                    <i class="fa fa-exclamation-triangle me-2"/>This widget could not be loaded.
+                    <button type="button" class="btn btn-link btn-sm p-0 ms-2"
+                            t-on-click="() => this.load()">Retry</button>
+                </div>
+                <div t-elif="state.status === 'denied'" class="ud-state" role="status">
+                    <i class="fa fa-lock me-2"/>You do not have access to this widget.
+                </div>
+                <div t-elif="state.status === 'empty'" class="ud-state">
+                    <i class="fa fa-inbox me-2"/>
+                    <t t-out="state.data.empty_message or 'No data for the selected period.'"/>
+                </div>
+                <t t-elif="state.status === 'ready'">
+                    <t t-component="props.widget.component" data="state.data"/>
+                </t>
+            </div>
+        </section>
+    </t>
+
+</templates>

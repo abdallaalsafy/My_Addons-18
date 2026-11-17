@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="unified_dashboard_core.KpiWidget">
+        <div class="ud-kpis">
+            <t t-foreach="props.data.tiles" t-as="tile" t-key="tile_index">
+                <button type="button"
+                        class="ud-kpi"
+                        t-att-class="toneClass(tile) + (tile.drill ? ' ud-clickable' : '')"
+                        t-att-disabled="!tile.drill"
+                        t-on-click="() => this.drill(tile.drill)">
+                    <span class="ud-kpi-value" t-out="display(tile)"/>
+                    <span class="ud-kpi-label" t-out="tile.label"/>
+                    <span t-if="tile.hint" class="ud-kpi-hint" t-out="tile.hint"/>
+                </button>
+            </t>
+        </div>
+    </t>
+
+    <t t-name="unified_dashboard_core.BarsWidget">
+        <ul class="ud-bars list-unstyled mb-0">
+            <t t-foreach="props.data.items" t-as="item" t-key="item_index">
+                <li class="ud-bar-row" t-att-class="item.drill ? 'ud-clickable' : ''"
+                    t-on-click="() => this.drill(item.drill)">
+                    <div class="ud-bar-head">
+                        <span class="ud-bar-label text-truncate" t-att-title="item.label" t-out="item.label"/>
+                        <span class="ud-bar-value" t-out="display(item)"/>
+                    </div>
+                    <div class="ud-bar-track" aria-hidden="true">
+                        <div class="ud-bar-fill" t-attf-style="width: #{width(item)}%"/>
+                    </div>
+                    <div t-if="item.secondary_text" class="ud-bar-secondary" t-out="item.secondary_text"/>
+                </li>
+            </t>
+        </ul>
+    </t>
+
+    <t t-name="unified_dashboard_core.TableWidget">
+        <div class="table-responsive">
+            <table class="table table-sm ud-table mb-0">
+                <thead>
+                    <tr>
+                        <th t-foreach="props.data.columns" t-as="col" t-key="col.key"
+                            t-att-class="col.align === 'end' ? 'text-end' : ''"
+                            t-out="col.label"/>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr t-foreach="props.data.rows" t-as="row" t-key="row_index"
+                        t-att-class="row.drill ? 'ud-clickable' : ''"
+                        t-on-click="() => this.drill(row.drill)">
+                        <td t-foreach="props.data.columns" t-as="col" t-key="col.key"
+                            t-att-class="col.align === 'end' ? 'text-end' : ''"
+                            t-out="cell(row, col)"/>
+                    </tr>
+                </tbody>
+            </table>
+            <div t-if="props.data.footer" class="ud-footnote" t-out="props.data.footer"/>
+        </div>
+    </t>
+
+    <t t-name="unified_dashboard_core.TrendWidget">
+        <div class="ud-trend">
+            <div class="ud-legend" t-if="series.length &gt; 1">
+                <span t-foreach="series" t-as="serie" t-key="serie_index" class="ud-legend-item">
+                    <span class="ud-swatch" t-att-class="'ud-s' + serie_index"/>
+                    <t t-out="serie.name"/>
+                </span>
+            </div>
+            <svg t-att-viewBox="viewBox" class="ud-trend-svg" role="img" preserveAspectRatio="xMidYMid meet"
+                 t-att-aria-label="props.data.title || ''">
+                <g class="ud-gridlines">
+                    <t t-foreach="gridLines" t-as="line" t-key="line_index">
+                        <line t-att-x1="pad.left" t-att-x2="width - pad.right" t-att-y1="line.y" t-att-y2="line.y"/>
+                        <text t-att-x="pad.left - 6" t-att-y="line.y + 4" text-anchor="end" t-out="line.label"/>
+                    </t>
+                </g>
+                <t t-foreach="bars" t-as="bar" t-key="bar.key">
+                    <rect t-att-class="bar.cls" t-att-x="bar.x" t-att-y="bar.y" t-att-width="bar.w"
+                          t-att-height="bar.h" rx="2">
+                        <title t-out="bar.tip"/>
+                    </rect>
+                    <text t-if="bar.showLabel" class="ud-bar-text" t-att-x="bar.x + bar.w / 2" t-att-y="bar.y - 4"
+                          text-anchor="middle" t-out="bar.text"/>
+                </t>
+                <g class="ud-xlabels">
+                    <text t-foreach="xLabels" t-as="xl" t-key="xl.key" t-att-x="xl.x" t-att-y="xl.y"
+                          text-anchor="middle" t-out="xl.label"/>
+                </g>
+            </svg>
+            <div t-if="props.data.footer" class="ud-footnote" t-out="props.data.footer"/>
+        </div>
+    </t>
+
+</templates>

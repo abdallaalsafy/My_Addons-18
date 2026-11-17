@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="demo_part_ramadan26_yusuf" model="quran.competition.participant">
+        <field name="competition_id" ref="demo_comp_ramadan26"/>
+        <field name="student_id" ref="management_quran_office_core.demo_student_yusuf"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="registration_number">SRC-26-001</field>
+        <field name="registration_date">2026-02-20</field>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_25"/>
+        <field name="ayah_num">57</field>
+        <field name="state">confirmed</field>
+        <field name="level_id" ref="demo_level_ramadan26_10"/>
+        <field name="score">82</field>
+        <field name="result_id" ref="demo_result_ramadan26_successful"/>
+        <field name="status">successful</field>
+        <field name="monetary_prize">500</field>
+        <field name="in_kind_prize">شهادة تقدير</field>
+    </record>
+
+    <record id="demo_part_ramadan26_omar" model="quran.competition.participant">
+        <field name="competition_id" ref="demo_comp_ramadan26"/>
+        <field name="student_id" ref="management_quran_office_core.demo_student_omar"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_omar"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_osama"/>
+        <field name="registration_number">SRC-26-002</field>
+        <field name="registration_date">2026-02-20</field>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_12"/>
+        <field name="ayah_num">59</field>
+        <field name="state">confirmed</field>
+        <field name="level_id" ref="demo_level_ramadan26_15"/>
+        <field name="score">93</field>
+        <field name="result_id" ref="demo_result_ramadan26_superior"/>
+        <field name="status">superior</field>
+        <field name="monetary_prize">1000</field>
+        <field name="in_kind_prize">درع المسابقة وشهادة تقدير</field>
+    </record>
+
+    <record id="demo_part_ramadan26_adam" model="quran.competition.participant">
+        <field name="competition_id" ref="demo_comp_ramadan26"/>
+        <field name="student_id" ref="management_quran_office_core.demo_student_adam"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_khaled"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_yasser"/>
+        <field name="registration_number">SRC-26-003</field>
+        <field name="registration_date">2026-02-20</field>
+        <field name="memorization_method">from_baqarah</field>
+        <field name="surah_id" ref="quran_utils.surah_4"/>
+        <field name="ayah_num">175</field>
+        <field name="state">confirmed</field>
+        <field name="level_id" ref="demo_level_ramadan26_5"/>
+        <field name="score">66</field>
+        <field name="result_id" ref="demo_result_ramadan26_acceptable"/>
+        <field name="status">acceptable</field>
+        <field name="in_kind_prize">شهادة مشاركة</field>
+    </record>
+
+    <record id="demo_part_ramadan26_hamza" model="quran.competition.participant">
+        <field name="competition_id" ref="demo_comp_ramadan26"/>
+        <field name="student_id" ref="management_quran_office_core.demo_student_hamza"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="registration_number">SRC-26-004</field>
+        <field name="registration_date">2026-02-20</field>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_36"/>
+        <field name="ayah_num">56</field>
+        <field name="state">withdrawn</field>
+    </record>
+
+    <record id="demo_part_ramadan26_mostafa" model="quran.competition.participant">
+        <field name="competition_id" ref="demo_comp_ramadan26"/>
+        <field name="student_id" ref="management_quran_office_core.demo_student_mostafa"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_omar"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_osama"/>
+        <field name="registration_number">SRC-26-005</field>
+        <field name="registration_date">2026-02-20</field>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_4"/>
+        <field name="ayah_num">29</field>
+        <field name="state">confirmed</field>
+        <field name="level_id" ref="demo_level_ramadan26_20"/>
+        <field name="score">96</field>
+        <field name="result_id" ref="demo_result_ramadan26_superior"/>
+        <field name="status">superior</field>
+        <field name="monetary_prize">1000</field>
+        <field name="in_kind_prize">درع المسابقة وشهادة تقدير</field>
+    </record>
+
+    <record id="demo_part_ramadan26_nour" model="quran.competition.participant">
+        <field name="competition_id" ref="demo_comp_ramadan26"/>
+        <field name="student_id" ref="management_quran_office_core.demo_student_nour"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="registration_number">SRC-26-006</field>
+        <field name="registration_date">2026-02-20</field>
+        <field name="memorization_method">from_baqarah</field>
+        <field name="surah_id" ref="quran_utils.surah_6"/>
+        <field name="ayah_num">27</field>
+        <field name="state">confirmed</field>
+        <field name="level_id" ref="demo_level_ramadan26_5"/>
+        <field name="score">71</field>
+        <field name="result_id" ref="demo_result_ramadan26_acceptable"/>
+        <field name="status">acceptable</field>
+        <field name="in_kind_prize">شهادة مشاركة</field>
+    </record>
+
+    <record id="demo_part_ramadan26_maryam" model="quran.competition.participant">
+        <field name="competition_id" ref="demo_comp_ramadan26"/>
+        <field name="student_id" ref="management_quran_office_core.demo_student_maryam"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="registration_number">SRC-26-007</field>
+        <field name="registration_date">2026-02-20</field>
+        <field name="memorization_method">from_baqarah</field>
+        <field name="surah_id" ref="quran_utils.surah_3"/>
+        <field name="ayah_num">15</field>
+        <field name="state">disqualified</field>
+        <field name="reason_disqualified" type="html"><p>Memorization amount (2.48 Juz) is not within the required range (5.00 - 30.00 Juz)</p></field>
+    </record>
+
+    <record id="demo_part_ramadan26_ziad" model="quran.competition.participant">
+        <field name="competition_id" ref="demo_comp_ramadan26"/>
+        <field name="student_id" ref="management_quran_office_core.demo_student_ziad"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_khaled"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_yasser"/>
+        <field name="registration_number">SRC-26-008</field>
+        <field name="registration_date">2026-02-20</field>
+        <field name="memorization_method">from_baqarah</field>
+        <field name="surah_id" ref="quran_utils.surah_4"/>
+        <field name="ayah_num">6</field>
+        <field name="state">disqualified</field>
+        <field name="reason_disqualified" type="html"><p>Memorization amount (3.80 Juz) is not within the required range (5.00 - 30.00 Juz)</p></field>
+    </record>
+
+    <record id="demo_part_ramadan26_salma" model="quran.competition.participant">
+        <field name="competition_id" ref="demo_comp_ramadan26"/>
+        <field name="student_id" ref="management_quran_office_core.demo_student_salma"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="registration_number">SRC-26-009</field>
+        <field name="registration_date">2026-02-20</field>
+        <field name="memorization_method">from_baqarah</field>
+        <field name="surah_id" ref="quran_utils.surah_2"/>
+        <field name="ayah_num">202</field>
+        <field name="state">disqualified</field>
+        <field name="reason_disqualified" type="html"><p>Memorization amount (1.50 Juz) is not within the required range (5.00 - 30.00 Juz)</p></field>
+    </record>
+
+    <record id="demo_part_winter26_yusuf" model="quran.competition.participant">
+        <field name="competition_id" ref="demo_comp_winter26"/>
+        <field name="student_id" ref="management_quran_office_core.demo_student_yusuf"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="registration_number">SRC-26-001</field>
+        <field name="registration_date">2026-11-10</field>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_13"/>
+        <field name="ayah_num">25</field>
+        <field name="state">confirmed</field>
+        <field name="level_id" ref="demo_level_winter26_15"/>
+    </record>
+
+    <record id="demo_part_winter26_omar" model="quran.competition.participant">
+        <field name="competition_id" ref="demo_comp_winter26"/>
+        <field name="student_id" ref="management_quran_office_core.demo_student_omar"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_omar"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_osama"/>
+        <field name="registration_number">SRC-26-002</field>
+        <field name="registration_date">2026-11-10</field>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_7"/>
+        <field name="ayah_num">119</field>
+        <field name="state">confirmed</field>
+        <field name="level_id" ref="demo_level_winter26_20"/>
+    </record>
+
+    <record id="demo_part_winter26_mostafa" model="quran.competition.participant">
+        <field name="competition_id" ref="demo_comp_winter26"/>
+        <field name="student_id" ref="management_quran_office_core.demo_student_mostafa"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_omar"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_osama"/>
+        <field name="registration_number">SRC-26-003</field>
+        <field name="registration_date">2026-11-10</field>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_2"/>
+        <field name="ayah_num">34</field>
+        <field name="state">confirmed</field>
+        <field name="level_id" ref="demo_level_winter26_25"/>
+    </record>
+
+    <record id="demo_part_winter26_adam" model="quran.competition.participant">
+        <field name="competition_id" ref="demo_comp_winter26"/>
+        <field name="student_id" ref="management_quran_office_core.demo_student_adam"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_khaled"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_yasser"/>
+        <field name="registration_number">SRC-26-004</field>
+        <field name="registration_date">2026-11-10</field>
+        <field name="memorization_method">from_baqarah</field>
+        <field name="surah_id" ref="quran_utils.surah_6"/>
+        <field name="ayah_num">27</field>
+        <field name="state">disqualified</field>
+        <field name="reason_disqualified" type="html"><p>Memorization amount (6.48 Juz) is not within the required range (15.00 - 30.00 Juz)</p></field>
+    </record>
+
+    <record id="demo_part_winter26_nour" model="quran.competition.participant">
+        <field name="competition_id" ref="demo_comp_winter26"/>
+        <field name="student_id" ref="management_quran_office_core.demo_student_nour"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="registration_number">SRC-26-005</field>
+        <field name="registration_date">2026-11-10</field>
+        <field name="memorization_method">from_baqarah</field>
+        <field name="surah_id" ref="quran_utils.surah_8"/>
+        <field name="ayah_num">40</field>
+        <field name="state">disqualified</field>
+        <field name="reason_disqualified" type="html"><p>Memorization amount (9.00 Juz) is not within the required range (15.00 - 30.00 Juz)</p></field>
+    </record>
+
+    <record id="demo_part_winter26_hamza" model="quran.competition.participant">
+        <field name="competition_id" ref="demo_comp_winter26"/>
+        <field name="student_id" ref="management_quran_office_core.demo_student_hamza"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="registration_number">SRC-26-006</field>
+        <field name="registration_date">2026-11-10</field>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_27"/>
+        <field name="ayah_num">38</field>
+        <field name="state">disqualified</field>
+        <field name="reason_disqualified" type="html"><p>Memorization amount (11.00 Juz) is not within the required range (15.00 - 30.00 Juz) - The participant has no previous registration matching the required competitions or tags.</p></field>
+    </record>
+
+    <record id="demo_part_winter26_ziad" model="quran.competition.participant">
+        <field name="competition_id" ref="demo_comp_winter26"/>
+        <field name="student_id" ref="management_quran_office_core.demo_student_ziad"/>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_khaled"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_yasser"/>
+        <field name="registration_number">SRC-26-007</field>
+        <field name="registration_date">2026-11-10</field>
+        <field name="memorization_method">from_baqarah</field>
+        <field name="surah_id" ref="quran_utils.surah_5"/>
+        <field name="ayah_num">23</field>
+        <field name="state">draft</field>
+    </record>
+
+</odoo>

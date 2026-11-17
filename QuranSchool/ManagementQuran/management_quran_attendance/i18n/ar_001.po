@@ -1,0 +1,1258 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* management_quran_attendance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20260423\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-17 01:39+0000\n"
+"PO-Revision-Date: 2026-11-17 01:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: management_quran_attendance
+#: model:ir.actions.report,print_report_name:management_quran_attendance.action_report_student_monthly_absence_sheet_landscape
+#: model:ir.actions.report,print_report_name:management_quran_attendance.action_report_student_monthly_absence_sheet_portrait
+msgid "'Monthly Absence Sheet' + object.name"
+msgstr "'جدول الغياب الشهري' + object.name"
+
+#. module: management_quran_attendance
+#: model:ir.actions.report,print_report_name:management_quran_attendance.action_report_student_attendance_detail
+msgid "'Student Attendance Detail Report'"
+msgstr "'تقرير تفاصيل حضور الطالب'"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.student_monthly_sheet
+msgid ""
+"<span class=\"mx-3\"/>\n"
+"                        <strong>Teacher:</strong>"
+msgstr ""
+"<span class=\"mx-3\"/>\n"
+"                        <strong>المعلم:</strong>"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_holiday_policy_form
+msgid ""
+"<span class=\"text-muted\">👉 Note: The day is not included in the holiday "
+"policy.</span>"
+msgstr ""
+"<span class=\"text-muted\">👉 ملاحظة: اليوم غير شامل في سياسة الإجازات.</span>"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.student_attendance_detail
+msgid "<span> - </span>"
+msgstr "<span> - </span>"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.student_monthly_sheet
+msgid "<span>Absence for </span>"
+msgstr "<span>الغياب لـ </span>"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.student_attendance_detail
+msgid "<strong>Month:</strong>"
+msgstr "<strong>الشهر:</strong>"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.student_attendance_detail
+msgid ""
+"<strong>Note:</strong> Status Codes:\n"
+"                                    P = Present, A = Absent, H = Holiday,\n"
+"                                    E = Excused, S = Sick, L = Late,\n"
+"                                    Un = Unrestricted"
+msgstr ""
+"<strong>ملاحظة:</strong> رموز الحالة:\n"
+"                                    P = حاضر، A = غائب، H = عطلة،\n"
+"                                    E = معذور، S = مريض، L = متأخر،\n"
+"                                    Un = غير مقيد"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.student_attendance_detail
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.student_monthly_sheet
+msgid "<strong>Office:</strong>"
+msgstr "<strong>المكتب:</strong>"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.student_attendance_detail
+msgid "<strong>Period:</strong>"
+msgstr "<strong>الفترة:</strong>"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_student_monthly_absence_sheet_wizard__holiday_policy_id
+msgid "Absence Policy"
+msgstr "سياسة الغياب"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.student_attendance_detail
+msgid "Absent"
+msgstr "غائب"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register__absent_days
+msgid "Absent Days"
+msgstr "أيام الغياب"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.res_persons_tree_view_attendance_inherit
+msgid "Absent Today"
+msgstr "غائب اليوم"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_policy__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.res_persons_tree_view_attendance_inherit
+msgid "Are you sure you want to mark this student as absent today?"
+msgstr "هل أنت متأكد أنك تريد تسجيل هذا الطالب غائبًا اليوم؟"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.res_persons_tree_view_attendance_inherit
+msgid "Are you sure you want to mark this student as present today?"
+msgstr "هل أنت متأكد أنك تريد تسجيل هذا الطالب حاضرًا اليوم؟"
+
+#. module: management_quran_attendance
+#: model:ir.ui.menu,name:management_quran_attendance.menu_quran_attendance_root
+msgid "Attendance"
+msgstr "الحضور"
+
+#. module: management_quran_attendance
+#: model:ir.model,name:management_quran_attendance.model_attendance_bulk_create_wizard
+msgid "Attendance Bulk Create Wizard"
+msgstr "معالج إنشاء حضور مجمّع"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_res_persons__attendance_count
+msgid "Attendance Count"
+msgstr "عدد الحضور"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_res_persons__attendance_current_day
+msgid "Attendance Current Day"
+msgstr "حضور اليوم الحالي"
+
+#. module: management_quran_attendance
+#: model:ir.model,name:management_quran_attendance.model_attendance_holiday_day
+msgid "Attendance Holiday Day"
+msgstr "يوم عطلة الحضور"
+
+#. module: management_quran_attendance
+#: model:ir.model,name:management_quran_attendance.model_attendance_holiday_policy
+msgid "Attendance Holiday Policy"
+msgstr "سياسة عطلات الحضور"
+
+#. module: management_quran_attendance
+#: model:ir.model,name:management_quran_attendance.model_attendance_register
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.form_attendance_register
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_register_list
+msgid "Attendance Register"
+msgstr "سجل الحضور"
+
+#. module: management_quran_attendance
+#. odoo-python
+#: code:addons/management_quran_attendance/wizards/attendance_register_date_wizard.py:0
+msgid "Attendance Register By Date Range"
+msgstr "سجل الحضور حسب النطاق الزمني"
+
+#. module: management_quran_attendance
+#: model:ir.actions.act_window,name:management_quran_attendance.action_attendance_register_current_month
+msgid "Attendance Register Current Month"
+msgstr "سجل الحضور للشهر الحالي"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.form_attendance_register
+msgid "Attendance Register Date"
+msgstr "تاريخ سجل الحضور"
+
+#. module: management_quran_attendance
+#: model:ir.model,name:management_quran_attendance.model_attendance_register_date_wizard
+msgid "Attendance Register Date Filter Wizard"
+msgstr "معالج تصفية سجل الحضور بالتاريخ"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.form_attendance_register
+msgid "Attendance Register Details"
+msgstr "تفاصيل سجل الحضور"
+
+#. module: management_quran_attendance
+#: model:ir.actions.act_window,name:management_quran_attendance.action_attendance_register_previous_month
+msgid "Attendance Register Previous Month"
+msgstr "سجل الحضور للشهر السابق"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_register_search
+msgid "Attendance Register Search"
+msgstr "بحث سجل الحضور"
+
+#. module: management_quran_attendance
+#: model:ir.actions.act_window,name:management_quran_attendance.action_attendance_register_date_filter
+msgid "Attendance Register by Date Range"
+msgstr "سجل الحضور حسب النطاق الزمني"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_res_persons__attendance_register_ids
+msgid "Attendance Registers"
+msgstr "سجلات الحضور"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_res_persons__attend_status
+msgid "Attendance Status"
+msgstr "حالة الحضور"
+
+#. module: management_quran_attendance
+#. odoo-python
+#: code:addons/management_quran_attendance/models/res_persons.py:0
+msgid ""
+"Attendance register for this student: %s , has previous attendance for day: "
+"%s , it is not filled"
+msgstr ""
+"سجل الحضور لهذا الطالب: %s، يوجد حضور سابق ليوم: %s، ولم يتم تعبئته."
+
+#. module: management_quran_attendance
+#. odoo-python
+#: code:addons/management_quran_attendance/models/res_persons.py:0
+msgid "Attendance register for this student: %s , the today is a holiday"
+msgstr "سجل الحضور لهذا الطالب: %s، اليوم هو عطلة."
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.res_persons_form_view_attendance_inherit
+msgid "Attendances"
+msgstr "الحضور"
+
+#. module: management_quran_attendance
+#. odoo-python
+#: code:addons/management_quran_attendance/models/res_persons.py:0
+msgid "Attendances of %s"
+msgstr "حضور %s"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__res_persons__attend_status__attend
+msgid "Attended"
+msgstr "حاضر"
+
+#. module: management_quran_attendance
+#: model:ir.ui.menu,name:management_quran_attendance.menu_quran_attendance_date_range
+msgid "By Date Range"
+msgstr "حسب النطاق الزمني"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_bulk_create_wizard_form
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_register_date_wizard_form
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_student_monthly_absence_sheet_wizard_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.res_config_settings_view_form_attendance
+msgid "Choose the default holiday policy used in new attendance records."
+msgstr "اختر سياسة الإجازة الافتراضية المستخدمة في سجلات الحضور الجديدة."
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_bulk_create_wizard__class_id
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_policy__class_id
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register__class_id
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register_date_wizard__class_id
+#: model:ir.model.fields,field_description:management_quran_attendance.field_student_monthly_absence_sheet_wizard__class_id
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.student_attendance_detail
+msgid "Class"
+msgstr "الفصل"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,help:management_quran_attendance.field_attendance_bulk_create_wizard__class_id
+#: model:ir.model.fields,help:management_quran_attendance.field_attendance_holiday_policy__class_id
+#: model:ir.model.fields,help:management_quran_attendance.field_attendance_register__class_id
+#: model:ir.model.fields,help:management_quran_attendance.field_attendance_register_date_wizard__class_id
+#: model:ir.model.fields,help:management_quran_attendance.field_student_monthly_absence_sheet_wizard__class_id
+msgid "Class this record belongs to"
+msgstr "الفصل الذي ينتمي إليه هذا السجل"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.form_attendance_register
+msgid "Collection"
+msgstr "المجموعة"
+
+#. module: management_quran_attendance
+#: model:ir.model,name:management_quran_attendance.model_res_config_settings
+msgid "Config Settings"
+msgstr "إعدادات التهيئة"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.res_persons_form_view_attendance_inherit
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.res_persons_tree_view_attendance_inherit
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_bulk_create_wizard_form
+msgid "Create Attendance"
+msgstr "إنشاء حضور"
+
+#. module: management_quran_attendance
+#: model:ir.actions.act_window,name:management_quran_attendance.action_attendance_bulk_create_wizard
+msgid "Create Attendance Registers"
+msgstr "إنشاء سجلات حضور"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_bulk_create_wizard_form
+msgid "Create Attendance for Students"
+msgstr "إنشاء حضور للطلاب"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_bulk_create_wizard__create_mode
+msgid "Create Mode"
+msgstr "وضع الإنشاء"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_bulk_create_wizard__create_mode__all
+msgid "Create all of them, or create none of them"
+msgstr "أنشئ الكل أو لا تنشئ أي منها"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_bulk_create_wizard__create_mode__any
+msgid "Create all or a valid records only"
+msgstr "أنشئ الكل أو السجلات الصالحة فقط"
+
+#. module: management_quran_attendance
+#. odoo-python
+#: code:addons/management_quran_attendance/wizards/attendance_bulk_create_wizard.py:0
+msgid "Created Attendance Registers"
+msgstr "سجلات الحضور المنشأة"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_bulk_create_wizard__create_uid
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_day__create_uid
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_policy__create_uid
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register__create_uid
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register_date_wizard__create_uid
+#: model:ir.model.fields,field_description:management_quran_attendance.field_student_monthly_absence_sheet_wizard__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_bulk_create_wizard__create_date
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_day__create_date
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_policy__create_date
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register__create_date
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register_date_wizard__create_date
+#: model:ir.model.fields,field_description:management_quran_attendance.field_student_monthly_absence_sheet_wizard__create_date
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+#. module: management_quran_attendance
+#: model:ir.ui.menu,name:management_quran_attendance.menu_quran_attendance_current_month
+msgid "Current Month"
+msgstr "الشهر الحالي"
+
+#. module: management_quran_attendance
+#: model:ir.actions.act_window,name:management_quran_attendance.action_attendance_month_holiday
+msgid "Daily Holidays"
+msgstr "العطل اليومية"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register__date
+#: model:ir.model.fields,field_description:management_quran_attendance.field_student_monthly_absence_sheet_wizard__report_date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_bulk_create_wizard_form
+msgid "Date Information"
+msgstr "معلومات التاريخ"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register__day
+msgid "Day"
+msgstr "اليوم"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_day__day_name
+msgid "Day Name"
+msgstr "اسم اليوم"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_day__day_number
+msgid "Day Number"
+msgstr "رقم اليوم"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.form_attendance_register
+msgid "Days"
+msgstr "الأيام"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_res_config_settings__holiday_policy_id
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.res_config_settings_view_form_attendance
+msgid "Default absence policy"
+msgstr "سياسة الغياب الافتراضية"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.form_attendance_register
+msgid "Detail"
+msgstr "التفاصيل"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.student_attendance_detail
+msgid "Detailed Attendance by Day"
+msgstr "الحضور التفصيلي حسب اليوم"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_bulk_create_wizard__display_name
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_day__display_name
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_policy__display_name
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register__display_name
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register_date_wizard__display_name
+#: model:ir.model.fields,field_description:management_quran_attendance.field_student_monthly_absence_sheet_wizard__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_policy__end_date
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register_date_wizard__end_date
+msgid "End Date"
+msgstr "تاريخ النهاية"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_policy__holiday_day_ids
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_holiday_policy_form
+msgid "Exceptional Holidays"
+msgstr "إجازات استثنائية"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.student_attendance_detail
+msgid "Excused"
+msgstr "مُعذور"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register__excused_days
+msgid "Excused Days"
+msgstr "أيام الأعذار"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_register_date_wizard_form
+msgid "Filter Attendance Register by Date Range"
+msgstr "تصفية سجل الحضور حسب النطاق الزمني"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_policy__is_friday_off
+msgid "Friday"
+msgstr "الجمعة"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_register_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.student_attendance_detail
+msgid "Holiday"
+msgstr "عطلة"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_day__holiday_date
+msgid "Holiday Date"
+msgstr "تاريخ العطلة"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register__holiday_days
+msgid "Holiday Days"
+msgstr "أيام العطلة"
+
+#. module: management_quran_attendance
+#: model:ir.actions.act_window,name:management_quran_attendance.action_attendance_holiday_policy
+#: model:ir.ui.menu,name:management_quran_attendance.menu_quran_attendance_holiday_policy
+msgid "Holiday Policies"
+msgstr "سياسات العطلات"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_bulk_create_wizard__holiday_policy_id
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_day__policy_id
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register__holiday_policy_id
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_holiday_policy_form
+msgid "Holiday Policy"
+msgstr "سياسة العطلة"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_holiday_policy_form
+msgid "Holiday Policy Name"
+msgstr "اسم سياسة العطلة"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_bulk_create_wizard__id
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_day__id
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_policy__id
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register__id
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register_date_wizard__id
+#: model:ir.model.fields,field_description:management_quran_attendance.field_student_monthly_absence_sheet_wizard__id
+msgid "ID"
+msgstr "المعرّف"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register__is_leap_year
+msgid "Is Leap Year"
+msgstr "سنة كبيسة"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register__is_policy_valid
+msgid "Is Policy Valid"
+msgstr "هل السياسة صالحة"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__student_monthly_absence_sheet_wizard__report_orientation__landscape
+msgid "Landscape"
+msgstr "أفقي"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_bulk_create_wizard__write_uid
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_day__write_uid
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_policy__write_uid
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register__write_uid
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register_date_wizard__write_uid
+#: model:ir.model.fields,field_description:management_quran_attendance.field_student_monthly_absence_sheet_wizard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_bulk_create_wizard__write_date
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_day__write_date
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_policy__write_date
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register__write_date
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register_date_wizard__write_date
+#: model:ir.model.fields,field_description:management_quran_attendance.field_student_monthly_absence_sheet_wizard__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث بتاريخ"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.student_attendance_detail
+msgid "Late"
+msgstr "متأخر"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register__late_days
+msgid "Late Days"
+msgstr "أيام التأخير"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_holiday_policy_form
+msgid "Lock"
+msgstr "قفل"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_policy__is_locked
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_holiday_policy_form
+msgid "Locked"
+msgstr "مقفل"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_policy__is_monday_off
+msgid "Monday"
+msgstr "الاثنين"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_bulk_create_wizard__month
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_day__month
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register__month
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_register_search
+msgid "Month"
+msgstr "الشهر"
+
+#. module: management_quran_attendance
+#. odoo-python
+#: code:addons/management_quran_attendance/models/attendance_register.py:0
+msgid "Month or Year is invalid."
+msgstr "الشهر أو السنة غير صحيح."
+
+#. module: management_quran_attendance
+#: model:ir.actions.act_window,name:management_quran_attendance.action_student_monthly_absence_sheet_wizard
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_student_monthly_absence_sheet_wizard_form
+msgid "Monthly Absence Sheet"
+msgstr "جدول الغياب الشهري"
+
+#. module: management_quran_attendance
+#: model:ir.actions.report,name:management_quran_attendance.action_report_student_monthly_absence_sheet_landscape
+msgid "Monthly Absence Sheet (Landscape)"
+msgstr "جدول الغياب الشهري (أفقي)"
+
+#. module: management_quran_attendance
+#: model:ir.actions.report,name:management_quran_attendance.action_report_student_monthly_absence_sheet_portrait
+msgid "Monthly Absence Sheet (Portrait)"
+msgstr "جدول الغياب الشهري (عمودي)"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_month_holiday_form
+msgid "Monthly Holiday"
+msgstr "العطلة الشهرية"
+
+#. module: management_quran_attendance
+#: model:ir.ui.menu,name:management_quran_attendance.menu_quran_attendance_holidays
+msgid "Monthly Holidays"
+msgstr "العطل الشهرية"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.student_attendance_detail
+msgid "No attendance data available for the selected students."
+msgstr "لا توجد بيانات حضور متاحة للطلاب المحددين."
+
+#. module: management_quran_attendance
+#. odoo-python
+#: code:addons/management_quran_attendance/models/res_persons.py:0
+msgid "No attendance register found for this student: %s"
+msgstr "لم يتم العثور على سجل حضور لهذا الطالب: %s"
+
+#. module: management_quran_attendance
+#. odoo-python
+#: code:addons/management_quran_attendance/reports/absence_monthly_sheet_report.py:0
+msgid "No student selected for printing."
+msgstr "لم يتم تحديد أي طالب للطباعة."
+
+#. module: management_quran_attendance
+#. odoo-python
+#: code:addons/management_quran_attendance/wizards/attendance_bulk_create_wizard.py:0
+msgid "No valid students match in the selected records."
+msgstr "لا يوجد طلاب صالحون في السجلات المحددة."
+
+#. module: management_quran_attendance
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__res_persons__attend_status__non_attend
+msgid "Non-Attended"
+msgstr "غير حاضر"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_bulk_create_wizard_form
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,help:management_quran_attendance.field_res_persons__attendance_count
+msgid "Number of attendances for this student (only shown for students)"
+msgstr "عدد الحضور لهذا الطالب (يظهر فقط للطلاب)"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_bulk_create_wizard__office_id
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_policy__office_id
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register__office_id
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register_date_wizard__office_id
+#: model:ir.model.fields,field_description:management_quran_attendance.field_student_monthly_absence_sheet_wizard__office_id
+msgid "Office"
+msgstr "المكتب"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,help:management_quran_attendance.field_attendance_bulk_create_wizard__office_id
+#: model:ir.model.fields,help:management_quran_attendance.field_attendance_holiday_policy__office_id
+#: model:ir.model.fields,help:management_quran_attendance.field_attendance_register__office_id
+#: model:ir.model.fields,help:management_quran_attendance.field_attendance_register_date_wizard__office_id
+#: model:ir.model.fields,help:management_quran_attendance.field_student_monthly_absence_sheet_wizard__office_id
+msgid "Office this record belongs to"
+msgstr "المكتب الذي ينتمي إليه هذا السجل"
+
+#. module: management_quran_attendance
+#. odoo-python
+#: code:addons/management_quran_attendance/models/holiday_policy.py:0
+msgid "Only managers can unlock this policy."
+msgstr "يمكن فقط للإدارة فتح هذه السياسة."
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_bulk_create_wizard_form
+msgid "Options"
+msgstr "الخيارات"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_student_monthly_absence_sheet_wizard__report_orientation
+msgid "Paper Orientation"
+msgstr "اتجاه الورق"
+
+#. module: management_quran_attendance
+#. odoo-python
+#: code:addons/management_quran_attendance/wizards/absence_monthly_sheet_wizard.py:0
+#: code:addons/management_quran_attendance/wizards/attendance_register_date_wizard.py:0
+msgid "Please select students only."
+msgstr "الرجاء اختيار الطلاب فقط."
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_holiday_policy_form
+msgid "Policy Duration"
+msgstr "مدة السياسة"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_policy__name
+msgid "Policy Name"
+msgstr "اسم السياسة"
+
+#. module: management_quran_attendance
+#: model:ir.model.constraint,message:management_quran_attendance.constraint_attendance_holiday_policy_unique_policy_name
+msgid "Policy name must be unique."
+msgstr "يجب أن يكون اسم السياسة فريدًا."
+
+#. module: management_quran_attendance
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__student_monthly_absence_sheet_wizard__report_orientation__portrait
+msgid "Portrait"
+msgstr "عمودي"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.student_attendance_detail
+msgid "Present"
+msgstr "حاضر"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register__present_days
+msgid "Present Days"
+msgstr "أيام الحضور"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.res_persons_tree_view_attendance_inherit
+msgid "Present Today"
+msgstr "حاضر اليوم"
+
+#. module: management_quran_attendance
+#: model:ir.ui.menu,name:management_quran_attendance.menu_quran_attendance_previous_month
+msgid "Previous Month"
+msgstr "الشهر السابق"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,help:management_quran_attendance.field_res_persons__attend_status
+msgid "Previous attendance status for this student (only shown for students)"
+msgstr "حالة الحضور السابقة لهذا الطالب (تظهر فقط للطلاب)"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_student_monthly_absence_sheet_wizard_form
+msgid "Print"
+msgstr "طباعة"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.res_persons_tree_view_attendance_inherit
+msgid "Print Absence Sheet"
+msgstr "طباعة جدول الغياب"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.res_persons_form_view_attendance_inherit
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.res_persons_tree_view_attendance_inherit
+msgid "Print Attendance Report"
+msgstr "طباعة تقرير الحضور"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_register_date_wizard_form
+msgid "Print PDF"
+msgstr "طباعة PDF"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.res_config_settings_view_form_attendance
+msgid "Quran Attendance Management"
+msgstr "إدارة حضور القرآن"
+
+#. module: management_quran_attendance
+#: model:ir.model,name:management_quran_attendance.model_res_persons
+msgid "Quran School person Extension"
+msgstr "امتداد شخص مدرسة القرآن"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_day__reason
+msgid "Reason"
+msgstr "السبب"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_policy__is_saturday_off
+msgid "Saturday"
+msgstr "السبت"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_bulk_create_wizard__show_mode
+msgid "Show Mode"
+msgstr "وضع العرض"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_register_date_wizard_form
+msgid "Show Records"
+msgstr "إظهار السجلات"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_bulk_create_wizard__show_mode__by_date
+msgid "Show all records with the same date"
+msgstr "إظهار كل السجلات بنفس التاريخ"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_bulk_create_wizard__show_mode__by_ids
+msgid "Show created records only"
+msgstr "إظهار السجلات المنشأة فقط"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.student_attendance_detail
+msgid "Sick"
+msgstr "مريض"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register__sick_days
+msgid "Sick Days"
+msgstr "أيام المرض"
+
+#. module: management_quran_attendance
+#. odoo-python
+#: code:addons/management_quran_attendance/wizards/attendance_bulk_create_wizard.py:0
+msgid "Some matched students are not valid, count: %s."
+msgstr "بعض الطلاب المطابقين غير صالحين، العدد: %s."
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_policy__start_date
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register_date_wizard__start_date
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.student_monthly_sheet
+msgid "Stu Code"
+msgstr "رمز الطالب"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.student_attendance_detail
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_register_search
+msgid "Student"
+msgstr "الطالب"
+
+#. module: management_quran_attendance
+#: model:ir.actions.report,name:management_quran_attendance.action_report_student_attendance_detail
+#: model:ir.model,name:management_quran_attendance.model_report_management_quran_attendance_student_attendance_detail
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.student_attendance_detail
+msgid "Student Attendance Detail Report"
+msgstr "تقرير تفاصيل حضور الطالب"
+
+#. module: management_quran_attendance
+#: model:ir.model,name:management_quran_attendance.model_report_management_quran_attendance_student_monthly_sheet
+msgid "Student Monthly Absence Sheet Report"
+msgstr "تقرير جدول غياب الطالب الشهري"
+
+#. module: management_quran_attendance
+#: model:ir.model,name:management_quran_attendance.model_student_monthly_absence_sheet_wizard
+msgid "Student Monthly Absence Sheet Wizard"
+msgstr "معالج جدول غياب الطالب الشهري"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.student_monthly_sheet
+msgid "Student Name"
+msgstr "اسم الطالب"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register__student_id
+msgid "Students"
+msgstr "الطلاب"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_bulk_create_wizard_form
+msgid "Students Information"
+msgstr "معلومات الطلاب"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_bulk_create_wizard_form
+msgid ""
+"Students must have office or choose office here , And must not registered "
+"for attendance at this month."
+msgstr ""
+"يجب أن يكون للطلاب مكتب أو يختاروا مكتبًا هنا، ولا يجب أن يكونوا مسجلين في الحضور في هذا الشهر."
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.student_attendance_detail
+msgid "Study"
+msgstr "الدراسة"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register__study_days
+msgid "Study Days"
+msgstr "أيام الدراسة"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.form_attendance_register
+msgid "Summary"
+msgstr "ملخص"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_policy__is_sunday_off
+msgid "Sunday"
+msgstr "الأحد"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_bulk_create_wizard__teacher_id
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_policy__teacher_id
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register__teacher_id
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register_date_wizard__teacher_id
+#: model:ir.model.fields,field_description:management_quran_attendance.field_student_monthly_absence_sheet_wizard__teacher_id
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.student_attendance_detail
+msgid "Teacher"
+msgstr "المعلم"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,help:management_quran_attendance.field_attendance_bulk_create_wizard__teacher_id
+#: model:ir.model.fields,help:management_quran_attendance.field_attendance_holiday_policy__teacher_id
+#: model:ir.model.fields,help:management_quran_attendance.field_attendance_register__teacher_id
+#: model:ir.model.fields,help:management_quran_attendance.field_attendance_register_date_wizard__teacher_id
+#: model:ir.model.fields,help:management_quran_attendance.field_student_monthly_absence_sheet_wizard__teacher_id
+msgid "Teacher or memorizer for this record"
+msgstr "المعلم أو الحافظ لهذا السجل"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,help:management_quran_attendance.field_attendance_holiday_policy__end_date
+#: model:ir.model.fields,help:management_quran_attendance.field_attendance_holiday_policy__start_date
+msgid "The day is not included in the holiday policy."
+msgstr "اليوم غير شامل في سياسة الإجازة."
+
+#. module: management_quran_attendance
+#. odoo-python
+#: code:addons/management_quran_attendance/wizards/attendance_register_date_wizard.py:0
+msgid "The end date must be greater than or equal to the start date."
+msgstr "يجب أن يكون تاريخ النهاية أكبر من أو يساوي تاريخ البداية."
+
+#. module: management_quran_attendance
+#. odoo-python
+#: code:addons/management_quran_attendance/models/holiday_policy.py:0
+msgid "The end date or start date is not valid."
+msgstr "تاريخ النهاية أو تاريخ البداية غير صالح."
+
+#. module: management_quran_attendance
+#. odoo-python
+#: code:addons/management_quran_attendance/wizards/absence_monthly_sheet_wizard.py:0
+msgid "The selected date cannot be greater than today."
+msgstr "لا يمكن أن يكون التاريخ المحدد أكبر من اليوم."
+
+#. module: management_quran_attendance
+#. odoo-python
+#: code:addons/management_quran_attendance/wizards/absence_monthly_sheet_wizard.py:0
+msgid "The selected holiday policy is not valid for the selected date."
+msgstr "سياسة العطلة المحددة غير صالحة للتاريخ المحدد."
+
+#. module: management_quran_attendance
+#. odoo-python
+#: code:addons/management_quran_attendance/models/attendance_register.py:0
+msgid "The student is already registered for this month and scope (%s/%s)."
+msgstr "هذا الطالب مسجل بالفعل في هذا الشهر ونطاقه (%s/%s)."
+
+#. module: management_quran_attendance
+#. odoo-python
+#: code:addons/management_quran_attendance/models/res_persons.py:0
+msgid ""
+"There is more than one attendance register for this student: %s , and "
+"office: %s does not match"
+msgstr ""
+"يوجد أكثر من سجل حضور لهذا الطالب: %s، والمكتب: %s غير مطابق"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_register_search
+msgid "This Month"
+msgstr "هذا الشهر"
+
+#. module: management_quran_attendance
+#: model:ir.model.constraint,message:management_quran_attendance.constraint_attendance_holiday_day_unique_policy_date
+msgid "This date is already marked as a holiday in this policy."
+msgstr "هذا التاريخ تمّ تسجيله بالفعل كعطلة في هذه السياسة."
+
+#. module: management_quran_attendance
+#. odoo-python
+#: code:addons/management_quran_attendance/models/holiday_days.py:0
+msgid ""
+"This policy day is locked. Only managers can edit record of policy: %s."
+msgstr ""
+"هذا اليوم في السياسة مقفل. يمكن فقط للإدارة تعديل سجل السياسة: %s."
+
+#. module: management_quran_attendance
+#. odoo-python
+#: code:addons/management_quran_attendance/models/holiday_policy.py:0
+msgid "This policy is locked. Only managers can delete record: %s."
+msgstr "هذه السياسة مقفلة. يمكن فقط للإدارة حذف سجل: %s."
+
+#. module: management_quran_attendance
+#. odoo-python
+#: code:addons/management_quran_attendance/models/holiday_policy.py:0
+msgid "This policy is locked. Only managers can edit record: %s."
+msgstr "هذه السياسة مقفلة. يمكن فقط للإدارة تعديل سجل: %s."
+
+#. module: management_quran_attendance
+#. odoo-python
+#: code:addons/management_quran_attendance/wizards/attendance_bulk_create_wizard.py:0
+msgid "This wizard must be opened from the students list."
+msgstr "يجب فتح هذا المعالج من قائمة الطلاب."
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_policy__is_thursday_off
+msgid "Thursday"
+msgstr "الخميس"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_policy__is_tuesday_off
+msgid "Tuesday"
+msgstr "الثلاثاء"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_holiday_policy_form
+msgid "Unlock"
+msgstr "فتح القفل"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_policy__is_wednesday_off
+msgid "Wednesday"
+msgstr "الأربعاء"
+
+#. module: management_quran_attendance
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_holiday_policy_form
+msgid "Weekly Holidays"
+msgstr "العطل الأسبوعية"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_bulk_create_wizard__year
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_holiday_day__year
+#: model:ir.model.fields,field_description:management_quran_attendance.field_attendance_register__year
+#: model_terms:ir.ui.view,arch_db:management_quran_attendance.view_attendance_register_search
+msgid "Year"
+msgstr "السنة"
+
+#. module: management_quran_attendance
+#. odoo-python
+#: code:addons/management_quran_attendance/wizards/attendance_bulk_create_wizard.py:0
+msgid "Year and month are required."
+msgstr "السنة والشهر مطلوبان."
+
+#. module: management_quran_attendance
+#. odoo-python
+#: code:addons/management_quran_attendance/models/attendance_register.py:0
+msgid "You cannot save day %s before a previous day is filled."
+msgstr "لا يمكنك حفظ اليوم %s قبل ملء اليوم السابق."
+
+#. module: management_quran_attendance
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_10__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_11__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_12__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_13__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_14__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_15__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_16__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_17__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_18__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_19__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_1__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_20__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_21__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_22__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_23__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_24__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_25__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_26__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_27__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_28__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_29__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_2__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_30__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_31__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_3__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_4__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_5__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_6__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_7__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_8__late
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_9__late
+msgid "⏰ Late"
+msgstr "⏰ متأخر"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_10__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_11__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_12__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_13__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_14__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_15__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_16__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_17__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_18__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_19__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_1__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_20__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_21__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_22__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_23__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_24__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_25__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_26__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_27__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_28__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_29__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_2__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_30__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_31__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_3__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_4__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_5__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_6__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_7__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_8__present
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_9__present
+msgid "✅ Present"
+msgstr "✅ حاضر"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_10__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_11__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_12__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_13__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_14__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_15__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_16__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_17__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_18__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_19__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_1__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_20__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_21__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_22__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_23__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_24__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_25__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_26__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_27__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_28__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_29__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_2__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_30__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_31__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_3__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_4__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_5__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_6__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_7__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_8__absent
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_9__absent
+msgid "❌ Absent"
+msgstr "❌ غائب"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_10__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_11__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_12__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_13__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_14__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_15__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_16__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_17__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_18__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_19__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_1__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_20__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_21__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_22__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_23__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_24__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_25__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_26__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_27__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_28__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_29__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_2__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_30__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_31__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_3__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_4__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_5__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_6__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_7__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_8__holiday
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_9__holiday
+msgid "🏖️ Holiday"
+msgstr "🏖️ عطلة"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_10__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_11__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_12__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_13__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_14__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_15__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_16__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_17__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_18__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_19__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_1__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_20__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_21__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_22__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_23__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_24__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_25__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_26__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_27__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_28__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_29__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_2__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_30__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_31__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_3__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_4__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_5__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_6__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_7__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_8__excused
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_9__excused
+msgid "📝 Excused"
+msgstr "📝 مُعذور"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_10__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_11__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_12__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_13__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_14__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_15__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_16__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_17__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_18__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_19__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_1__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_20__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_21__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_22__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_23__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_24__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_25__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_26__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_27__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_28__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_29__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_2__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_30__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_31__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_3__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_4__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_5__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_6__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_7__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_8__unrestricted
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_9__unrestricted
+msgid "🔓 Unrestricted"
+msgstr "🔓 غير مقيد"
+
+#. module: management_quran_attendance
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_10__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_11__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_12__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_13__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_14__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_15__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_16__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_17__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_18__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_19__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_1__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_20__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_21__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_22__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_23__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_24__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_25__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_26__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_27__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_28__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_29__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_2__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_30__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_31__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_3__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_4__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_5__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_6__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_7__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_8__sick
+#: model:ir.model.fields.selection,name:management_quran_attendance.selection__attendance_register__day_9__sick
+msgid "🤒 Sick"
+msgstr "🤒 مريض"

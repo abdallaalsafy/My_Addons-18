@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="demo_office_noor" model="quran.office.office">
+        <field name="name">مكتب النور لتحفيظ القرآن الكريم</field>
+        <field name="description">مكتب تحفيظ في مدينة بني سويف</field>
+    </record>
+
+    <record id="demo_office_furqan" model="quran.office.office">
+        <field name="name">مكتب الفرقان لتحفيظ القرآن الكريم</field>
+        <field name="description">مكتب تحفيظ في مركز الواسطى</field>
+    </record>
+
+</odoo>

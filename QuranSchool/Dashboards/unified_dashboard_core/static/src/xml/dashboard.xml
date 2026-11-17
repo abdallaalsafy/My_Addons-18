@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="unified_dashboard_core.Dashboard">
+        <div class="o_action ud-dashboard">
+            <div class="ud-scroll">
+                <header class="ud-toolbar">
+                    <h2 class="ud-title">Dashboard</h2>
+                    <div class="ud-filters">
+                        <label class="ud-filter">
+                            <span>Period</span>
+                            <select class="form-select form-select-sm" t-on-change="onPresetChange"
+                                    t-att-value="state.preset">
+                                <option t-foreach="presets" t-as="preset" t-key="preset.key"
+                                        t-att-value="preset.key" t-att-selected="preset.key === state.preset"
+                                        t-out="preset.label"/>
+                            </select>
+                        </label>
+                        <t t-if="state.preset === 'custom'">
+                            <label class="ud-filter">
+                                <span>From</span>
+                                <input type="date" class="form-control form-control-sm" t-att-value="state.dateFrom"
+                                       t-on-change="(ev) => this.onDateChange('dateFrom', ev)"/>
+                            </label>
+                            <label class="ud-filter">
+                                <span>To</span>
+                                <input type="date" class="form-control form-control-sm" t-att-value="state.dateTo"
+                                       t-on-change="(ev) => this.onDateChange('dateTo', ev)"/>
+                            </label>
+                        </t>
+                        <button type="button" class="btn btn-secondary btn-sm" t-on-click="refresh"
+                                title="Reload all widgets">
+                            <i class="fa fa-refresh me-1"/>Refresh
+                        </button>
+                    </div>
+                    <p t-if="state.customError" class="ud-filter-error" role="alert" t-out="state.customError"/>
+                </header>
+
+                <div t-if="totalWidgets === 0" class="ud-empty">
+                    <i class="fa fa-th-large fa-2x mb-2"/>
+                    <p>No dashboard widgets are installed yet. Install a dashboard integration addon to add content here.</p>
+                </div>
+                <div t-elif="allDenied" class="ud-empty">
+                    <i class="fa fa-lock fa-2x mb-2"/>
+                    <p>You do not have access to any of the dashboard widgets. Please contact your administrator.</p>
+                </div>
+
+                <t t-foreach="sections" t-as="section" t-key="section.key">
+                    <section class="ud-section">
+                        <h2 class="ud-section-title" t-out="section.title"/>
+                        <div class="ud-grid">
+                            <t t-foreach="section.widgets" t-as="widget" t-key="widget.key">
+                                <div t-attf-class="ud-cell ud-size-#{widget.size}">
+                                    <DashboardWidgetCard widget="widget"
+                                                         preset="filters.preset"
+                                                         dateFrom="filters.date_from"
+                                                         dateTo="filters.date_to"
+                                                         refreshKey="state.refreshKey"
+                                                         onDenied.bind="onWidgetDenied"/>
+                                </div>
+                            </t>
+                        </div>
+                    </section>
+                </t>
+
+                <p t-if="deniedCount and !allDenied" class="ud-footnote">
+                    <t t-out="deniedCount"/> widget(s) are hidden because you do not have access to them.
+                </p>
+            </div>
+        </div>
+    </t>
+
+</templates>

@@ -1,0 +1,557 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* management_quran_memorization
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20260423\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-17 02:00+0000\n"
+"PO-Revision-Date: 2026-11-17 02:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: management_quran_memorization
+#: model:ir.actions.report,print_report_name:management_quran_memorization.memorization_report_action
+msgid "'Memorization Report'"
+msgstr "'تقرير الحفظ'"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.report_memorization_document
+msgid "<strong>Report Date:</strong>"
+msgstr "<strong>تاريخ التقرير:</strong>"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_student_memorization_form
+msgid "Add any notes about this memorization session..."
+msgstr "أضف أي ملاحظات حول جلسة الحفظ هذه..."
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_student_memorization_form
+msgid "Additional Information"
+msgstr "معلومات إضافية"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,help:management_quran_memorization.field_student_memorization__notes
+msgid "Additional notes about the memorization session"
+msgstr "ملاحظات إضافية حول جلسة الحفظ"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.report_memorization_document
+msgid "Amount (Juz')"
+msgstr "المقدار (جزء)"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,help:management_quran_memorization.field_batch_memorization_wizard__juze_amount
+#: model:ir.model.fields,help:management_quran_memorization.field_student_memorization__juze_amount
+msgid "Amount of Quran memorized in Juz' (parts) with decimal precision"
+msgstr "مقدار القرآن المحفوظ بالأجزاء مع دقة عشرية"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.report_memorization_document
+msgid "Average Grade:"
+msgstr "متوسط الدرجة:"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.report_memorization_document
+msgid "Average Test:"
+msgstr "متوسط الاختبار:"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,help:management_quran_memorization.field_batch_memorization_wizard__ayah_num
+#: model:ir.model.fields,help:management_quran_memorization.field_student_memorization__ayah_num
+msgid "Ayah number where memorization starts"
+msgstr "رقم الآية التي يبدأ عندها الحفظ"
+
+#. module: management_quran_memorization
+#: model:ir.actions.act_window,name:management_quran_memorization.action_batch_memorization_wizard
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_batch_memorization_wizard_form
+msgid "Batch Memorization Registration"
+msgstr "تسجيل الحفظ الجماعي"
+
+#. module: management_quran_memorization
+#: model:ir.model,name:management_quran_memorization.model_batch_memorization_wizard
+msgid "Batch Student Memorization Registration Wizard"
+msgstr "معالج تسجيل حفظ الطلاب الجماعي"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_batch_memorization_wizard_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: management_quran_memorization
+#. odoo-python
+#: code:addons/management_quran_memorization/models/res_persons.py:0
+msgid "Cannot create memorization for student (%s) without office."
+msgstr "لا يمكن إنشاء سجل الحفظ للطالب (%s) بدون مكتب."
+
+#. module: management_quran_memorization
+#. odoo-python
+#: code:addons/management_quran_memorization/models/memorization.py:0
+msgid "Cannot create memorization record for future month %s"
+msgstr "لا يمكن إنشاء سجل الحفظ لشهر مستقبلي %s"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,field_description:management_quran_memorization.field_batch_memorization_wizard__class_id
+#: model:ir.model.fields,field_description:management_quran_memorization.field_student_memorization__class_id
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.report_memorization_document
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_student_memorization_search
+msgid "Class"
+msgstr "الفصل"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_batch_memorization_wizard_form
+msgid "Class Information"
+msgstr "معلومات الفصل"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,help:management_quran_memorization.field_batch_memorization_wizard__class_id
+#: model:ir.model.fields,help:management_quran_memorization.field_student_memorization__class_id
+msgid "Class this record belongs to"
+msgstr "الفصل الذي ينتمي إليه هذا السجل"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.report_memorization_document
+msgid "Code"
+msgstr "الكود"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.res_persons_tree_view_quran_office_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_res_persons_form_memorization_inherit
+msgid "Create Memorization"
+msgstr "إنشاء حفظ"
+
+#. module: management_quran_memorization
+#: model_terms:ir.actions.act_window,help:management_quran_memorization.action_student_memorizations
+msgid "Create a new student memorization record"
+msgstr "إنشاء سجل حفظ جديد للطالب"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,field_description:management_quran_memorization.field_batch_memorization_wizard__create_uid
+#: model:ir.model.fields,field_description:management_quran_memorization.field_student_memorization__create_uid
+msgid "Created by"
+msgstr "تم الإنشاء بواسطة"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,field_description:management_quran_memorization.field_batch_memorization_wizard__create_date
+#: model:ir.model.fields,field_description:management_quran_memorization.field_student_memorization__create_date
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_student_memorization_search
+msgid "Current Month"
+msgstr "الشهر الحالي"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_student_memorization_search
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,help:management_quran_memorization.field_student_memorization__review_amount
+msgid "Details about the review portion"
+msgstr "تفاصيل جزء المراجعة"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,field_description:management_quran_memorization.field_batch_memorization_wizard__display_name
+#: model:ir.model.fields,field_description:management_quran_memorization.field_student_memorization__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_student_memorization_form
+msgid "Enter review details..."
+msgstr "أدخل تفاصيل المراجعة..."
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.report_memorization_document
+msgid "Grade"
+msgstr "الدرجة"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_student_memorization_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,field_description:management_quran_memorization.field_batch_memorization_wizard__id
+#: model:ir.model.fields,field_description:management_quran_memorization.field_student_memorization__id
+msgid "ID"
+msgstr "المعرّف"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_student_memorization_search
+msgid "Last Month"
+msgstr "الشهر الماضي"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,field_description:management_quran_memorization.field_batch_memorization_wizard__write_uid
+#: model:ir.model.fields,field_description:management_quran_memorization.field_student_memorization__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,field_description:management_quran_memorization.field_batch_memorization_wizard__write_date
+#: model:ir.model.fields,field_description:management_quran_memorization.field_student_memorization__write_date
+msgid "Last Updated on"
+msgstr "تاريخ آخر تحديث"
+
+#. module: management_quran_memorization
+#: model_terms:ir.actions.act_window,help:management_quran_memorization.action_student_memorizations
+msgid ""
+"Manage student Quran memorization records.\n"
+"                    Track monthly memorization progress, surahs, ayahs, and review details."
+msgstr "إدارة سجلات حفظ القرآن للطلاب. تتبع تقدم الحفظ الشهري، والسور، والآيات، وتفاصيل المراجعة."
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,help:management_quran_memorization.field_student_memorization__test_grade
+msgid "Maximum grade of the test. The student grade cannot exceed it."
+msgstr "الحد الأقصى لدرجة الاختبار. لا يمكن أن تتجاوز درجة الطالب هذه القيمة."
+
+#. module: management_quran_memorization
+#: model:ir.ui.menu,name:management_quran_memorization.menu_memorization_management_root
+msgid "Memorization"
+msgstr "الحفظ"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,field_description:management_quran_memorization.field_batch_memorization_wizard__juze_amount
+#: model:ir.model.fields,field_description:management_quran_memorization.field_student_memorization__juze_amount
+msgid "Memorization Amount (Juz')"
+msgstr "مقدار الحفظ (جزء)"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,field_description:management_quran_memorization.field_batch_memorization_wizard__ayah_num
+#: model:ir.model.fields,field_description:management_quran_memorization.field_student_memorization__ayah_num
+msgid "Memorization Ayah"
+msgstr "آية الحفظ"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,field_description:management_quran_memorization.field_res_persons__memorization_count
+msgid "Memorization Count"
+msgstr "عدد سجلات الحفظ"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_student_memorization_search
+msgid "Memorization From Baqarah"
+msgstr "الحفظ من البقرة"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_student_memorization_search
+msgid "Memorization From Nas"
+msgstr "الحفظ من الناس"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_batch_memorization_wizard_form
+msgid "Memorization Information"
+msgstr "معلومات الحفظ"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,field_description:management_quran_memorization.field_batch_memorization_wizard__memorization_method
+#: model:ir.model.fields,field_description:management_quran_memorization.field_student_memorization__memorization_method
+msgid "Memorization Method"
+msgstr "طريقة الحفظ"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,field_description:management_quran_memorization.field_batch_memorization_wizard__memorization_month
+#: model:ir.model.fields,field_description:management_quran_memorization.field_student_memorization__memorization_month
+msgid "Memorization Month"
+msgstr "شهر الحفظ"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,field_description:management_quran_memorization.field_student_memorization__name
+msgid "Memorization Number"
+msgstr "رقم الحفظ"
+
+#. module: management_quran_memorization
+#: model:ir.actions.report,name:management_quran_memorization.memorization_report_action
+msgid "Memorization Report"
+msgstr "تقرير الحفظ"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,field_description:management_quran_memorization.field_batch_memorization_wizard__surah_id
+#: model:ir.model.fields,field_description:management_quran_memorization.field_student_memorization__surah_id
+msgid "Memorization Surah"
+msgstr "سورة الحفظ"
+
+#. module: management_quran_memorization
+#. odoo-python
+#: code:addons/management_quran_memorization/models/memorization.py:0
+msgid "Memorization must be unique per student per month per office."
+msgstr "يجب أن يكون الحفظ فريدًا لكل طالب لكل شهر ولكل مكتب."
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,help:management_quran_memorization.field_res_persons__memorization_ids
+msgid "Memorization records for this student (only shown for students)"
+msgstr "سجلات الحفظ لهذا الطالب (يظهر فقط للطلاب)"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,field_description:management_quran_memorization.field_res_persons__memorization_ids
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_res_persons_form_memorization_inherit
+msgid "Memorizations"
+msgstr "سجلات الحفظ"
+
+#. module: management_quran_memorization
+#. odoo-python
+#: code:addons/management_quran_memorization/models/res_persons.py:0
+msgid "Memorizations of %s"
+msgstr "حفظات %s"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_student_memorization_search
+msgid "Method"
+msgstr "الطريقة"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_batch_memorization_wizard_form
+msgid "Method & Amount"
+msgstr "الطريقة والمقدار"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,help:management_quran_memorization.field_batch_memorization_wizard__memorization_method
+#: model:ir.model.fields,help:management_quran_memorization.field_student_memorization__memorization_method
+msgid "Method of Quran memorization"
+msgstr "طريقة حفظ القرآن"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_student_memorization_search
+msgid "Mixing Memorization"
+msgstr "خلط الحفظ"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.report_memorization_document
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_student_memorization_search
+msgid "Month"
+msgstr "الشهر"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,field_description:management_quran_memorization.field_batch_memorization_wizard__month_name
+#: model:ir.model.fields,field_description:management_quran_memorization.field_student_memorization__month_name
+msgid "Month Name"
+msgstr "اسم الشهر"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,help:management_quran_memorization.field_batch_memorization_wizard__memorization_month
+msgid "Month and year for this memorization batch"
+msgstr "الشهر والسنة لدفعة الحفظ هذه"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,help:management_quran_memorization.field_student_memorization__memorization_month
+msgid "Month and year for this memorization record"
+msgstr "الشهر والسنة لسجل الحفظ هذا"
+
+#. module: management_quran_memorization
+#: model:ir.actions.act_window,name:management_quran_memorization.action_student_memorizations
+#: model:ir.ui.menu,name:management_quran_memorization.menu_student_memorizations
+msgid "Monthly Memorizations"
+msgstr "الحفظ الشهري"
+
+#. module: management_quran_memorization
+#. odoo-python
+#: code:addons/management_quran_memorization/models/memorization.py:0
+msgid "New"
+msgstr "جديد"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,field_description:management_quran_memorization.field_student_memorization__notes
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,help:management_quran_memorization.field_res_persons__memorization_count
+msgid ""
+"Number of memorization records for this student (only shown for students)"
+msgstr "عدد سجلات الحفظ لهذا الطالب (يظهر فقط للطلاب)"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,field_description:management_quran_memorization.field_batch_memorization_wizard__office_id
+#: model:ir.model.fields,field_description:management_quran_memorization.field_student_memorization__office_id
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_student_memorization_search
+msgid "Office"
+msgstr "المكتب"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,help:management_quran_memorization.field_batch_memorization_wizard__office_id
+#: model:ir.model.fields,help:management_quran_memorization.field_student_memorization__office_id
+msgid "Office this record belongs to"
+msgstr "المكتب الذي ينتمي إليه هذا السجل"
+
+#. module: management_quran_memorization
+#. odoo-python
+#: code:addons/management_quran_memorization/models/memorization.py:0
+msgid "Please select a student first."
+msgstr "يرجى اختيار طالب أولاً."
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_student_memorization_form
+msgid "Quran Memorization Details"
+msgstr "تفاصيل حفظ القرآن"
+
+#. module: management_quran_memorization
+#: model:ir.model,name:management_quran_memorization.model_res_persons
+msgid "Quran School person Extension"
+msgstr "امتداد شخص مدرسة القرآن"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_batch_memorization_wizard_form
+msgid "Register Memorization"
+msgstr "تسجيل الحفظ"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,field_description:management_quran_memorization.field_batch_memorization_wizard__surah_ids
+#: model:ir.model.fields,field_description:management_quran_memorization.field_student_memorization__surah_ids
+msgid "Required Surahs"
+msgstr "السور المطلوبة"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_student_memorization_form
+msgid "Review & Grade Details"
+msgstr "تفاصيل المراجعة والدرجة"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,field_description:management_quran_memorization.field_student_memorization__review_amount
+msgid "Review Amount"
+msgstr "مقدار المراجعة"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_batch_memorization_wizard_form
+msgid "Start Point"
+msgstr "نقطة البداية"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.report_memorization_document
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_student_memorization_search
+msgid "Student"
+msgstr "الطالب"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.report_memorization_document
+msgid "Student Code"
+msgstr "رمز الطالب"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,field_description:management_quran_memorization.field_student_memorization__student_grade
+msgid "Student Grade"
+msgstr "درجة الطالب"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_student_memorization_form
+msgid "Student Information"
+msgstr "معلومات الطالب"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_student_memorization_form
+msgid "Student Memorization"
+msgstr "حفظ الطالب"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.report_memorization_document
+msgid "Student Memorization Report"
+msgstr "تقرير حفظ الطالب"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_student_memorization_search
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_student_memorization_tree
+msgid "Student Memorizations"
+msgstr "حفظات الطالب"
+
+#. module: management_quran_memorization
+#: model:ir.model,name:management_quran_memorization.model_student_memorization
+msgid "Student Monthly Quran Memorization"
+msgstr "حفظ القرآن الشهري للطالب"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,field_description:management_quran_memorization.field_student_memorization__student_id
+msgid "Student Name"
+msgstr "اسم الطالب"
+
+#. module: management_quran_memorization
+#. odoo-python
+#: code:addons/management_quran_memorization/models/memorization.py:0
+msgid "Student grade (%.1f) cannot be greater than test grade (%d)"
+msgstr "لا يمكن أن تكون درجة الطالب (%.1f) أكبر من درجة الاختبار (%d)"
+
+#. module: management_quran_memorization
+#. odoo-python
+#: code:addons/management_quran_memorization/models/memorization.py:0
+msgid "Student grade cannot be negative"
+msgstr "لا يمكن أن تكون درجة الطالب سالبة"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,help:management_quran_memorization.field_student_memorization__student_grade
+msgid "Student's overall grade for memorization"
+msgstr "الدرجة الإجمالية للطالب في الحفظ"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.report_memorization_document
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_student_memorization_search
+msgid "Surah"
+msgstr "السورة"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,help:management_quran_memorization.field_batch_memorization_wizard__surah_id
+#: model:ir.model.fields,help:management_quran_memorization.field_student_memorization__surah_id
+msgid "Surah where memorization starts"
+msgstr "السورة التي يبدأ عندها الحفظ"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,help:management_quran_memorization.field_batch_memorization_wizard__surah_ids
+#: model:ir.model.fields,help:management_quran_memorization.field_student_memorization__surah_ids
+msgid "Surahs that must be memorized"
+msgstr "السور التي يجب حفظها"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,field_description:management_quran_memorization.field_batch_memorization_wizard__teacher_id
+#: model:ir.model.fields,field_description:management_quran_memorization.field_student_memorization__teacher_id
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.report_memorization_document
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_student_memorization_search
+msgid "Teacher"
+msgstr "المعلم"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,help:management_quran_memorization.field_batch_memorization_wizard__teacher_id
+#: model:ir.model.fields,help:management_quran_memorization.field_student_memorization__teacher_id
+msgid "Teacher or memorizer for this record"
+msgstr "المعلم أو الحافظ لهذا السجل"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.report_memorization_document
+msgid "Test"
+msgstr "الاختبار"
+
+#. module: management_quran_memorization
+#: model:ir.model.fields,field_description:management_quran_memorization.field_student_memorization__test_grade
+msgid "Test Grade"
+msgstr "درجة الاختبار"
+
+#. module: management_quran_memorization
+#. odoo-python
+#: code:addons/management_quran_memorization/models/memorization.py:0
+msgid "Test grade cannot be negative"
+msgstr "لا يمكن أن تكون درجة الاختبار سالبة"
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.view_student_memorization_search
+msgid "This Year"
+msgstr "هذا العام"
+
+#. module: management_quran_memorization
+#. odoo-python
+#: code:addons/management_quran_memorization/models/res_persons.py:0
+msgid "This student already has memorization for month (%s) and office (%s)."
+msgstr "هذا الطالب لديه حافظة بالفعل للشهر (%s) والمكتب (%s)."
+
+#. module: management_quran_memorization
+#. odoo-python
+#: code:addons/management_quran_memorization/wizards/batch_memorization_wizard.py:0
+msgid "This wizard must be opened from the students list."
+msgstr "يجب فتح هذه المعالجة من قائمة الطلاب."
+
+#. module: management_quran_memorization
+#: model_terms:ir.ui.view,arch_db:management_quran_memorization.report_memorization_document
+msgid "Total Records:"
+msgstr "إجمالي السجلات:"

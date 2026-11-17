@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="demo_tag_ramadan" model="quran.competition.tag">
+        <field name="name">مسابقة رمضانية</field>
+    </record>
+
+    <record id="demo_tag_local" model="quran.competition.tag">
+        <field name="name">مسابقة محلية</field>
+    </record>
+
+    <record id="demo_tag_governorate" model="quran.competition.tag">
+        <field name="name">مسابقة على مستوى المحافظة</field>
+    </record>
+
+</odoo>

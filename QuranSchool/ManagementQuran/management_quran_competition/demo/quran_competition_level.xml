@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="demo_level_ramadan26_5" model="quran.competition.level">
+        <field name="name">المستوى الأول - 5 أجزاء</field>
+        <field name="required_juz">5</field>
+        <field name="competition_id" ref="demo_comp_ramadan26"/>
+    </record>
+
+    <record id="demo_level_ramadan26_10" model="quran.competition.level">
+        <field name="name">المستوى الثاني - 10 أجزاء</field>
+        <field name="required_juz">10</field>
+        <field name="competition_id" ref="demo_comp_ramadan26"/>
+    </record>
+
+    <record id="demo_level_ramadan26_15" model="quran.competition.level">
+        <field name="name">المستوى الثالث - 15 جزءًا</field>
+        <field name="required_juz">15</field>
+        <field name="competition_id" ref="demo_comp_ramadan26"/>
+    </record>
+
+    <record id="demo_level_ramadan26_20" model="quran.competition.level">
+        <field name="name">المستوى الرابع - 20 جزءًا</field>
+        <field name="required_juz">20</field>
+        <field name="competition_id" ref="demo_comp_ramadan26"/>
+    </record>
+
+    <record id="demo_level_ramadan26_30" model="quran.competition.level">
+        <field name="name">المستوى الخامس - القرآن كاملًا</field>
+        <field name="required_juz">30</field>
+        <field name="competition_id" ref="demo_comp_ramadan26"/>
+    </record>
+
+    <record id="demo_level_winter26_15" model="quran.competition.level">
+        <field name="name">فئة 15 جزءًا</field>
+        <field name="required_juz">15</field>
+        <field name="competition_id" ref="demo_comp_winter26"/>
+    </record>
+
+    <record id="demo_level_winter26_20" model="quran.competition.level">
+        <field name="name">فئة 20 جزءًا</field>
+        <field name="required_juz">20</field>
+        <field name="competition_id" ref="demo_comp_winter26"/>
+    </record>
+
+    <record id="demo_level_winter26_25" model="quran.competition.level">
+        <field name="name">فئة 25 جزءًا</field>
+        <field name="required_juz">25</field>
+        <field name="competition_id" ref="demo_comp_winter26"/>
+    </record>
+
+    <record id="demo_level_winter26_30" model="quran.competition.level">
+        <field name="name">فئة القرآن كاملًا</field>
+        <field name="required_juz">30</field>
+        <field name="competition_id" ref="demo_comp_winter26"/>
+    </record>
+
+</odoo>

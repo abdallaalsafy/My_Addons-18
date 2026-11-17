@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- The one and only dashboard action. Integration addons never add another. -->
+    <record id="action_unified_dashboard" model="ir.actions.client">
+        <field name="name">Dashboard</field>
+        <field name="tag">unified_dashboard.main</field>
+    </record>
+
+    <!-- <menuitem id="menu_unified_dashboard"
+              name="Dashboard"
+              action="action_unified_dashboard"
+              sequence="0"
+              groups="base.group_user"
+              web_icon="unified_dashboard_core,static/description/icon.png"/> -->
+</odoo>

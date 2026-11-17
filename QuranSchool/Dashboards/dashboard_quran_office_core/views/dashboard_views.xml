@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_dashboard_quran_office"
+              name="Dashboard"
+              parent="management_quran_office_core.menu_quran_office_core_root"
+              action="unified_dashboard_core.action_unified_dashboard"
+              sequence="0"/>
+</odoo>

@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="demo_mem_yusuf_202608" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_yusuf"/>
+        <field name="memorization_month">2026-08-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_16"/>
+        <field name="ayah_num">86</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">10</field>
+        <field name="review_amount">مراجعة جزء كامل</field>
+    </record>
+
+    <record id="demo_mem_yusuf_202609" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_yusuf"/>
+        <field name="memorization_month">2026-09-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_15"/>
+        <field name="ayah_num">99</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">10</field>
+        <field name="review_amount">مراجعة الخمسة أجزاء الأخيرة</field>
+    </record>
+
+    <record id="demo_mem_yusuf_202610" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_yusuf"/>
+        <field name="memorization_month">2026-10-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_13"/>
+        <field name="ayah_num">25</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">7.5</field>
+        <field name="review_amount">مراجعة جزء كامل</field>
+    </record>
+
+    <record id="demo_mem_maryam_202608" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_maryam"/>
+        <field name="memorization_month">2026-08-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="memorization_method">from_baqarah</field>
+        <field name="surah_id" ref="quran_utils.surah_3"/>
+        <field name="ayah_num">92</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">7.5</field>
+        <field name="review_amount">مراجعة آخر جزأين</field>
+    </record>
+
+    <record id="demo_mem_maryam_202609" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_maryam"/>
+        <field name="memorization_month">2026-09-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="memorization_method">from_baqarah</field>
+        <field name="surah_id" ref="quran_utils.surah_3"/>
+        <field name="ayah_num">165</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">10</field>
+        <field name="review_amount">مراجعة ما تم حفظه خلال الشهر</field>
+    </record>
+
+    <record id="demo_mem_maryam_202610" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_maryam"/>
+        <field name="memorization_month">2026-10-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="memorization_method">from_baqarah</field>
+        <field name="surah_id" ref="quran_utils.surah_4"/>
+        <field name="ayah_num">23</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">7.5</field>
+        <field name="review_amount">مراجعة آخر جزأين</field>
+    </record>
+
+    <record id="demo_mem_omar_202608" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_omar"/>
+        <field name="memorization_month">2026-08-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_omar"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_osama"/>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_8"/>
+        <field name="ayah_num">35</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">6.5</field>
+        <field name="review_amount">مراجعة جزء كامل</field>
+    </record>
+
+    <record id="demo_mem_omar_202609" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_omar"/>
+        <field name="memorization_month">2026-09-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_omar"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_osama"/>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_7"/>
+        <field name="ayah_num">43</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">10</field>
+        <field name="review_amount">مراجعة الخمسة أجزاء الأخيرة</field>
+    </record>
+
+    <record id="demo_mem_omar_202610" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_omar"/>
+        <field name="memorization_month">2026-10-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_omar"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_osama"/>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_7"/>
+        <field name="ayah_num">119</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">6.5</field>
+        <field name="review_amount">مراجعة آخر جزأين</field>
+    </record>
+
+    <record id="demo_mem_adam_202608" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_adam"/>
+        <field name="memorization_month">2026-08-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_khaled"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_yasser"/>
+        <field name="memorization_method">from_baqarah</field>
+        <field name="surah_id" ref="quran_utils.surah_5"/>
+        <field name="ayah_num">23</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">6.5</field>
+        <field name="review_amount">مراجعة آخر جزأين</field>
+    </record>
+
+    <record id="demo_mem_adam_202609" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_adam"/>
+        <field name="memorization_month">2026-09-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_khaled"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_yasser"/>
+        <field name="memorization_method">from_baqarah</field>
+        <field name="surah_id" ref="quran_utils.surah_5"/>
+        <field name="ayah_num">81</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">8</field>
+        <field name="review_amount">مراجعة الخمسة أجزاء الأخيرة</field>
+    </record>
+
+    <record id="demo_mem_adam_202610" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_adam"/>
+        <field name="memorization_month">2026-10-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_khaled"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_yasser"/>
+        <field name="memorization_method">from_baqarah</field>
+        <field name="surah_id" ref="quran_utils.surah_6"/>
+        <field name="ayah_num">27</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">6.5</field>
+        <field name="review_amount">مراجعة جزء كامل</field>
+    </record>
+
+    <record id="demo_mem_hamza_202608" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_hamza"/>
+        <field name="memorization_month">2026-08-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_29"/>
+        <field name="ayah_num">24</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">9</field>
+        <field name="review_amount">مراجعة جزء كامل</field>
+    </record>
+
+    <record id="demo_mem_hamza_202609" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_hamza"/>
+        <field name="memorization_month">2026-09-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_28"/>
+        <field name="ayah_num">38</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">8</field>
+        <field name="review_amount">مراجعة الخمسة أجزاء الأخيرة</field>
+    </record>
+
+    <record id="demo_mem_hamza_202610" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_hamza"/>
+        <field name="memorization_month">2026-10-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_27"/>
+        <field name="ayah_num">38</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">8.5</field>
+        <field name="review_amount">مراجعة جزء كامل</field>
+    </record>
+
+    <record id="demo_mem_salma_202608" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_salma"/>
+        <field name="memorization_month">2026-08-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="memorization_method">from_baqarah</field>
+        <field name="surah_id" ref="quran_utils.surah_2"/>
+        <field name="ayah_num">252</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">6.5</field>
+        <field name="review_amount">مراجعة آخر جزأين</field>
+    </record>
+
+    <record id="demo_mem_salma_202609" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_salma"/>
+        <field name="memorization_month">2026-09-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="memorization_method">from_baqarah</field>
+        <field name="surah_id" ref="quran_utils.surah_3"/>
+        <field name="ayah_num">15</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">10</field>
+        <field name="review_amount">مراجعة ما تم حفظه خلال الشهر</field>
+    </record>
+
+    <record id="demo_mem_salma_202610" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_salma"/>
+        <field name="memorization_month">2026-10-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="memorization_method">from_baqarah</field>
+        <field name="surah_id" ref="quran_utils.surah_3"/>
+        <field name="ayah_num">92</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">9.5</field>
+        <field name="review_amount">مراجعة آخر جزأين</field>
+    </record>
+
+    <record id="demo_mem_mostafa_202608" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_mostafa"/>
+        <field name="memorization_month">2026-08-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_omar"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_osama"/>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_3"/>
+        <field name="ayah_num">108</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">8.5</field>
+        <field name="review_amount">مراجعة ما تم حفظه خلال الشهر</field>
+    </record>
+
+    <record id="demo_mem_mostafa_202609" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_mostafa"/>
+        <field name="memorization_month">2026-09-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_omar"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_osama"/>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_3"/>
+        <field name="ayah_num">178</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">8</field>
+        <field name="review_amount">مراجعة ما تم حفظه خلال الشهر</field>
+    </record>
+
+    <record id="demo_mem_mostafa_202610" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_mostafa"/>
+        <field name="memorization_month">2026-10-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_omar"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_osama"/>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_2"/>
+        <field name="ayah_num">34</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">6.5</field>
+        <field name="review_amount">مراجعة آخر جزأين</field>
+    </record>
+
+    <record id="demo_mem_nour_202608" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_nour"/>
+        <field name="memorization_month">2026-08-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="memorization_method">from_baqarah</field>
+        <field name="surah_id" ref="quran_utils.surah_7"/>
+        <field name="ayah_num">87</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">7</field>
+        <field name="review_amount">مراجعة جزء كامل</field>
+    </record>
+
+    <record id="demo_mem_nour_202609" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_nour"/>
+        <field name="memorization_month">2026-09-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="memorization_method">from_baqarah</field>
+        <field name="surah_id" ref="quran_utils.surah_7"/>
+        <field name="ayah_num">163</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">7</field>
+        <field name="review_amount">مراجعة ما تم حفظه خلال الشهر</field>
+    </record>
+
+    <record id="demo_mem_nour_202610" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_nour"/>
+        <field name="memorization_month">2026-10-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="memorization_method">from_baqarah</field>
+        <field name="surah_id" ref="quran_utils.surah_8"/>
+        <field name="ayah_num">40</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">9.5</field>
+        <field name="review_amount">مراجعة آخر جزأين</field>
+    </record>
+
+    <record id="demo_mem_ziad_202608" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_ziad"/>
+        <field name="memorization_month">2026-08-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_khaled"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_yasser"/>
+        <field name="memorization_method">from_baqarah</field>
+        <field name="surah_id" ref="quran_utils.surah_4"/>
+        <field name="ayah_num">86</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">6.5</field>
+        <field name="review_amount">مراجعة آخر جزأين</field>
+    </record>
+
+    <record id="demo_mem_ziad_202609" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_ziad"/>
+        <field name="memorization_month">2026-09-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_khaled"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_yasser"/>
+        <field name="memorization_method">from_baqarah</field>
+        <field name="surah_id" ref="quran_utils.surah_4"/>
+        <field name="ayah_num">147</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">8</field>
+        <field name="review_amount">مراجعة الخمسة أجزاء الأخيرة</field>
+    </record>
+
+    <record id="demo_mem_ziad_202610" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_ziad"/>
+        <field name="memorization_month">2026-10-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_khaled"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_yasser"/>
+        <field name="memorization_method">from_baqarah</field>
+        <field name="surah_id" ref="quran_utils.surah_5"/>
+        <field name="ayah_num">23</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">6.5</field>
+        <field name="review_amount">مراجعة جزء كامل</field>
+    </record>
+
+    <record id="demo_mem_laila_202608" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_laila"/>
+        <field name="memorization_month">2026-08-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="memorization_method">mixed</field>
+        <field name="surah_ids" eval="[(6, 0, [ref('quran_utils.surah_112'), ref('quran_utils.surah_113'), ref('quran_utils.surah_114')])]"/>
+        <field name="test_grade">10</field>
+        <field name="student_grade">9.5</field>
+        <field name="review_amount">مراجعة جزء كامل</field>
+    </record>
+
+    <record id="demo_mem_laila_202609" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_laila"/>
+        <field name="memorization_month">2026-09-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="memorization_method">mixed</field>
+        <field name="surah_ids" eval="[(6, 0, [ref('quran_utils.surah_109'), ref('quran_utils.surah_110'), ref('quran_utils.surah_111'), ref('quran_utils.surah_112'), ref('quran_utils.surah_113'), ref('quran_utils.surah_114')])]"/>
+        <field name="test_grade">10</field>
+        <field name="student_grade">9.5</field>
+        <field name="review_amount">مراجعة آخر جزأين</field>
+    </record>
+
+    <record id="demo_mem_laila_202610" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_laila"/>
+        <field name="memorization_month">2026-10-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="memorization_method">mixed</field>
+        <field name="surah_ids" eval="[(6, 0, [ref('quran_utils.surah_105'), ref('quran_utils.surah_106'), ref('quran_utils.surah_107'), ref('quran_utils.surah_108'), ref('quran_utils.surah_109'), ref('quran_utils.surah_110'), ref('quran_utils.surah_111'), ref('quran_utils.surah_112'), ref('quran_utils.surah_113'), ref('quran_utils.surah_114')])]"/>
+        <field name="test_grade">10</field>
+        <field name="student_grade">8</field>
+        <field name="review_amount">مراجعة ما تم حفظه خلال الشهر</field>
+    </record>
+
+    <record id="demo_mem_abdelrahman_202608" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_abdelrahman"/>
+        <field name="memorization_month">2026-08-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_39"/>
+        <field name="ayah_num">44</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">9</field>
+        <field name="review_amount">مراجعة آخر جزأين</field>
+    </record>
+
+    <record id="demo_mem_abdelrahman_202609" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_abdelrahman"/>
+        <field name="memorization_month">2026-09-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_37"/>
+        <field name="ayah_num">29</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">8.5</field>
+        <field name="review_amount">مراجعة ما تم حفظه خلال الشهر</field>
+    </record>
+
+    <record id="demo_mem_abdelrahman_202610" model="student.memorization">
+        <field name="student_id" ref="management_quran_office_core.demo_student_abdelrahman"/>
+        <field name="memorization_month">2026-10-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_36"/>
+        <field name="ayah_num">56</field>
+        <field name="test_grade">10</field>
+        <field name="student_grade">6.5</field>
+        <field name="review_amount">مراجعة جزء كامل</field>
+    </record>
+
+</odoo>

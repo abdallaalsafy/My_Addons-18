@@ -1,0 +1,127 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* dashboard_quran_competition
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20260423\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-17 06:34+0000\n"
+"PO-Revision-Date: 2026-11-17 06:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: dashboard_quran_competition
+#. odoo-python
+#: code:addons/dashboard_quran_competition/models/dashboard_quran_competition.py:0
+msgid "Average score %s"
+msgstr "متوسط النتيجة %s"
+
+#. module: dashboard_quran_competition
+#. odoo-python
+#: code:addons/dashboard_quran_competition/models/dashboard_quran_competition.py:0
+msgid "Competition"
+msgstr "المسابقة"
+
+#. module: dashboard_quran_competition
+#. odoo-javascript
+#. odoo-python
+#: code:addons/dashboard_quran_competition/models/dashboard_quran_competition.py:0
+#: code:addons/dashboard_quran_competition/static/src/js/widgets.js:0
+msgid "Competitions"
+msgstr "المسابقات"
+
+#. module: dashboard_quran_competition
+#. odoo-javascript
+#: code:addons/dashboard_quran_competition/static/src/js/widgets.js:0
+msgid "Competitions dated within the period, their participants and prizes."
+msgstr "المسابقات المقامة خلال الفترة، وأصحابها والمكافآت المعطاة."
+
+#. module: dashboard_quran_competition
+#. odoo-javascript
+#: code:addons/dashboard_quran_competition/static/src/js/widgets.js:0
+msgid "Competitions overview"
+msgstr "نظرة عامة على المسابقات"
+
+#. module: dashboard_quran_competition
+#. odoo-python
+#: code:addons/dashboard_quran_competition/models/dashboard_quran_competition.py:0
+msgid "Confirmed participants"
+msgstr "المشاركون المؤكدون"
+
+#. module: dashboard_quran_competition
+#: model:ir.model,name:dashboard_quran_competition.model_dashboard_quran_competition
+msgid "Dashboard data: Quran Competition"
+msgstr "بيانات لوحة التحكم: مسابقة القرآن"
+
+#. module: dashboard_quran_competition
+#. odoo-python
+#: code:addons/dashboard_quran_competition/models/dashboard_quran_competition.py:0
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: dashboard_quran_competition
+#. odoo-python
+#: code:addons/dashboard_quran_competition/models/dashboard_quran_competition.py:0
+msgid "Disqualified"
+msgstr "مُستبعد"
+
+#. module: dashboard_quran_competition
+#. odoo-javascript
+#: code:addons/dashboard_quran_competition/static/src/js/widgets.js:0
+msgid ""
+"Evaluated participants by result (disqualified and withdrawn excluded)."
+msgstr ""
+"المشاركون المُقيَّمون حسب النتيجة (بدون المستبعدين والمنسحبين)."
+
+#. module: dashboard_quran_competition
+#. odoo-python
+#: code:addons/dashboard_quran_competition/models/dashboard_quran_competition.py:0
+msgid "Monetary prizes"
+msgstr "المكافآت النقدية"
+
+#. module: dashboard_quran_competition
+#. odoo-javascript
+#: code:addons/dashboard_quran_competition/static/src/js/widgets.js:0
+msgid "Next open competitions from today."
+msgstr "المسابقات المفتوحة القادمة من اليوم."
+
+#. module: dashboard_quran_competition
+#. odoo-python
+#: code:addons/dashboard_quran_competition/models/dashboard_quran_competition.py:0
+msgid "No competitions in the selected period."
+msgstr "لا توجد مسابقات في الفترة المحددة."
+
+#. module: dashboard_quran_competition
+#. odoo-python
+#: code:addons/dashboard_quran_competition/models/dashboard_quran_competition.py:0
+msgid "No evaluated participants in the selected period."
+msgstr "لا يوجد مشاركون تم تقييمهم في الفترة المحددة."
+
+#. module: dashboard_quran_competition
+#. odoo-python
+#: code:addons/dashboard_quran_competition/models/dashboard_quran_competition.py:0
+msgid "No upcoming open competitions."
+msgstr "لا توجد مسابقات مفتوحة قادمة."
+
+#. module: dashboard_quran_competition
+#. odoo-python
+#: code:addons/dashboard_quran_competition/models/dashboard_quran_competition.py:0
+msgid "Participants"
+msgstr "المشاركون"
+
+#. module: dashboard_quran_competition
+#. odoo-javascript
+#: code:addons/dashboard_quran_competition/static/src/js/widgets.js:0
+msgid "Results distribution"
+msgstr "توزيع النتائج"
+
+#. module: dashboard_quran_competition
+#. odoo-javascript
+#: code:addons/dashboard_quran_competition/static/src/js/widgets.js:0
+msgid "Upcoming competitions"
+msgstr "المسابقات القادمة"

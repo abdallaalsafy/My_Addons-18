@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="demo_result_ramadan26_superior" model="quran.competition.participant.result">
+        <field name="name">ممتاز</field>
+        <field name="result_status">superior</field>
+        <field name="percentage">90</field>
+        <field name="competition_id" ref="demo_comp_ramadan26"/>
+    </record>
+
+    <record id="demo_result_ramadan26_successful" model="quran.competition.participant.result">
+        <field name="name">جيد جدًا</field>
+        <field name="result_status">successful</field>
+        <field name="percentage">75</field>
+        <field name="competition_id" ref="demo_comp_ramadan26"/>
+    </record>
+
+    <record id="demo_result_ramadan26_acceptable" model="quran.competition.participant.result">
+        <field name="name">مقبول</field>
+        <field name="result_status">acceptable</field>
+        <field name="percentage">60</field>
+        <field name="competition_id" ref="demo_comp_ramadan26"/>
+    </record>
+
+    <record id="demo_result_ramadan26_precipitate" model="quran.competition.participant.result">
+        <field name="name">يحتاج مراجعة</field>
+        <field name="result_status">precipitate</field>
+        <field name="percentage">0</field>
+        <field name="competition_id" ref="demo_comp_ramadan26"/>
+    </record>
+
+    <record id="demo_result_winter26_superior" model="quran.competition.participant.result">
+        <field name="name">ممتاز</field>
+        <field name="result_status">superior</field>
+        <field name="percentage">95</field>
+        <field name="competition_id" ref="demo_comp_winter26"/>
+    </record>
+
+    <record id="demo_result_winter26_successful" model="quran.competition.participant.result">
+        <field name="name">جيد جدًا</field>
+        <field name="result_status">successful</field>
+        <field name="percentage">85</field>
+        <field name="competition_id" ref="demo_comp_winter26"/>
+    </record>
+
+    <record id="demo_result_winter26_acceptable" model="quran.competition.participant.result">
+        <field name="name">مقبول</field>
+        <field name="result_status">acceptable</field>
+        <field name="percentage">70</field>
+        <field name="competition_id" ref="demo_comp_winter26"/>
+    </record>
+
+    <record id="demo_result_winter26_precipitate" model="quran.competition.participant.result">
+        <field name="name">يحتاج مراجعة</field>
+        <field name="result_status">precipitate</field>
+        <field name="percentage">0</field>
+        <field name="competition_id" ref="demo_comp_winter26"/>
+    </record>
+
+</odoo>

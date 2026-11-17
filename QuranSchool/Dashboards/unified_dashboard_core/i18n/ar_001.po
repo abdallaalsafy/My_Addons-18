@@ -1,0 +1,200 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* unified_dashboard_core
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20260423\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-17 06:25+0000\n"
+"PO-Revision-Date: 2026-11-17 06:25+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: unified_dashboard_core
+#. odoo-javascript
+#: code:addons/unified_dashboard_core/static/src/js/dashboard.js:0
+msgid "Custom range"
+msgstr "نطاق مخصص"
+
+#. module: unified_dashboard_core
+#. odoo-javascript
+#: code:addons/unified_dashboard_core/static/src/xml/dashboard.xml:0
+#: model:ir.actions.client,name:unified_dashboard_core.action_unified_dashboard
+msgid "Dashboard"
+msgstr "لوحة التحكم"
+
+#. module: unified_dashboard_core
+#. odoo-javascript
+#: code:addons/unified_dashboard_core/static/src/xml/dashboard.xml:0
+msgid "From"
+msgstr "من"
+
+#. module: unified_dashboard_core
+#. odoo-python
+#: code:addons/unified_dashboard_core/models/unified_dashboard_base.py:0
+msgid "Invalid dashboard widget."
+msgstr "ودجة لوحة التحكم غير صالحة."
+
+#. module: unified_dashboard_core
+#. odoo-python
+#: code:addons/unified_dashboard_core/models/unified_dashboard_base.py:0
+msgid "Invalid period."
+msgstr "فترة غير صالحة."
+
+#. module: unified_dashboard_core
+#. odoo-javascript
+#: code:addons/unified_dashboard_core/static/src/js/dashboard.js:0
+msgid "Last 3 months"
+msgstr "آخر 3 أشهر"
+
+#. module: unified_dashboard_core
+#. odoo-javascript
+#: code:addons/unified_dashboard_core/static/src/js/dashboard.js:0
+msgid "Last month"
+msgstr "الشهر الماضي"
+
+#. module: unified_dashboard_core
+#. odoo-javascript
+#: code:addons/unified_dashboard_core/static/src/xml/widget_card.xml:0
+msgid "Loading…"
+msgstr "جارٍ التحميل..."
+
+#. module: unified_dashboard_core
+#. odoo-javascript
+#: code:addons/unified_dashboard_core/static/src/xml/dashboard.xml:0
+msgid ""
+"No dashboard widgets are installed yet. Install a dashboard integration "
+"addon to add content here."
+msgstr ""
+"لم يتم تثبيت أي ودجات لواجهة لوحة التحكم بعد. قم بتثبيت إضافة تكامل لوحة "
+"التحكم لإضافة المحتوى هنا."
+
+#. module: unified_dashboard_core
+#. odoo-javascript
+#: code:addons/unified_dashboard_core/static/src/xml/widget_card.xml:0
+msgid "Not affected by the period"
+msgstr "غير متأثر بالفترة"
+
+#. module: unified_dashboard_core
+#. odoo-javascript
+#: code:addons/unified_dashboard_core/static/src/js/widget_registry.js:0
+msgid "Other"
+msgstr "أخرى"
+
+#. module: unified_dashboard_core
+#. odoo-javascript
+#: code:addons/unified_dashboard_core/static/src/xml/dashboard.xml:0
+msgid "Period"
+msgstr "الفترة"
+
+#. module: unified_dashboard_core
+#. odoo-python
+#: code:addons/unified_dashboard_core/models/unified_dashboard_base.py:0
+msgid "Please choose both dates of the custom period."
+msgstr "يرجى اختيار تاريخي الفترة المخصصة."
+
+#. module: unified_dashboard_core
+#. odoo-javascript
+#: code:addons/unified_dashboard_core/static/src/xml/dashboard.xml:0
+msgid "Refresh"
+msgstr "تحديث"
+
+#. module: unified_dashboard_core
+#. odoo-javascript
+#: code:addons/unified_dashboard_core/static/src/xml/dashboard.xml:0
+msgid "Reload all widgets"
+msgstr "إعادة تحميل جميع الوحدات"
+
+#. module: unified_dashboard_core
+#. odoo-javascript
+#: code:addons/unified_dashboard_core/static/src/xml/widget_card.xml:0
+msgid "Retry"
+msgstr "إعادة المحاولة"
+
+#. module: unified_dashboard_core
+#. odoo-python
+#: code:addons/unified_dashboard_core/models/unified_dashboard_base.py:0
+msgid "The custom period is too long."
+msgstr "الفترة المخصصة طويلة جدًا."
+
+#. module: unified_dashboard_core
+#. odoo-javascript
+#. odoo-python
+#: code:addons/unified_dashboard_core/models/unified_dashboard_base.py:0
+#: code:addons/unified_dashboard_core/static/src/js/dashboard.js:0
+msgid "The start date must not be after the end date."
+msgstr "يجب ألا يكون تاريخ البداية بعد تاريخ النهاية."
+
+#. module: unified_dashboard_core
+#. odoo-javascript
+#: code:addons/unified_dashboard_core/static/src/js/dashboard.js:0
+msgid "This month"
+msgstr "هذا الشهر"
+
+#. module: unified_dashboard_core
+#. odoo-python
+#: code:addons/unified_dashboard_core/models/unified_dashboard_base.py:0
+msgid "This widget could not be computed. Please check the server log."
+msgstr "تعذر حساب هذه الودجة. يرجى التحقق من سجل الخادم."
+
+#. module: unified_dashboard_core
+#. odoo-javascript
+#: code:addons/unified_dashboard_core/static/src/xml/widget_card.xml:0
+msgid "This widget could not be loaded."
+msgstr "تعذر تحميل هذه الودجة."
+
+#. module: unified_dashboard_core
+#. odoo-javascript
+#: code:addons/unified_dashboard_core/static/src/js/dashboard.js:0
+msgid "This year"
+msgstr "هذا العام"
+
+#. module: unified_dashboard_core
+#. odoo-javascript
+#: code:addons/unified_dashboard_core/static/src/xml/dashboard.xml:0
+msgid "To"
+msgstr "إلى"
+
+#. module: unified_dashboard_core
+#: model:ir.model,name:unified_dashboard_core.model_unified_dashboard_base
+msgid "Unified Dashboard Base (widget data contract)"
+msgstr "قاعدة لوحة التحكم الموحدة (عقد بيانات الودجات)"
+
+#. module: unified_dashboard_core
+#. odoo-python
+#: code:addons/unified_dashboard_core/models/unified_dashboard_base.py:0
+msgid "Unknown dashboard widget."
+msgstr "ودجة لوحة التحكم غير معروفة."
+
+#. module: unified_dashboard_core
+#. odoo-python
+#: code:addons/unified_dashboard_core/models/unified_dashboard_base.py:0
+msgid "You are not allowed to see this widget."
+msgstr "غير مسموح لك برؤية هذه الودجة."
+
+#. module: unified_dashboard_core
+#. odoo-javascript
+#: code:addons/unified_dashboard_core/static/src/xml/dashboard.xml:0
+msgid ""
+"You do not have access to any of the dashboard widgets. Please contact your "
+"administrator."
+msgstr ""
+"ليس لديك صلاحية الوصول إلى أي من ودجات لوحة التحكم. يرجى التواصل مع "
+"المشرف."
+
+#. module: unified_dashboard_core
+#. odoo-javascript
+#: code:addons/unified_dashboard_core/static/src/xml/widget_card.xml:0
+msgid "You do not have access to this widget."
+msgstr "ليس لديك صلاحية الوصول إلى هذه الودجة."
+
+#. module: unified_dashboard_core
+#. odoo-javascript
+#: code:addons/unified_dashboard_core/static/src/xml/dashboard.xml:0
+msgid "widget(s) are hidden because you do not have access to them."
+msgstr "تم إخفاء الوحدات لأنك لا تملك صلاحية الوصول إليها."

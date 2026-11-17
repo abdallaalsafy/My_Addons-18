@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- Father -->
+    <record id="demo_father_ahmed" model="res.persons">
+        <field name="first_name">أحمد</field>
+        <field name="middle_name">محمود</field>
+        <field name="third_name">السيد</field>
+        <field name="last_name">الجندي</field>
+        <field name="id_number">28204112210117</field>
+        <field name="gender">m</field>
+        <field name="parent_role">father</field>
+        <field name="function">مدرس</field>
+        <field name="mobile">01012345601</field>
+        <field name="area_id" ref="demo_area_beni_suef"/>
+    </record>
+
+    <!-- Father -->
+    <record id="demo_father_mahmoud" model="res.persons">
+        <field name="first_name">محمود</field>
+        <field name="middle_name">عبد الرحمن</field>
+        <field name="third_name">حسن</field>
+        <field name="last_name">المصري</field>
+        <field name="id_number">27909022210217</field>
+        <field name="gender">m</field>
+        <field name="parent_role">father</field>
+        <field name="function">مهندس زراعي</field>
+        <field name="mobile">01112345602</field>
+        <field name="area_id" ref="demo_area_wasta"/>
+    </record>
+
+    <!-- Father -->
+    <record id="demo_father_hassan" model="res.persons">
+        <field name="first_name">حسن</field>
+        <field name="middle_name">إبراهيم</field>
+        <field name="third_name">علي</field>
+        <field name="last_name">الشرقاوي</field>
+        <field name="id_number">28501232210317</field>
+        <field name="gender">m</field>
+        <field name="parent_role">father</field>
+        <field name="function">محاسب</field>
+        <field name="mobile">01212345603</field>
+        <field name="area_id" ref="demo_area_beni_suef"/>
+    </record>
+
+    <!-- Father -->
+    <record id="demo_father_ibrahim" model="res.persons">
+        <field name="first_name">إبراهيم</field>
+        <field name="middle_name">خالد</field>
+        <field name="third_name">فتحي</field>
+        <field name="last_name">النجار</field>
+        <field name="id_number">28106172210417</field>
+        <field name="gender">m</field>
+        <field name="parent_role">father</field>
+        <field name="function">نجار</field>
+        <field name="mobile">01512345604</field>
+        <field name="area_id" ref="demo_area_nasser"/>
+    </record>
+
+    <!-- Father -->
+    <record id="demo_father_khaled" model="res.persons">
+        <field name="first_name">خالد</field>
+        <field name="middle_name">سعيد</field>
+        <field name="third_name">محمد</field>
+        <field name="last_name">الصاوي</field>
+        <field name="id_number">28712052210517</field>
+        <field name="gender">m</field>
+        <field name="parent_role">father</field>
+        <field name="function">موظف حكومي</field>
+        <field name="mobile">01012345605</field>
+        <field name="area_id" ref="demo_area_wasta"/>
+    </record>
+
+    <!-- Mother -->
+    <record id="demo_mother_m_ahmed" model="res.persons">
+        <field name="first_name">فاطمة</field>
+        <field name="middle_name">حسين</field>
+        <field name="third_name">علي</field>
+        <field name="last_name">عبد الغني</field>
+        <field name="id_number">28505202220127</field>
+        <field name="gender">f</field>
+        <field name="parent_role">mother</field>
+        <field name="mobile">01012345611</field>
+        <field name="area_id" ref="demo_area_beni_suef"/>
+    </record>
+
+    <!-- Mother -->
+    <record id="demo_mother_m_mahmoud" model="res.persons">
+        <field name="first_name">خديجة</field>
+        <field name="middle_name">مصطفى</field>
+        <field name="third_name">عوض</field>
+        <field name="last_name">سلامة</field>
+        <field name="id_number">28303082220227</field>
+        <field name="gender">f</field>
+        <field name="parent_role">mother</field>
+        <field name="mobile">01112345612</field>
+        <field name="area_id" ref="demo_area_wasta"/>
+    </record>
+
+    <!-- Mother -->
+    <record id="demo_mother_m_hassan" model="res.persons">
+        <field name="first_name">زينب</field>
+        <field name="middle_name">محمد</field>
+        <field name="third_name">إسماعيل</field>
+        <field name="last_name">الدسوقي</field>
+        <field name="id_number">28808142220327</field>
+        <field name="gender">f</field>
+        <field name="parent_role">mother</field>
+        <field name="mobile">01212345613</field>
+        <field name="area_id" ref="demo_area_beni_suef"/>
+    </record>
+
+    <!-- Mother -->
+    <record id="demo_mother_m_ibrahim" model="res.persons">
+        <field name="first_name">عائشة</field>
+        <field name="middle_name">أحمد</field>
+        <field name="third_name">رمضان</field>
+        <field name="last_name">البحيري</field>
+        <field name="id_number">28410302220427</field>
+        <field name="gender">f</field>
+        <field name="parent_role">mother</field>
+        <field name="mobile">01512345614</field>
+        <field name="area_id" ref="demo_area_nasser"/>
+    </record>
+
+    <!-- Mother -->
+    <record id="demo_mother_m_khaled" model="res.persons">
+        <field name="first_name">أسماء</field>
+        <field name="middle_name">عبد الله</field>
+        <field name="third_name">فؤاد</field>
+        <field name="last_name">الغريب</field>
+        <field name="id_number">29002272220527</field>
+        <field name="gender">f</field>
+        <field name="parent_role">mother</field>
+        <field name="mobile">01012345615</field>
+        <field name="area_id" ref="demo_area_wasta"/>
+    </record>
+
+    <!-- Mother -->
+    <record id="demo_mother_m_orphan" model="res.persons">
+        <field name="first_name">سعاد</field>
+        <field name="middle_name">عبد الحميد</field>
+        <field name="third_name">يوسف</field>
+        <field name="last_name">الحداد</field>
+        <field name="id_number">28607092220627</field>
+        <field name="gender">f</field>
+        <field name="parent_role">mother</field>
+        <field name="mobile">01112345616</field>
+        <field name="area_id" ref="demo_area_beni_suef"/>
+    </record>
+
+    <!-- Teacher -->
+    <record id="demo_teacher_t_abdallah" model="res.persons">
+        <field name="first_name">عبد الله</field>
+        <field name="middle_name">محمد</field>
+        <field name="third_name">إسماعيل</field>
+        <field name="last_name">الفقي</field>
+        <field name="id_number">28403122230117</field>
+        <field name="gender">m</field>
+        <field name="is_teacher">True</field>
+        <field name="teacher_salary">3500</field>
+        <field name="qualification">ليسانس دراسات إسلامية - جامعة الأزهر</field>
+        <field name="mobile">01012345621</field>
+        <field name="area_id" ref="demo_area_beni_suef"/>
+    </record>
+
+    <!-- Teacher -->
+    <record id="demo_teacher_t_osama" model="res.persons">
+        <field name="first_name">أسامة</field>
+        <field name="middle_name">رمضان</field>
+        <field name="third_name">عطية</field>
+        <field name="last_name">سليمان</field>
+        <field name="id_number">28807252230217</field>
+        <field name="gender">m</field>
+        <field name="is_teacher">True</field>
+        <field name="teacher_salary">3500</field>
+        <field name="qualification">بكالوريوس تربية - قسم الدراسات الإسلامية</field>
+        <field name="mobile">01112345622</field>
+        <field name="area_id" ref="demo_area_wasta"/>
+    </record>
+
+    <!-- Teacher -->
+    <record id="demo_teacher_t_heba" model="res.persons">
+        <field name="first_name">هبة</field>
+        <field name="middle_name">محمد</field>
+        <field name="third_name">عوض</field>
+        <field name="last_name">حجازي</field>
+        <field name="id_number">29211042230327</field>
+        <field name="gender">f</field>
+        <field name="is_teacher">True</field>
+        <field name="teacher_salary">3200</field>
+        <field name="qualification">ليسانس قراءات - كلية القرآن الكريم</field>
+        <field name="mobile">01212345623</field>
+        <field name="area_id" ref="demo_area_beni_suef"/>
+    </record>
+
+    <!-- Teacher -->
+    <record id="demo_teacher_t_yasser" model="res.persons">
+        <field name="first_name">ياسر</field>
+        <field name="middle_name">فتحي</field>
+        <field name="third_name">عبد العاطي</field>
+        <field name="last_name">زكي</field>
+        <field name="id_number">29001192230417</field>
+        <field name="gender">m</field>
+        <field name="is_teacher">True</field>
+        <field name="teacher_salary">3000</field>
+        <field name="qualification">إجازة في رواية حفص عن عاصم</field>
+        <field name="mobile">01512345624</field>
+        <field name="area_id" ref="demo_area_wasta"/>
+    </record>
+
+    <!-- Student (class_id is set from the class file) -->
+    <record id="demo_student_yusuf" model="res.persons">
+        <field name="first_name">يوسف</field>
+        <field name="middle_name">أحمد</field>
+        <field name="third_name">محمود</field>
+        <field name="last_name">السيد الجندي</field>
+        <field name="gender">m</field>
+        <field name="birth_date">2014-03-15</field>
+        <field name="is_student">True</field>
+        <field name="status">persistent</field>
+        <field name="father_id" ref="demo_father_ahmed"/>
+        <field name="mother_id" ref="demo_mother_m_ahmed"/>
+        <field name="area_id" ref="demo_area_beni_suef"/>
+        <field name="office_id" ref="demo_office_noor"/>
+        <field name="teacher_id" ref="demo_teacher_t_abdallah"/>
+        <field name="subscription_fee">150</field>
+        <field name="discount_percentage_fee">0</field>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_13"/>
+        <field name="ayah_num">25</field>
+    </record>
+
+    <!-- Student (class_id is set from the class file) -->
+    <record id="demo_student_maryam" model="res.persons">
+        <field name="first_name">مريم</field>
+        <field name="middle_name">أحمد</field>
+        <field name="third_name">محمود</field>
+        <field name="last_name">السيد الجندي</field>
+        <field name="gender">f</field>
+        <field name="birth_date">2016-09-03</field>
+        <field name="is_student">True</field>
+        <field name="status">persistent</field>
+        <field name="father_id" ref="demo_father_ahmed"/>
+        <field name="mother_id" ref="demo_mother_m_ahmed"/>
+        <field name="area_id" ref="demo_area_beni_suef"/>
+        <field name="office_id" ref="demo_office_noor"/>
+        <field name="teacher_id" ref="demo_teacher_t_heba"/>
+        <field name="subscription_fee">150</field>
+        <field name="discount_percentage_fee">0</field>
+        <field name="memorization_method">from_baqarah</field>
+        <field name="surah_id" ref="quran_utils.surah_4"/>
+        <field name="ayah_num">23</field>
+    </record>
+
+    <!-- Student (class_id is set from the class file) -->
+    <record id="demo_student_omar" model="res.persons">
+        <field name="first_name">عمر</field>
+        <field name="middle_name">محمود</field>
+        <field name="third_name">عبد الرحمن</field>
+        <field name="last_name">حسن المصري</field>
+        <field name="gender">m</field>
+        <field name="birth_date">2012-01-28</field>
+        <field name="is_student">True</field>
+        <field name="status">persistent</field>
+        <field name="father_id" ref="demo_father_mahmoud"/>
+        <field name="mother_id" ref="demo_mother_m_mahmoud"/>
+        <field name="area_id" ref="demo_area_wasta"/>
+        <field name="office_id" ref="demo_office_furqan"/>
+        <field name="teacher_id" ref="demo_teacher_t_osama"/>
+        <field name="subscription_fee">150</field>
+        <field name="discount_percentage_fee">0</field>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_7"/>
+        <field name="ayah_num">119</field>
+    </record>
+
+    <!-- Student (class_id is set from the class file) -->
+    <record id="demo_student_adam" model="res.persons">
+        <field name="first_name">آدم</field>
+        <field name="middle_name">محمود</field>
+        <field name="third_name">عبد الرحمن</field>
+        <field name="last_name">حسن المصري</field>
+        <field name="gender">m</field>
+        <field name="birth_date">2015-06-12</field>
+        <field name="is_student">True</field>
+        <field name="status">persistent</field>
+        <field name="father_id" ref="demo_father_mahmoud"/>
+        <field name="mother_id" ref="demo_mother_m_mahmoud"/>
+        <field name="area_id" ref="demo_area_wasta"/>
+        <field name="office_id" ref="demo_office_furqan"/>
+        <field name="teacher_id" ref="demo_teacher_t_yasser"/>
+        <field name="subscription_fee">150</field>
+        <field name="discount_percentage_fee">25</field>
+        <field name="reason_discount_fee">خصم الأخوة</field>
+        <field name="memorization_method">from_baqarah</field>
+        <field name="surah_id" ref="quran_utils.surah_6"/>
+        <field name="ayah_num">27</field>
+    </record>
+
+    <!-- Student (class_id is set from the class file) -->
+    <record id="demo_student_hamza" model="res.persons">
+        <field name="first_name">حمزة</field>
+        <field name="middle_name">حسن</field>
+        <field name="third_name">إبراهيم</field>
+        <field name="last_name">علي الشرقاوي</field>
+        <field name="gender">m</field>
+        <field name="birth_date">2013-11-09</field>
+        <field name="is_student">True</field>
+        <field name="status">persistent</field>
+        <field name="father_id" ref="demo_father_hassan"/>
+        <field name="mother_id" ref="demo_mother_m_hassan"/>
+        <field name="area_id" ref="demo_area_beni_suef"/>
+        <field name="office_id" ref="demo_office_noor"/>
+        <field name="teacher_id" ref="demo_teacher_t_abdallah"/>
+        <field name="subscription_fee">120</field>
+        <field name="discount_percentage_fee">0</field>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_27"/>
+        <field name="ayah_num">38</field>
+    </record>
+
+    <!-- Student (class_id is set from the class file) -->
+    <record id="demo_student_salma" model="res.persons">
+        <field name="first_name">سلمى</field>
+        <field name="middle_name">حسن</field>
+        <field name="third_name">إبراهيم</field>
+        <field name="last_name">علي الشرقاوي</field>
+        <field name="gender">f</field>
+        <field name="birth_date">2017-04-21</field>
+        <field name="is_student">True</field>
+        <field name="status">persistent</field>
+        <field name="father_id" ref="demo_father_hassan"/>
+        <field name="mother_id" ref="demo_mother_m_hassan"/>
+        <field name="area_id" ref="demo_area_beni_suef"/>
+        <field name="office_id" ref="demo_office_noor"/>
+        <field name="teacher_id" ref="demo_teacher_t_heba"/>
+        <field name="subscription_fee">120</field>
+        <field name="discount_percentage_fee">25</field>
+        <field name="reason_discount_fee">خصم الأخوة</field>
+        <field name="memorization_method">from_baqarah</field>
+        <field name="surah_id" ref="quran_utils.surah_3"/>
+        <field name="ayah_num">92</field>
+    </record>
+
+    <!-- Student (class_id is set from the class file) -->
+    <record id="demo_student_mostafa" model="res.persons">
+        <field name="first_name">مصطفى</field>
+        <field name="middle_name">إبراهيم</field>
+        <field name="third_name">خالد</field>
+        <field name="last_name">فتحي النجار</field>
+        <field name="gender">m</field>
+        <field name="birth_date">2011-08-06</field>
+        <field name="is_student">True</field>
+        <field name="status">persistent</field>
+        <field name="father_id" ref="demo_father_ibrahim"/>
+        <field name="mother_id" ref="demo_mother_m_ibrahim"/>
+        <field name="area_id" ref="demo_area_nasser"/>
+        <field name="office_id" ref="demo_office_furqan"/>
+        <field name="teacher_id" ref="demo_teacher_t_osama"/>
+        <field name="subscription_fee">150</field>
+        <field name="discount_percentage_fee">0</field>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_2"/>
+        <field name="ayah_num">34</field>
+    </record>
+
+    <!-- Student (class_id is set from the class file) -->
+    <record id="demo_student_nour" model="res.persons">
+        <field name="first_name">نور</field>
+        <field name="middle_name">إبراهيم</field>
+        <field name="third_name">خالد</field>
+        <field name="last_name">فتحي النجار</field>
+        <field name="gender">f</field>
+        <field name="birth_date">2014-12-02</field>
+        <field name="is_student">True</field>
+        <field name="status">persistent</field>
+        <field name="father_id" ref="demo_father_ibrahim"/>
+        <field name="mother_id" ref="demo_mother_m_ibrahim"/>
+        <field name="area_id" ref="demo_area_nasser"/>
+        <field name="office_id" ref="demo_office_noor"/>
+        <field name="teacher_id" ref="demo_teacher_t_heba"/>
+        <field name="subscription_fee">150</field>
+        <field name="discount_percentage_fee">50</field>
+        <field name="reason_discount_fee">ظروف أسرية</field>
+        <field name="memorization_method">from_baqarah</field>
+        <field name="surah_id" ref="quran_utils.surah_8"/>
+        <field name="ayah_num">40</field>
+    </record>
+
+    <!-- Student (class_id is set from the class file) -->
+    <record id="demo_student_ziad" model="res.persons">
+        <field name="first_name">زياد</field>
+        <field name="middle_name">خالد</field>
+        <field name="third_name">سعيد</field>
+        <field name="last_name">محمد الصاوي</field>
+        <field name="gender">m</field>
+        <field name="birth_date">2016-02-14</field>
+        <field name="is_student">True</field>
+        <field name="status">persistent</field>
+        <field name="father_id" ref="demo_father_khaled"/>
+        <field name="mother_id" ref="demo_mother_m_khaled"/>
+        <field name="area_id" ref="demo_area_wasta"/>
+        <field name="office_id" ref="demo_office_furqan"/>
+        <field name="teacher_id" ref="demo_teacher_t_yasser"/>
+        <field name="subscription_fee">120</field>
+        <field name="discount_percentage_fee">0</field>
+        <field name="memorization_method">from_baqarah</field>
+        <field name="surah_id" ref="quran_utils.surah_5"/>
+        <field name="ayah_num">23</field>
+    </record>
+
+    <!-- Student (class_id is set from the class file) -->
+    <record id="demo_student_laila" model="res.persons">
+        <field name="first_name">ليلى</field>
+        <field name="middle_name">خالد</field>
+        <field name="third_name">سعيد</field>
+        <field name="last_name">محمد الصاوي</field>
+        <field name="gender">f</field>
+        <field name="birth_date">2018-07-30</field>
+        <field name="is_student">True</field>
+        <field name="status">persistent</field>
+        <field name="father_id" ref="demo_father_khaled"/>
+        <field name="mother_id" ref="demo_mother_m_khaled"/>
+        <field name="area_id" ref="demo_area_wasta"/>
+        <field name="office_id" ref="demo_office_noor"/>
+        <field name="teacher_id" ref="demo_teacher_t_heba"/>
+        <field name="subscription_fee">120</field>
+        <field name="discount_percentage_fee">25</field>
+        <field name="reason_discount_fee">خصم الأخوة</field>
+        <field name="memorization_method">mixed</field>
+        <field name="surah_ids" eval="[(6, 0, [ref('quran_utils.surah_105'), ref('quran_utils.surah_106'), ref('quran_utils.surah_107'), ref('quran_utils.surah_108'), ref('quran_utils.surah_109'), ref('quran_utils.surah_110'), ref('quran_utils.surah_111'), ref('quran_utils.surah_112'), ref('quran_utils.surah_113'), ref('quran_utils.surah_114')])]"/>
+    </record>
+
+    <!-- Student without a linked father -->
+    <record id="demo_student_abdelrahman" model="res.persons">
+        <field name="first_name">عبد الرحمن</field>
+        <field name="middle_name">طارق</field>
+        <field name="third_name">أنور</field>
+        <field name="last_name">الحداد</field>
+        <field name="gender">m</field>
+        <field name="birth_date">2015-05-18</field>
+        <field name="is_student">True</field>
+        <field name="status">persistent</field>
+        <field name="area_id" ref="demo_area_beni_suef"/>
+        <field name="office_id" ref="demo_office_noor"/>
+        <field name="teacher_id" ref="demo_teacher_t_abdallah"/>
+        <field name="subscription_fee">100</field>
+        <field name="discount_percentage_fee">100</field>
+        <field name="mother_id" ref="demo_mother_m_orphan"/>
+        <field name="is_fatherless">True</field>
+        <field name="reason_discount_fee">يتيم - إعفاء كامل</field>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_36"/>
+        <field name="ayah_num">56</field>
+    </record>
+
+    <!-- Student without a linked father (disconnected: no records are created for him) -->
+    <record id="demo_student_karim" model="res.persons">
+        <field name="first_name">كريم</field>
+        <field name="middle_name">هشام</field>
+        <field name="third_name">عادل</field>
+        <field name="last_name">البنا</field>
+        <field name="gender">m</field>
+        <field name="birth_date">2013-10-07</field>
+        <field name="is_student">True</field>
+        <field name="status">disconnected</field>
+        <field name="area_id" ref="demo_area_wasta"/>
+        <field name="office_id" ref="demo_office_furqan"/>
+        <field name="teacher_id" ref="demo_teacher_t_osama"/>
+        <field name="subscription_fee">120</field>
+        <field name="discount_percentage_fee">0</field>
+        <field name="memorization_method">from_nas</field>
+        <field name="surah_id" ref="quran_utils.surah_41"/>
+        <field name="ayah_num">8</field>
+    </record>
+
+</odoo>

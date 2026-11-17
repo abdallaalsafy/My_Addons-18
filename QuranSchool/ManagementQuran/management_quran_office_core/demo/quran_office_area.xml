@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="demo_area_beni_suef" model="quran.office.area">
+        <field name="name">بني سويف</field>
+        <field name="description">مدينة بني سويف ومحيطها</field>
+    </record>
+
+    <record id="demo_area_wasta" model="quran.office.area">
+        <field name="name">الواسطى</field>
+        <field name="description">مركز الواسطى</field>
+    </record>
+
+    <record id="demo_area_nasser" model="quran.office.area">
+        <field name="name">ناصر</field>
+        <field name="description">مركز ناصر</field>
+    </record>
+
+    <record id="demo_area_ihnasia" model="quran.office.area">
+        <field name="name">إهناسيا</field>
+        <field name="description">مركز إهناسيا</field>
+    </record>
+
+</odoo>

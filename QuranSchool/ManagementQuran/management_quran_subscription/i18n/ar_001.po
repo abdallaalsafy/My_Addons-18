@@ -1,0 +1,596 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* management_quran_subscription
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20260423\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-17 01:35+0000\n"
+"PO-Revision-Date: 2026-11-17 01:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: management_quran_subscription
+#: model:ir.actions.report,print_report_name:management_quran_subscription.subscription_receipt_action
+msgid "'Subscription Receipt'"
+msgstr "'إيصال الاشتراك'"
+
+#. module: management_quran_subscription
+#: model:ir.actions.report,print_report_name:management_quran_subscription.subscription_report_action
+msgid "'Subscription Report'"
+msgstr "'تقرير الاشتراك'"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.report_subscription_receipt_document
+msgid "<strong style=\"font-size: 18px; font-weight: bold;\">Class:</strong>"
+msgstr "<strong style=\"font-size: 18px; font-weight: bold;\">الفصل:</strong>"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.report_subscription_receipt_document
+msgid "<strong style=\"font-size: 18px; font-weight: bold;\">Code:</strong>"
+msgstr "<strong style=\"font-size: 18px; font-weight: bold;\">الكود:</strong>"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.report_subscription_receipt_document
+msgid "<strong style=\"font-size: 18px; font-weight: bold;\">Date:</strong>"
+msgstr "<strong style=\"font-size: 18px; font-weight: bold;\">التاريخ:</strong>"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.report_subscription_receipt_document
+msgid "<strong style=\"font-size: 18px; font-weight: bold;\">Name:</strong>"
+msgstr "<strong style=\"font-size: 18px; font-weight: bold;\">الاسم:</strong>"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.report_subscription_receipt_document
+msgid "<strong style=\"font-size: 18px; font-weight: bold;\">Office:</strong>"
+msgstr "<strong style=\"font-size: 18px; font-weight: bold;\">المكتب:</strong>"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.report_subscription_receipt_document
+msgid ""
+"<strong style=\"font-size: 18px; font-weight: bold;\">Paid Amount:</strong>"
+msgstr ""
+"<strong style=\"font-size: 18px; font-weight: bold;\">المبلغ المدفوع:</strong>"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.report_subscription_receipt_document
+msgid ""
+"<strong style=\"font-size: 18px; font-weight: bold;\">Payment "
+"Voucher:</strong>"
+msgstr ""
+"<strong style=\"font-size: 18px; font-weight: bold;\">إشعار الدفع:</strong>"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.report_subscription_receipt_document
+msgid "<strong style=\"font-size: 18px; font-weight: bold;\">Receipt No:</strong>"
+msgstr "<strong style=\"font-size: 18px; font-weight: bold;\">رقم الإيصال:</strong>"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.report_subscription_receipt_document
+msgid ""
+"<strong style=\"font-size: 18px; font-weight: bold;\">Subscription "
+"Month:</strong>"
+msgstr ""
+"<strong style=\"font-size: 18px; font-weight: bold;\">شهر الاشتراك:</strong>"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.report_subscription_document
+msgid "<strong>Report Date:</strong>"
+msgstr "<strong>تاريخ التقرير:</strong>"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.view_monthly_subscription_form
+msgid "Add any notes about this subscription..."
+msgstr "أضف أي ملاحظات حول هذا الاشتراك..."
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.view_monthly_subscription_form
+msgid "Additional Information"
+msgstr "معلومات إضافية"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.batch_subscription_wizard_form_view
+msgid "Batch Register"
+msgstr "تسجيل مجمّع"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.batch_subscription_wizard_form_view
+msgid "Batch Student Subscription Registration"
+msgstr "تسجيل اشتراكات الطلاب دفعة واحدة"
+
+#. module: management_quran_subscription
+#: model:ir.model,name:management_quran_subscription.model_batch_subscription_wizard
+msgid "Batch Student Subscription Registration Wizard"
+msgstr "معالج تسجيل اشتراكات الطلاب دفعة واحدة"
+
+#. module: management_quran_subscription
+#: model:ir.actions.act_window,name:management_quran_subscription.batch_subscription_wizard_action
+msgid "Batch Subscription Registration"
+msgstr "تسجيل الاشتراكات دفعة واحدة"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.batch_subscription_wizard_form_view
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: management_quran_subscription
+#. odoo-python
+#: code:addons/management_quran_subscription/models/subscription.py:0
+msgid "Cannot create subscription for future month %s"
+msgstr "لا يمكن إنشاء اشتراك لشهر مستقبلي %s"
+
+#. module: management_quran_subscription
+#. odoo-python
+#: code:addons/management_quran_subscription/models/res_persons.py:0
+msgid ""
+"Cannot create subscription for student (%s) with zero subscription fee."
+msgstr ""
+"لا يمكن إنشاء اشتراك للطالب (%s) مع وجود رسوم اشتراك صفرية."
+
+#. module: management_quran_subscription
+#. odoo-python
+#: code:addons/management_quran_subscription/models/res_persons.py:0
+msgid "Cannot create subscription for student (%s) without office."
+msgstr "لا يمكن إنشاء اشتراك للطالب (%s) بدون مكتب."
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,field_description:management_quran_subscription.field_batch_subscription_wizard__class_id
+#: model:ir.model.fields,field_description:management_quran_subscription.field_monthly_subscription__class_id
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.view_monthly_subscription_search
+msgid "Class"
+msgstr "الفصل"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,help:management_quran_subscription.field_batch_subscription_wizard__class_id
+#: model:ir.model.fields,help:management_quran_subscription.field_monthly_subscription__class_id
+msgid "Class this record belongs to"
+msgstr "الفصل الذي ينتمي إليه هذا السجل"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.report_subscription_document
+msgid "Code"
+msgstr "الكود"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.res_persons_form_view_quran_office_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.res_persons_tree_view_quran_office_subscription
+msgid "Create Subscription"
+msgstr "إنشاء اشتراك"
+
+#. module: management_quran_subscription
+#: model_terms:ir.actions.act_window,help:management_quran_subscription.action_monthly_subscriptions
+msgid "Create a new monthly subscription"
+msgstr "إنشاء اشتراك شهري جديد"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,field_description:management_quran_subscription.field_batch_subscription_wizard__create_uid
+#: model:ir.model.fields,field_description:management_quran_subscription.field_monthly_subscription__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,field_description:management_quran_subscription.field_batch_subscription_wizard__create_date
+#: model:ir.model.fields,field_description:management_quran_subscription.field_monthly_subscription__create_date
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,field_description:management_quran_subscription.field_batch_subscription_wizard__currency_id
+#: model:ir.model.fields,field_description:management_quran_subscription.field_monthly_subscription__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,help:management_quran_subscription.field_batch_subscription_wizard__currency_id
+#: model:ir.model.fields,help:management_quran_subscription.field_monthly_subscription__currency_id
+msgid "Currency for subscription fee"
+msgstr "عملة رسوم الاشتراك"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.view_monthly_subscription_search
+msgid "Current Month"
+msgstr "الشهر الحالي"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,field_description:management_quran_subscription.field_monthly_subscription__discount_percentage_fee
+msgid "Discount %"
+msgstr "نسبة الخصم %"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,field_description:management_quran_subscription.field_batch_subscription_wizard__display_name
+#: model:ir.model.fields,field_description:management_quran_subscription.field_monthly_subscription__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,field_description:management_quran_subscription.field_monthly_subscription__expected_amount
+msgid "Expected Amount"
+msgstr "المبلغ المتوقع"
+
+#. module: management_quran_subscription
+#: model:ir.actions.server,name:management_quran_subscription.action_fast_create_subscription
+msgid "Fast Create Subscription"
+msgstr "إنشاء اشتراك سريع"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.report_subscription_document
+msgid "Fee"
+msgstr "الرسوم"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.report_subscription_receipt_document
+msgid "Generated:"
+msgstr "تم إنشاؤه:"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.view_monthly_subscription_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,field_description:management_quran_subscription.field_batch_subscription_wizard__id
+#: model:ir.model.fields,field_description:management_quran_subscription.field_monthly_subscription__id
+msgid "ID"
+msgstr "المعرّف"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.batch_subscription_wizard_form_view
+msgid "Information"
+msgstr "المعلومات"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.view_monthly_subscription_search
+msgid "Last Month"
+msgstr "الشهر الماضي"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,field_description:management_quran_subscription.field_batch_subscription_wizard__write_uid
+#: model:ir.model.fields,field_description:management_quran_subscription.field_monthly_subscription__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,field_description:management_quran_subscription.field_batch_subscription_wizard__write_date
+#: model:ir.model.fields,field_description:management_quran_subscription.field_monthly_subscription__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث بتاريخ"
+
+#. module: management_quran_subscription
+#: model_terms:ir.actions.act_window,help:management_quran_subscription.action_monthly_subscriptions
+msgid ""
+"Manage student subscriptions for Quran office classes.\n"
+"                    Track payments, discounts, and remaining amounts."
+msgstr ""
+"إدارة اشتراكات الطلاب لفصول مكتب القرآن.\n"
+"                    تتبع المدفوعات والخصومات والمبالغ المتبقية."
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.report_subscription_document
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.view_monthly_subscription_search
+msgid "Month"
+msgstr "الشهر"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,field_description:management_quran_subscription.field_batch_subscription_wizard__month_name
+#: model:ir.model.fields,field_description:management_quran_subscription.field_monthly_subscription__month_name
+msgid "Month Name"
+msgstr "اسم الشهر"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,help:management_quran_subscription.field_monthly_subscription__subscription_month
+msgid "Month and year for this subscription"
+msgstr "شهر وسنة هذا الاشتراك"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,help:management_quran_subscription.field_batch_subscription_wizard__subscription_month
+msgid "Month and year for this subscription batch"
+msgstr "شهر وسنة دفعة الاشتراك هذه"
+
+#. module: management_quran_subscription
+#: model:ir.model,name:management_quran_subscription.model_monthly_subscription
+msgid "Monthly Student Subscription"
+msgstr "اشتراك طالب شهري"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.view_monthly_subscription_form
+msgid "Monthly Subscription"
+msgstr "اشتراك شهري"
+
+#. module: management_quran_subscription
+#: model:ir.actions.act_window,name:management_quran_subscription.action_monthly_subscriptions
+#: model:ir.ui.menu,name:management_quran_subscription.menu_monthly_subscriptions
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.view_monthly_subscription_search
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.view_monthly_subscription_tree
+msgid "Monthly Subscriptions"
+msgstr "الاشتراكات الشهرية"
+
+#. module: management_quran_subscription
+#. odoo-python
+#: code:addons/management_quran_subscription/models/subscription.py:0
+msgid "New"
+msgstr "جديد"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.view_monthly_subscription_search
+msgid "No Discount"
+msgstr "بدون خصم"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,field_description:management_quran_subscription.field_monthly_subscription__notes
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,help:management_quran_subscription.field_res_persons__subscription_count
+msgid "Number of subscriptions for this student (only shown for students)"
+msgstr "عدد اشتراكات هذا الطالب (يظهر فقط للطلاب)"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,field_description:management_quran_subscription.field_batch_subscription_wizard__office_id
+#: model:ir.model.fields,field_description:management_quran_subscription.field_monthly_subscription__office_id
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.view_monthly_subscription_search
+msgid "Office"
+msgstr "المكتب"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,help:management_quran_subscription.field_batch_subscription_wizard__office_id
+#: model:ir.model.fields,help:management_quran_subscription.field_monthly_subscription__office_id
+msgid "Office this record belongs to"
+msgstr "المكتب الذي ينتمي إليه هذا السجل"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.view_monthly_subscription_search
+msgid "Overpayment"
+msgstr "دفعة زائدة"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.report_subscription_receipt_document
+msgid "PAID IN FULL"
+msgstr "مدفوع بالكامل"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,field_description:management_quran_subscription.field_monthly_subscription__paid_amount
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.view_monthly_subscription_tree
+msgid "Paid Amount"
+msgstr "المبلغ المدفوع"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.view_monthly_subscription_search
+msgid "Paid in Full"
+msgstr "مدفوع بالكامل"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.view_monthly_subscription_search
+msgid "Partial Payment"
+msgstr "دفعة جزئية"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.view_monthly_subscription_form
+msgid "Payment Information"
+msgstr "معلومات الدفع"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.report_subscription_receipt_document
+msgid "Payment Receipt"
+msgstr "إيصال الدفع"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,field_description:management_quran_subscription.field_monthly_subscription__payment_voucher_number
+msgid "Payment Voucher Number"
+msgstr "رقم إشعار الدفع"
+
+#. module: management_quran_subscription
+#. odoo-python
+#: code:addons/management_quran_subscription/models/subscription.py:0
+msgid "Please select a student first."
+msgstr "الرجاء اختيار طالب أولاً."
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.report_subscription_receipt_document
+msgid "Quran Office"
+msgstr "مكتب القرآن"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.report_subscription_receipt_document
+msgid "Quran Office Management System"
+msgstr "نظام إدارة مكتب القرآن"
+
+#. module: management_quran_subscription
+#: model:ir.model,name:management_quran_subscription.model_res_persons
+msgid "Quran School person Extension"
+msgstr "امتداد شخص مدرسة القرآن"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,field_description:management_quran_subscription.field_monthly_subscription__remaining_amount
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.view_monthly_subscription_tree
+msgid "Remaining Amount"
+msgstr "المبلغ المتبقي"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.report_subscription_document
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.view_monthly_subscription_search
+msgid "Student"
+msgstr "الطالب"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.report_subscription_document
+msgid "Student Code"
+msgstr "رمز الطالب"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.view_monthly_subscription_form
+msgid "Student Information"
+msgstr "معلومات الطالب"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,field_description:management_quran_subscription.field_monthly_subscription__student_id
+msgid "Student Name"
+msgstr "اسم الطالب"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.report_subscription_document
+msgid "Student Subscriptions Report"
+msgstr "تقرير اشتراكات الطلاب"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,help:management_quran_subscription.field_batch_subscription_wizard__subscription_fee
+msgid "Student subscription fee"
+msgstr "رسوم اشتراك الطالب"
+
+#. module: management_quran_subscription
+#. odoo-python
+#: code:addons/management_quran_subscription/models/subscription.py:0
+msgid ""
+"Student, subscription month, and office must be set to check for duplicates."
+msgstr ""
+"يجب تحديد الطالب وشهر الاشتراك والمكتب للتحقق من التكرار."
+
+#. module: management_quran_subscription
+#: model:ir.ui.menu,name:management_quran_subscription.menu_subscription_management_root
+msgid "Subscription"
+msgstr "الاشتراك"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,field_description:management_quran_subscription.field_res_persons__subscription_count
+msgid "Subscription Count"
+msgstr "عدد الاشتراكات"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.view_monthly_subscription_form
+msgid "Subscription Details"
+msgstr "تفاصيل الاشتراك"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,field_description:management_quran_subscription.field_batch_subscription_wizard__subscription_fee
+#: model:ir.model.fields,field_description:management_quran_subscription.field_monthly_subscription__subscription_fee
+msgid "Subscription Fee"
+msgstr "رسوم الاشتراك"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,field_description:management_quran_subscription.field_batch_subscription_wizard__subscription_month
+#: model:ir.model.fields,field_description:management_quran_subscription.field_monthly_subscription__subscription_month
+msgid "Subscription Month"
+msgstr "شهر الاشتراك"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,field_description:management_quran_subscription.field_monthly_subscription__name
+msgid "Subscription Number"
+msgstr "رقم الاشتراك"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.batch_subscription_wizard_form_view
+msgid "Subscription Period"
+msgstr "فترة الاشتراك"
+
+#. module: management_quran_subscription
+#: model:ir.actions.report,name:management_quran_subscription.subscription_receipt_action
+msgid "Subscription Receipt"
+msgstr "إيصال الاشتراك"
+
+#. module: management_quran_subscription
+#: model:ir.actions.report,name:management_quran_subscription.subscription_report_action
+msgid "Subscription Report"
+msgstr "تقرير الاشتراك"
+
+#. module: management_quran_subscription
+#. odoo-python
+#: code:addons/management_quran_subscription/models/subscription.py:0
+msgid ""
+"Subscription not allowed with negative paid amount. Please enter a valid "
+"amount."
+msgstr ""
+"لا يسمح بالاشتراك بمبلغ مدفوع سالب. الرجاء إدخال مبلغ صحيح."
+
+#. module: management_quran_subscription
+#. odoo-python
+#: code:addons/management_quran_subscription/models/subscription.py:0
+msgid ""
+"Subscription not allowed with zero paid amount unless discount is 100%. "
+"Please enter a valid amount or adjust the discount."
+msgstr ""
+"لا يسمح بالاشتراك بمبلغ مدفوع صفر إلا إذا كان الخصم 100%. الرجاء إدخال مبلغ صحيح أو تعديل الخصم."
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,field_description:management_quran_subscription.field_res_persons__subscription_ids
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.res_persons_form_view_quran_office_subscription
+msgid "Subscriptions"
+msgstr "الاشتراكات"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,help:management_quran_subscription.field_res_persons__subscription_ids
+msgid "Subscriptions in this student"
+msgstr "الاشتراكات في هذا الطالب"
+
+#. module: management_quran_subscription
+#. odoo-python
+#: code:addons/management_quran_subscription/models/res_persons.py:0
+msgid "Subscriptions of %s"
+msgstr "اشتراكات %s"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,field_description:management_quran_subscription.field_batch_subscription_wizard__teacher_id
+#: model:ir.model.fields,field_description:management_quran_subscription.field_monthly_subscription__teacher_id
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.view_monthly_subscription_search
+msgid "Teacher"
+msgstr "المعلم"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,help:management_quran_subscription.field_batch_subscription_wizard__teacher_id
+#: model:ir.model.fields,help:management_quran_subscription.field_monthly_subscription__teacher_id
+msgid "Teacher or memorizer for this record"
+msgstr "المعلم أو الحافظ لهذا السجل"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.report_subscription_receipt_document
+msgid "Thank you for your payment!"
+msgstr "شكرًا لك على الدفع!"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.view_monthly_subscription_search
+msgid "This Year"
+msgstr "هذا العام"
+
+#. module: management_quran_subscription
+#. odoo-python
+#: code:addons/management_quran_subscription/models/subscription.py:0
+msgid ""
+"This student already has a subscription for this office in the selected "
+"month!"
+msgstr ""
+"هذا الطالب لديه اشتراك بالفعل لهذا المكتب في الشهر المحدد!"
+
+#. module: management_quran_subscription
+#. odoo-python
+#: code:addons/management_quran_subscription/wizards/batch_subscription_wizard.py:0
+msgid "This wizard must be opened from the students list."
+msgstr "يجب فتح هذا المعالج من قائمة الطلاب."
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.report_subscription_document
+msgid "Total Fee:"
+msgstr "إجمالي الرسوم:"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.report_subscription_document
+msgid "Total Records:"
+msgstr "إجمالي السجلات:"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.report_subscription_document
+msgid "Voucher"
+msgstr "إشعار الدفع"
+
+#. module: management_quran_subscription
+#: model:ir.model.fields,help:management_quran_subscription.field_monthly_subscription__payment_voucher_number
+msgid "Voucher number for this payment"
+msgstr "رقم إشعار الدفع لهذا السجل"
+
+#. module: management_quran_subscription
+#: model_terms:ir.ui.view,arch_db:management_quran_subscription.view_monthly_subscription_search
+msgid "With Discount"
+msgstr "بخصم"

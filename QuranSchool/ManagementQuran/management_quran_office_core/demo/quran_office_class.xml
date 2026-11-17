@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="demo_class_c_abubakr" model="quran.office.class">
+        <field name="name">حلقة أبي بكر الصديق</field>
+        <field name="description">حلقة الأولاد - المستوى المتوسط</field>
+        <field name="office_id" ref="demo_office_noor"/>
+        <field name="teacher_id" ref="demo_teacher_t_abdallah"/>
+        <field name="student_ids" eval="[(6, 0, [ref('demo_student_yusuf'), ref('demo_student_hamza'), ref('demo_student_abdelrahman')])]"/>
+    </record>
+
+    <record id="demo_class_c_aisha" model="quran.office.class">
+        <field name="name">حلقة عائشة بنت أبي بكر</field>
+        <field name="description">حلقة البنات</field>
+        <field name="office_id" ref="demo_office_noor"/>
+        <field name="teacher_id" ref="demo_teacher_t_heba"/>
+        <field name="student_ids" eval="[(6, 0, [ref('demo_student_maryam'), ref('demo_student_salma'), ref('demo_student_nour'), ref('demo_student_laila')])]"/>
+    </record>
+
+    <record id="demo_class_c_omar" model="quran.office.class">
+        <field name="name">حلقة عمر بن الخطاب</field>
+        <field name="description">حلقة الأولاد - المستوى المتقدم</field>
+        <field name="office_id" ref="demo_office_furqan"/>
+        <field name="teacher_id" ref="demo_teacher_t_osama"/>
+        <field name="student_ids" eval="[(6, 0, [ref('demo_student_omar'), ref('demo_student_mostafa'), ref('demo_student_karim')])]"/>
+    </record>
+
+    <record id="demo_class_c_khaled" model="quran.office.class">
+        <field name="name">حلقة خالد بن الوليد</field>
+        <field name="description">حلقة الأولاد - المبتدئين</field>
+        <field name="office_id" ref="demo_office_furqan"/>
+        <field name="teacher_id" ref="demo_teacher_t_yasser"/>
+        <field name="student_ids" eval="[(6, 0, [ref('demo_student_adam'), ref('demo_student_ziad')])]"/>
+    </record>
+
+</odoo>

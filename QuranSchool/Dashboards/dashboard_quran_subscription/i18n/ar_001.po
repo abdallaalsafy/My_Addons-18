@@ -1,0 +1,161 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* dashboard_quran_subscription
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20260423\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-17 06:36+0000\n"
+"PO-Revision-Date: 2026-11-17 06:36+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: dashboard_quran_subscription
+#. odoo-python
+#: code:addons/dashboard_quran_subscription/models/dashboard_quran_subscription.py:0
+msgid "%s subscriptions"
+msgstr "%s اشتراكات"
+
+#. module: dashboard_quran_subscription
+#. odoo-python
+#: code:addons/dashboard_quran_subscription/models/dashboard_quran_subscription.py:0
+msgid "Collected"
+msgstr "المجموع"
+
+#. module: dashboard_quran_subscription
+#. odoo-python
+#: code:addons/dashboard_quran_subscription/models/dashboard_quran_subscription.py:0
+msgid "Collected amounts per month"
+msgstr "المبالغ المحصلة شهريًا"
+
+#. module: dashboard_quran_subscription
+#. odoo-python
+#: code:addons/dashboard_quran_subscription/models/dashboard_quran_subscription.py:0
+msgid "Collection rate"
+msgstr "معدل التحصيل"
+
+#. module: dashboard_quran_subscription
+#. odoo-javascript
+#: code:addons/dashboard_quran_subscription/static/src/js/widgets.js:0
+msgid "Collection summary"
+msgstr "ملخص التحصيل"
+
+#. module: dashboard_quran_subscription
+#. odoo-javascript
+#: code:addons/dashboard_quran_subscription/static/src/js/widgets.js:0
+msgid "Collections trend"
+msgstr "اتجاه التحصيل"
+
+#. module: dashboard_quran_subscription
+#: model:ir.model,name:dashboard_quran_subscription.model_dashboard_quran_subscription
+msgid "Dashboard data: Quran Subscription"
+msgstr "بيانات لوحة التحكم: اشتراك القرآن"
+
+#. module: dashboard_quran_subscription
+#. odoo-python
+#: code:addons/dashboard_quran_subscription/models/dashboard_quran_subscription.py:0
+msgid "Expected"
+msgstr "المتوقع"
+
+#. module: dashboard_quran_subscription
+#. odoo-javascript
+#: code:addons/dashboard_quran_subscription/static/src/js/widgets.js:0
+msgid ""
+"Expected vs collected amounts per currency, plus students not yet billed."
+msgstr ""
+"المبالغ المتوقعة مقابل المحصلة لكل عملة، بالإضافة إلى الطلاب غير المفوترين بعد."
+
+#. module: dashboard_quran_subscription
+#. odoo-python
+#: code:addons/dashboard_quran_subscription/models/dashboard_quran_subscription.py:0
+msgid "In %s"
+msgstr "في %s"
+
+#. module: dashboard_quran_subscription
+#. odoo-javascript
+#: code:addons/dashboard_quran_subscription/static/src/js/widgets.js:0
+msgid "Largest outstanding balances"
+msgstr "أكبر الأرصدة المتبقية"
+
+#. module: dashboard_quran_subscription
+#. odoo-python
+#: code:addons/dashboard_quran_subscription/models/dashboard_quran_subscription.py:0
+msgid ""
+"Last 6 months ending at the period end. Months without subscriptions are "
+"left blank."
+msgstr ""
+"آخر 6 أشهر تنتهي بنهاية الفترة. تترك الأشهر بدون اشتراكات فارغة."
+
+#. module: dashboard_quran_subscription
+#. odoo-python
+#: code:addons/dashboard_quran_subscription/models/dashboard_quran_subscription.py:0
+msgid "Month"
+msgstr "الشهر"
+
+#. module: dashboard_quran_subscription
+#. odoo-python
+#: code:addons/dashboard_quran_subscription/models/dashboard_quran_subscription.py:0
+msgid "Net of over-payments"
+msgstr "بعد المبالغ الزائدة"
+
+#. module: dashboard_quran_subscription
+#. odoo-python
+#: code:addons/dashboard_quran_subscription/models/dashboard_quran_subscription.py:0
+msgid "No outstanding balances in the selected period."
+msgstr "لا توجد أرصدة متبقية في الفترة المحددة."
+
+#. module: dashboard_quran_subscription
+#. odoo-python
+#: code:addons/dashboard_quran_subscription/models/dashboard_quran_subscription.py:0
+msgid "No subscriptions in the last 6 months."
+msgstr "لا توجد اشتراكات في آخر 6 أشهر."
+
+#. module: dashboard_quran_subscription
+#. odoo-python
+#: code:addons/dashboard_quran_subscription/models/dashboard_quran_subscription.py:0
+msgid "No subscriptions in the selected period."
+msgstr "لا توجد اشتراكات في الفترة المحددة."
+
+#. module: dashboard_quran_subscription
+#. odoo-python
+#: code:addons/dashboard_quran_subscription/models/dashboard_quran_subscription.py:0
+msgid "Office"
+msgstr "المكتب"
+
+#. module: dashboard_quran_subscription
+#. odoo-python
+#: code:addons/dashboard_quran_subscription/models/dashboard_quran_subscription.py:0
+msgid "Remaining"
+msgstr "المتبقي"
+
+#. module: dashboard_quran_subscription
+#. odoo-python
+#: code:addons/dashboard_quran_subscription/models/dashboard_quran_subscription.py:0
+msgid ""
+"Showing %(shown)s of %(total)s subscriptions with a remaining balance "
+"(largest amounts first)."
+msgstr ""
+"عرض %(shown)s من %(total)s اشتراكات ذات رصيد متبقي (الأكبر أولاً)."
+
+#. module: dashboard_quran_subscription
+#. odoo-python
+#: code:addons/dashboard_quran_subscription/models/dashboard_quran_subscription.py:0
+msgid "Student"
+msgstr "الطالب"
+
+#. module: dashboard_quran_subscription
+#. odoo-python
+#: code:addons/dashboard_quran_subscription/models/dashboard_quran_subscription.py:0
+msgid "Students without a subscription"
+msgstr "الطلاب بدون اشتراك"
+
+#. module: dashboard_quran_subscription
+#. odoo-javascript
+#: code:addons/dashboard_quran_subscription/static/src/js/widgets.js:0
+msgid "Subscriptions"
+msgstr "الاشتراكات"

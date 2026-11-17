@@ -1,0 +1,144 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* dashboard_quran_memorization
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20260423\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-17 06:35+0000\n"
+"PO-Revision-Date: 2026-11-17 06:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: dashboard_quran_memorization
+#. odoo-python
+#: code:addons/dashboard_quran_memorization/models/dashboard_quran_memorization.py:0
+msgid "Average grade"
+msgstr "متوسط الدرجة"
+
+#. module: dashboard_quran_memorization
+#. odoo-python
+#: code:addons/dashboard_quran_memorization/models/dashboard_quran_memorization.py:0
+msgid "Average grade %s"
+msgstr "متوسط الدرجة %s"
+
+#. module: dashboard_quran_memorization
+#. odoo-python
+#: code:addons/dashboard_quran_memorization/models/dashboard_quran_memorization.py:0
+msgid "Average grade per month"
+msgstr "متوسط الدرجة شهريًا"
+
+#. module: dashboard_quran_memorization
+#: model:ir.model,name:dashboard_quran_memorization.model_dashboard_quran_memorization
+msgid "Dashboard data: Quran Memorization"
+msgstr "بيانات لوحة التحكم: حفظ القرآن"
+
+#. module: dashboard_quran_memorization
+#. odoo-javascript
+#: code:addons/dashboard_quran_memorization/static/src/js/widgets.js:0
+msgid "Follow-up summary"
+msgstr "ملخص المتابعة"
+
+#. module: dashboard_quran_memorization
+#. odoo-javascript
+#: code:addons/dashboard_quran_memorization/static/src/js/widgets.js:0
+msgid "Grades trend"
+msgstr "اتجاه الدرجات"
+
+#. module: dashboard_quran_memorization
+#. odoo-python
+#: code:addons/dashboard_quran_memorization/models/dashboard_quran_memorization.py:0
+msgid "In %s"
+msgstr "في %s"
+
+#. module: dashboard_quran_memorization
+#. odoo-python
+#: code:addons/dashboard_quran_memorization/models/dashboard_quran_memorization.py:0
+msgid ""
+"Last 6 months ending at the period end, weighted by each test's maximum "
+"grade."
+msgstr ""
+"آخر 6 أشهر تنتهي بنهاية الفترة، وموزونة حسب الحد الأقصى لكل اختبار."
+
+#. module: dashboard_quran_memorization
+#. odoo-javascript
+#: code:addons/dashboard_quran_memorization/static/src/js/widgets.js:0
+msgid "Memorization"
+msgstr "الحفظ"
+
+#. module: dashboard_quran_memorization
+#. odoo-python
+#: code:addons/dashboard_quran_memorization/models/dashboard_quran_memorization.py:0
+msgid "Memorization records"
+msgstr "سجلات الحفظ"
+
+#. module: dashboard_quran_memorization
+#. odoo-javascript
+#: code:addons/dashboard_quran_memorization/static/src/js/widgets.js:0
+msgid "Monthly memorization records, grades and students not yet followed."
+msgstr "سجلات الحفظ الشهرية والدرجات والطلاب غير المتابعين بعد."
+
+#. module: dashboard_quran_memorization
+#. odoo-python
+#: code:addons/dashboard_quran_memorization/models/dashboard_quran_memorization.py:0
+msgid "No graded records"
+msgstr "لا توجد سجلات مصنفة"
+
+#. module: dashboard_quran_memorization
+#. odoo-python
+#: code:addons/dashboard_quran_memorization/models/dashboard_quran_memorization.py:0
+msgid "No graded records in the last 6 months."
+msgstr "لا توجد سجلات مُدرجة في آخر 6 أشهر."
+
+#. module: dashboard_quran_memorization
+#. odoo-python
+#: code:addons/dashboard_quran_memorization/models/dashboard_quran_memorization.py:0
+msgid "No memorization records in the selected period."
+msgstr "لا توجد سجلات حفظ في الفترة المحددة."
+
+#. module: dashboard_quran_memorization
+#. odoo-python
+#: code:addons/dashboard_quran_memorization/models/dashboard_quran_memorization.py:0
+msgid "No teacher"
+msgstr "لا يوجد معلم"
+
+#. module: dashboard_quran_memorization
+#. odoo-javascript
+#: code:addons/dashboard_quran_memorization/static/src/js/widgets.js:0
+msgid "Records by teacher"
+msgstr "السجلات حسب المعلم"
+
+#. module: dashboard_quran_memorization
+#. odoo-python
+#: code:addons/dashboard_quran_memorization/models/dashboard_quran_memorization.py:0
+msgid "Students followed"
+msgstr "الطلاب المتابعون"
+
+#. module: dashboard_quran_memorization
+#. odoo-python
+#: code:addons/dashboard_quran_memorization/models/dashboard_quran_memorization.py:0
+msgid "Students without a memorization record"
+msgstr "الطلاب بدون سجل حفظ"
+
+#. module: dashboard_quran_memorization
+#. odoo-python
+#: code:addons/dashboard_quran_memorization/models/dashboard_quran_memorization.py:0
+msgid "Students without a record"
+msgstr "الطلاب بدون سجل"
+
+#. module: dashboard_quran_memorization
+#. odoo-javascript
+#: code:addons/dashboard_quran_memorization/static/src/js/widgets.js:0
+msgid "Top 10 teachers by number of records, with their average grade."
+msgstr "أفضل 10 معلمين حسب عدد السجلات، مع متوسط درجاتهم."
+
+#. module: dashboard_quran_memorization
+#. odoo-python
+#: code:addons/dashboard_quran_memorization/models/dashboard_quran_memorization.py:0
+msgid "Weighted by each test's maximum grade (%s records)"
+msgstr "موزونة حسب الحد الأقصى لكل اختبار (%s سجل)"

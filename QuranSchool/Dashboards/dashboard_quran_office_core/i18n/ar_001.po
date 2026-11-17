@@ -1,0 +1,220 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* dashboard_quran_office_core
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20260423\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-17 06:35+0000\n"
+"PO-Revision-Date: 2026-11-17 06:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: dashboard_quran_office_core
+#. odoo-python
+#: code:addons/dashboard_quran_office_core/models/dashboard_quran_office_core.py:0
+msgid "%(low)s – %(high)s Juz'"
+msgstr "%(low)s – %(high)s جزء"
+
+#. module: dashboard_quran_office_core
+#. odoo-python
+#: code:addons/dashboard_quran_office_core/models/dashboard_quran_office_core.py:0
+msgid "Active students"
+msgstr "الطلاب النشطون"
+
+#. module: dashboard_quran_office_core
+#. odoo-javascript
+#: code:addons/dashboard_quran_office_core/static/src/js/widgets.js:0
+msgid "Active students grouped by memorized amount (Juz')."
+msgstr "الطلاب النشطون موزعون حسب مقدار الحفظ (أجزاء)."
+
+#. module: dashboard_quran_office_core
+#. odoo-python
+#: code:addons/dashboard_quran_office_core/models/dashboard_quran_office_core.py:0
+msgid "Classes"
+msgstr "الفصول"
+
+#. module: dashboard_quran_office_core
+#. odoo-python
+#: code:addons/dashboard_quran_office_core/models/dashboard_quran_office_core.py:0
+msgid "Classes without a teacher"
+msgstr "الفصول بدون معلم"
+
+#. module: dashboard_quran_office_core
+#. odoo-javascript
+#: code:addons/dashboard_quran_office_core/static/src/js/widgets.js:0
+msgid "Current number of active students, teachers, offices and classes."
+msgstr "العدد الحالي للطلاب النشطين والمعلمين والمكاتب والفصول."
+
+#. module: dashboard_quran_office_core
+#: model:ir.ui.menu,name:dashboard_quran_office_core.menu_dashboard_quran_office
+msgid "Dashboard"
+msgstr "لوحة التحكم"
+
+#. module: dashboard_quran_office_core
+#: model:ir.model,name:dashboard_quran_office_core.model_dashboard_quran_office
+msgid "Dashboard data: Quran Office Core"
+msgstr "بيانات لوحة التحكم: نواة مكتب القرآن"
+
+#. module: dashboard_quran_office_core
+#. odoo-javascript
+#: code:addons/dashboard_quran_office_core/static/src/js/widgets.js:0
+msgid "Data to complete"
+msgstr "بيانات لتكملتها"
+
+#. module: dashboard_quran_office_core
+#. odoo-python
+#: code:addons/dashboard_quran_office_core/models/dashboard_quran_office_core.py:0
+msgid "Disconnected"
+msgstr "منقطع"
+
+#. module: dashboard_quran_office_core
+#. odoo-python
+#: code:addons/dashboard_quran_office_core/models/dashboard_quran_office_core.py:0
+msgid "Disconnected students"
+msgstr "الطلاب المنقطعون"
+
+#. module: dashboard_quran_office_core
+#. odoo-python
+#: code:addons/dashboard_quran_office_core/models/dashboard_quran_office_core.py:0
+msgid "Fatherless students"
+msgstr "الطلاب الأيتام"
+
+#. module: dashboard_quran_office_core
+#. odoo-javascript
+#: code:addons/dashboard_quran_office_core/static/src/js/widgets.js:0
+msgid "Memorization levels"
+msgstr "مستويات الحفظ"
+
+#. module: dashboard_quran_office_core
+#. odoo-python
+#: code:addons/dashboard_quran_office_core/models/dashboard_quran_office_core.py:0
+msgid "Mixed method (by Surahs)"
+msgstr "طريقة مختلطة (حسب السور)"
+
+#. module: dashboard_quran_office_core
+#. odoo-python
+#: code:addons/dashboard_quran_office_core/models/dashboard_quran_office_core.py:0
+msgid "No memorization recorded"
+msgstr "لا توجد سجلات حفظ"
+
+#. module: dashboard_quran_office_core
+#. odoo-python
+#: code:addons/dashboard_quran_office_core/models/dashboard_quran_office_core.py:0
+msgid "No office"
+msgstr "لا يوجد مكتب"
+
+#. module: dashboard_quran_office_core
+#. odoo-python
+#: code:addons/dashboard_quran_office_core/models/dashboard_quran_office_core.py:0
+msgid "No students yet."
+msgstr "لا يوجد طلاب بعد."
+
+#. module: dashboard_quran_office_core
+#. odoo-python
+#: code:addons/dashboard_quran_office_core/models/dashboard_quran_office_core.py:0
+msgid "No students, teachers, offices or classes yet."
+msgstr "لا يوجد حتى الآن طلاب أو معلمين أو مكاتب أو فصول."
+
+#. module: dashboard_quran_office_core
+#. odoo-python
+#: code:addons/dashboard_quran_office_core/models/dashboard_quran_office_core.py:0
+msgid "Offices"
+msgstr "المكاتب"
+
+#. module: dashboard_quran_office_core
+#. odoo-python
+#: code:addons/dashboard_quran_office_core/models/dashboard_quran_office_core.py:0
+msgid "Other offices (%s)"
+msgstr "مكاتب أخرى (%s)"
+
+#. module: dashboard_quran_office_core
+#. odoo-javascript
+#: code:addons/dashboard_quran_office_core/static/src/js/widgets.js:0
+msgid "Overview"
+msgstr "نظرة عامة"
+
+#. module: dashboard_quran_office_core
+#. odoo-python
+#: code:addons/dashboard_quran_office_core/models/dashboard_quran_office_core.py:0
+msgid "Persistent"
+msgstr "مستمر"
+
+#. module: dashboard_quran_office_core
+#. odoo-python
+#: code:addons/dashboard_quran_office_core/models/dashboard_quran_office_core.py:0
+msgid "Persistent students"
+msgstr "الطلاب المستمرون"
+
+#. module: dashboard_quran_office_core
+#. odoo-javascript
+#: code:addons/dashboard_quran_office_core/static/src/js/widgets.js:0
+msgid ""
+"Records missing an office, class, teacher or status. Click to open them."
+msgstr ""
+"سجلات تفتقد مكتبًا أو فصلًا أو معلمًا أو حالة. انقر لفتحها."
+
+#. module: dashboard_quran_office_core
+#. odoo-python
+#: code:addons/dashboard_quran_office_core/models/dashboard_quran_office_core.py:0
+msgid "Students"
+msgstr "الطلاب"
+
+#. module: dashboard_quran_office_core
+#. odoo-javascript
+#: code:addons/dashboard_quran_office_core/static/src/js/widgets.js:0
+msgid "Students & Classes"
+msgstr "الطلاب والفصول"
+
+#. module: dashboard_quran_office_core
+#. odoo-javascript
+#: code:addons/dashboard_quran_office_core/static/src/js/widgets.js:0
+msgid "Students by office"
+msgstr "الطلاب حسب المكتب"
+
+#. module: dashboard_quran_office_core
+#. odoo-python
+#: code:addons/dashboard_quran_office_core/models/dashboard_quran_office_core.py:0
+msgid "Students without a class"
+msgstr "الطلاب بدون فصل"
+
+#. module: dashboard_quran_office_core
+#. odoo-python
+#: code:addons/dashboard_quran_office_core/models/dashboard_quran_office_core.py:0
+msgid "Students without a status"
+msgstr "الطلاب بدون حالة"
+
+#. module: dashboard_quran_office_core
+#. odoo-python
+#: code:addons/dashboard_quran_office_core/models/dashboard_quran_office_core.py:0
+msgid "Students without a teacher"
+msgstr "الطلاب بدون معلم"
+
+#. module: dashboard_quran_office_core
+#. odoo-python
+#: code:addons/dashboard_quran_office_core/models/dashboard_quran_office_core.py:0
+msgid "Students without an office"
+msgstr "الطلاب بدون مكتب"
+
+#. module: dashboard_quran_office_core
+#. odoo-python
+#: code:addons/dashboard_quran_office_core/models/dashboard_quran_office_core.py:0
+msgid "Teachers"
+msgstr "المعلمين"
+
+#. module: dashboard_quran_office_core
+#. odoo-python
+#: code:addons/dashboard_quran_office_core/models/dashboard_quran_office_core.py:0
+msgid "Teachers without a class"
+msgstr "المعلمين بدون فصل"
+
+#. module: dashboard_quran_office_core
+#. odoo-javascript
+#: code:addons/dashboard_quran_office_core/static/src/js/widgets.js:0
+msgid "Top 10 offices by number of active students."
+msgstr "أفضل 10 مكاتب حسب عدد الطلاب النشطين."

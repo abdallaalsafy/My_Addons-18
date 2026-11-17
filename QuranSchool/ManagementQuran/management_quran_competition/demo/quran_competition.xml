@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="demo_comp_ramadan26" model="quran.competition">
+        <field name="name">مسابقة رمضان لحفظ القرآن الكريم 2026</field>
+        <field name="competition_date">2026-03-05</field>
+        <field name="status">completed</field>
+        <field name="test_grade">100</field>
+        <field name="description">مسابقة رمضانية سنوية لطلاب المكاتب.</field>
+        <field name="requirement_id" ref="demo_req_general"/>
+        <field name="tag_ids" eval="[(6, 0, [ref('demo_tag_ramadan'), ref('demo_tag_local')])]"/>
+        <field name="judge_ids" eval="[(6, 0, [ref('management_quran_office_core.demo_teacher_t_abdallah'), ref('management_quran_office_core.demo_teacher_t_osama')])]"/>
+    </record>
+
+    <record id="demo_comp_winter26" model="quran.competition">
+        <field name="name">مسابقة المتميزين القرآنية - الشتاء 2026</field>
+        <field name="competition_date">2026-12-20</field>
+        <field name="status">opening</field>
+        <field name="test_grade">100</field>
+        <field name="description">مسابقة للمتميزين ممن شاركوا في المسابقة الرمضانية.</field>
+        <field name="requirement_id" ref="demo_req_elite"/>
+        <field name="tag_ids" eval="[(6, 0, [ref('demo_tag_governorate')])]"/>
+        <field name="judge_ids" eval="[(6, 0, [ref('management_quran_office_core.demo_teacher_t_abdallah'), ref('management_quran_office_core.demo_teacher_t_yasser')])]"/>
+    </record>
+
+</odoo>

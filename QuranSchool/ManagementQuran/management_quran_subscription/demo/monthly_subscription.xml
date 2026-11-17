@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="demo_sub_yusuf_202608" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_yusuf"/>
+        <field name="subscription_month">2026-08-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="paid_amount">150.0</field>
+        <field name="payment_voucher_number">V-202608-001</field>
+    </record>
+
+    <record id="demo_sub_yusuf_202609" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_yusuf"/>
+        <field name="subscription_month">2026-09-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="paid_amount">150.0</field>
+        <field name="payment_voucher_number">V-202609-002</field>
+    </record>
+
+    <record id="demo_sub_yusuf_202610" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_yusuf"/>
+        <field name="subscription_month">2026-10-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="paid_amount">75.0</field>
+        <field name="payment_voucher_number">V-202610-003</field>
+        <field name="notes">دفعة جزئية - الباقي يُسدد لاحقًا</field>
+    </record>
+
+    <record id="demo_sub_maryam_202608" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_maryam"/>
+        <field name="subscription_month">2026-08-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="paid_amount">150.0</field>
+        <field name="payment_voucher_number">V-202608-004</field>
+    </record>
+
+    <record id="demo_sub_maryam_202609" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_maryam"/>
+        <field name="subscription_month">2026-09-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="paid_amount">150.0</field>
+        <field name="payment_voucher_number">V-202609-005</field>
+    </record>
+
+    <record id="demo_sub_maryam_202610" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_maryam"/>
+        <field name="subscription_month">2026-10-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="paid_amount">150.0</field>
+        <field name="payment_voucher_number">V-202610-006</field>
+    </record>
+
+    <record id="demo_sub_omar_202608" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_omar"/>
+        <field name="subscription_month">2026-08-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_omar"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_osama"/>
+        <field name="paid_amount">150.0</field>
+        <field name="payment_voucher_number">V-202608-007</field>
+    </record>
+
+    <record id="demo_sub_omar_202609" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_omar"/>
+        <field name="subscription_month">2026-09-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_omar"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_osama"/>
+        <field name="paid_amount">150.0</field>
+        <field name="payment_voucher_number">V-202609-008</field>
+    </record>
+
+    <record id="demo_sub_omar_202610" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_omar"/>
+        <field name="subscription_month">2026-10-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_omar"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_osama"/>
+        <field name="paid_amount">150.0</field>
+        <field name="payment_voucher_number">V-202610-009</field>
+    </record>
+
+    <record id="demo_sub_adam_202608" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_adam"/>
+        <field name="subscription_month">2026-08-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_khaled"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_yasser"/>
+        <field name="paid_amount">112.5</field>
+        <field name="payment_voucher_number">V-202608-010</field>
+    </record>
+
+    <record id="demo_sub_adam_202609" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_adam"/>
+        <field name="subscription_month">2026-09-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_khaled"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_yasser"/>
+        <field name="paid_amount">112.5</field>
+        <field name="payment_voucher_number">V-202609-011</field>
+    </record>
+
+    <record id="demo_sub_adam_202610" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_adam"/>
+        <field name="subscription_month">2026-10-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_khaled"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_yasser"/>
+        <field name="paid_amount">112.5</field>
+        <field name="payment_voucher_number">V-202610-012</field>
+    </record>
+
+    <record id="demo_sub_hamza_202608" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_hamza"/>
+        <field name="subscription_month">2026-08-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="paid_amount">120.0</field>
+        <field name="payment_voucher_number">V-202608-013</field>
+    </record>
+
+    <record id="demo_sub_hamza_202609" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_hamza"/>
+        <field name="subscription_month">2026-09-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="paid_amount">120.0</field>
+        <field name="payment_voucher_number">V-202609-014</field>
+    </record>
+
+    <record id="demo_sub_hamza_202610" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_hamza"/>
+        <field name="subscription_month">2026-10-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="paid_amount">60.0</field>
+        <field name="payment_voucher_number">V-202610-015</field>
+        <field name="notes">دفعة جزئية - الباقي يُسدد لاحقًا</field>
+    </record>
+
+    <record id="demo_sub_salma_202608" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_salma"/>
+        <field name="subscription_month">2026-08-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="paid_amount">90.0</field>
+        <field name="payment_voucher_number">V-202608-016</field>
+    </record>
+
+    <record id="demo_sub_salma_202609" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_salma"/>
+        <field name="subscription_month">2026-09-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="paid_amount">90.0</field>
+        <field name="payment_voucher_number">V-202609-017</field>
+    </record>
+
+    <record id="demo_sub_salma_202610" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_salma"/>
+        <field name="subscription_month">2026-10-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="paid_amount">45.0</field>
+        <field name="payment_voucher_number">V-202610-018</field>
+        <field name="notes">دفعة جزئية - الباقي يُسدد لاحقًا</field>
+    </record>
+
+    <record id="demo_sub_mostafa_202608" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_mostafa"/>
+        <field name="subscription_month">2026-08-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_omar"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_osama"/>
+        <field name="paid_amount">150.0</field>
+        <field name="payment_voucher_number">V-202608-019</field>
+    </record>
+
+    <record id="demo_sub_mostafa_202609" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_mostafa"/>
+        <field name="subscription_month">2026-09-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_omar"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_osama"/>
+        <field name="paid_amount">150.0</field>
+        <field name="payment_voucher_number">V-202609-020</field>
+    </record>
+
+    <record id="demo_sub_mostafa_202610" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_mostafa"/>
+        <field name="subscription_month">2026-10-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_omar"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_osama"/>
+        <field name="paid_amount">150.0</field>
+        <field name="payment_voucher_number">V-202610-021</field>
+    </record>
+
+    <record id="demo_sub_nour_202608" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_nour"/>
+        <field name="subscription_month">2026-08-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="paid_amount">75.0</field>
+        <field name="payment_voucher_number">V-202608-022</field>
+    </record>
+
+    <record id="demo_sub_nour_202609" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_nour"/>
+        <field name="subscription_month">2026-09-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="paid_amount">75.0</field>
+        <field name="payment_voucher_number">V-202609-023</field>
+    </record>
+
+    <record id="demo_sub_nour_202610" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_nour"/>
+        <field name="subscription_month">2026-10-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="paid_amount">75.0</field>
+        <field name="payment_voucher_number">V-202610-024</field>
+    </record>
+
+    <record id="demo_sub_ziad_202608" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_ziad"/>
+        <field name="subscription_month">2026-08-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_khaled"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_yasser"/>
+        <field name="paid_amount">120.0</field>
+        <field name="payment_voucher_number">V-202608-025</field>
+    </record>
+
+    <record id="demo_sub_ziad_202609" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_ziad"/>
+        <field name="subscription_month">2026-09-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_khaled"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_yasser"/>
+        <field name="paid_amount">120.0</field>
+        <field name="payment_voucher_number">V-202609-026</field>
+    </record>
+
+    <record id="demo_sub_ziad_202610" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_ziad"/>
+        <field name="subscription_month">2026-10-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_furqan"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_khaled"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_yasser"/>
+        <field name="paid_amount">120.0</field>
+        <field name="payment_voucher_number">V-202610-027</field>
+    </record>
+
+    <record id="demo_sub_laila_202608" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_laila"/>
+        <field name="subscription_month">2026-08-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="paid_amount">90.0</field>
+        <field name="payment_voucher_number">V-202608-028</field>
+    </record>
+
+    <record id="demo_sub_laila_202609" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_laila"/>
+        <field name="subscription_month">2026-09-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="paid_amount">90.0</field>
+        <field name="payment_voucher_number">V-202609-029</field>
+    </record>
+
+    <record id="demo_sub_laila_202610" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_laila"/>
+        <field name="subscription_month">2026-10-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_aisha"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_heba"/>
+        <field name="paid_amount">90.0</field>
+        <field name="payment_voucher_number">V-202610-030</field>
+    </record>
+
+    <record id="demo_sub_abdelrahman_202608" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_abdelrahman"/>
+        <field name="subscription_month">2026-08-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="paid_amount">0.0</field>
+    </record>
+
+    <record id="demo_sub_abdelrahman_202609" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_abdelrahman"/>
+        <field name="subscription_month">2026-09-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="paid_amount">0.0</field>
+    </record>
+
+    <record id="demo_sub_abdelrahman_202610" model="monthly.subscription">
+        <field name="student_id" ref="management_quran_office_core.demo_student_abdelrahman"/>
+        <field name="subscription_month">2026-10-01</field>
+        <field name="office_id" ref="management_quran_office_core.demo_office_noor"/>
+        <field name="class_id" ref="management_quran_office_core.demo_class_c_abubakr"/>
+        <field name="teacher_id" ref="management_quran_office_core.demo_teacher_t_abdallah"/>
+        <field name="paid_amount">0.0</field>
+    </record>
+
+</odoo>

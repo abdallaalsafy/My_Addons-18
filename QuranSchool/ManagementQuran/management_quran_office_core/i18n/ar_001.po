@@ -1,0 +1,2618 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* management_quran_office_core
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20260423\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-17 01:14+0000\n"
+"PO-Revision-Date: 2026-11-17 01:14+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: management_quran_office_core
+#: model:ir.actions.report,print_report_name:management_quran_office_core.action_report_detailed_person
+msgid "'Detailed person Report'"
+msgstr "'تقرير تفاصيل الشخص'"
+
+#. module: management_quran_office_core
+#: model:ir.actions.report,print_report_name:management_quran_office_core.action_report_salaries_or_subscriptions
+msgid "'Salaries Or Subscriptions Report'"
+msgstr "'تقرير الرواتب أو الاشتراكات'"
+
+#. module: management_quran_office_core
+#: model:ir.actions.report,print_report_name:management_quran_office_core.action_report_students_academic
+msgid "'Students Academic Report'"
+msgstr "'تقرير الطلاب الأكاديمي'"
+
+#. module: management_quran_office_core
+#: model:ir.actions.report,print_report_name:management_quran_office_core.action_report_all_persons_basic_data
+msgid "'persons Basic Data Report'"
+msgstr "'تقرير البيانات الأساسية للأشخاص'"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "(OK) Birth Certificate"
+msgstr "(موجود) شهادة الميلاد"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "(OK)ID Card"
+msgstr "(موجود) بطاقة الهوية"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "(X) Birth Certificate"
+msgstr "(غير موجود) شهادة الميلاد"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "(X) ID Card"
+msgstr "(غير موجود) بطاقة الهوية"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/utils.py:0
+msgid "0 days"
+msgstr "0 يوم"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.view_quran_person_kanban
+msgid "<span class=\"badge text-bg-danger\">Disconnected</span>"
+msgstr "<span class=\"badge text-bg-danger\">منقطع</span>"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.view_quran_person_kanban
+msgid "<span class=\"badge text-bg-info\">Father</span>"
+msgstr "<span class=\"badge text-bg-info\">الأب</span>"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.view_quran_person_kanban
+msgid "<span class=\"badge text-bg-info\">Quran</span>"
+msgstr "<span class=\"badge text-bg-info\">القرآن</span>"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.view_quran_person_kanban
+msgid "<span class=\"badge text-bg-primary\">Student</span>"
+msgstr "<span class=\"badge text-bg-primary\">طالب</span>"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.view_quran_person_kanban
+msgid "<span class=\"badge text-bg-success\">Persistent</span>"
+msgstr "<span class=\"badge text-bg-success\">مستمر</span>"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.view_quran_person_kanban
+msgid "<span class=\"badge text-bg-success\">Teacher</span>"
+msgstr "<span class=\"badge text-bg-success\">معلم</span>"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.view_quran_person_kanban
+msgid "<span class=\"badge text-bg-warning\">Mother</span>"
+msgstr "<span class=\"badge text-bg-warning\">الأم</span>"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "<span style=\"text-decoration: underline;\">Age</span>:"
+msgstr "<span style=\"text-decoration: underline;\">العمر</span>:"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "<span style=\"text-decoration: underline;\">Birth Date</span>:"
+msgstr "<span style=\"text-decoration: underline;\">تاريخ الميلاد</span>:"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "<span style=\"text-decoration: underline;\">ID Number</span>:"
+msgstr "<span style=\"text-decoration: underline;\">رقم الهوية</span>:"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "<span>PARENT</span>"
+msgstr "<span>ولي الأمر</span>"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "<span>STUDENT</span>"
+msgstr "<span>الطالب</span>"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "<span>TEACHER</span>"
+msgstr "<span>المعلم</span>"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.view_quran_person_kanban
+msgid "<span>♀</span>"
+msgstr "<span>أنثى</span>"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.view_quran_person_kanban
+msgid "<span>♂</span>"
+msgstr "<span>ذكر</span>"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_financial_document
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_person_basic_data_document
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_student_document
+msgid "<strong>Report Date:</strong>"
+msgstr "<strong>تاريخ التقرير:</strong>"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/res_persons.py:0
+msgid "A person %s with the same complete name already exists."
+msgstr "يوجد شخص %s بنفس الاسم الكامل بالفعل."
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/res_persons.py:0
+msgid "A person cannot be their own father!"
+msgstr "لا يمكن للشخص أن يكون أبًا لنفسه!"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/res_persons.py:0
+msgid "A person cannot be their own mother!"
+msgstr "لا يمكن للشخص أن يكون أمًا لنفسه!"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/res_persons.py:0
+msgid "A person cannot be their own teacher!"
+msgstr "لا يمكن للشخص أن يكون معلمًا لنفسه!"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "Academic Information"
+msgstr "المعلومات الأكاديمية"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__qualification
+msgid "Academic qualification of the person"
+msgstr "المؤهل العلمي للشخص"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_area__active
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_class__active
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_office__active
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__active
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.area_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_class_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_office_search_view
+msgid "Active"
+msgstr "نشط"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.area_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_class_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_office_search_view
+msgid "Active Status"
+msgstr "الحالة النشطة"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__update_person_data_wizard__tags_mode__add
+msgid "Add Tags"
+msgstr "إضافة وسوم"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.area_form_view
+msgid "Add any additional information about this area..."
+msgstr "أضف أي معلومات إضافية حول هذه المنطقة..."
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_class_form_view
+msgid "Add any additional information about this class..."
+msgstr "أضف أي معلومات إضافية حول هذا الفصل..."
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_office_form_view
+msgid "Add any additional information about this office..."
+msgstr "أضف أي معلومات إضافية حول هذا المكتب..."
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_update_person_data_wizard__tags_mode
+msgid "Add tags to existing ones or replace all tags"
+msgstr "أضف وسومًا إلى الموجودة أو استبدل كل الوسوم"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__additional_documents
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Additional Documents"
+msgstr "وثائق إضافية"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_quran_office_area__description
+msgid "Additional information about the area"
+msgstr "معلومات إضافية عن المنطقة"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_quran_office_class__description
+msgid "Additional information about the class"
+msgstr "معلومات إضافية عن الفصل"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_quran_office_office__description
+msgid "Additional information about the office"
+msgstr "معلومات إضافية عن المكتب"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Address"
+msgstr "العنوان"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Address..."
+msgstr "العنوان..."
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "Address:"
+msgstr "العنوان:"
+
+#. module: management_quran_office_core
+#: model:ir.actions.act_window,name:management_quran_office_core.action_student_filter_wizard
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.view_student_filter_wizard_form
+msgid "Advanced Student Filter"
+msgstr "فلتر الطلاب المتقدم"
+
+#. module: management_quran_office_core
+#: model:ir.model,name:management_quran_office_core.model_student_filter_wizard
+msgid "Advanced Student Filter Wizard"
+msgstr "معالج فلتر الطلاب المتقدم"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_financial_document
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_person_basic_data_document
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_student_document
+msgid "Age"
+msgstr "العمر"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__age_days
+msgid "Age (Days)"
+msgstr "العمر (أيام)"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__age_months
+msgid "Age (Months)"
+msgstr "العمر (أشهر)"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__age_years
+msgid "Age (Years)"
+msgstr "العمر (سنوات)"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.view_student_filter_wizard_form
+msgid "Age Filter"
+msgstr "فلتر العمر"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__age_filter_type
+msgid "Age Filter Type"
+msgstr "نوع فلتر العمر"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__age_value
+msgid "Age Value"
+msgstr "قيمة العمر"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_student_filter_wizard__age_value
+msgid "Age value for filtering"
+msgstr "قيمة العمر للفلترة"
+
+#. module: management_quran_office_core
+#: model:ir.ui.menu,name:management_quran_office_core.menu_all_persons_quran_office_core
+msgid "All Persons"
+msgstr "جميع الأفراد"
+
+#. module: management_quran_office_core
+#: model:ir.actions.act_window,name:management_quran_office_core.action_all_persons_view_id
+msgid "All persons"
+msgstr "جميع الأشخاص"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__juze_amount
+msgid "Amount of Quran memorized in Juz' (parts) with decimal precision"
+msgstr "مقدار القرآن المحفوظ بالأجزاء مع دقة عشرية"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.view_student_filter_wizard_form
+msgid "Apply Filter"
+msgstr "تطبيق الفلتر"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_search_view_quran_office
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.view_quran_person_kanban
+msgid "Archived"
+msgstr "مؤرشف"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Are you sure you want to remove the mother role?."
+msgstr "هل أنت متأكد أنك تريد إزالة دور الأم؟"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid ""
+"Are you sure you want to remove the student role? This will also remove any "
+"associated office, class, teacher, and subscription information."
+msgstr ""
+"هل أنت متأكد أنك تريد إزالة دور الطالب؟ سيؤدي هذا أيضًا إلى إزالة معلومات المكتب والفصل والمعلم والاشتراك المرتبطة."
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid ""
+"Are you sure you want to remove the teacher role? This will also remove any "
+"associated classes and salary information."
+msgstr ""
+"هل أنت متأكد أنك تريد إزالة دور المعلم؟ سيؤدي هذا أيضًا إلى إزالة معلومات الفصول والراتب المرتبطة."
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__area_id
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_person_basic_data_document
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_search_view_quran_office
+msgid "Area"
+msgstr "المنطقة"
+
+#. module: management_quran_office_core
+#: model:ir.model,name:management_quran_office_core.model_quran_office_area
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__area_id
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.area_form_view
+msgid "Area/District"
+msgstr "المنطقة/المحافظة"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "Area/District:"
+msgstr "المنطقة/المحافظة:"
+
+#. module: management_quran_office_core
+#: model:ir.actions.act_window,name:management_quran_office_core.action_areas_view_id
+#: model:ir.ui.menu,name:management_quran_office_core.menu_areas_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.area_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.area_tree_view
+msgid "Areas/Districts"
+msgstr "المناطق/المحافظات"
+
+#. module: management_quran_office_core
+#: model_terms:ir.actions.act_window,help:management_quran_office_core.action_areas_view_id
+msgid ""
+"Areas/Districts help you organize persons by geographical location.\n"
+"                You can assign persons to specific areas for better management and reporting."
+msgstr ""
+"تساعدك المناطق/المحافظات على تنظيم الأفراد حسب موقعهم الجغرافي.\n"
+"                يمكنك تخصيص الأفراد لمناطق معينة لتحسين الإدارة والتقارير."
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_config_settings_view_form_quran_core
+msgid "Attendance"
+msgstr "الحضور"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_config_settings__module_management_quran_attendance
+msgid "Attendance Module"
+msgstr "وحدة الحضور"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__ayah_num
+msgid "Ayah number where memorization starts"
+msgstr "رقم الآية التي يبدأ عندها الحفظ"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_person_basic_data_document
+msgid "Basic Data for Fathers"
+msgstr "البيانات الأساسية للأباء"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_person_basic_data_document
+msgid "Basic Data for Mothers"
+msgstr "البيانات الأساسية للأمهات"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_person_basic_data_document
+msgid "Basic Data for Students"
+msgstr "البيانات الأساسية للطلاب"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_person_basic_data_document
+msgid "Basic Data for Teachers"
+msgstr "البيانات الأساسية للمعلمين"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_person_basic_data_document
+msgid "Basic Data for persons"
+msgstr "البيانات الأساسية للأشخاص"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__birth_certificate
+msgid "Birth Certificate"
+msgstr "شهادة الميلاد"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__birth_certificate_file
+msgid "Birth Certificate File Name"
+msgstr "اسم ملف شهادة الميلاد"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__has_birth_certificate
+msgid "Birth Certificate Filter"
+msgstr "فلتر شهادة الميلاد"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__birth_date
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_person_basic_data_document
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_search_view_quran_office
+msgid "Birth Date"
+msgstr "تاريخ الميلاد"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/res_persons.py:0
+msgid "Birth Date can't be greater than current date!"
+msgstr "لا يمكن أن يكون تاريخ الميلاد أكبر من التاريخ الحالي!"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.update_person_data_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.view_student_filter_wizard_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/res_persons.py:0
+msgid "Cannot remove father role: This person has active children."
+msgstr "لا يمكن إزالة دور الأب: هذا الشخص لديه أطفال نشطون."
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/res_persons.py:0
+msgid "Cannot remove mother role: This person has active children."
+msgstr "لا يمكن إزالة دور الأم: هذا الشخص لديه أطفال نشطون."
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.view_quran_person_kanban
+msgid "Children"
+msgstr "الأطفال"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__children_count
+msgid "Children Count"
+msgstr "عدد الأطفال"
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/res_persons.py:0
+msgid "Children of %s (Father)"
+msgstr "أطفال %s (الأب)"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/res_persons.py:0
+msgid "Children of %s (Mother)"
+msgstr "أطفال %s (الأم)"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__class_id
+#: model:ir.model.fields,field_description:management_quran_office_core.field_school_organization_mixin__class_id
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__class_id
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__class_id
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_student_document
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_search_view_quran_office
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.view_student_filter_wizard_form
+msgid "Class"
+msgstr "الفصل"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__has_class
+msgid "Class Filter"
+msgstr "فلتر الفصل"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_class__name
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_class_form_view
+msgid "Class Name"
+msgstr "اسم الفصل"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__class_id
+#: model:ir.model.fields,help:management_quran_office_core.field_school_organization_mixin__class_id
+#: model:ir.model.fields,help:management_quran_office_core.field_student_filter_wizard__class_id
+#: model:ir.model.fields,help:management_quran_office_core.field_update_person_data_wizard__class_id
+msgid "Class this record belongs to"
+msgstr "الفصل الذي ينتمي إليه هذا السجل"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "Class:"
+msgstr "الفصل:"
+
+#. module: management_quran_office_core
+#: model:ir.actions.act_window,name:management_quran_office_core.action_classes_view_id
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_office__class_ids
+#: model:ir.ui.menu,name:management_quran_office_core.menu_classes_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_office_form_view
+msgid "Classes"
+msgstr "الفصول"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__class_ids
+msgid "Classes as Teacher"
+msgstr "الفصول كمعلم"
+
+#. module: management_quran_office_core
+#: model_terms:ir.actions.act_window,help:management_quran_office_core.action_classes_view_id
+msgid ""
+"Classes help you organize students by assigning teachers and managing \n"
+"                student groups within each Quran office."
+msgstr ""
+"تساعدك الفصول على تنظيم الطلاب من خلال تعيين المعلمين وإدارة \n"
+"                مجموعات الطلاب داخل كل مكتب قرآن."
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_quran_office_office__class_ids
+msgid "Classes in this office"
+msgstr "الفصول في هذا المكتب"
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__update_person_data_wizard__mode_area__clear
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__update_person_data_wizard__mode_discount__clear
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__update_person_data_wizard__mode_father__clear
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__update_person_data_wizard__mode_mother__clear
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__update_person_data_wizard__mode_office_class__clear
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__update_person_data_wizard__mode_qua__clear
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__update_person_data_wizard__mode_salary__clear
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__update_person_data_wizard__mode_subscrip__clear
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__update_person_data_wizard__mode_tags__clear
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__update_person_data_wizard__mode_teacher__clear
+msgid "Clear"
+msgstr "مسح"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_area__code
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_class__code
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_office__code
+msgid "Code"
+msgstr "الكود"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_config_settings_view_form_quran_core
+msgid "Competition"
+msgstr "المسابقة"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_config_settings__module_management_quran_competition
+msgid "Competition Module"
+msgstr "وحدة المسابقة"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__complete_name
+msgid "Complete Name"
+msgstr "الاسم الكامل"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__is_quran_memorizer
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__is_quran_memorizer__memorizer
+msgid "Complete Quran Memorizer"
+msgstr "حافظ كامل للقرآن"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/res_persons.py:0
+msgid "Complete name cannot be empty. Please fill in the name fields."
+msgstr "لا يمكن أن يكون الاسم الكامل فارغًا. يرجى ملء حقول الاسم."
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__complete_name
+msgid "Complete person's name"
+msgstr "اسم الشخص الكامل"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__name
+msgid "Computed person's name"
+msgstr "اسم الشخص المحسوب"
+
+#. module: management_quran_office_core
+#: model:ir.model,name:management_quran_office_core.model_res_config_settings
+msgid "Config Settings"
+msgstr "إعدادات التهيئة"
+
+#. module: management_quran_office_core
+#: model:ir.ui.menu,name:management_quran_office_core.menu_configuration_quran_office_core
+msgid "Configuration"
+msgstr "الإعدادات"
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.view_student_filter_wizard_form
+msgid "Contact Information"
+msgstr "معلومات الاتصال"
+
+#. module: management_quran_office_core
+#: model_terms:ir.actions.act_window,help:management_quran_office_core.action_quran_offices_view_id
+msgid "Create your first Quran office"
+msgstr "أنشئ أول مكتب قرآن لك"
+
+#. module: management_quran_office_core
+#: model_terms:ir.actions.act_window,help:management_quran_office_core.action_areas_view_id
+msgid "Create your first area/district"
+msgstr "أنشئ أول منطقة/محافظة لك"
+
+#. module: management_quran_office_core
+#: model_terms:ir.actions.act_window,help:management_quran_office_core.action_classes_view_id
+msgid "Create your first class"
+msgstr "أنشئ أول فصل لك"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_area__create_uid
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_class__create_uid
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_office__create_uid
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__create_uid
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__create_uid
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_area__create_date
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_class__create_date
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_office__create_date
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__create_date
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__create_date
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__create_date
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__currency_id
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__currency_id
+#: model:ir.model.fields,help:management_quran_office_core.field_update_person_data_wizard__currency_id
+msgid "Currency for subscription fee"
+msgstr "عملة رسوم الاشتراك"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_area__description
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_class__description
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_office__description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__age_from_id
+msgid "Detailed Age"
+msgstr "العمر التفصيلي"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "Detailed person Information Report"
+msgstr "تقرير معلومات الشخص التفصيلي"
+
+#. module: management_quran_office_core
+#: model:ir.actions.report,name:management_quran_office_core.action_report_detailed_person
+msgid "Detailed person Report"
+msgstr "تقرير تفاصيل الشخص"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__res_persons__status__disconnected
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__status__disconnected
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_search_view_quran_office
+msgid "Disconnected"
+msgstr "منقطع"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__discount_percentage_fee
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__discount_percentage_fee
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_financial_document
+msgid "Discount %"
+msgstr "نسبة الخصم %"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "Discount Percentage:"
+msgstr "نسبة الخصم:"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_financial_document
+msgid "Discount Reason"
+msgstr "سبب الخصم"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "Discount Reason:"
+msgstr "سبب الخصم:"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/wizards/update_person_data_wizard.py:0
+msgid "Discount percentage cannot be negative or zero in update mode."
+msgstr "لا يمكن أن تكون نسبة الخصم سلبية أو صفرًا في وضع التحديث."
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__discount_percentage_fee
+#: model:ir.model.fields,help:management_quran_office_core.field_update_person_data_wizard__discount_percentage_fee
+msgid "Discount percentage for student subscription fee"
+msgstr "نسبة الخصم على رسوم اشتراك الطالب"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_area__display_name
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_class__display_name
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_office__display_name
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__display_name
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__display_name
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Documents"
+msgstr "المستندات"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.view_student_filter_wizard_form
+msgid "Documents & Photos"
+msgstr "المستندات والصور"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Education"
+msgstr "التعليم"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__id_number
+msgid "Egyptian national ID number (14 digits)"
+msgstr "رقم الهوية الوطنية المصرية (14 رقمًا)"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__email
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__email
+msgid "Email address of the person"
+msgstr "عنوان بريد الشخص الإلكتروني"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "Email:"
+msgstr "البريد الإلكتروني:"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_update_person_data_wizard__qualification
+msgid "Enter the academic qualification for persons"
+msgstr "أدخل المؤهل العلمي للأشخاص"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__age_filter_type__equals
+msgid "Equals"
+msgstr "يساوي"
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Family"
+msgstr "العائلة"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "Family Contact Information"
+msgstr "معلومات التواصل العائلية"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__father_id
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__res_persons__parent_role__father
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.view_student_filter_wizard_form
+msgid "Father"
+msgstr "الأب"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__has_father
+msgid "Father Filter"
+msgstr "فلتر الأب"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "Father Job:"
+msgstr "مهنة الأب:"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__father_id
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__father_id
+msgid "Father Name"
+msgstr "اسم الأب"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "Father Phone:"
+msgstr "هاتف الأب:"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/res_persons.py:0
+msgid "Father must be male! Please select a male person as father."
+msgstr "يجب أن يكون الأب ذكرًا! يرجى اختيار شخص ذكر كأب."
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__is_fatherless
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__is_fatherless__fatherless
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_search_view_quran_office
+msgid "Fatherless"
+msgstr "بدون أب"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__is_fatherless
+msgid "Fatherless Filter"
+msgstr "فلتر بدون أب"
+
+#. module: management_quran_office_core
+#: model:ir.actions.act_window,name:management_quran_office_core.action_fathers_view_id
+#: model:ir.ui.menu,name:management_quran_office_core.menu_fathers_quran_office_core
+msgid "Fathers"
+msgstr "الأباء"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__res_persons__gender__f
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__gender__f
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_financial_document
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_student_document
+msgid "Female"
+msgstr "أنثى"
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_student_filter_wizard__id_number
+msgid "Filter by ID number or leave empty to include all"
+msgstr "تصفية حسب رقم الهوية أو اتركه فارغًا لتضمين الجميع"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_student_filter_wizard__father_id
+msgid "Filter by father or leave empty to include all"
+msgstr "تصفية حسب الأب أو اتركه فارغًا لتضمين الجميع"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_student_filter_wizard__mother_id
+msgid "Filter by mother or leave empty to include all"
+msgstr "تصفية حسب الأم أو اتركها فارغة لتضمين الجميع"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_student_filter_wizard__phone
+msgid "Filter by phone number or leave empty to include all"
+msgstr "تصفية حسب رقم الهاتف أو اتركه فارغًا لتضمين الجميع"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/wizards/student_filter_wizard.py:0
+msgid "Filtered Students"
+msgstr "الطلاب المفلترون"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Financial"
+msgstr "مالي"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "Financial Information"
+msgstr "المعلومات المالية"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_financial_document
+msgid "Financial Report"
+msgstr "التقرير المالي"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__first_name
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "First Name"
+msgstr "الاسم الأول"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "From Al-Baqarah"
+msgstr "من البقرة"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "From An-Nas"
+msgstr "من الناس"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_person_basic_data_document
+msgid "Full Name"
+msgstr "الاسم الكامل"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__function
+msgid "Function"
+msgstr "الوظيفة"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__function
+msgid "Function or role of the person"
+msgstr "وظيفة أو دور الشخص"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__gender
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__gender
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_financial_document
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_student_document
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_search_view_quran_office
+msgid "Gender"
+msgstr "الجنس"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "Gender:"
+msgstr "الجنس:"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__age_filter_type__greater_than
+msgid "Greater Than"
+msgstr "أكبر من"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.area_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_class_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_office_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_search_view_quran_office
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__has_birth_certificate__with_certificate
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_search_view_quran_office
+msgid "Has Birth Certificate"
+msgstr "لديه شهادة ميلاد"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__has_class__with_class
+msgid "Has Class"
+msgstr "لديه فصل"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_search_view_quran_office
+msgid "Has Discount Fee"
+msgstr "لديه رسوم خصم"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__has_father__with_father
+msgid "Has Father"
+msgstr "لديه أب"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_search_view_quran_office
+msgid "Has ID Card"
+msgstr "لديه بطاقة هوية"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__has_id_card_front__with_id_front
+msgid "Has ID Card Front"
+msgstr "لديه وجه بطاقة الهوية"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__has_id_number__with_id
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_search_view_quran_office
+msgid "Has ID Number"
+msgstr "لديه رقم هوية"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__has_mother__with_mother
+msgid "Has Mother"
+msgstr "لديه أم"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__has_office__with_office
+msgid "Has Office"
+msgstr "لديه مكتب"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__has_personal_photo__with_photo
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_search_view_quran_office
+msgid "Has Personal Photo"
+msgstr "لديه صورة شخصية"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__has_phone__with_phone
+msgid "Has Phone"
+msgstr "لديه هاتف"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__has_teacher__with_teacher
+msgid "Has Teacher"
+msgstr "لديه معلم"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__is_quran_memorizer
+msgid "Has memorized the entire Quran"
+msgstr "حفظ كامل القرآن"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_area__id
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_class__id
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_office__id
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__id
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__id
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__id
+msgid "ID"
+msgstr "الهوية"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "ID Card"
+msgstr "بطاقة الهوية"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__id_card_back
+msgid "ID Card Back"
+msgstr "ظهر بطاقة الهوية"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__id_card_back_file
+msgid "ID Card Back File Name "
+msgstr "اسم ملف ظهر بطاقة الهوية"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__id_card_front
+msgid "ID Card Front"
+msgstr "وجه بطاقة الهوية"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__id_card_front_file
+msgid "ID Card Front File Name"
+msgstr "اسم ملف وجه بطاقة الهوية"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__has_id_card_front
+msgid "ID Card Front Filter"
+msgstr "فلتر وجه بطاقة الهوية"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__id_number
+msgid "ID Card Number"
+msgstr "رقم بطاقة الهوية"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__id_number
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_financial_document
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_person_basic_data_document
+msgid "ID Number"
+msgstr "رقم الهوية"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__has_id_number
+msgid "ID Number Filter"
+msgstr "فلتر رقم الهوية"
+
+#. module: management_quran_office_core
+#: model:ir.model.constraint,message:management_quran_office_core.constraint_res_persons_id_number_uniq
+msgid "ID Number must be unique per person."
+msgstr "يجب أن يكون رقم الهوية فريدًا لكل شخص."
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.view_student_filter_wizard_form
+msgid "Identification"
+msgstr "التعريف"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_quran_office_area__active
+msgid "If unchecked, this area will not be available for selection"
+msgstr "إذا لم يتم تحديده، فلن تكون هذه المنطقة متاحة للاختيار"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_quran_office_class__active
+msgid "If unchecked, this class will not be available"
+msgstr "إذا لم يتم تحديده، فلن يكون هذا الفصل متاحًا"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_quran_office_office__active
+msgid "If unchecked, this office will not be available"
+msgstr "إذا لم يتم تحديده، فلن يكون هذا المكتب متاحًا"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.area_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_class_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_office_search_view
+msgid "Inactive"
+msgstr "غير نشط"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_config_settings__module_management_quran_attendance
+msgid "Install Attendance Module"
+msgstr "تثبيت وحدة الحضور"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_config_settings__module_management_quran_competition
+msgid "Install Competition Module"
+msgstr "تثبيت وحدة المسابقة"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_config_settings__module_management_quran_memorization
+msgid "Install Memorization Module"
+msgstr "تثبيت وحدة الحفظ"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_config_settings__module_management_quran_subscription
+msgid "Install Subscription Module"
+msgstr "تثبيت وحدة الاشتراك"
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__notes
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Internal Notes"
+msgstr "ملاحظات داخلية"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Internal notes..."
+msgstr "ملاحظات داخلية..."
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__ref
+msgid "Internal reference number"
+msgstr "الرقم المرجعي الداخلي"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/res_persons.py:0
+msgid ""
+"Invalid Egyptian National ID format! Please enter a valid 14-digit national "
+"ID number."
+msgstr ""
+"تنسيق بطاقة الرقم القومي المصري غير صالح! الرجاء إدخال رقم قومي صالح مكون من 14 رقمًا."
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__is_student
+msgid "Is a Student"
+msgstr "طالب"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__is_teacher
+msgid "Is a Teacher"
+msgstr "معلم"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__is_fatherless
+msgid "Is the student fatherless"
+msgstr "هل الطالب بدون أب"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__last_name
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Last Name"
+msgstr "اسم العائلة"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_area__write_uid
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_class__write_uid
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_office__write_uid
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__write_uid
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__write_uid
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_area__write_date
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_class__write_date
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_office__write_date
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__write_date
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__write_date
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__write_date
+msgid "Last Updated on"
+msgstr "تاريخ آخر تحديث"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__age_filter_type__less_than
+msgid "Less Than"
+msgstr "أقل من"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Make Father"
+msgstr "تعيين أب"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Make Mother"
+msgstr "تعيين أم"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Make Student"
+msgstr "تعيين طالب"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Make Teacher"
+msgstr "تعيين معلم"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__res_persons__gender__m
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__gender__m
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_financial_document
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_student_document
+msgid "Male"
+msgstr "ذكر"
+
+#. module: management_quran_office_core
+#: model:ir.ui.menu,name:management_quran_office_core.menu_quran_office_core_root
+msgid "Manage Quran Office"
+msgstr "إدارة مكتب القرآن"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_config_settings_view_form_quran_core
+msgid "Manage Student Attendance"
+msgstr "إدارة حضور الطلاب"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_config_settings_view_form_quran_core
+msgid "Manage Student Competition"
+msgstr "إدارة مسابقات الطلاب"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_config_settings_view_form_quran_core
+msgid "Manage Student Memorization"
+msgstr "إدارة حفظ الطلاب"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_config_settings_view_form_quran_core
+msgid "Manage Student Subscription"
+msgstr "إدارة اشتراكات الطلاب"
+
+#. module: management_quran_office_core
+#: model:ir.module.category,description:management_quran_office_core.module_category_quran_office
+msgid "Management access for Quran Office Core"
+msgstr "صلاحيات الإدارة لنواة مكتب القرآن"
+
+#. module: management_quran_office_core
+#: model:res.groups,name:management_quran_office_core.group_quran_office_manager
+msgid "Manager"
+msgstr "المدير"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_config_settings_view_form_quran_core
+msgid "Memorization"
+msgstr "الحفظ"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__juze_amount
+msgid "Memorization Amount (Juz')"
+msgstr "مقدار الحفظ (جزء)"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__ayah_num
+msgid "Memorization Ayah"
+msgstr "آية الحفظ"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Memorization Details"
+msgstr "تفاصيل الحفظ"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__memorization_method
+msgid "Memorization Method"
+msgstr "طريقة الحفظ"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "Memorization Method:"
+msgstr "طريقة الحفظ:"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_config_settings__module_management_quran_memorization
+msgid "Memorization Module"
+msgstr "وحدة الحفظ"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "Memorization Start:"
+msgstr "بداية الحفظ:"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__surah_id
+msgid "Memorization Surah"
+msgstr "سورة الحفظ"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Method & Amount"
+msgstr "الطريقة والمقدار"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__memorization_method
+msgid "Method of Quran memorization"
+msgstr "طريقة حفظ القرآن"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__middle_name
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Middle Name"
+msgstr "اسم الأب الأوسط"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "Mixed Memorization"
+msgstr "حفظ مختلط"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__mobile
+msgid "Mobile"
+msgstr "الجوال"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__mobile
+msgid "Mobile number of the person"
+msgstr "رقم جوال الشخص"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__mode_area
+msgid "Mode Area"
+msgstr "وضعية المنطقة"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__mode_discount
+msgid "Mode Discount"
+msgstr "وضعية الخصم"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__mode_father
+msgid "Mode Fathers"
+msgstr "وضعية الآباء"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__mode_mother
+msgid "Mode Mothers"
+msgstr "وضعية الأمهات"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__mode_office_class
+msgid "Mode Office Class"
+msgstr "وضعية الفصل في المكتب"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__mode_qua
+msgid "Mode Qualification"
+msgstr "وضعية المؤهل"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__mode_subscrip
+msgid "Mode Subscription"
+msgstr "وضعية الاشتراك"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__mode_tags
+msgid "Mode Tags"
+msgstr "وضعية الوسوم"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__mode_teacher
+msgid "Mode Teacher"
+msgstr "وضعية المعلم"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__mode_salary
+msgid "Mode salary"
+msgstr "وضعية الراتب"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__mother_id
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__res_persons__parent_role__mother
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.view_student_filter_wizard_form
+msgid "Mother"
+msgstr "الأم"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__has_mother
+msgid "Mother Filter"
+msgstr "فلتر الأم"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "Mother Job:"
+msgstr "وظيفة الأم:"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__mother_id
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__mother_id
+msgid "Mother Name"
+msgstr "اسم الأم"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "Mother Phone:"
+msgstr "هاتف الأم:"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/res_persons.py:0
+msgid "Mother must be female! Please select a female person as mother."
+msgstr "يجب أن تكون الأم أنثى! يرجى اختيار شخص أنثى كأم."
+
+#. module: management_quran_office_core
+#: model:ir.actions.act_window,name:management_quran_office_core.action_mothers_view_id
+#: model:ir.ui.menu,name:management_quran_office_core.menu_mothers_quran_office_core
+msgid "Mothers"
+msgstr "الأمهات"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_area__name
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_office__name
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Name Details"
+msgstr "تفاصيل الاسم"
+
+#. module: management_quran_office_core
+#: model:ir.model.constraint,message:management_quran_office_core.constraint_quran_office_area_name_uniq
+msgid "Name must be unique per area."
+msgstr "يجب أن يكون الاسم فريدًا لكل منطقة."
+
+#. module: management_quran_office_core
+#: model:ir.model.constraint,message:management_quran_office_core.constraint_quran_office_class_office_name_uniq
+msgid "Name must be unique per class per office."
+msgstr "يجب أن يكون الاسم فريدًا لكل فصل داخل كل مكتب."
+
+#. module: management_quran_office_core
+#: model:ir.model.constraint,message:management_quran_office_core.constraint_quran_office_office_name_uniq
+msgid "Name must be unique per office."
+msgstr "يجب أن يكون الاسم فريدًا لكل مكتب."
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_quran_office_office__name
+msgid "Name of the Quran memorization office"
+msgstr "اسم مكتب حفظ القرآن"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_quran_office_area__name
+msgid "Name of the area/district"
+msgstr "اسم المنطقة/المحافظة"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_quran_office_class__name
+msgid "Name of the class"
+msgstr "اسم الفصل"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/classes.py:0
+#: code:addons/management_quran_office_core/models/office.py:0
+#: code:addons/management_quran_office_core/models/res_persons.py:0
+msgid "New"
+msgstr "جديد"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_search_view_quran_office
+msgid "No Birth Certificate"
+msgstr "لا يوجد شهادة ميلاد"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_search_view_quran_office
+msgid "No ID Card"
+msgstr "لا توجد بطاقة هوية"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_search_view_quran_office
+msgid "No ID Number"
+msgstr "لا يوجد رقم هوية"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_search_view_quran_office
+msgid "No Personal Photo"
+msgstr "لا توجد صورة شخصية"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/wizards/student_filter_wizard.py:0
+msgid "No students found matching the criteria."
+msgstr "لا يوجد طلاب يطابقون المعايير."
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__is_quran_memorizer__not_memorizer
+msgid "Not Complete Quran Memorizer"
+msgstr "غير حافظ كامل للقرآن"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__is_fatherless__not_fatherless
+msgid "Not Fatherless"
+msgstr "ليس بدون أب"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/utils.py:0
+msgid "Not specified"
+msgstr "غير محدد"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_office__class_count
+msgid "Number of Classes"
+msgstr "عدد الفصول"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_class__student_count
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_office__student_count
+msgid "Number of Students"
+msgstr "عدد الطلاب"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__children_count
+msgid ""
+"Number of children for this person (only shown for fathers and mothers)"
+msgstr "عدد الأطفال لهذا الشخص (يظهر فقط للأب والأم)"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_area__person_count
+msgid "Number of persons"
+msgstr "عدد الأفراد"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_class__office_id
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__office_id
+#: model:ir.model.fields,field_description:management_quran_office_core.field_school_organization_mixin__office_id
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__office_id
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__office_id
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_class_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_student_document
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_search_view_quran_office
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.view_student_filter_wizard_form
+msgid "Office"
+msgstr "المكتب"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__has_office
+msgid "Office Filter"
+msgstr "فلتر المكتب"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_office_form_view
+msgid "Office Name"
+msgstr "اسم المكتب"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_quran_office_class__office_id
+msgid "Office this class belongs to"
+msgstr "المكتب الذي ينتمي إليه هذا الفصل"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__office_id
+#: model:ir.model.fields,help:management_quran_office_core.field_school_organization_mixin__office_id
+#: model:ir.model.fields,help:management_quran_office_core.field_student_filter_wizard__office_id
+#: model:ir.model.fields,help:management_quran_office_core.field_update_person_data_wizard__office_id
+msgid "Office this record belongs to"
+msgstr "المكتب الذي ينتمي إليه هذا السجل"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "Office:"
+msgstr "المكتب:"
+
+#. module: management_quran_office_core
+#: model:ir.ui.menu,name:management_quran_office_core.menu_quran_offices_quran_office_core
+msgid "Offices"
+msgstr "المكاتب"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/res_persons.py:0
+msgid "Only female persons can be converted to mother."
+msgstr "يمكن تحويل الأفراد الإناث فقط إلى أم."
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/res_persons.py:0
+msgid "Only male persons can be converted to father."
+msgstr "يمكن تحويل الأفراد الذكور فقط إلى أب."
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__parent_role
+msgid "Parent Role"
+msgstr "دور الوالد"
+
+#. module: management_quran_office_core
+#: model:ir.ui.menu,name:management_quran_office_core.menu_parents_quran_office_core
+msgid "Parents"
+msgstr "أولياء الأمور"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__res_persons__status__persistent
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__status__persistent
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_search_view_quran_office
+msgid "Persistent"
+msgstr "مستمر"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Personal Details"
+msgstr "التفاصيل الشخصية"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "Personal Information"
+msgstr "المعلومات الشخصية"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__personal_photo
+msgid "Personal Photo"
+msgstr "الصورة الشخصية"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__personal_photo_file
+msgid "Personal Photo File Name"
+msgstr "اسم ملف الصورة الشخصية"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__has_personal_photo
+msgid "Personal Photo Filter"
+msgstr "فلتر الصورة الشخصية"
+
+#. module: management_quran_office_core
+#: model:ir.ui.menu,name:management_quran_office_core.menu_persons_quran_office_core
+msgid "Persons"
+msgstr "الأفراد"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__phone
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__phone
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_financial_document
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_person_basic_data_document
+msgid "Phone"
+msgstr "الهاتف"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__has_phone
+msgid "Phone Filter"
+msgstr "فلتر الهاتف"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__phone
+msgid "Phone number of the person"
+msgstr "رقم هاتف الشخص"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "Phone:"
+msgstr "الهاتف:"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__photo
+msgid "Photo"
+msgstr "الصورة"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Photos & Identity"
+msgstr "الصور والهوية"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/wizards/update_person_data_wizard.py:0
+msgid "Please select at least one field to update"
+msgstr "الرجاء تحديد حقل واحد على الأقل للتحديث"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.view_student_filter_wizard_form
+msgid "Print Results"
+msgstr "طباعة النتائج"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__qualification
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__qualification
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_person_basic_data_document
+msgid "Qualification"
+msgstr "المؤهل"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "Qualification:"
+msgstr "المؤهل:"
+
+#. module: management_quran_office_core
+#: model:ir.model,name:management_quran_office_core.model_quran_office_class
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_class_form_view
+msgid "Quran Class"
+msgstr "فصل القرآن"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_class_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_class_tree_view
+msgid "Quran Classes"
+msgstr "فصول القرآن"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_config_settings_view_form_quran_core
+msgid "Quran Core Management"
+msgstr "إدارة النواة القرآنية"
+
+#. module: management_quran_office_core
+#: model:ir.model,name:management_quran_office_core.model_quran_office_office
+msgid "Quran Memorization Office"
+msgstr "مكتب حفظ القرآن"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__is_quran_memorizer
+msgid "Quran Memorizer Filter"
+msgstr "فلتر الحافظ"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_search_view_quran_office
+msgid "Quran Memorizers"
+msgstr "الحفظة"
+
+#. module: management_quran_office_core
+#: model:ir.module.category,name:management_quran_office_core.module_category_quran_office
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_office_form_view
+msgid "Quran Office"
+msgstr "مكتب القرآن"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_config_settings_view_form_quran_core
+msgid "Quran Office Management"
+msgstr "إدارة مكتب القرآن"
+
+#. module: management_quran_office_core
+#: model:ir.actions.act_window,name:management_quran_office_core.action_management_quran_office_core_settings
+msgid "Quran Office Management Settings"
+msgstr "إعدادات إدارة مكتب القرآن"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Quran Office person"
+msgstr "شخص مكتب القرآن"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_search_view_quran_office
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_tree_view_quran_office
+msgid "Quran Office persons"
+msgstr "أشخاص مكتب القرآن"
+
+#. module: management_quran_office_core
+#: model:ir.actions.act_window,name:management_quran_office_core.action_quran_offices_view_id
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_office_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_office_tree_view
+msgid "Quran Offices"
+msgstr "مكاتب القرآن"
+
+#. module: management_quran_office_core
+#: model_terms:ir.actions.act_window,help:management_quran_office_core.action_quran_offices_view_id
+msgid ""
+"Quran Offices help you organize students and classes for better management.\n"
+"                Each office can have multiple classes and students."
+msgstr "تساعدك مكاتب القرآن على تنظيم الطلاب والفصول بشكل أفضل للإدارة.\n                يمكن لكل مكتب أن يحتوي على عدة فصول وطلاب."
+
+#. module: management_quran_office_core
+#: model:ir.model,name:management_quran_office_core.model_res_persons
+msgid "Quran School person Extension"
+msgstr "امتداد شخص مدرسة القرآن"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__reason_discount_fee
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__reason_discount_fee
+msgid "Reason for Discount"
+msgstr "سبب الخصم"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__reason_discount_fee
+#: model:ir.model.fields,help:management_quran_office_core.field_update_person_data_wizard__reason_discount_fee
+msgid "Reason for discount on student subscription fee"
+msgstr "سبب الخصم على رسوم اشتراك الطالب"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__ref
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Remove as Father"
+msgstr "إزالة كأب"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Remove as Mother"
+msgstr "إزالة كأم"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Remove as Student"
+msgstr "إزالة كطالب"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Remove as Teacher"
+msgstr "إزالة كمعلم"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__update_person_data_wizard__tags_mode__replace
+msgid "Replace Tags"
+msgstr "استبدال الوسوم"
+
+#. module: management_quran_office_core
+#: model:ir.ui.menu,name:management_quran_office_core.menu_reports_quran_office_core
+msgid "Reports"
+msgstr "التقارير"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__surah_ids
+msgid "Required Surahs"
+msgstr "السور المطلوبة"
+
+#. module: management_quran_office_core
+#: model:ir.actions.report,name:management_quran_office_core.action_report_salaries_or_subscriptions
+msgid "Salaries Or Subscriptions Report"
+msgstr "تقرير الرواتب أو الاشتراكات"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_financial_document
+msgid "Salary"
+msgstr "الراتب"
+
+#. module: management_quran_office_core
+#: model:ir.model,name:management_quran_office_core.model_school_organization_mixin
+msgid "School Organization Mixin"
+msgstr "مزيج تنظيم المدرسة"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_update_person_data_wizard__area_id
+msgid "Select area for persons"
+msgstr "تحديد المنطقة للأشخاص"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__area_id
+msgid "Select the area/district where the person is located"
+msgstr "اختر المنطقة/المحافظة التي يوجد فيها الشخص"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__father_id
+#: model:ir.model.fields,help:management_quran_office_core.field_update_person_data_wizard__father_id
+msgid "Select the father from existing persons"
+msgstr "اختر الأب من بين الأشخاص الموجودين"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__mother_id
+#: model:ir.model.fields,help:management_quran_office_core.field_update_person_data_wizard__mother_id
+msgid "Select the mother from existing persons"
+msgstr "اختر الأم من بين الأشخاص الموجودين"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__parent_role
+msgid "Select the parent role (only one can be selected)"
+msgstr "اختر دور الوالد (يمكن تحديد واحد فقط)"
+
+#. module: management_quran_office_core
+#: model:ir.actions.server,name:management_quran_office_core.action_set_quran_memorizer_true
+msgid "Set Quran Memorizer"
+msgstr "تعيين كحافظ للقرآن"
+
+#. module: management_quran_office_core
+#: model:ir.actions.server,name:management_quran_office_core.action_set_student_as_disconnected
+msgid "Set Student as Disconnected"
+msgstr "تعيين الطالب كمنقطع"
+
+#. module: management_quran_office_core
+#: model:ir.actions.server,name:management_quran_office_core.action_set_student_as_persistent
+msgid "Set Student as Persistent"
+msgstr "تعيين الطالب كمسـتمر"
+
+#. module: management_quran_office_core
+#: model:ir.actions.server,name:management_quran_office_core.action_set_person_as_fatherless
+msgid "Set as Fatherless"
+msgstr "تعيين كبدون أب"
+
+#. module: management_quran_office_core
+#: model:ir.actions.server,name:management_quran_office_core.action_set_person_not_fatherless
+msgid "Set not Fatherless"
+msgstr "تعيين كذو أب"
+
+#. module: management_quran_office_core
+#: model:ir.ui.menu,name:management_quran_office_core.menu_quran_office_core_settings
+msgid "Settings"
+msgstr "الإعدادات"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.view_student_filter_wizard_form
+msgid "Social & Religious Status"
+msgstr "الحالة الاجتماعية والدينية"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Start Point"
+msgstr "نقطة البداية"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_search_view_quran_office
+msgid "Status"
+msgstr "الحالة"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.view_student_filter_wizard_form
+msgid "Status & Gender"
+msgstr "الحالة والجنس"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__street
+msgid "Street"
+msgstr "الشارع"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__street
+msgid "Street address of the person"
+msgstr "عنوان الشارع للشخص"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "Student Contact Information"
+msgstr "معلومات التواصل للطالب"
+
+#. module: management_quran_office_core
+#: model:ir.ui.menu,name:management_quran_office_core.menu_student_filter_wizard
+msgid "Student Filter"
+msgstr "فلتر الطلاب"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_financial_document
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_student_document
+msgid "Student Name"
+msgstr "اسم الطالب"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__status
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__status
+msgid "Student Status"
+msgstr "حالة الطالب"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__status
+msgid "Student persistence status - only shown for students"
+msgstr "حالة استمرار الطالب - تظهر فقط للطلاب"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_update_person_data_wizard__subscription_fee
+msgid "Student subscription fee"
+msgstr "رسوم اشتراك الطالب"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__subscription_fee
+msgid "Student subscription fee amount"
+msgstr "مبلغ رسوم اشتراك الطالب"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__birth_date
+msgid "Student's date of birth"
+msgstr "تاريخ ميلاد الطالب"
+
+#. module: management_quran_office_core
+#: model:ir.actions.act_window,name:management_quran_office_core.action_students_view_id
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_class__student_ids
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_office__student_ids
+#: model:ir.ui.menu,name:management_quran_office_core.menu_students_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_class_form_view
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_office_form_view
+msgid "Students"
+msgstr "الطلاب"
+
+#. module: management_quran_office_core
+#: model:ir.actions.report,name:management_quran_office_core.action_report_students_academic
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_student_document
+msgid "Students Academic Report"
+msgstr "تقرير الطلاب الأكاديمي"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_financial_document
+msgid "Students Subscriptions Report"
+msgstr "تقرير اشتراكات الطلاب"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_quran_office_class__student_ids
+msgid "Students in this class"
+msgstr "الطلاب في هذا الفصل"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_quran_office_office__student_ids
+msgid "Students in this office"
+msgstr "الطلاب في هذا المكتب"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__subscription_fee
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__subscription_fee
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_financial_document
+msgid "Subscription Fee"
+msgstr "رسوم الاشتراك"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "Subscription Fee:"
+msgstr "رسوم الاشتراك:"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_config_settings__module_management_quran_subscription
+msgid "Subscription Module"
+msgstr "وحدة الاشتراك"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/wizards/update_person_data_wizard.py:0
+msgid "Subscription fee cannot be negative or zero in update mode."
+msgstr "لا يمكن أن تكون رسوم الاشتراك سالبة أو صفرية في وضع التحديث."
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_config_settings_view_form_quran_core
+msgid "Subscriptions"
+msgstr "الاشتراكات"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__surah_id
+msgid "Surah where memorization starts"
+msgstr "السورة التي يبدأ عندها الحفظ"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__surah_ids
+msgid "Surahs that must be memorized"
+msgstr "السور التي يجب حفظها"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_search_view_quran_office
+msgid "Tag"
+msgstr "الوسم"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__tags_ids
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__tag_ids
+msgid "Tags"
+msgstr "الوسوم"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__tags_mode
+msgid "Tags Mode"
+msgstr "وضع الوسوم"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__tags_ids
+msgid "Tags for categorizing the person"
+msgstr "وسوم لتصنيف الشخص"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_update_person_data_wizard__tag_ids
+msgid "Tags to add to persons"
+msgstr "الوسوم لإضافتها للأشخاص"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_class__teacher_id
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__teacher_id
+#: model:ir.model.fields,field_description:management_quran_office_core.field_school_organization_mixin__teacher_id
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__teacher_id
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__teacher_id
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_class_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_student_document
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_search_view_quran_office
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.view_student_filter_wizard_form
+msgid "Teacher"
+msgstr "المعلم"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_student_filter_wizard__has_teacher
+msgid "Teacher Filter"
+msgstr "فلتر المعلم"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_financial_document
+msgid "Teacher Name"
+msgstr "اسم المعلم"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__teacher_salary
+#: model:ir.model.fields,field_description:management_quran_office_core.field_update_person_data_wizard__teacher_salary
+msgid "Teacher Salary"
+msgstr "راتب المعلم"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "Teacher Salary:"
+msgstr "راتب المعلم:"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__teacher_salary
+#: model:ir.model.fields,help:management_quran_office_core.field_update_person_data_wizard__teacher_salary
+msgid "Teacher monthly salary"
+msgstr "الراتب الشهري للمعلم"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_quran_office_class__teacher_id
+msgid "Teacher or memorizer for this class"
+msgstr "المعلم أو الحافظ لهذا الفصل"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__teacher_id
+#: model:ir.model.fields,help:management_quran_office_core.field_school_organization_mixin__teacher_id
+#: model:ir.model.fields,help:management_quran_office_core.field_student_filter_wizard__teacher_id
+#: model:ir.model.fields,help:management_quran_office_core.field_update_person_data_wizard__teacher_id
+msgid "Teacher or memorizer for this record"
+msgstr "المعلم أو الحافظ لهذا السجل"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/wizards/update_person_data_wizard.py:0
+msgid "Teacher salary cannot be negative or zero in update mode."
+msgstr "لا يمكن أن يكون راتب المعلم سالبًا أو صفرًا في وضع التحديث."
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "Teacher:"
+msgstr "المعلم:"
+
+#. module: management_quran_office_core
+#: model:ir.actions.act_window,name:management_quran_office_core.action_teachers_view_id
+#: model:ir.ui.menu,name:management_quran_office_core.menu_teachers_quran_office_core
+msgid "Teachers"
+msgstr "المعلمون"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_financial_document
+msgid "Teachers Salaries Report"
+msgstr "تقرير رواتب المعلمين"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/school_organization_mixin.py:0
+msgid "The selected class does not belong to the selected office."
+msgstr "الفصل المحدد لا ينتمي إلى المكتب المحدد."
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__third_name
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Third Name"
+msgstr "الاسم الثالث"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/res_persons.py:0
+msgid "This person is not a student (%s)."
+msgstr "هذا الشخص ليس طالبًا (%s)."
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/res_persons.py:0
+msgid "This student is disconnected (%s)."
+msgstr "هذا الطالب منقطع (%s)."
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/res_persons.py:0
+msgid "This student is not active (%s)."
+msgstr "هذا الطالب غير نشط (%s)."
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/wizards/update_person_data_wizard.py:0
+msgid "This wizard must be opened from Contacts."
+msgstr "يجب فتح هذا المعالج من قائمة جهات الاتصال."
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__title
+msgid "Title"
+msgstr "اللقب"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__title
+msgid "Title of the person"
+msgstr "لقب الشخص"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "To Aya:"
+msgstr "إلى الآية:"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_tree_view_quran_office
+msgid "Total Fee"
+msgstr "إجمالي الرسوم"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_financial_document
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_person_basic_data_document
+msgid "Total Records:"
+msgstr "إجمالي السجلات:"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_tree_view_quran_office
+msgid "Total Salary"
+msgstr "إجمالي الراتب"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_financial_document
+msgid "Total Salary:"
+msgstr "إجمالي الراتب:"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_student_document
+msgid "Total Students:"
+msgstr "إجمالي الطلاب:"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_quran_office_office__class_count
+msgid "Total number of classes in this office"
+msgstr "إجمالي عدد الفصول في هذا المكتب"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_quran_office_area__person_count
+msgid "Total number of persons in this area"
+msgstr "إجمالي عدد الأفراد في هذه المنطقة"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_quran_office_class__student_count
+msgid "Total number of students in this class"
+msgstr "إجمالي عدد الطلاب في هذا الفصل"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_quran_office_office__student_count
+msgid "Total number of students in this office"
+msgstr "إجمالي عدد الطلاب في هذا المكتب"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_financial_document
+msgid "Total:"
+msgstr "الإجمالي:"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_quran_office_area__code
+msgid "Unique code for the area"
+msgstr "رمز فريد للمنطقة"
+
+#. module: management_quran_office_core
+#: model:ir.actions.server,name:management_quran_office_core.action_set_quran_memorizer_false
+msgid "Unset Quran Memorizer"
+msgstr "إلغاء تعيين الحافظ"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/res_persons.py:0
+msgid "Unsupported operator %s for age search."
+msgstr "عامل غير مدعوم %s للبحث حسب العمر."
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__update_person_data_wizard__mode_area__update
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__update_person_data_wizard__mode_discount__update
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__update_person_data_wizard__mode_father__update
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__update_person_data_wizard__mode_mother__update
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__update_person_data_wizard__mode_office_class__update
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__update_person_data_wizard__mode_qua__update
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__update_person_data_wizard__mode_salary__update
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__update_person_data_wizard__mode_subscrip__update
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__update_person_data_wizard__mode_tags__update
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__update_person_data_wizard__mode_teacher__update
+msgid "Update"
+msgstr "تحديث"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.update_person_data_wizard_form_view
+msgid "Update Academic Information"
+msgstr "تحديث المعلومات الأكاديمية"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.update_person_data_wizard_form_view
+msgid "Update Area"
+msgstr "تحديث المنطقة"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_tree_view_quran_office
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.update_person_data_wizard_form_view
+msgid "Update Data"
+msgstr "تحديث البيانات"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.update_person_data_wizard_form_view
+msgid "Update Parent"
+msgstr "تحديث الوالد"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.update_person_data_wizard_form_view
+msgid "Update Qualification"
+msgstr "تحديث المؤهل"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.update_person_data_wizard_form_view
+msgid "Update Salary"
+msgstr "تحديث الراتب"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.update_person_data_wizard_form_view
+msgid "Update Subscription"
+msgstr "تحديث الاشتراك"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.update_person_data_wizard_form_view
+msgid "Update Tags"
+msgstr "تحديث الوسوم"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.update_person_data_wizard_form_view
+msgid "Update person Data"
+msgstr "تحديث بيانات الشخص"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/res_persons.py:0
+#: model:ir.model,name:management_quran_office_core.model_update_person_data_wizard
+msgid "Update person Data Wizard"
+msgstr "معالج تحديث بيانات الشخص"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_update_person_data_wizard__mode_area
+#: model:ir.model.fields,help:management_quran_office_core.field_update_person_data_wizard__mode_discount
+#: model:ir.model.fields,help:management_quran_office_core.field_update_person_data_wizard__mode_father
+#: model:ir.model.fields,help:management_quran_office_core.field_update_person_data_wizard__mode_mother
+#: model:ir.model.fields,help:management_quran_office_core.field_update_person_data_wizard__mode_office_class
+#: model:ir.model.fields,help:management_quran_office_core.field_update_person_data_wizard__mode_qua
+#: model:ir.model.fields,help:management_quran_office_core.field_update_person_data_wizard__mode_salary
+#: model:ir.model.fields,help:management_quran_office_core.field_update_person_data_wizard__mode_subscrip
+#: model:ir.model.fields,help:management_quran_office_core.field_update_person_data_wizard__mode_tags
+#: model:ir.model.fields,help:management_quran_office_core.field_update_person_data_wizard__mode_teacher
+msgid "Update selected fields or clear existing data"
+msgstr "تحديث الحقول المحددة أو مسح البيانات الحالية"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__photo
+msgid "Upload a photo of the person"
+msgstr "رفع صورة للشخص"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__additional_documents
+msgid "Upload additional documents"
+msgstr "رفع مستندات إضافية"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__id_card_back
+msgid "Upload back side of ID card"
+msgstr "رفع جانب بطاقة الهوية الخلفي"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__birth_certificate
+msgid "Upload birth certificate"
+msgstr "رفع شهادة الميلاد"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__id_card_front
+msgid "Upload front side of ID card"
+msgstr "رفع جانب بطاقة الهوية الأمامي"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__personal_photo
+msgid "Upload personal photo"
+msgstr "رفع الصورة الشخصية"
+
+#. module: management_quran_office_core
+#: model:res.groups,name:management_quran_office_core.group_quran_office_user
+msgid "User"
+msgstr "مستخدم"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_res_persons__website
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "Website"
+msgstr "الموقع الإلكتروني"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__website
+msgid "Website of the person"
+msgstr "موقع الشخص الإلكتروني"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_search_view_quran_office
+msgid "With Area"
+msgstr "بمنطقة"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_search_view_quran_office
+msgid "With Class"
+msgstr "بفصل"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_office_search_view
+msgid "With Classes"
+msgstr "بفصول"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_search_view_quran_office
+msgid "With Office"
+msgstr "بمكتب"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_class_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_office_search_view
+msgid "With Students"
+msgstr "بطلاب"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_class_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_search_view_quran_office
+msgid "With Teacher"
+msgstr "بمعلم"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.area_search_view
+msgid "With persons"
+msgstr "بالأشخاص"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__has_birth_certificate__without_certificate
+msgid "Without Birth Certificate"
+msgstr "بدون شهادة ميلاد"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__has_class__without_class
+msgid "Without Class"
+msgstr "بدون فصل"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_office_search_view
+msgid "Without Classes"
+msgstr "بدون فصول"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__has_father__without_father
+msgid "Without Father"
+msgstr "بدون أب"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__has_id_card_front__without_id_front
+msgid "Without ID Card Front"
+msgstr "بدون وجه بطاقة الهوية"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__has_id_number__without_id
+msgid "Without ID Number"
+msgstr "بدون رقم هوية"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__has_mother__without_mother
+msgid "Without Mother"
+msgstr "بدون أم"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__has_office__without_office
+msgid "Without Office"
+msgstr "بدون مكتب"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__has_personal_photo__without_photo
+msgid "Without Personal Photo"
+msgstr "بدون صورة شخصية"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__has_phone__without_phone
+msgid "Without Phone"
+msgstr "بدون هاتف"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_class_search_view
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_office_search_view
+msgid "Without Students"
+msgstr "بدون طلاب"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields.selection,name:management_quran_office_core.selection__student_filter_wizard__has_teacher__without_teacher
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.quran_class_search_view
+msgid "Without Teacher"
+msgstr "بدون معلم"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.area_search_view
+msgid "Without persons"
+msgstr "بدون أشخاص"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/utils.py:0
+msgid "day"
+msgstr "يوم"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/utils.py:0
+msgid "days"
+msgstr "أيام"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "e.g. \"B2B\", \"VIP\", \"Consulting\", ..."
+msgstr "مثل: \"B2B\"، \"VIP\"، \"Consulting\"..."
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "e.g. Mister"
+msgstr "مثل: السيد"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "e.g. Sales Director"
+msgstr "مثل: مدير المبيعات"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.res_persons_form_view_quran_office
+msgid "e.g. https://www.odoo.com"
+msgstr "مثل: https://www.odoo.com"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/utils.py:0
+msgid "month"
+msgstr "شهر"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/utils.py:0
+msgid "months"
+msgstr "أشهر"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__first_name
+msgid "person's first name"
+msgstr "الاسم الأول للشخص"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__gender
+msgid "person's gender"
+msgstr "جنس الشخص"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__last_name
+msgid "person's last name"
+msgstr "اسم الشخص الأخير"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__middle_name
+msgid "person's middle name"
+msgstr "اسم الشخص الأوسط"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_res_persons__third_name
+msgid "person's third name"
+msgstr "اسم الشخص الثالث"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,field_description:management_quran_office_core.field_quran_office_area__person_ids
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.area_form_view
+msgid "persons"
+msgstr "أفراد"
+
+#. module: management_quran_office_core
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+msgid "persons And Documents Status"
+msgstr "حالة الأفراد والمستندات"
+
+#. module: management_quran_office_core
+#: model:ir.actions.report,name:management_quran_office_core.action_report_all_persons_basic_data
+msgid "persons Basic Data Report"
+msgstr "تقرير البيانات الأساسية للأفراد"
+
+#. module: management_quran_office_core
+#: model:ir.model.fields,help:management_quran_office_core.field_quran_office_area__person_ids
+msgid "persons located in this area"
+msgstr "الأفراد الموجودون في هذه المنطقة"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/utils.py:0
+msgid "year"
+msgstr "سنة"
+
+#. module: management_quran_office_core
+#. odoo-python
+#: code:addons/management_quran_office_core/models/utils.py:0
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.report_detailed_person_document
+#: model_terms:ir.ui.view,arch_db:management_quran_office_core.view_quran_person_kanban
+msgid "years"
+msgstr "سنوات"
